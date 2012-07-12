@@ -10,18 +10,18 @@
 @TYPE-LineHeight: 				24;
 @TYPE-FontFamily: 				Arial, Helvetica, sans-serif;	
 @TYPE-FontColor:				#222;
-@TYPE-VerticalSpace:			(@TYPE-LineHeight/@TYPE-FontSize)*1em;	
+@TYPE-VerticalRhythm:			(@TYPE-LineHeight/@TYPE-FontSize)*1em;	
 
-@TYPE-SIZE-Omega: 				32;
-@TYPE-SIZE-Alpha: 				32;
-@TYPE-SIZE-Beta: 				32;
-@TYPE-SIZE-Gamma: 				24;
-@TYPE-SIZE-Delta: 				16;
-@TYPE-SIZE-Epsilon: 			14;
-@TYPE-SIZE-Zeta: 				13;
+@TYPE-SIZE-Omega: 				72;
+@TYPE-SIZE-Alpha: 				60;
+@TYPE-SIZE-Beta: 				48;
+@TYPE-SIZE-Gamma: 				36;
+@TYPE-SIZE-Delta: 				24;
+@TYPE-SIZE-Epsilon: 			21;
+@TYPE-SIZE-Zeta: 				18;
 @TYPE-SIZE-Eta: 				@TYPE-FontSize;
-@TYPE-SIZE-Theta: 				11;
-@TYPE-SIZE-Iota: 				10;
+@TYPE-SIZE-Theta: 				14;
+@TYPE-SIZE-Iota: 				12;
 
 // Links
 // ----------------------------------------------------	
@@ -47,13 +47,30 @@
 @ALERT-Error: 					#D8000C;
 @ALERT-Success: 				#4F8A10;
 
+// FORMS
+// ----------------------------------------------------	
+
+// BUTTONS
+// ----------------------------------------------------	
+
 // GRID
 // ----------------------------------------------------	
 
 @GRID-Cols: 					12;
 @GRID-ColWidth: 				60;
 @GRID-Gutter: 					21;
-@GRID-MaxWidth:					1200px;
+@GRID-MaxWidth:					(@GRID-Cols * @GRID-ColWidth) + ((@GRID-Cols - 1) * @GRID-Gutter); //derived from ACTUAL values
+
+// Z-INDEX
+// -------------------------
+
+@ZINDEX-Dropdown:           1000;
+@ZINDEX-Nav:				1100;
+@ZINDEX-Popover:            1200;
+@ZINDEX-Tooltip:            1300;
+@ZINDEX-FixedNav:        	1400;
+@ZINDEX-ModalBackdrop:      1500;
+@ZINDEX-Modal:				1600;
 
 // STYLE
 // ----------------------------------------------------	
