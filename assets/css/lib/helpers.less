@@ -20,3 +20,57 @@
 .c {
 	.clearfix();
 }
+
+/*================= Display ===============*/
+
+.block, .show  {
+	display:block;
+}
+
+.hide {
+	display: none;
+}
+
+//TODO: Use mixins for opacity
+
+.invisible {	
+	opacity:0;
+	-moz-opacity: 0;
+	filter:alpha(opacity=0);
+}
+
+.visible {	
+	opacity:1;
+	-moz-opacity: 1;
+	filter:alpha(opacity=1);
+}
+
+// New image replacement
+// Source: http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+
+.ir {
+	font: 0/0 a;
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+}
+
+/*================= Alignment ===============*/
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+.center {
+	text-align:center;
+}
+
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

@@ -6,19 +6,20 @@
 SITENAME = {
 
 
-    /* ===================== Common ========================*/
+    /* ===================== COMMON ========================*/
     common: {
 
         init: function() {
-            //site-wide code
 
             //Signal js is present
             $("html").removeClass("no-js");
 
+        }
+
     },
 
 
-    /* ===================== home ========================*/
+    /* ===================== HOME ========================*/
     home: {
 
         init: function() {
