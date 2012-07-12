@@ -1,0 +1,61 @@
+/* ==========================================================================
+// Variables
+// =========================================================================*/
+
+/* ===================== TYPOGRAPHY ===================*/
+
+@TYPE-FontSize: 				16;
+@TYPE-LineHeight: 				24;
+@TYPE-FontFamily: 				Arial, Helvetica, sans-serif;	
+@TYPE-FontColor:				#222;
+@TYPE-VerticalSpace:			(@TYPE-LineHeight/@TYPE-FontSize)*1em;	
+
+@TYPE-SIZE-Omega: 				32;
+@TYPE-SIZE-Alpha: 				32;
+@TYPE-SIZE-Beta: 				32;
+@TYPE-SIZE-Gamma: 				24;
+@TYPE-SIZE-Delta: 				16;
+@TYPE-SIZE-Epsilon: 			14;
+@TYPE-SIZE-Zeta: 				13;
+@TYPE-SIZE-Eta: 				@TYPE-FontSize;
+@TYPE-SIZE-Theta: 				11;
+@TYPE-SIZE-Iota: 				10;
+
+/* ===================== LINKS ========================*/	
+
+@LINK-Link:						#00e;
+@LINK-Visited:					lighten(@LINK-Link, 10);
+@LINK-Hover:					darken(@LINK-Link, 20);
+@LINK-Active:					darken(@LINK-Link, 20);
+@LINK-Focus:					darken(@LINK-Link, 40);
+
+/* ===================== SELECTS ======================*/
+
+@SELECT-BgColor:				#FE57A1;
+@SELECT-TextColor:				#FFF;
+
+/* ===================== ALERTS ======================*/
+
+@ALERT-Info: 					#00529B; 
+@ALERT-Note: 					#EBE8E2;
+@ALERT-Alert: 					#9F6000;
+@ALERT-Error: 					#D8000C;
+@ALERT-Success: 				#4F8A10;
+
+/* ===================== GRID ========================*/
+
+@GRID-Cols: 					12;
+@GRID-ColWidth: 				60;
+@GRID-Gutter: 					21;
+@GRID-MaxWidth:					1200px;
+
+/* ===================== Style ======================*/
+
+@STYLE-BorderRadius:			8;
+@STYLE-BodyBgColor:				#FFF;
+
+/* ===================== PATHS ======================*/
+
+@PATH-Assets:					"assets/";
+@PATH-Images:					@PATH-Assets + "images/";
+@PATH-Fonts:					@PATH-Assets + "fonts/";
