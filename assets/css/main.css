@@ -6,6 +6,8 @@
 // ALL
 // =========================================================================*/
 
+/* Always first*/
+
 /* ==========================================================================
 // RESET
 // Reference: http://github.com/necolas/normalize.css
@@ -43,6 +45,7 @@ audio:not([controls]) {
 /* ==========================================================================
 // Base
 // =========================================================================*/
+
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
@@ -72,6 +75,30 @@ body {
   background: #fe57a1;
   color: white;
   text-shadow: none;
+}
+/* ==========================================================================
+// Links
+// =========================================================================*/
+
+a {
+  color: #0000ee;
+}
+a:visited {
+  color: #2222ff;
+}
+a:hover {
+  color: #000088;
+}
+a:focus {
+  outline: thin dotted;
+  color: #000022;
+}
+a:active {
+  color: #000088;
+}
+a:hover,
+a:active {
+  outline: 0;
 }
 /* ==========================================================================
 // Lists
@@ -222,6 +249,197 @@ td {
 // TYPOGRAPHY
 // =========================================================================*/
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 24px 0;
+  /* Currently px for margin to keep rythm - could be improved */
+  color: #222222;
+  font-weight: bold;
+  text-rendering: optimizelegibility;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-weight: normal;
+}
+h1,
+.alpha {
+  font-size: 3.75em;
+  line-height: 1.2;
+}
+h1 small,
+.alpha small {
+  font-size: 3em;
+  line-height: 1;
+}
+h1 small small,
+.alpha small small {
+  font-size: 2.25em;
+  line-height: 1.333333333;
+}
+h1 small small small,
+.alpha small small small {
+  font-size: 1.5em;
+  line-height: 1;
+}
+h1 small small small small,
+.alpha small small small small {
+  font-size: 1.3125em;
+  line-height: 1.142857143;
+}
+h1 small small small small small,
+.alpha small small small small small {
+  font-size: 1.125em;
+  line-height: 1.333333333;
+}
+h2,
+.beta {
+  font-size: 3em;
+  line-height: 1;
+}
+h2 small,
+.beta small {
+  font-size: 2.25em;
+  line-height: 1.333333333;
+}
+h2 small small,
+.beta small small {
+  font-size: 1.5em;
+  line-height: 1;
+}
+h2 small small small,
+.beta small small small {
+  font-size: 1.3125em;
+  line-height: 1.142857143;
+}
+h2 small small small small,
+.beta small small small small {
+  font-size: 1.125em;
+  line-height: 1.333333333;
+}
+h3,
+.gamma {
+  font-size: 2.25em;
+  line-height: 1.333333333;
+}
+h3 small,
+.gamma small {
+  font-size: 1.5em;
+  line-height: 1;
+}
+h3 small small,
+.gamma small small {
+  font-size: 1.3125em;
+  line-height: 1.142857143;
+}
+h3 small small small,
+.gamma small small small {
+  font-size: 1.125em;
+  line-height: 1.333333333;
+}
+h4,
+.delta {
+  font-size: 1.5em;
+  line-height: 1;
+}
+h4 small,
+.delta small {
+  font-size: 1.3125em;
+  line-height: 1.142857143;
+}
+h4 small small,
+.delta small small {
+  font-size: 1.125em;
+  line-height: 1.333333333;
+}
+h5,
+.epsilon {
+  font-size: 1.3125em;
+  line-height: 1.142857143;
+}
+h5 small,
+.epsilon small {
+  font-size: 1.125em;
+  line-height: 1.333333333;
+}
+h6,
+.zeta {
+  font-size: 1.125em;
+  line-height: 1.333333333;
+}
+p {
+  margin: 0 0 1.5em 0;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1.5em 2.5em;
+}
+dfn {
+  font-style: italic;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1.5em 0;
+  padding: 0;
+}
+ins {
+  background: #ffff99;
+  color: black;
+  text-decoration: none;
+}
+mark {
+  background: yellow;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+small,
+.small {
+  font-size: 85%;
+}
+.type-wrap {
+  word-wrap: break-word;
+}
 /* ==========================================================================
 // FORMS
 // =========================================================================*/
@@ -377,7 +595,7 @@ td {
 }
 .grid {
   *zoom: 1;
-  max-width: 951;
+  max-width: 951px;
   margin: 0 auto;
 }
 .grid:before,

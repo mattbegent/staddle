@@ -29,9 +29,6 @@ audio:not([controls]) {
 // Base
 // =========================================================================*/
 
-//Calculates the base font size based on browser default of 16
-@TYPE-FontSizePercentage:100%*(@TYPE-FontSize/16);
-
 html { 
     font-size: @TYPE-FontSizePercentage; 
     -webkit-text-size-adjust: @TYPE-FontSizePercentage; 
@@ -60,6 +57,35 @@ body {
     background: @SELECT-BgColor; 
     color: @SELECT-TextColor; 
     text-shadow: none; 
+}
+
+/* ==========================================================================
+// Links
+// =========================================================================*/
+
+a { 
+    color: @LINK-Link; 
+}
+
+a:visited { 
+    color: @LINK-Visited; 
+}
+
+a:hover { 
+    color: @LINK-Hover; 
+}
+
+a:focus { 
+    outline: thin dotted; 
+    color:@LINK-Focus; 
+}
+
+a:active { 
+    color:@LINK-Active; 
+}
+
+a:hover, a:active { 
+    outline: 0; 
 }
 
 /* ==========================================================================
