@@ -14,7 +14,7 @@
 	}
 
 	.column-offset-in-context(@columns:@DEFAULTS-Cols, @context:@GRID-MaxWidth) {
-		margin-left: ((((@GRID-ColWidth * @columns) + (@GRID-Gutter * (@columns - 1)))/@context)*100)+0%;
+		margin-left: ((((@GRID-ColWidth * @columns) + (@GRID-GutterWidth * (@columns - 1)))/@context)*100)+0%;
 	}
 	 
 	.column-width(@columns:1) {
@@ -74,18 +74,14 @@
 	// end of loops
 
 	.spanX(@maxcols);
+	.offsetX(@maxcols - 1);
 	//.spanNestedX(@maxcols, @maxcols - 1);
-	//.offsetX(@maxcols);
 
 }
 
-.grid > [class*="span-"]:first-child, .boxes > [class*="span"]:first-child {
+.grid > [class*="span-"]:first-child {
 	margin-left: 0;
 	clear:left;
-}
-
-.grid > [class*="span-"]:last-child {
-	margin-bottom:0;
 }
 
 [class^="span-"] {
@@ -102,7 +98,7 @@
 
 //============ Responsive Adjustments =============//
 
-//Mobile Grid
+//Desktop Grid
 @media only screen and (min-width: 767px) {
 
 	[class*="span-"] {
