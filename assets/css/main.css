@@ -256,7 +256,7 @@ h4,
 h5,
 h6 {
   margin: 0 0 24px 0;
-  /* Currently px for margin to keep rythm - could be improved */
+  /* Currently px for margin to keep rhythm - could be improved */
   color: #222222;
   font-weight: bold;
   text-rendering: optimizelegibility;
@@ -516,71 +516,6 @@ small,
 /* ==========================================================================
 // GRID
 // =========================================================================*/
-.span-1 {
-  width: 6.309148265%;
-  margin-left: 2.208201893%;
-  margin-bottom: 1.5em;
-}
-.span-2 {
-  width: 14.826498423%;
-  margin-left: 2.208201893%;
-  margin-bottom: 1.5em;
-}
-.span-3 {
-  width: 23.34384858%;
-  margin-left: 2.208201893%;
-  margin-bottom: 1.5em;
-}
-.span-4 {
-  width: 31.861198738%;
-  margin-left: 2.208201893%;
-  margin-bottom: 1.5em;
-}
-.span-5 {
-  width: 40.378548896%;
-  margin-left: 2.208201893%;
-  margin-bottom: 1.5em;
-}
-.span-6 {
-  width: 48.895899054%;
-  margin-left: 2.208201893%;
-  margin-bottom: 1.5em;
-}
-.span-7 {
-  width: 40.378548896%;
-  margin-left: 2.208201893%;
-  margin-bottom: 1.5em;
-}
-.span-8 {
-  width: 65.930599369%;
-  margin-left: 2.208201893%;
-  margin-bottom: 1.5em;
-}
-.span-9 {
-  width: 74.447949527%;
-  margin-left: 2.208201893%;
-  margin-bottom: 1.5em;
-}
-.span-10 {
-  width: 82.965299685%;
-  margin-left: 2.208201893%;
-  margin-bottom: 1.5em;
-}
-.span-11 {
-  width: 91.482649842%;
-  margin-left: 2.208201893%;
-  margin-bottom: 1.5em;
-}
-.span-12 {
-  width: 100%;
-  margin-left: 2.208201893%;
-  margin-bottom: 1.5em;
-  margin-left: 0;
-}
-.first {
-  margin-left: 0;
-  clear: left;
-}
 .grid > [class*="span-"]:first-child,
 .boxes > [class*="span"]:first-child {
   margin-left: 0;
@@ -589,14 +524,14 @@ small,
 .grid > [class*="span-"]:last-child {
   margin-bottom: 0;
 }
-[class*="span-"] {
-  display: inline;
-  float: left;
+[class^="span-"] {
+  width: 100%;
+  margin-left: 0;
 }
 .grid {
+  width: auto;
+  margin: 0 0.5em;
   *zoom: 1;
-  max-width: 951px;
-  margin: 0 auto;
 }
 .grid:before,
 .grid:after {
@@ -606,25 +541,14 @@ small,
 .grid:after {
   clear: both;
 }
-@media only screen and (max-width: 767px) {
-  .grid {
-    width: auto;
-    margin: 0 0.5em;
+@media only screen and (min-width: 767px) {
+  [class*="span-"] {
+    display: inline;
+    float: left;
   }
-  .span-1,
-  .span-2,
-  .span-3,
-  .span-4,
-  .span-5,
-  .span-6,
-  .span-7,
-  .span-8,
-  .span-9,
-  .span-10,
-  .span-11,
-  .span-12 {
-    width: 100%;
-    margin-left: 0;
+  .grid {
+    max-width: 951px;
+    margin: 0 auto;
   }
 }
 /* =========================================================================

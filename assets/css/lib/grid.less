@@ -2,47 +2,65 @@
 // GRID
 // =========================================================================*/
 
+
 //This is a temporary grid
-//TODO: Gary to make more dynamic
 
 //============ Column Calculations =============//
 
-.colwidth(@numberOfCols: 1){
-
-	//Gutters
-	@gutterPercentage:100%*(@GRID-GutterWidth/@GRID-MaxWidth);	
-	@totalGutterWidth: (@GRID-Cols - 1) * @GRID-GutterWidth;
-
-	//Single Col
-	@singleColPx:(@GRID-MaxWidth - @totalGutterWidth)/@GRID-Cols;
-	@singleColPercentage: 100%*(@singleColPx/@GRID-MaxWidth);
-
-	//This col offset
-	@thisColsOffset: (@numberOfCols - 1) * @gutterPercentage;
-	@thisColWidth: (@singleColPercentage*@numberOfCols) + @thisColsOffset;
-
-	//All together
-	width: @thisColWidth;
-	margin-left: @gutterPercentage;
-	margin-bottom: @TYPE-VerticalRhythm;
+.column-width-in-context(@columns:1, @context:@GRID-MaxWidth) {
+	width: (((@GRID-ColWidth * @columns) + (@GRID-GutterWidth * @columns))/@context)*100+0%;
 }
  
-.span-1 {.colwidth(1);}
-.span-2 {.colwidth(2);}
-.span-3 {.colwidth(3);}
-.span-4 {.colwidth(4);} 
-.span-5 {.colwidth(5);}
-.span-6 {.colwidth(6);}
-.span-7 {.colwidth(5);}
-.span-8 {.colwidth(8);}
-.span-9 {.colwidth(9);}
-.span-10 {.colwidth(10);}
-.span-11 {.colwidth(11);}
-.span-12 {.colwidth(12);margin-left:0;}
+.column-width(@columns:1) {
+	.column-width-in-context(@columns, @GRID-MaxWidth);
+}
 
-.first {
-	margin-left:0;
-	clear:left;
+.generate-grid(@cols:@GRID-Cols, @colwidth:@GRID-ColWidth, @gutter:@GRID-GutterWidth) {
+
+	.spanNestedX(@parent, @index) when (@index > 0) {
+		(~".span-@{parent} > .span-@{index}") { 
+			.nested(@parent, @index)
+		}
+		.spanNestedX(@parent, @index - 1);
+	}
+
+	.spanNestedX(@parent, -1) {}
+
+	.spanX(@index) when (@index > 0) {
+		(~".span-@{index}") { 
+			.span(@index);
+		}
+		.spanNestedX(@index, @index - 1);
+		.spanX(@index - 1);
+	}
+
+	.spanX(0) {}
+
+	.offsetX(@index) when (@index > 0) {
+		(~".offset-@{index}") { 
+			.offset(@index); 
+		}
+		.offsetX(@index - 1);		
+	}
+
+	.offsetX(0) {}
+
+	.nested(@parent, @index) {
+		.column-width-in-context(@index, @parent);
+	}
+
+	.span(@index) {
+		.column-width(@index);
+	}
+
+	.offset(@index) {
+		.column-offset(@index);
+	}
+
+	.spanX(@cols, @cols -1);
+	.spanNestedX(@cols);
+	.offsetX(@cols);
+
 }
 
 .grid > [class*="span-"]:first-child, .boxes > [class*="span"]:first-child {
@@ -54,30 +72,29 @@
 	margin-bottom:0;
 }
 
-[class*="span-"] {
-	display:inline;
-	float:left;
-}
+[class^="span-"] {
+	width:100%;
+	margin-left:0;
+} 
 
 .grid {
+	width:auto;
+	margin:0 0.5em;
 	.clearfix();
-	max-width:@GRID-MaxWidth *1px;
-	margin:0 auto;
 }
 
 //============ Responsive Adjustments =============//
 
 //Mobile Grid
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 767px) {
 
+[class*="span-"] {
+	display:inline;
+	float:left; 
+}
 	.grid {
-		width:auto;
-		margin:0 0.5em;
+	max-width:@GRID-MaxWidth *1px;
+	margin:0 auto;
 	}
- 
-	.span-1,.span-2,.span-3,.span-4,.span-5,.span-6,.span-7,.span-8,.span-9,.span-10,.span-11,.span-12 {
-		width:100%;
-		margin-left:0;
-	} 
 
 }
