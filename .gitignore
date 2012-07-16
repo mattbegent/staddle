@@ -1,8 +1,7 @@
 # Ignore certain .css files #
 ######################
 
-/assets/css/lib/*.css
-/assets/css/variables.css
+/assets/less/*.css
 
 # Ignore OS generated files #
 ######################
