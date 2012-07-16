@@ -1,3 +1,88 @@
 /* ==========================================================================
 // FORMS
 // =========================================================================*/
+
+//=========== Default Styles ================//
+
+form p {
+	.clearfix();
+}
+
+label  {
+	cursor:pointer;
+	display:block;
+	font-weight:bold;
+}
+
+input {
+	float:left;
+	display:block;
+	max-width:100%;
+}
+
+input, textarea, select {
+	width:100%;
+	.border-radius(4px);
+	padding:4px;
+	border: 1px solid #888;
+	color:#555;
+}
+
+input, textarea {
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
+input:focus, textarea:focus, select:focus{
+	//TODO: Change to nice color
+	border-color: rgba(82, 168, 236, 0.8);
+  	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+ 	outline: 0;
+  	outline: thin dotted \9;
+}
+
+button {
+	.button;
+}
+
+//=========== Validation ================//
+
+//TODO: Colors here //
+
+//============ Responsive Adjustments =============//
+
+//Desktop set sizes
+
+@media only screen and (min-width: 768px) {
+
+	//=========== Fixed sizes ================//
+
+	input, textarea, select {
+		width:250px;
+	}
+
+	.input-small {
+		width:80px;
+	}
+
+	.input-medium {
+		width:150px;
+	}
+
+	.input-large {
+		width:225px;
+	}
+
+	.input-xlarge {
+		width:300px;
+	}
+
+	.input-full {
+		width:100%;
+	}
+
+}

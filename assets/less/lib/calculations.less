@@ -16,3 +16,15 @@
 	@em: (@selectedSize/@TYPE-FontSize)*1em; 
 	line-height: @selectedSize/@em;
 }
+
+//========== PADDINGS/MARGINS ==============//
+
+.padding-to-em(@selectedSize){
+	@em: @TYPE-FontSize*1em; 
+	padding: @selectedSize/@em;
+}
+
+.margin-to-em(@selectedSize){
+	@em: @TYPE-FontSize*1em; 
+	margin: @selectedSize/@em;
+}

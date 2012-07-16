@@ -568,14 +568,16 @@ small,
 /*TODO: Add variables to text and border-colors*/
 
 .alert {
-  padding: 1em;
+  display: block;
+  position: relative;
+  padding: 0.6875em;
+  /*TODO: Make better -takes into account the 1px border*/
   margin-bottom: 1.5em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   -moz-border-radius: 0.5em;
   -webkit-border-radius: 0.5em;
   border-radius: 0.5em;
-  display: block;
-  position: relative;
+  /* TODO: Use variable */
   border-width: 1px;
   border-style: solid;
 }
@@ -593,6 +595,16 @@ small,
   background-color: #dff0d8;
   color: #468847;
   border-color: #468847;
+}
+.alert-note {
+  background-color: #ebe8e2;
+  color: #222222;
+  border-color: #222222;
+}
+.alert-alert {
+  background-color: #f2dede;
+  color: #b94a48;
+  border-color: #b94a48;
 }
 /* =========================================================================
 // BOXES
@@ -660,6 +672,104 @@ small,
 // FORMS
 // =========================================================================*/
 
+form p {
+  *zoom: 1;
+}
+form p:before,
+form p:after {
+  content: "";
+  display: table;
+}
+form p:after {
+  clear: both;
+}
+label {
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+}
+input {
+  float: left;
+  display: block;
+  max-width: 100%;
+}
+input,
+textarea,
+select {
+  width: 100%;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  padding: 4px;
+  border: 1px solid #888888;
+  color: #555555;
+}
+input,
+textarea {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  outline: 0;
+  outline: thin dotted \9;
+}
+button {
+  display: block;
+  color: white;
+  background-color: #e01b6a;
+  text-decoration: none;
+  padding: 6px 1em;
+  cursor: pointer;
+  margin: 0 0 12px 0;
+  border: none;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  border-radius: 0.25em;
+}
+button:hover {
+  background-color: #e94587;
+  color: white;
+}
+button,
+button:visited {
+  color: white;
+}
+button [class^="icon-"],
+button [class*=" icon-"] {
+  /* keeps button heights with and without icons the same */
+  line-height: .9em;
+}
+@media only screen and (min-width: 768px) {
+  input,
+  textarea,
+  select {
+    width: 250px;
+  }
+  .input-small {
+    width: 80px;
+  }
+  .input-medium {
+    width: 150px;
+  }
+  .input-large {
+    width: 225px;
+  }
+  .input-xlarge {
+    width: 300px;
+  }
+  .input-full {
+    width: 100%;
+  }
+}
 /* ==========================================================================
 // MEDIA OBJECT
 // =========================================================================*/
@@ -708,8 +818,13 @@ small,
 // =========================================================================*/
 
 .well {
-  padding: 1em;
-  /*TODO: Base on variable - write the rest of it*/
+  display: block;
+  padding: 0.75em;
+  background-color: #ebebeb;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em;
+  /* TODO: Use variable */
 
 }
 /* =========================================================================

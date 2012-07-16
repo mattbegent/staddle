@@ -6,31 +6,43 @@
 /*TODO: Add variables to text and border-colors*/
 
 .alert {
-	padding:1em;
-	margin-bottom:@TYPE-VerticalRhythm;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	.border-radius(0.5em);
 	display:block;
 	position: relative; 
+	.padding-to-em((@TYPE-LineHeight/2)-1); /*TODO: Make better -takes into account the 1px border*/
+	margin-bottom:@TYPE-VerticalRhythm;
+
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	.border-radius(0.5em); /* TODO: Use variable */
 	border-width:1px;
 	border-style:solid;
 }
 
-.alert-info {
-	background-color: @ALERT-Info;
-	color: #3A87AD; 
-	border-color: #3A87AD;
+.alert-info { 
+	background-color: @ALERT-InfoBgColor;
+	color:  @ALERT-InfoTextColor; 
+	border-color: @ALERT-InfoBorderColor;
 }
 
 .alert-error {
-	background-color: @ALERT-Error;
-	color: #B94A48;
-	border-color: #B94A48;
+	background-color: @ALERT-ErrorBgColor;
+	color: @ALERT-ErrorTextColor;
+	border-color: @ALERT-ErrorBorderColor;
 }
 
-.alert-success {
-	background-color: @ALERT-Success;
-	color: #468847;
-	border-color: #468847;
+.alert-success { 
+	background-color: @ALERT-SuccessBgColor;
+	color: @ALERT-SuccessTextColor;
+	border-color: @ALERT-SuccessBorderColor;
 }
 
+.alert-note { 
+	background-color: @ALERT-NoteBgColor;
+	color: @ALERT-NoteTextColor;
+	border-color: @ALERT-NoteBorderColor;
+}
+
+.alert-alert { 
+	background-color: @ALERT-AlertBgColor;
+	color: @ALERT-AlertTextColor;
+	border-color: @ALERT-AlertBorderColor;
+}
