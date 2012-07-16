@@ -6,6 +6,8 @@
 // ALL
 // =========================================================================*/
 
+/* Base */
+
 /* Always first*/
 
 /* ==========================================================================
@@ -440,67 +442,9 @@ small,
 .type-wrap {
   word-wrap: break-word;
 }
-/* ==========================================================================
-// FORMS
-// =========================================================================*/
-
 /* =========================================================================
-// BOXES
+// CSS3
 // =======================================================================*/
-
-/* ==========================================================================
-// OBJECTS
-// NOT SURE THIS SHOULD BE CALLED THIS OR BE HERE
-// =========================================================================*/
-
-/*================= Media Object ===============*/
-
-/* Source: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/ */
-
-.media {
-  margin-bottom: 1.5em;
-  *zoom: 1;
-}
-.media:before,
-.media:after {
-  content: "";
-  display: table;
-}
-.media:after {
-  clear: both;
-}
-.media .media-content {
-  overflow: hidden;
-  _overflow: visible;
-  zoom: 1;
-}
-.media .media-image {
-  float: left;
-  margin-right: 1em;
-}
-.media .media-image img {
-  display: block;
-}
-.media .media-image-alt {
-  float: right;
-  margin-left: 1em;
-}
-/* Mobile */
-
-@media only screen and (max-width: 767px) {
-  .media .media-image {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-}
-/*================= Media Object ===============*/
-
-.well {
-  padding: 1em;
-  /*TODO: Base on variable - write the rest of it*/
-
-}
 /* ==========================================================================
 // ANIMATIONS
 // =========================================================================*/
@@ -612,6 +556,161 @@ small,
   .offset-1 {
     margin-left: 6.309148265%;
   }
+}
+/* Lib Modules */
+
+/* =========================================================================
+// ALERTS
+// =======================================================================*/
+
+/*TODO: Make follow baseline*/
+
+/*TODO: Add variables to text and border-colors*/
+
+.alert {
+  padding: 1em;
+  margin-bottom: 1.5em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em;
+  display: block;
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+}
+.alert-info {
+  background-color: #d9edf7;
+  color: #3a87ad;
+  border-color: #3a87ad;
+}
+.alert-error {
+  background-color: #f2dede;
+  color: #b94a48;
+  border-color: #b94a48;
+}
+.alert-success {
+  background-color: #dff0d8;
+  color: #468847;
+  border-color: #468847;
+}
+/* =========================================================================
+// BOXES
+// =======================================================================*/
+
+/* =========================================================================
+// BUTTONS
+// =======================================================================*/
+/*================= BUTTON CREATOR ===============*/
+/*================= THE BUTTONS ===============*/
+
+.button {
+  display: block;
+  color: white;
+  background-color: #e01b6a;
+  text-decoration: none;
+  padding: 6px 1em;
+  cursor: pointer;
+  margin: 0 0 12px 0;
+  border: none;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  border-radius: 0.25em;
+}
+.button:hover {
+  background-color: #e94587;
+  color: white;
+}
+.button,
+.button:visited {
+  color: white;
+}
+.button-alt {
+  display: block;
+  color: black;
+  background-color: #009402;
+  text-decoration: none;
+  padding: 6px 1em;
+  cursor: pointer;
+  margin: 0 0 12px 0;
+  border: none;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  border-radius: 0.25em;
+}
+.button-alt:hover {
+  background-color: #00c703;
+  color: black;
+}
+.button-alt,
+.button-alt:visited {
+  color: black;
+}
+/*================= DESKTOP INLINE ===============*/
+
+@media only screen and (min-width: 768px) {
+  .button,
+  .button-alt {
+    display: inline-block;
+  }
+}
+/* ==========================================================================
+// FORMS
+// =========================================================================*/
+
+/* ==========================================================================
+// MEDIA OBJECT
+// =========================================================================*/
+
+/* Source: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/ */
+
+.media {
+  margin-bottom: 1.5em;
+  *zoom: 1;
+}
+.media:before,
+.media:after {
+  content: "";
+  display: table;
+}
+.media:after {
+  clear: both;
+}
+.media .media-content {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1;
+}
+.media .media-image {
+  float: left;
+  margin-right: 1em;
+}
+.media .media-image img {
+  display: block;
+}
+.media .media-image-alt {
+  float: right;
+  margin-left: 1em;
+}
+/* Mobile */
+
+@media only screen and (max-width: 767px) {
+  .media .media-image {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+/* ==========================================================================
+// WELL
+// =========================================================================*/
+
+.well {
+  padding: 1em;
+  /*TODO: Base on variable - write the rest of it*/
+
 }
 /* =========================================================================
 // HEADER

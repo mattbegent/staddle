@@ -1,0 +1,52 @@
+/* =========================================================================
+// BUTTONS
+// =======================================================================*/
+
+/*================= BUTTON CREATOR ===============*/
+
+.button-create(@backgroundColor, @hoverColor, @textColor, @borderRadius: 0.25em) {
+	display:block;
+	color:@textColor;
+	background-color:@backgroundColor;
+	text-decoration:none;
+	@paddingBottom:(ceil(@TYPE-LineHeight/4)*1px;
+	padding:@paddingBottom 1em;
+	cursor: pointer;
+	@marginBottom:(round(@TYPE-LineHeight/2)*1px;
+	margin:0 0 @marginBottom 0;
+	border:none;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+
+	.border-radius(@borderRadius);
+
+	//Hover
+	&:hover {
+		background-color: @hoverColor;
+		color:@textColor;
+		//.inner-shadow(0,2px,3px);
+	}
+
+	//If used as class with a inside
+	&, &:visited {
+		color:@textColor;
+	}
+}
+
+/*================= THE BUTTONS ===============*/
+
+.button {
+	.button-create(@BUTTON-MainColor, @BUTTON-HoverColor, @BUTTON-TextColor);
+}
+
+.button-alt {
+	.button-create(@BUTTON-AltColor, @BUTTON-AltHoverColor, @BUTTON-AltTextColor);
+}
+
+/*================= DESKTOP INLINE ===============*/
+
+@media only screen and (min-width: 768px) { 
+	.button, .button-alt {
+		display: inline-block;	
+	}   
+ 
+}
