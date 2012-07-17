@@ -1,3 +1,25 @@
 /* =========================================================================
 // BOXES
 // =======================================================================*/
+
+.box {
+
+	display: block;
+	background-color: @BOX-BgColor;
+	margin-bottom:@TYPE-VerticalRhythm;
+	.padding-to-em(@TYPE-LineHeight/2);
+	.border-radius-context();
+
+	.clearfix();
+
+	.box-image {
+		display: block;
+		margin-bottom:(@TYPE-LineHeight/2)*1px;
+	}
+
+	.box-caption {
+		display: block;
+		float:left;
+	}
+
+}

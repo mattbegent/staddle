@@ -2,10 +2,19 @@
 // CSS3
 // =======================================================================*/
 
+//============ BORDER RADIUS ==============//
+
 .border-radius(@radius) {
 	-moz-border-radius: @radius;
 	-webkit-border-radius: @radius;
 	border-radius: @radius;
+}
+
+.border-radius-context(@radius:@STYLE-BorderRadius) {
+	@radiusEm: (@radius/@TYPE-FontSize)*1em;
+	-moz-border-radius: @radiusEm;
+	-webkit-border-radius: @radiusEm;
+	border-radius: @radiusEm;
 }
 
 .border-radius-custom(@topLeft: 5px, @topRight: 5px, @bottomLeft: 5px, @bottomRight: 5px) {
@@ -14,24 +23,27 @@
 	border-radius: @topLeft @topRight @bottomLeft @bottomRight;
 }
 
+//============ BOX SHADOW =============//
+
 .box-shadow(@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.5) {
 	-webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
 	-moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
 	box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
 }
 
-.inner-shadow(@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.5) {
+.box-shadow-inner(@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.5) {
 	-webkit-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
 	-moz-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
 	box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
 }
 
-.transition(@range: all, @time: 1s, @ease: ease-in-out) {
-	-webkit-transition: @range @time @ease;
-	-moz-transition: @range @time @ease; 
-	-o-transition: @range @time @ease;
-	transition: @range @time @ease;
+.box-shadow-custom(@customShadow) {
+	-webkit-box-shadow: @customShadow;
+	-moz-box-shadow: @customShadow;
+	box-shadow: @customShadow;
 }
+
+//============ TRANSFORMATION =============//
 
 .transform(@rotate: 90deg, @scale: 1, @skew: 1deg, @translate: 10px) {
 	-webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
@@ -41,11 +53,22 @@
 	transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
 }
 
+//============ ANIMATION =============//
+
 .animation(@name, @duration: 300ms, @delay: 0, @ease: ease) {
 	-webkit-animation: @name @duration @delay @ease;
 	-moz-animation: @name @duration @delay @ease;
 	-ms-animation: @name @duration @delay @ease;
 }
+
+.transition(@range: all, @time: 1s, @ease: ease-in-out) {
+	-webkit-transition: @range @time @ease;
+	-moz-transition: @range @time @ease; 
+	-o-transition: @range @time @ease;
+	transition: @range @time @ease;
+}
+
+//============ GRADIENTS =============//
 
 .gradient(@origin: left, @alpha: 0.2) {
 	background-image: -webkit-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
@@ -55,7 +78,7 @@
 	background-image: linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
 }
 
-.gradient-custom (@origin: left, @start: #ffffff, @stop: #000000) {
+.gradient-custom(@origin: left, @start: #ffffff, @stop: #000000) {
 	background-color: @start;
 	background-image: -webkit-linear-gradient(@origin, @start, @stop);
 	background-image: -moz-linear-gradient(@origin, @start, @stop);
@@ -65,6 +88,8 @@
 	background-image: linear-gradient(@origin, @start, @stop);
 }
 
+//============ OPACITY =============//
+
 .opacity(@opacity: 1) {
 	opacity: @opacity;
 	-webkit-opacity: @opacity;
@@ -73,4 +98,13 @@
 	@ieOpacity: @opacity * 100;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieOpacity})";
 	filter: ~"alpha(opacity=@{ieOpacity})";
+}
+
+//============ BOX SIZING =============//
+
+.box-sizing(@type:border-box) {	
+	-webkit-box-sizing:@type;
+	-moz-box-sizing: @type;
+	-ms-box-sizing: @type;
+	box-sizing: @type;
 }

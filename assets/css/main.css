@@ -10,6 +10,9 @@
 
 /* Always first*/
 
+/* =========================================================================
+// CSS3
+// =======================================================================*/
 /* ==========================================================================
 // RESET
 // Reference: http://github.com/necolas/normalize.css
@@ -67,6 +70,9 @@ body {
   font-size: 1em;
   line-height: 1.5em;
   background-color: white;
+}
+[class*="wrapper-"] {
+  margin: 0 1em;
 }
 ::-moz-selection {
   background: #fe57a1;
@@ -223,8 +229,9 @@ input[type="radio"] {
 }
 input[type="search"] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-decoration,
@@ -442,9 +449,6 @@ small,
 .type-wrap {
   word-wrap: break-word;
 }
-/* =========================================================================
-// CSS3
-// =======================================================================*/
 /* ==========================================================================
 // ANIMATIONS
 // =========================================================================*/
@@ -577,7 +581,6 @@ small,
   -moz-border-radius: 0.5em;
   -webkit-border-radius: 0.5em;
   border-radius: 0.5em;
-  /* TODO: Use variable */
   border-width: 1px;
   border-style: solid;
 }
@@ -610,6 +613,32 @@ small,
 // BOXES
 // =======================================================================*/
 
+.box {
+  display: block;
+  background-color: #ebebeb;
+  margin-bottom: 1.5em;
+  padding: 0.75em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em;
+  *zoom: 1;
+}
+.box:before,
+.box:after {
+  content: "";
+  display: table;
+}
+.box:after {
+  clear: both;
+}
+.box .box-image {
+  display: block;
+  margin-bottom: 12px;
+}
+.box .box-caption {
+  display: block;
+  float: left;
+}
 /* =========================================================================
 // BUTTONS
 // =======================================================================*/
@@ -706,10 +735,10 @@ select {
 }
 input,
 textarea {
-  box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
 input:focus,
 textarea:focus,
@@ -824,8 +853,6 @@ button [class*=" icon-"] {
   -moz-border-radius: 0.5em;
   -webkit-border-radius: 0.5em;
   border-radius: 0.5em;
-  /* TODO: Use variable */
-
 }
 /* =========================================================================
 // HEADER
@@ -837,6 +864,10 @@ button [class*=" icon-"] {
 
 /* =========================================================================
 // CUSTOM-MODULE
+// =======================================================================*/
+
+/* =========================================================================
+// IE OVERRIDES
 // =======================================================================*/
 
 /*  Font Awesome
@@ -1561,6 +1592,8 @@ ul.icons li .icon-large:before {
 .icon-user-md:before {
   content: "\f200";
 }
+/* Icons */
+
 /* ==========================================================================
 // HELPERS
 // =========================================================================*/

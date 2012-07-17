@@ -29,18 +29,13 @@ input, textarea, select {
 }
 
 input, textarea {
-	box-sizing: border-box;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
+	.box-sizing();
 }
 
 input:focus, textarea:focus, select:focus{
 	//TODO: Change to nice color
 	border-color: rgba(82, 168, 236, 0.8);
-  	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	.box-shadow-custom(~"inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)");
  	outline: 0;
   	outline: thin dotted \9;
 }
