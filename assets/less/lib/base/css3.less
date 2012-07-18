@@ -1,8 +1,9 @@
-/* =========================================================================
+// =========================================================================
 // CSS3
-// =======================================================================*/
+// =======================================================================//
 
-//============ BORDER RADIUS ==============//
+// BORDER RADIUS
+// ----------------------------------------------------
 
 .border-radius(@radius) {
 	-moz-border-radius: @radius;
@@ -23,7 +24,12 @@
 	border-radius: @topLeft @topRight @bottomLeft @bottomRight;
 }
 
-//============ BOX SHADOW =============//
+.rounded {
+	.border-radius-context();
+}
+
+// BOX SHADOW
+// ----------------------------------------------------
 
 .box-shadow(@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.5) {
 	-webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
@@ -43,7 +49,8 @@
 	box-shadow: @customShadow;
 }
 
-//============ TRANSFORMATION =============//
+// TRANSFORMATION
+// ----------------------------------------------------
 
 .transform(@rotate: 90deg, @scale: 1, @skew: 1deg, @translate: 10px) {
 	-webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
@@ -53,7 +60,8 @@
 	transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
 }
 
-//============ ANIMATION =============//
+// ANIMATION
+// ----------------------------------------------------
 
 .animation(@name, @duration: 300ms, @delay: 0, @ease: ease) {
 	-webkit-animation: @name @duration @delay @ease;
@@ -68,7 +76,8 @@
 	transition: @range @time @ease;
 }
 
-//============ GRADIENTS =============//
+// GRADIENTS
+// ----------------------------------------------------
 
 .gradient(@origin: left, @alpha: 0.2) {
 	background-image: -webkit-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
@@ -88,7 +97,8 @@
 	background-image: linear-gradient(@origin, @start, @stop);
 }
 
-//============ OPACITY =============//
+// OPACITY
+// ----------------------------------------------------
 
 .opacity(@opacity: 1) {
 	opacity: @opacity;
@@ -100,7 +110,8 @@
 	filter: ~"alpha(opacity=@{ieOpacity})";
 }
 
-//============ BOX SIZING =============//
+// BOX SIZING
+// ----------------------------------------------------
 
 .box-sizing(@type:border-box) {	
 	-webkit-box-sizing:@type;

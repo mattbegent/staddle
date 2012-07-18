@@ -1,8 +1,9 @@
 /* =========================================================================
-// BUTTONS
+// BUTTON
 // =======================================================================*/
 
-/*================= BUTTON CREATOR ===============*/
+// BUTTON CREATOR
+// ----------------------------------------------------
 
 .button-create(@backgroundColor, @hoverColor, @textColor, @borderRadius: 0.25em) {
 	display:block;
@@ -18,12 +19,13 @@
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 
 	.border-radius(@borderRadius);
+	.transition(all,0.2s);
 
 	//Hover
 	&:hover {
 		background-color: @hoverColor;
 		color:@textColor;
-		//.inner-shadow(0,2px,3px);
+		.transition(all,0.3s);
 	}
 
 	//If used as class with a inside
@@ -32,7 +34,8 @@
 	}
 }
 
-/*================= THE BUTTONS ===============*/
+// THE BUTTONS
+// ----------------------------------------------------
 
 .button {
 	.button-create(@BUTTON-MainColor, @BUTTON-HoverColor, @BUTTON-TextColor);
@@ -42,7 +45,8 @@
 	.button-create(@BUTTON-AltColor, @BUTTON-AltHoverColor, @BUTTON-AltTextColor);
 }
 
-/*================= DESKTOP INLINE ===============*/
+// DESKTOP ADJUSTMENT
+// ----------------------------------------------------
 
 @media only screen and (min-width: 768px) { 
 	.button, .button-alt {

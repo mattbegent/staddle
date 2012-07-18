@@ -1,8 +1,9 @@
 /* ==========================================================================
-// FORMS
+// FORM
 // =========================================================================*/
 
-//=========== Default Styles ================//
+// DEFAULT
+// ----------------------------------------------------
 
 form p {
 	.clearfix();
@@ -33,7 +34,6 @@ input, textarea {
 }
 
 input:focus, textarea:focus, select:focus{
-	//TODO: Change to nice color
 	border-color: rgba(82, 168, 236, 0.8);
 	.box-shadow-custom(~"inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)");
  	outline: 0;
@@ -44,17 +44,15 @@ button {
 	.button;
 }
 
-//=========== Validation ================//
+// VALIDATION
+// ----------------------------------------------------
 
 //TODO: Colors here //
 
-//============ Responsive Adjustments =============//
-
-//Desktop set sizes
+// DESKTOP ADJUSTMENTS
+// ----------------------------------------------------
 
 @media only screen and (min-width: 768px) {
-
-	//=========== Fixed sizes ================//
 
 	input, textarea, select {
 		width:250px;

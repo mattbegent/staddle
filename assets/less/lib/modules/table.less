@@ -1,0 +1,37 @@
+/* =========================================================================
+// TABLE
+// =======================================================================*/
+
+// BASE
+// ----------------------------------------------------
+
+.table {
+	width:100%;
+
+	th, td {
+		padding:0.5em;
+		text-align:left;
+	}
+
+	tbody {
+		tr {
+			&:hover {
+				background-color:@TABLE-HoverBgColor;
+				.transition( all, 0.3s);
+			}
+		}
+	}
+}
+
+// STRIPED
+// ----------------------------------------------------
+
+.table.table-striped {
+	tbody {
+		tr {
+			&:nth-child(even){
+				background-color:@TABLE-StripedBgColor;
+			}
+		}
+	}
+}

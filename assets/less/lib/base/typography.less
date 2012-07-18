@@ -2,22 +2,23 @@
 // TYPOGRAPHY
 // =========================================================================*/
 
-//============ HEADINGS =============//
+// HEADINGS
+// ----------------------------------------------------
 
 h1, h2, h3, h4, h5, h6 {
 	margin:0 0 @TYPE-LineHeight*1px 0; /* Currently px for margin to keep rhythm - could be improved */
 	color:@TYPE-HeadingsColor;
 	font-weight:bold;
 	text-rendering: optimizelegibility;
-	small {
+	&.small {
 		font-weight:normal;
 	}
 }
 
 h1, .alpha {
 	.font-size-to-em(@TYPE-SIZE-Alpha);
-	line-height: (@TYPE-LineHeight * 3)/@TYPE-SIZE-Alpha;
-	small {
+	line-height: (@TYPE-LineHeight * 2)/@TYPE-SIZE-Alpha;
+	&.small {
 		.beta;
 	}
 }
@@ -32,8 +33,8 @@ h2, .beta {
 
 h3, .gamma {
 	.font-size-to-em(@TYPE-SIZE-Gamma);
-	line-height: (@TYPE-LineHeight * 2)/@TYPE-SIZE-Gamma;
-	small {
+	line-height: (@TYPE-LineHeight * 1)/@TYPE-SIZE-Gamma;
+	&.small {
 		.delta;
 	}
 }
@@ -41,7 +42,7 @@ h3, .gamma {
 h4, .delta {
 	.font-size-to-em(@TYPE-SIZE-Delta);
 	line-height: @TYPE-LineHeight/@TYPE-SIZE-Delta;
-	small {
+	&.small {
 		.epsilon;
 	}
 }
@@ -49,7 +50,7 @@ h4, .delta {
 h5, .epsilon {
 	.font-size-to-em(@TYPE-SIZE-Epsilon);
 	line-height: @TYPE-LineHeight/@TYPE-SIZE-Epsilon;
-	small {
+	&.small {
 		.zeta;
 	}
 }
@@ -59,8 +60,8 @@ h6, .zeta {
 	line-height: @TYPE-LineHeight/@TYPE-SIZE-Zeta;
 }
 
-//============== BODY ===============//
-
+// BODY
+// ----------------------------------------------------
 p {
 	margin:0 0 @TYPE-VerticalRhythm 0;
 	&:last-child {
@@ -129,7 +130,8 @@ small, .small {
 	font-size: 85%; 
 }
 
-//============== HELPERS ===============//
+// TYPE HELPERS
+// ----------------------------------------------------
 
 .type-wrap {
 	word-wrap: break-word;

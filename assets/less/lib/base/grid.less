@@ -1,0 +1,95 @@
+/* ==========================================================================
+// GRID
+// =========================================================================*/
+
+// COLUMN CALCULATIONS
+// ----------------------------------------------------
+
+.colwidth(@numberOfCols: 1){
+
+	//Gutters
+	@gutterPercentage:100%*(@GRID-GutterWidth/@GRID-MaxWidth);  
+	@totalGutterWidth: (@GRID-Cols - 1) * @GRID-GutterWidth;
+	
+	//Single Col
+	@singleColPx:(@GRID-MaxWidth - @totalGutterWidth)/@GRID-Cols;
+	@singleColPercentage: 100%*(@singleColPx/@GRID-MaxWidth);
+
+	//This col offset
+	@thisColsOffset: (@numberOfCols - 1) * @gutterPercentage;
+	@thisColWidth: (@singleColPercentage*@numberOfCols) + @thisColsOffset;
+
+    //All together
+	width: @thisColWidth;
+	margin-left: @gutterPercentage;
+	margin-bottom: @TYPE-VerticalRhythm;
+}
+
+.grid > [class*="span-"]:first-child {
+	margin-left: 0;
+	clear:left;
+}
+
+.grid.first {
+	margin-left:0;
+	clear:left;
+}
+
+[class^="span-"] {
+	width:100%;
+	margin-left:0;
+	.transition( all, 0.3s); //Abit cheeky
+} 
+
+
+.grid {
+	width:auto;
+	margin:0 auto;
+	.clearfix();
+}
+
+.wrapper-all {
+    margin:0.5em;
+}
+
+.wrapper-full {
+    margin:0;
+    width:100%;
+}
+
+// DESKTOP GRID
+// ----------------------------------------------------
+
+@media only screen and (min-width: 768px) {
+
+	[class*="span-"] {
+		display:inline;
+		float:left; 
+		margin-bottom:@TYPE-VerticalRhythm;
+		&:last-child {
+			margin-bottom:0;
+		}
+	}
+
+	.grid {
+		max-width: @GRID-MaxWidth * 1px;
+	}
+
+	.span-1 {.colwidth(1);}
+	.span-2 {.colwidth(2);}
+	.span-3 {.colwidth(3);}
+	.span-4 {.colwidth(4);} 
+	.span-5 {.colwidth(5);}
+	.span-6 {.colwidth(6);}
+	.span-7 {.colwidth(5);}
+	.span-8 {.colwidth(8);}
+	.span-9 {.colwidth(9);}
+	.span-10 {.colwidth(10);}
+	.span-11 {.colwidth(11);}
+	.span-12 {.colwidth(12);margin-left:0;}
+
+
+	.wrapper-all {
+    	margin:1em;
+	}
+}

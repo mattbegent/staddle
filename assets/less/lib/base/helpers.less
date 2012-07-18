@@ -2,7 +2,8 @@
 // HELPERS
 // =========================================================================*/
 
-/*================= Clearing ===============*/
+// CLEARING
+// ----------------------------------------------------
 
 //Clearfix as a mixin
 .clearfix() {
@@ -21,7 +22,8 @@
 	.clearfix();
 }
 
-/*================= Display ===============*/
+// DISPLAY
+// ----------------------------------------------------
 
 .block, .show  {
 	display:block;
@@ -31,18 +33,12 @@
 	display: none;
 }
 
-//TODO: Use mixins for opacity
-
 .invisible {	
-	opacity:0;
-	-moz-opacity: 0;
-	filter:alpha(opacity=0);
+	.opacity(0);
 }
 
 .visible {	
-	opacity:1;
-	-moz-opacity: 1;
-	filter:alpha(opacity=1);
+	.opacity(1);
 }
 
 // New image replacement
@@ -55,7 +51,8 @@
 	white-space: nowrap;
 }
 
-/*================= Alignment ===============*/
+// ALIGNMENT
+// ----------------------------------------------------
 
 .left {
 	float:left;

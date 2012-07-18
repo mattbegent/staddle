@@ -34,11 +34,18 @@
 
 <body id="sitename">
 
-	<div id="wrapper">
+	<div class="wrapper-all">
 
 		<header class="wrapper-header" role="banner">
 		
-			<!-- HEADER CONTENT HERE -->
+			<div class="grid">
+				<div class="span-12">
+
+					<!-- HEADER CONTENT HERE -->
+					<h1>Boilerplate Presents</h1>
+
+				</div>
+			</div>
 
 		</header>
 
@@ -50,25 +57,11 @@
 
 					<!-- MAIN CONTENT HERE -->
 
-					<h1>Boilerplate Presents</h1>
-	       
-					<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+					<h1>Header Level 1</h1>
 
 					<h2>Header Level 2</h2>
-						       
-					<ol>
-					   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-					   <li>Aliquam tincidunt mauris eu risus.</li>
-					</ol>
-
-					<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
 
 					<h3>Header Level 3</h3>
-
-					<ul>
-					   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-					   <li>Aliquam tincidunt mauris eu risus.</li>
-					</ul>
 
 					<h4>Header Level 4</h4>
 
@@ -76,26 +69,156 @@
 
 					<h6>Header Level 6</h6>
 
-					<h4>Alert</h4>
+					<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+					<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+						       
+					<ol>
+					   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+					   <li>Aliquam tincidunt mauris eu risus.</li>
+					</ol>
+
+					<ul>
+					   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+					   <li>Aliquam tincidunt mauris eu risus.</li>
+					</ul>
+
+					<h3 class="beta">Modules</h3>
+
+					<h4>Alerts</h4>
+
+					<p class="alert alert-info"><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
+
+					<p class="alert alert-error"><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
+
+					<p class="alert alert-success"><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
+
+					<p class="alert alert-note"><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
 
 					<p class="alert alert-alert"><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
 
-					<h4>Button</h4>
+					<h4>Box</h4>
+
+					<div class="box">
+						<img class="box-image" src="http://lorempixel.com/g/700/400/" alt="Test Image" />
+						<div class="box-caption">
+							<p>Amet quam egestas semper</p>
+						</div>
+					</div>
+
+					<h4>Buttons</h4>
 
 					<a href="#" class="button">Donec non enim</a>
 
-					<h4>Well</h4>
+					<a href="#" class="button-alt">Donec non enim</a>	
+
+					<h4>Form</h4>	
+
+					<form id="form-o-matic" method="post" class="c">
+
+						<p>
+							<label for="name">Title:</label>
+							<select class="input-small">
+								<option>Lord</option>
+								<option>Rev</option>
+								<option>Dude</option>
+							</select>
+						</p>
+						
+						<p>
+							<label for="name">Name:</label>
+							<input id="name" type="text" autocomplete="on" placeholder="Name" required="required" class="input-medium"/>
+						</p>
+
+						<p>
+							<label for="email">Email:</label>
+							<input id="email" type="email" autocomplete="on" placeholder="name@example.com" class="input-large" />
+						</p>
+
+						<p>
+							<label for="xlarge">XLarge:</label>
+							<input id="xlarge" type="text" autocomplete="on" placeholder="xlarge" class="input-xlarge" />
+						</p>
+
+						<p>
+							<label for="message">Message:</label>
+							<textarea id="message" type="text" rows="5" class="input-xlarge"></textarea>
+						</p>
+
+						<p>
+							<button type="submit" id="submit">submit</button>
+						</p>
+
+					</form>	
+
+					<h4>Media</h4>
+
+					<div class="media">
+						<img class="media-image" src="http://lorempixel.com/g/200/200/" alt="Test Image" />
+						<p class="media-content"><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
+					</div>
+
+					<h4>Navigation</h4>
+
+					<nav>
+						<ul class="nav">
+							<li><a href="#" class="active">Item 1</a></li>
+							<li><a href="#">Item 2</a></li>
+							<li><a href="#">Item 3</a></li>
+						</ul>
+			 		</nav>
+
+			 		<nav>
+						<ul class="nav nav-vertical">
+							<li><a href="#" class="active">Item 1</a></li>
+							<li><a href="#">Item 2</a></li>
+							<li><a href="#">Item 3</a></li>
+						</ul>
+			 		</nav>
+
+			 		<h4>Table</h4>
+
+			 		<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Header 1</th>
+								<th>Header 2</th>
+								<th>Header 3</th>
+								<th>Header 4</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Pellentesque</td>
+								<td>Pellentesque</td>
+								<td>Pellentesque</td>
+								<td>Pellentesque</td>
+							</tr>
+							<tr>
+								<td>Pellentesque</td>
+								<td>Pellentesque</td>
+								<td>Pellentesque</td>
+								<td>Pellentesque</td>
+							</tr>
+							<tr>
+								<td>Pellentesque</td>
+								<td>Pellentesque</td>
+								<td>Pellentesque</td>
+								<td>Pellentesque</td>
+							</tr>
+						</tbody>
+					</table>
+
+			 		<h4>Well</h4>
 
 					<p class="well">
-						<strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
-					</p>
-
-					<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+						<strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+					</p>	
 
 				</div>
 
 				<div class="span-4">
-					<h2>Boilerplate Presents</h2>
+					<h2>Header Level 2</h2>
 	       
 					<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
 

@@ -1,0 +1,60 @@
+/* ==========================================================================
+// NAVIGATION
+// =========================================================================*/
+
+.nav {
+
+	.clearfix();
+	margin:@TYPE-VerticalRhythm 0 @TYPE-VerticalRhythm 0;
+	background-color:@NAV-BgColor;
+
+	li {
+		list-style: none;
+		a {
+			display: block;
+			text-decoration: none;
+			color:@NAV-TextColor;
+			padding:0.5em;
+			&:hover, &.active {
+				background-color:@NAV-ActiveBgColor;
+				color:@NAV-ActiveTextColor;
+			}
+		}
+	}
+
+}
+
+// MOBILE
+// ----------------------------------------------------
+
+@media only screen and (max-width: 767px) { 
+
+	.nav {
+		li {
+			display: block;
+		}
+	}
+
+}
+
+// DESKTOP
+// ----------------------------------------------------
+
+@media only screen and (min-width: 768px) { 
+
+	.nav {
+		li {
+			display: inline;
+			float:left;
+			margin-left:0;
+		}
+	}
+
+	.nav-vertical {
+		li {
+			display:block;
+			float:none;
+		}
+	}
+
+}
