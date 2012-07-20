@@ -1,6 +1,17 @@
-// =========================================================================
+// ==========================================================================
 // VARIABLES
-// =========================================================================
+// =========================================================================//
+
+// SETUP
+// =========================================================================//
+
+// GRID
+// ----------------------------------------------------	
+
+@GRID-Cols: 					12;
+@GRID-ColWidth: 				60;
+@GRID-GutterWidth: 				21;
+@GRID-MaxWidth:					(@GRID-Cols * @GRID-ColWidth) + ((@GRID-Cols - 1) * @GRID-GutterWidth); //derived from ACTUAL values
 
 // TYPOGRAPHY
 // ----------------------------------------------------
@@ -37,6 +48,22 @@
 @SELECT-BgColor:				#639AFF;
 @SELECT-TextColor:				#FFF;
 
+// STYLE
+// ----------------------------------------------------	
+
+@STYLE-BorderRadius:			8;
+@STYLE-BodyBgColor:				#FFF;
+
+// PATHS
+// ----------------------------------------------------	
+
+@PATH-Assets:					"assets/";
+@PATH-Images:					"assets/images/";
+@PATH-Fonts:					"assets/fonts/";
+
+// MODULES
+// =========================================================================//
+
 // ALERT
 // ----------------------------------------------------	
 
@@ -60,24 +87,38 @@
 @ALERT-AlertTextColor: 			@ALERT-ErrorTextColor;
 @ALERT-AlertBorderColor: 		@ALERT-ErrorBorderColor;
 
-// FORM
+// COLORS
 // ----------------------------------------------------	
+
+@COLOR-Base:					#AD1111;
+
+// Sample colors
+@COLOR-Complement1: 			spin(@COLOR-Base, 180);
+@COLOR-Complement2: 			darken(spin(@COLOR-Base, 180), 5%);
+@COLOR-Lighten1: 				lighten(@COLOR-Base, 15%);
+@COLOR-Lighten2: 				lighten(@COLOR-Base, 30%); 
 
 // BUTTON
 // ----------------------------------------------------
 
-@BUTTON-MainColor:				#E01B6A;
+@BUTTON-MainColor:				@COLOR-Complement1;
 @BUTTON-HoverColor:				lighten(@BUTTON-MainColor, 10%);
 @BUTTON-TextColor:				#FFF;
 
-@BUTTON-AltColor:				#009402;
+@BUTTON-AltColor:				@COLOR-Lighten1;
 @BUTTON-AltHoverColor:			lighten(@BUTTON-AltColor, 10%);	
-@BUTTON-AltTextColor:			#000;
+@BUTTON-AltTextColor:			#FFF;
 
 // BOX
 // ----------------------------------------------------	
 
-@BOX-BgColor: 					#EBEBEB;
+@BOX-HeaderBgColor: 			#C2C2C2;
+@BOX-HeaderTextColor: 			#FFF;
+@BOX-BodyBgColor: 				#EBEBEB;
+@BOX-FooterBgColor: 			#C2C2C2;
+
+// FORM
+// ----------------------------------------------------	
 
 // NAVIGATION
 // ----------------------------------------------------	
@@ -97,35 +138,3 @@
 // ----------------------------------------------------	
 
 @WELL-BgColor: 					#EBEBEB;
-
-// GRID
-// ----------------------------------------------------	
-
-@GRID-Cols: 					12;
-@GRID-ColWidth: 				60;
-@GRID-GutterWidth: 				21;
-@GRID-MaxWidth:					(@GRID-Cols * @GRID-ColWidth) + ((@GRID-Cols - 1) * @GRID-GutterWidth); //derived from ACTUAL values
-
-// Z-INDEX
-// ----------------------------------------------------
-
-@ZINDEX-Dropdown:           	1000;
-@ZINDEX-Nav:					1100;
-@ZINDEX-Popover:            	1200;
-@ZINDEX-Tooltip:            	1300;
-@ZINDEX-FixedNav:        		1400;
-@ZINDEX-ModalBackdrop:      	1500;
-@ZINDEX-Modal:					1600;
-
-// STYLE
-// ----------------------------------------------------	
-
-@STYLE-BorderRadius:			8;
-@STYLE-BodyBgColor:				#FFF;
-
-// PATHS
-// ----------------------------------------------------	
-
-@PATH-Assets:					"assets/";
-@PATH-Images:					"assets/images/";
-@PATH-Fonts:					"assets/fonts/";

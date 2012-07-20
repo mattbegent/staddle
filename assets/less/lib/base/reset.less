@@ -6,11 +6,22 @@
 // HTML5 DISPLAY
 // ----------------------------------------------------
 
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { 
+article, 
+aside, 
+details, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup, 
+nav, 
+section { 
     display: block; 
 }
 
-audio, canvas, video { 
+audio, 
+canvas, 
+video { 
     display: inline-block; 
     *display: inline; 
     *zoom: 1; 
@@ -34,7 +45,11 @@ html {
     overflow-y: scroll;
 }
 
-html, button, input, select, textarea { 
+html, 
+button, 
+input, 
+select, 
+textarea { 
     font-family: @TYPE-FontFamily; 
     color: @TYPE-FontColor; 
 }
@@ -90,7 +105,8 @@ a:hover, a:active {
 // LISTS
 // ----------------------------------------------------
 
-ul, ol {
+ul, 
+ol {
     margin: @TYPE-VerticalRhythm 0; 
     padding: 0 0 0 (40/@TYPE-FontSize)*1em; 
 }
@@ -99,7 +115,8 @@ dd {
     margin: 0 0 0 (40/@TYPE-FontSize)*1em; }
 
 
-nav ul, nav ol { 
+nav ul, 
+nav ol { 
     list-style: none; 
     list-style-image: none; 
     margin: 0; 
@@ -131,7 +148,10 @@ figure {
 }
 
 // Video/Flash
-object, embed, iframe, video{
+object, 
+embed, 
+iframe, 
+video {
 	max-width:100%;
 	height:auto;
 }
@@ -165,33 +185,43 @@ legend {
     white-space: normal; 
 }
 
-button, input, select, textarea { 
+button, 
+input, 
+select, 
+textarea { 
     font-size: 100%; 
     margin: 0; 
     vertical-align: baseline; 
     *vertical-align: middle; 
 }
 
-button, input { 
+button, 
+input { 
     line-height: normal; 
 }
 
-button, input[type="button"], input[type="reset"], input[type="submit"] { 
+button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] { 
     cursor: pointer; 
     -webkit-appearance: button; 
     *overflow: visible; 
 }
 
-button[disabled], input[disabled] { 
+button[disabled], 
+input[disabled] { 
     cursor: default; 
 }
 
-button::-moz-focus-inner, input::-moz-focus-inner { 
+button::-moz-focus-inner, 
+input::-moz-focus-inner { 
     border: 0; 
     padding: 0; 
 }
 
-input[type="checkbox"], input[type="radio"] { 
+input[type="checkbox"], 
+input[type="radio"] { 
     box-sizing: border-box; 
     padding: 0; 
     *width: 13px; 
@@ -203,7 +233,8 @@ input[type="search"] {
     .box-sizing(content-box);
 }
 
-input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { 
+input[type="search"]::-webkit-search-decoration, 
+input[type="search"]::-webkit-search-cancel-button { 
     -webkit-appearance: none; 
 }
 

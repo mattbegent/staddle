@@ -4,22 +4,41 @@
 
 .box {
 
-	display: block;
-	background-color: @BOX-BgColor;
+	display:block;
 	margin-bottom:@TYPE-VerticalRhythm;
-	.padding-to-em(@TYPE-LineHeight/2);
-	.border-radius-context();
-
 	.clearfix();
 
-	.box-image {
+	.box-header {
 		display: block;
-		margin-bottom:(@TYPE-LineHeight/2)*1px;
+		background-color: @BOX-HeaderBgColor;
+		color:@BOX-HeaderTextColor;
+
+		@boxHeaderRadius: (@STYLE-BorderRadius/@TYPE-FontSize)*1em; // TODO: Make a lot tidier - move to base/css3
+		.border-radius-custom(@boxHeaderRadius,@boxHeaderRadius,0,0);
+		.gradient();
 	}
 
-	.box-caption {
+	.box-body {
 		display: block;
-		float:left;
+		background-color: @BOX-BodyBgColor;
 	}
 
+	.box-footer {
+		display: block;
+		background-color: @BOX-FooterBgColor;
+
+		@boxFooterRadius: (@STYLE-BorderRadius/@TYPE-FontSize)*1em; // TODO: Make a lot tidier - move to base/css3
+		.border-radius-custom(0, 0, @boxFooterRadius, @boxFooterRadius);
+	}
+
+}
+
+.box-header,
+.box-body,
+.box-footer {
+	.padding-to-em(@TYPE-LineHeight/2);
+	margin-bottom:0;
+	:last-child {
+		margin-bottom:0;
+	}
 }

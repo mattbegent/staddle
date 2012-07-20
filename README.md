@@ -13,6 +13,8 @@ Features
 * Easy user configuration
 * Css3 mixins
 * Css debugging
+* Follows [SMACSS](http://smacss.com/)
+* Flexibility - all of the built in modules are independent, so if you don't use one you can uncomment it
 
 Getting Started
 ---------------------

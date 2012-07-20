@@ -2,19 +2,26 @@
 // ALERT
 // =======================================================================*/
 
-// TODO: Make follow baseline
+// @TODO: Make follow baseline
+
+// BASE
+// ----------------------------------------------------
 
 .alert {
 	display:block;
 	position: relative; 
-	.padding-to-em((@TYPE-LineHeight/2)-1); //TODO: Make better -takes into account the 1px border
+	.padding-to-em((@TYPE-LineHeight/2)-1); // TODO: Make better -takes into account the 1px border
 	margin-bottom:@TYPE-VerticalRhythm;
-
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	.border-radius-context();
+	
 	border-width:1px;
 	border-style:solid;
+
+	.border-radius-context();
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
+
+// INFO
+// ----------------------------------------------------
 
 .alert-info { 
 	background-color: @ALERT-InfoBgColor;
@@ -22,11 +29,17 @@
 	border-color: @ALERT-InfoBorderColor;
 }
 
+// ERROR
+// ----------------------------------------------------
+
 .alert-error {
 	background-color: @ALERT-ErrorBgColor;
 	color: @ALERT-ErrorTextColor;
 	border-color: @ALERT-ErrorBorderColor;
 }
+
+// SUCCESS
+// ----------------------------------------------------
 
 .alert-success { 
 	background-color: @ALERT-SuccessBgColor;
@@ -34,11 +47,17 @@
 	border-color: @ALERT-SuccessBorderColor;
 }
 
+// NOTE
+// ----------------------------------------------------
+
 .alert-note { 
 	background-color: @ALERT-NoteBgColor;
 	color: @ALERT-NoteTextColor;
 	border-color: @ALERT-NoteBorderColor;
 }
+
+// ALERT
+// ----------------------------------------------------
 
 .alert-alert { 
 	background-color: @ALERT-AlertBgColor;

@@ -5,7 +5,7 @@
 // CLEARING
 // ----------------------------------------------------
 
-//Clearfix as a mixin
+// Clearfix as a mixin
 .clearfix() {
 	*zoom: 1; 
 	&:before, &:after { 
@@ -17,7 +17,7 @@
 	}
 }
 
-//Clearfix for use within html
+// Clearfix for use within html
 .c {
 	.clearfix();
 }
@@ -25,7 +25,8 @@
 // DISPLAY
 // ----------------------------------------------------
 
-.block, .show  {
+.block, 
+.show  {
 	display:block;
 }
 
@@ -70,4 +71,49 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+// RESPONSIVE UTILITIES
+// ----------------------------------------------------
+
+// Mobile
+
+@media only screen and (max-width: 767px) { 
+
+	.hide-mobile {
+		display: none !important;
+	}
+
+	.show-mobile {
+		display: block !important;
+	}
+
+}
+
+// Tablet
+
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+
+	.hide-tablet {
+		display: none !important;
+	}
+
+	.show-tablet {
+		display: block !important;
+	}
+
+}
+
+// Desktop
+
+@media only screen and (min-width: 981px) { 
+
+	.hide-desktop {
+		display: none !important;
+	}
+
+	.show-desktop {
+		display: block !important;
+	}
+
 }

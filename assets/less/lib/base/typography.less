@@ -5,8 +5,13 @@
 // HEADINGS
 // ----------------------------------------------------
 
-h1, h2, h3, h4, h5, h6 {
-	margin:0 0 @TYPE-LineHeight*1px 0; /* Currently px for margin to keep rhythm - could be improved */
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	margin:0 0 @TYPE-LineHeight*1px 0; // Currently px for margin to keep rhythm - could be improved
 	color:@TYPE-HeadingsColor;
 	font-weight:bold;
 	text-rendering: optimizelegibility;
@@ -15,47 +20,58 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-h1, .alpha {
+h1, 
+.alpha {
 	.font-size-to-em(@TYPE-SIZE-Alpha);
 	line-height: (@TYPE-LineHeight * 2)/@TYPE-SIZE-Alpha;
 	&.small {
-		.beta;
+		.font-size-to-em(@TYPE-SIZE-Beta);
+		line-height: (@TYPE-LineHeight * 2)/@TYPE-SIZE-Beta;
 	}
 }
 
-h2, .beta {
+h2, 
+.beta {
 	.font-size-to-em(@TYPE-SIZE-Beta);
 	line-height: (@TYPE-LineHeight * 2)/@TYPE-SIZE-Beta;
-	small {
-		.gamma;
+	&.small {
+		.font-size-to-em(@TYPE-SIZE-Gamma);
+		line-height: (@TYPE-LineHeight * 1)/@TYPE-SIZE-Gamma;
 	}
 }
 
-h3, .gamma {
+h3, 
+.gamma {
 	.font-size-to-em(@TYPE-SIZE-Gamma);
 	line-height: (@TYPE-LineHeight * 1)/@TYPE-SIZE-Gamma;
 	&.small {
-		.delta;
+		.font-size-to-em(@TYPE-SIZE-Delta);
+		line-height: @TYPE-LineHeight/@TYPE-SIZE-Delta;
 	}
 }
 
-h4, .delta {
+h4, 
+.delta {
 	.font-size-to-em(@TYPE-SIZE-Delta);
 	line-height: @TYPE-LineHeight/@TYPE-SIZE-Delta;
 	&.small {
-		.epsilon;
+		.font-size-to-em(@TYPE-SIZE-Epsilon);
+		line-height: @TYPE-LineHeight/@TYPE-SIZE-Epsilon;
 	}
 }
 
-h5, .epsilon {
+h5, 
+.epsilon {
 	.font-size-to-em(@TYPE-SIZE-Epsilon);
 	line-height: @TYPE-LineHeight/@TYPE-SIZE-Epsilon;
 	&.small {
-		.zeta;
+		.font-size-to-em(@TYPE-SIZE-Zeta);
+		line-height: @TYPE-LineHeight/@TYPE-SIZE-Zeta;
 	}
 }
 
-h6, .zeta {
+h6, 
+.zeta {
 	.font-size-to-em(@TYPE-SIZE-Zeta);
 	line-height: @TYPE-LineHeight/@TYPE-SIZE-Zeta;
 }
@@ -73,7 +89,8 @@ abbr[title] {
 	border-bottom: 1px dotted; 
 }
 
-b, strong { 
+b, 
+strong { 
 	font-weight: bold; 
 }
 
@@ -107,7 +124,10 @@ mark {
 	font-weight: bold; 
 }
 
-pre, code, kbd, samp { 
+pre, 
+code, 
+kbd, 
+samp { 
 	font-family: monospace, serif; 
 	_font-family: 'courier new', monospace; 
 	font-size: 1em; }
@@ -121,12 +141,15 @@ pre {
 q { 
 	quotes: none; 
 }
-q:before, q:after { 
+
+q:before, 
+q:after { 
 	content: ""; 
 	content: none; 
 }
 
-small, .small { 
+small, 
+.small { 
 	font-size: 85%; 
 }
 

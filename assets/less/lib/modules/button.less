@@ -6,6 +6,7 @@
 // ----------------------------------------------------
 
 .button-create(@backgroundColor, @hoverColor, @textColor, @borderRadius: 0.25em) {
+
 	display:block;
 	color:@textColor;
 	background-color:@backgroundColor;
@@ -19,19 +20,24 @@
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 
 	.border-radius(@borderRadius);
-	.transition(all,0.2s);
+	.box-shadow(0, 1px, 2px);
+	.transition(all,0.2s);	
+	.gradient();
 
 	//Hover
 	&:hover {
 		background-color: @hoverColor;
 		color:@textColor;
-		.transition(all,0.3s);
+		.box-shadow-inner(0, 2px, 3px);
+		.transition(all, 0.3s);
 	}
 
-	//If used as class with a inside
-	&, &:visited {
+	// If used as class with a inside
+	&, 
+	&:visited {
 		color:@textColor;
 	}
+
 }
 
 // THE BUTTONS
@@ -49,8 +55,10 @@
 // ----------------------------------------------------
 
 @media only screen and (min-width: 768px) { 
-	.button, .button-alt {
+
+	.button, 
+	.button-alt {
 		display: inline-block;	
 	}   
- 
+
 }
