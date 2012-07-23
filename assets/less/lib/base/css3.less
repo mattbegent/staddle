@@ -45,6 +45,13 @@
 	box-shadow: 		@customShadow;
 }
 
+// TEXT SHADOW
+// ----------------------------------------------------
+
+.text-shadow (@textshadow: 0 1px 0 rgba(0, 0, 0, 0.4)) {
+	text-shadow: @textshadow;
+}
+
 // TRANSFORMATION
 // ----------------------------------------------------
 
@@ -94,6 +101,14 @@
 	-o-transition: 		@range @time @ease;
 	-ms-transition: 	@range @time @ease;
 	transition: 		@range @time @ease;
+}
+
+.transition-none () {
+	-webkit-transition: none;
+	-moz-transition: 	none; 
+	-o-transition: 		none;
+	-ms-transition: 	none;
+	transition: 		none;
 }
 
 // GRADIENTS
