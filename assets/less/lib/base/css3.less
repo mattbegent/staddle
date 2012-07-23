@@ -2,6 +2,33 @@
 // CSS3
 // =======================================================================//
 
+// ANIMATION
+// ----------------------------------------------------
+
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+	-webkit-animation: 	@name @duration @delay @ease;
+	-moz-animation: 	@name @duration @delay @ease;
+	-o-animation: 		@name @duration @delay @ease;
+	-ms-animation: 		@name @duration @delay @ease;
+	animation:			@name @duration @delay @ease;
+}
+
+.transition (@range: all, @time: 1s, @ease: ease-in-out) {
+	-webkit-transition: @range @time @ease;
+	-moz-transition: 	@range @time @ease; 
+	-o-transition: 		@range @time @ease;
+	-ms-transition: 	@range @time @ease;
+	transition: 		@range @time @ease;
+}
+
+.transition-none () {
+	-webkit-transition: none;
+	-moz-transition: 	none; 
+	-o-transition: 		none;
+	-ms-transition: 	none;
+	transition: 		none;
+}
+
 // BORDER RADIUS
 // ----------------------------------------------------
 
@@ -45,6 +72,50 @@
 	box-shadow: 		@customShadow;
 }
 
+// BOX SIZING
+// ----------------------------------------------------
+
+.box-sizing (@type:border-box) {	
+	-webkit-box-sizing:	@type;
+	-moz-box-sizing: 	@type;
+	-ms-box-sizing: 	@type;
+	box-sizing: 		@type;
+}
+
+// GRADIENTS
+// ----------------------------------------------------
+
+.gradient (@origin: left, @alpha: 0.1) {
+	background-image: -webkit-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+	background-image: -moz-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+	background-image: -o-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+	background-image: -ms-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+	background-image: linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+}
+
+.gradient-custom (@origin: left, @start: #ffffff, @stop: #000000) {
+	background-color: @start;
+	background-image: -webkit-linear-gradient(@origin, @start, @stop);
+	background-image: -moz-linear-gradient(@origin, @start, @stop);
+	background-image: -o-linear-gradient(@origin, @start, @stop);
+	background-image: -ms-linear-gradient(@origin, @start, @stop);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@stop');//IE 5.5 - 8
+	background-image: linear-gradient(@origin, @start, @stop);
+}
+
+// OPACITY
+// ----------------------------------------------------
+
+.opacity (@opacity: 1) {
+	opacity: @opacity;
+	-webkit-opacity: @opacity;
+	-moz-opacity: @opacity;
+	//ie <9
+	@ieOpacity: @opacity * 100;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieOpacity})";
+	filter: ~"alpha(opacity=@{ieOpacity})";
+}
+
 // TEXT SHADOW
 // ----------------------------------------------------
 
@@ -82,75 +153,4 @@
 	-moz-transform: 	 skew(@deg, @deg2);
 	-ms-transform: 		 skew(@deg, @deg2);
 	-o-transform: 		 skew(@deg, @deg2);
-}
-
-// ANIMATION
-// ----------------------------------------------------
-
-.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
-	-webkit-animation: 	@name @duration @delay @ease;
-	-moz-animation: 	@name @duration @delay @ease;
-	-o-animation: 		@name @duration @delay @ease;
-	-ms-animation: 		@name @duration @delay @ease;
-	animation:			@name @duration @delay @ease;
-}
-
-.transition (@range: all, @time: 1s, @ease: ease-in-out) {
-	-webkit-transition: @range @time @ease;
-	-moz-transition: 	@range @time @ease; 
-	-o-transition: 		@range @time @ease;
-	-ms-transition: 	@range @time @ease;
-	transition: 		@range @time @ease;
-}
-
-.transition-none () {
-	-webkit-transition: none;
-	-moz-transition: 	none; 
-	-o-transition: 		none;
-	-ms-transition: 	none;
-	transition: 		none;
-}
-
-// GRADIENTS
-// ----------------------------------------------------
-
-.gradient (@origin: left, @alpha: 0.1) {
-	background-image: -webkit-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
-	background-image: -moz-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
-	background-image: -o-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
-	background-image: -ms-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
-	background-image: linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
-}
-
-.gradient-custom (@origin: left, @start: #ffffff, @stop: #000000) {
-	background-color: @start;
-	background-image: -webkit-linear-gradient(@origin, @start, @stop);
-	background-image: -moz-linear-gradient(@origin, @start, @stop);
-	background-image: -o-linear-gradient(@origin, @start, @stop);
-	background-image: -ms-linear-gradient(@origin, @start, @stop);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@stop');//IE 5.5 - 8
-	background-image: linear-gradient(@origin, @start, @stop);
-}
-
-// OPACITY
-// ----------------------------------------------------
-
-.opacity (@opacity: 1) {
-	opacity: @opacity;
-	-webkit-opacity: @opacity;
-	-moz-opacity: @opacity;
-	//ie <9
-	@ieOpacity: @opacity * 100;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieOpacity})";
-	filter: ~"alpha(opacity=@{ieOpacity})";
-}
-
-// BOX SIZING
-// ----------------------------------------------------
-
-.box-sizing (@type:border-box) {	
-	-webkit-box-sizing:	@type;
-	-moz-box-sizing: 	@type;
-	-ms-box-sizing: 	@type;
-	box-sizing: 		@type;
 }
