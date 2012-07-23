@@ -33,7 +33,7 @@
 		.small;
 		.transition-none;
 
-		&:hover {
+		&:hover, &.active {
 			background-color: @BREADCRUMB-BgColorHover;
 			.transition-none;
 		}
@@ -49,7 +49,7 @@
 			left: -1em;
 		}
 
-		&:hover::before {
+		&:hover::before, &.active::before {
 			border-color: @BREADCRUMB-BgColorHover @BREADCRUMB-BgColorHover @BREADCRUMB-BgColorHover transparent; 
 		}
 
@@ -64,7 +64,7 @@
 			right: -1em;
 		}
 
-		&:hover::after {
+		&:hover::after, &.active::after  {
 			border-left-color: @BREADCRUMB-BgColorHover;
 		}
 
