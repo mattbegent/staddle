@@ -7,22 +7,25 @@
 .media {
 	margin-bottom: @TYPE-VerticalRhythm;
 	.clearfix ();
-	.media-content {
-		overflow: hidden; 
-		_overflow: visible; 
-		zoom: 1;
+}
+
+.media-content {
+	overflow: hidden; 
+	_overflow: visible; 
+	zoom: 1;
+}
+
+.media-image { 
+	float: left; 
+	margin-right: 1em;
+	img{
+		display: block;
 	}
-	.media-image { 
-		float: left; 
-		margin-right: 1em;
-		img{
-			display: block;
-		}
-	}
-	.media-image-alt {
-		float: right; 
-		margin-left: 1em;
-	}
+}
+
+.media-image-alt {
+	float: right; 
+	margin-left: 1em;
 }
 
 // MOBILE
