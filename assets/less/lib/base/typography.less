@@ -11,77 +11,77 @@ h3,
 h4, 
 h5, 
 h6 {
-	margin:0 0 @TYPE-LineHeight*1px 0; // Currently px for margin to keep rhythm - could be improved
-	color:@TYPE-HeadingsColor;
-	font-weight:bold;
+	margin: 0 0 @TYPE-LineHeight*1px 0; // Currently px for margin to keep rhythm - could be improved
+	color: @TYPE-HeadingsColor;
+	font-weight: bold;
 	text-rendering: optimizelegibility;
 	&.small {
-		font-weight:normal;
+		font-weight: normal;
 	}
 }
 
 h1, 
 .alpha {
-	.font-size-to-em(@TYPE-SIZE-Alpha);
+	.font-size-to-em (@TYPE-SIZE-Alpha);
 	line-height: (@TYPE-LineHeight * 2)/@TYPE-SIZE-Alpha;
 	&.small {
-		.font-size-to-em(@TYPE-SIZE-Beta);
+		.font-size-to-em (@TYPE-SIZE-Beta);
 		line-height: (@TYPE-LineHeight * 2)/@TYPE-SIZE-Beta;
 	}
 }
 
 h2, 
 .beta {
-	.font-size-to-em(@TYPE-SIZE-Beta);
+	.font-size-to-em (@TYPE-SIZE-Beta);
 	line-height: (@TYPE-LineHeight * 2)/@TYPE-SIZE-Beta;
 	&.small {
-		.font-size-to-em(@TYPE-SIZE-Gamma);
+		.font-size-to-em (@TYPE-SIZE-Gamma);
 		line-height: (@TYPE-LineHeight * 1)/@TYPE-SIZE-Gamma;
 	}
 }
 
 h3, 
 .gamma {
-	.font-size-to-em(@TYPE-SIZE-Gamma);
+	.font-size-to-em (@TYPE-SIZE-Gamma);
 	line-height: (@TYPE-LineHeight * 1)/@TYPE-SIZE-Gamma;
 	&.small {
-		.font-size-to-em(@TYPE-SIZE-Delta);
+		.font-size-to-em (@TYPE-SIZE-Delta);
 		line-height: @TYPE-LineHeight/@TYPE-SIZE-Delta;
 	}
 }
 
 h4, 
 .delta {
-	.font-size-to-em(@TYPE-SIZE-Delta);
+	.font-size-to-em (@TYPE-SIZE-Delta);
 	line-height: @TYPE-LineHeight/@TYPE-SIZE-Delta;
 	&.small {
-		.font-size-to-em(@TYPE-SIZE-Epsilon);
+		.font-size-to-em (@TYPE-SIZE-Epsilon);
 		line-height: @TYPE-LineHeight/@TYPE-SIZE-Epsilon;
 	}
 }
 
 h5, 
 .epsilon {
-	.font-size-to-em(@TYPE-SIZE-Epsilon);
+	.font-size-to-em (@TYPE-SIZE-Epsilon);
 	line-height: @TYPE-LineHeight/@TYPE-SIZE-Epsilon;
 	&.small {
-		.font-size-to-em(@TYPE-SIZE-Zeta);
+		.font-size-to-em (@TYPE-SIZE-Zeta);
 		line-height: @TYPE-LineHeight/@TYPE-SIZE-Zeta;
 	}
 }
 
 h6, 
 .zeta {
-	.font-size-to-em(@TYPE-SIZE-Zeta);
+	.font-size-to-em (@TYPE-SIZE-Zeta);
 	line-height: @TYPE-LineHeight/@TYPE-SIZE-Zeta;
 }
 
 // BODY
 // ----------------------------------------------------
 p {
-	margin:0 0 @TYPE-VerticalRhythm 0;
+	margin: 0 0 @TYPE-VerticalRhythm 0;
 	&:last-child {
-		margin-bottom:0;
+		margin-bottom: 0;
 	}
 }
 

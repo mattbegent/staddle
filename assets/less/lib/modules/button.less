@@ -7,35 +7,35 @@
 
 .button-create(@backgroundColor, @hoverColor, @textColor, @borderRadius: 0.25em) {
 
-	display:block;
-	color:@textColor;
-	background-color:@backgroundColor;
-	text-decoration:none;
-	@paddingBottom:(ceil(@TYPE-LineHeight/4)*1px;
-	padding:@paddingBottom 1em;
+	display: block;
+	color: @textColor;
+	background-color: @backgroundColor;
+	text-decoration: none;
+	@paddingBottom: (ceil(@TYPE-LineHeight/4)*1px;
+	padding: @paddingBottom 1em;
 	cursor: pointer;
-	@marginBottom:(round(@TYPE-LineHeight/2)*1px;
+	@marginBottom: (round(@TYPE-LineHeight/2)*1px;
 	margin:0 0 @marginBottom 0;
-	border:none;
+	border: none;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 
-	.border-radius(@borderRadius);
-	.box-shadow(0, 1px, 2px);
-	.transition(all,0.2s);	
-	.gradient();
+	.border-radius (@borderRadius);
+	.box-shadow (0, 1px, 2px);
+	.transition (all,0.2s);	
+	.gradient ();
 
 	//Hover
 	&:hover {
 		background-color: @hoverColor;
-		color:@textColor;
-		.box-shadow-inner(0, 2px, 3px);
-		.transition(all, 0.3s);
+		color: @textColor;
+		.box-shadow-inner (0, 2px, 3px);
+		.transition (all, 0.3s);
 	}
 
 	// If used as class with a inside
 	&, 
 	&:visited {
-		color:@textColor;
+		color: @textColor;
 	}
 
 }
@@ -44,11 +44,11 @@
 // ----------------------------------------------------
 
 .button {
-	.button-create(@BUTTON-MainColor, @BUTTON-HoverColor, @BUTTON-TextColor);
+	.button-create (@BUTTON-MainColor, @BUTTON-HoverColor, @BUTTON-TextColor);
 }
 
 .button-alt {
-	.button-create(@BUTTON-AltColor, @BUTTON-AltHoverColor, @BUTTON-AltTextColor);
+	.button-create (@BUTTON-AltColor, @BUTTON-AltHoverColor, @BUTTON-AltTextColor);
 }
 
 // DESKTOP ADJUSTMENT

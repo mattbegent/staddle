@@ -10,11 +10,11 @@
 .colwidth (@numberOfCols: 1){
 
 	// Gutters
-	@gutterPercentage:100%*(@GRID-GutterWidth/@GRID-MaxWidth);  
+	@gutterPercentage: 100%*(@GRID-GutterWidth/@GRID-MaxWidth);  
 	@totalGutterWidth: (@GRID-Cols - 1) * @GRID-GutterWidth;
 	
 	// Single Col
-	@singleColPx:(@GRID-MaxWidth - @totalGutterWidth)/@GRID-Cols;
+	@singleColPx: (@GRID-MaxWidth - @totalGutterWidth)/@GRID-Cols;
 	@singleColPercentage: 100%*(@singleColPx/@GRID-MaxWidth);
 
 	// This col offset
@@ -47,33 +47,33 @@
 
 .grid > [class*="span-"]:first-child {
 	margin-left: 0;
-	clear:left;
+	clear: left;
 }
 
 .grid.first, [class*="span-"].first {
-	margin-left:0;
-	clear:left;
+	margin-left: 0;
+	clear: left;
 }
 
 [class^="span-"] {
-	width:100%;
-	margin-left:0;
+	width: 100%;
+	margin-left: 0;
 	.transition( all, 0.3s); //Abit cheeky
 } 
 
 .grid {
-	width:auto;
-	margin:0 auto;
+	width: auto;
+	margin: 0 auto;
 	.clearfix();
 }
 
 .wrapper-all {
-    margin:0.5em;
+    margin: 0.5em;
 }
 
 .wrapper-full {
-    margin:0;
-    width:100%;
+    margin: 0;
+    width: 100%;
 }
 
 // DESKTOP GRID
@@ -82,11 +82,11 @@
 @media only screen and (min-width: 768px) {
 
 	[class*="span-"] {
-		display:inline;
-		float:left; 
-		margin-bottom:@TYPE-VerticalRhythm;
+		display: inline;
+		float: left; 
+		margin-bottom: @TYPE-VerticalRhythm;
 		&:last-child {
-			margin-bottom:0;
+			margin-bottom: 0;
 		}
 	}
 
@@ -107,7 +107,7 @@
 	.span-11 { .colwidth(11); }
 	.span-12 { 
 		.colwidth(12);
-		margin-left:0;
+		margin-left: 0;
 	}
 
 	.offset-1 { .offsetwidth(1); }
@@ -124,7 +124,7 @@
 	.offset-12 { .offsetwidth(4); }
 
 	.wrapper-all {
-    	margin:1em;
+    	margin: 1em;
 	}
 
 }

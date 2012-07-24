@@ -4,17 +4,17 @@
 
 .box {
 
-	display:block;
-	margin-bottom:@TYPE-VerticalRhythm;
+	display: block;
+	margin-bottom: @TYPE-VerticalRhythm;
 	.clearfix();
 
 	.box-header {
 		display: block;
 		background-color: @BOX-HeaderBgColor;
-		color:@BOX-HeaderTextColor;
+		color: @BOX-HeaderTextColor;
 
 		@boxHeaderRadius: (@STYLE-BorderRadius/@TYPE-FontSize)*1em; // TODO: Make a lot tidier - move to base/css3
-		.border-radius-custom(@boxHeaderRadius,@boxHeaderRadius,0,0);
+		.border-radius-custom (@boxHeaderRadius,@boxHeaderRadius,0,0);
 		.gradient();
 	}
 
@@ -28,7 +28,7 @@
 		background-color: @BOX-FooterBgColor;
 
 		@boxFooterRadius: (@STYLE-BorderRadius/@TYPE-FontSize)*1em; // TODO: Make a lot tidier - move to base/css3
-		.border-radius-custom(0, 0, @boxFooterRadius, @boxFooterRadius);
+		.border-radius-custom (0, 0, @boxFooterRadius, @boxFooterRadius);
 	}
 
 }
@@ -36,9 +36,9 @@
 .box-header,
 .box-body,
 .box-footer {
-	.padding-to-em(@TYPE-LineHeight/2);
-	margin-bottom:0;
+	.padding-to-em (@TYPE-LineHeight/2);
+	margin-bottom: 0;
 	:last-child {
-		margin-bottom:0;
+		margin-bottom: 0;
 	}
 }
