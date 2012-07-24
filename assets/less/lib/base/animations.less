@@ -2,24 +2,104 @@
 // ANIMATIONS
 // =========================================================================*/
 
-.fade{
-	.transition(opacity,0.3s,linear);
-	.opacity(0);
-	&.in {
-		.opacity(1);
-	}
-}
+// ANIMATION
+// ----------------------------------------------------
 
-.collapse {
-	position: relative;
-	height: 0;
-	overflow: hidden;
-	.transition(height, 0.35s, ease);
-	&.in {
-    	height: auto;
+.fade {
+
+	&-in {
+		.animation (FADE-IN, 500ms, 0, ease-in);
+		.animation-fill-mode (forwards);	
 	}
+
+	&-out {
+		.animation (FADE-OUT, 500ms, 0, ease-in);
+		.animation-fill-mode (forwards);
+	}	
+
 }
 
 .animate-transition {
-	.transition( all, 0.4s);
+	.transition (all, 0.4s);
 }
+
+// KEYFRAMES
+// ----------------------------------------------------
+
+// Fade In
+
+@-webkit-keyframes FADE-IN {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@-moz-keyframes FADE-IN {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@-o-keyframes FADE-IN {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@-ms-keyframes FADE-IN {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes FADE-IN {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+// Fade Out
+
+@-webkit-keyframes FADE-OUT {
+	0%   { opacity: 1; }
+	100% { 
+		opacity: 0; 
+		height: 0; 
+		visibility: hidden; 
+	}
+}
+
+@-moz-keyframes FADE-OUT {
+	0%   { opacity: 1; }
+	100% { 
+		opacity: 0; 
+		height: 0; 
+		visibility: hidden; 
+	}
+}
+
+@-o-keyframes FADE-OUT {
+	0%   { opacity: 1; }
+	100% { 
+		opacity: 0; 
+		height: 0; 
+		visibility: hidden; 
+	}
+}
+
+@-ms-keyframes FADE-OUT {
+	0%   { opacity: 1; }
+	100% { 
+		opacity: 0; 
+		height: 0; 
+		visibility: hidden; 
+	}
+}
+
+@keyframes FADE-OUT {
+	0%   { opacity: 1; }
+	100% { 
+		opacity: 0; 
+		height: 0; 
+		visibility: hidden; 
+	}
+}
+
+// Slide Up
+
+// Slide Down
