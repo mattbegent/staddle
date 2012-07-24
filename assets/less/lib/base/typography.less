@@ -11,7 +11,6 @@ h3,
 h4, 
 h5, 
 h6 {
-	margin: 0 0 @TYPE-LineHeight*1px 0; // Currently px for margin to keep rhythm - could be improved
 	color: @TYPE-HeadingsColor;
 	font-weight: bold;
 	text-rendering: optimizelegibility;
@@ -24,9 +23,11 @@ h1,
 .alpha {
 	.font-size-to-em (@TYPE-SIZE-Alpha);
 	line-height: (@TYPE-LineHeight * 2)/@TYPE-SIZE-Alpha;
+	margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Alpha)*1em 0;
 	&.small {
 		.font-size-to-em (@TYPE-SIZE-Beta);
 		line-height: (@TYPE-LineHeight * 2)/@TYPE-SIZE-Beta;
+		margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Beta)*1em 0;
 	}
 }
 
@@ -34,9 +35,11 @@ h2,
 .beta {
 	.font-size-to-em (@TYPE-SIZE-Beta);
 	line-height: (@TYPE-LineHeight * 2)/@TYPE-SIZE-Beta;
+	margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Beta)*1em 0;
 	&.small {
 		.font-size-to-em (@TYPE-SIZE-Gamma);
 		line-height: (@TYPE-LineHeight * 1)/@TYPE-SIZE-Gamma;
+		margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Gamma)*1em 0;
 	}
 }
 
@@ -44,9 +47,11 @@ h3,
 .gamma {
 	.font-size-to-em (@TYPE-SIZE-Gamma);
 	line-height: (@TYPE-LineHeight * 1)/@TYPE-SIZE-Gamma;
+	margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Gamma)*1em 0;
 	&.small {
 		.font-size-to-em (@TYPE-SIZE-Delta);
 		line-height: @TYPE-LineHeight/@TYPE-SIZE-Delta;
+		margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Delta)*1em 0;
 	}
 }
 
@@ -54,9 +59,11 @@ h4,
 .delta {
 	.font-size-to-em (@TYPE-SIZE-Delta);
 	line-height: @TYPE-LineHeight/@TYPE-SIZE-Delta;
+	margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Delta)*1em 0;
 	&.small {
 		.font-size-to-em (@TYPE-SIZE-Epsilon);
 		line-height: @TYPE-LineHeight/@TYPE-SIZE-Epsilon;
+		margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Epsilon)*1em 0;
 	}
 }
 
@@ -64,15 +71,18 @@ h5,
 .epsilon {
 	.font-size-to-em (@TYPE-SIZE-Epsilon);
 	line-height: @TYPE-LineHeight/@TYPE-SIZE-Epsilon;
+	margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Epsilon)*1em 0;
 	&.small {
 		.font-size-to-em (@TYPE-SIZE-Zeta);
 		line-height: @TYPE-LineHeight/@TYPE-SIZE-Zeta;
+		margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Zeta)*1em 0;
 	}
 }
 
 h6, 
 .zeta {
 	.font-size-to-em (@TYPE-SIZE-Zeta);
+	margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Zeta)*1em 0;
 	line-height: @TYPE-LineHeight/@TYPE-SIZE-Zeta;
 }
 
