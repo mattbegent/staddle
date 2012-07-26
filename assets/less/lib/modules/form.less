@@ -7,7 +7,7 @@
 // DEFAULT
 // ----------------------------------------------------
 
-form p {
+.form-row {
 	.clearfix ();
 }
 
@@ -15,6 +15,7 @@ label  {
 	cursor: pointer;
 	display: block;
 	font-weight: bold;
+	width:140px;
 }
 
 input {
@@ -23,7 +24,9 @@ input {
 	max-width: 100%;
 }
 
-input, textarea, select {
+input, 
+textarea, 
+select {
 	width: 100%;
 	.border-radius (4px);
 	padding: 4px;
@@ -31,7 +34,8 @@ input, textarea, select {
 	color: #555;
 }
 
-input, textarea {
+input, 
+textarea {
 	.box-sizing ();
 }
 
@@ -56,8 +60,18 @@ button {
 
 @media only screen and (min-width: 768px) {
 
-	input, textarea, select {
+	label {
+		width: 140px;
+		float: left;
+		text-align: right;
+		margin-top: 2px;
+	}
+
+	input, 
+	textarea, 
+	select {
 		width: 250px;
+		margin-left: 10px;
 	}
 
 	.input-small {

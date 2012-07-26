@@ -45,7 +45,7 @@
 
 					<nav>
 						<ul class="nav">	
-							<li><a href="#typography">Typography</a></li>					
+							<li><a href="#typography" class="active">Typography</a></li>					
 							<li><a href="#modules">Modules</a></li>
 						</ul>
 					</nav>
@@ -147,36 +147,36 @@
 
 						<form id="form-o-matic" method="post" class="c">
 
-							<p>
-								<label for="name">Title:</label>
-								<select class="input-small">
+							<p class="form-row">
+								<label for="title">Title</label>
+								<select id="title" class="input-small">
 									<option>Lord</option>
 									<option>Rev</option>
 									<option>Dude</option>
 								</select>
 							</p>
 							
-							<p>
-								<label for="name">Name:</label>
+							<p class="form-row">
+								<label for="name">Name</label>
 								<input id="name" type="text" autocomplete="on" placeholder="Name" required="required" class="input-medium"/>
 							</p>
 
-							<p>
-								<label for="email">Email:</label>
+							<p class="form-row">
+								<label for="email">Email</label>
 								<input id="email" type="email" autocomplete="on" placeholder="name@example.com" class="input-large" />
 							</p>
 
-							<p>
-								<label for="xlarge">XLarge:</label>
+							<p class="form-row">
+								<label for="xlarge">XLarge</label>
 								<input id="xlarge" type="text" autocomplete="on" placeholder="xlarge" class="input-xlarge" />
 							</p>
 
-							<p>
-								<label for="message">Message:</label>
+							<p class="form-row">
+								<label for="message">Message</label>
 								<textarea id="message" type="text" rows="5" class="input-xlarge"></textarea>
 							</p>
 
-							<p>
+							<p class="form-row">
 								<button type="submit" id="submit">Submit</button>
 							</p>
 
