@@ -8,12 +8,18 @@
 // Calculates the base font size based on browser default of 16
 @TYPE-FontSizePercentage:100%*(@TYPE-FontSize/16);
 
-.font-size-to-em (@selectedSize){
+.font-size-rems (@px-size){
+	@rem-size: @px-size / @TYPE-FontSize;
+	font-size: ~"@{px-size}px"; 
+	font-size: ~"@{rem-size}rem";
+}
+
+.font-size-em (@selectedSize){
 	@em: @TYPE-FontSize*1em; 
 	font-size: @selectedSize/@em;
 }
 
-.line-height-to-em (@selectedSize){
+.line-height-em (@selectedSize){
 	@em: (@selectedSize/@TYPE-FontSize)*1em; 
 	line-height: @selectedSize/@em;
 }
@@ -21,12 +27,12 @@
 // PADDINGS/MARGINS
 // ----------------------------------------------------
 
-.padding-to-em (@selectedSize){
+.padding-em (@selectedSize){
 	@em: @TYPE-FontSize*1em; 
 	padding: @selectedSize/@em;
 }
 
-.margin-to-em (@selectedSize){
+.margin-em (@selectedSize){
 	@em: @TYPE-FontSize*1em; 
 	margin: @selectedSize/@em;
 }
