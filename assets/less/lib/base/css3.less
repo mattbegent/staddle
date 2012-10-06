@@ -48,23 +48,33 @@
 // BORDER RADIUS
 // ----------------------------------------------------
 
-.border-radius (@radius) {
+.border-radius (@radius) when (@SYTLE-RoundCorners) {
 	-webkit-border-radius: 	@radius;
 	-moz-border-radius: 	@radius;
 	border-radius: 			@radius;
 }
 
-.border-radius-context (@radius:@STYLE-BorderRadius) {
+.border-radius-context (@radius: @STYLE-BorderRadius) when (@SYTLE-RoundCorners) {
 	@radiusEm: (@radius/@TYPE-FontSize)*1em;
 	-webkit-border-radius: 	@radiusEm;
 	-moz-border-radius: 	@radiusEm;
 	border-radius: 			@radiusEm;
 }
 
-.border-radius-custom (@topLeft: 5px, @topRight: 5px, @bottomLeft: 5px, @bottomRight: 5px) {
+.border-radius-custom (@topLeft: 0.5em, @topRight: 0.5em, @bottomLeft: 0.5em, @bottomRight: 0.5em) {
 	-webkit-border-radius: 	@topLeft @topRight @bottomLeft @bottomRight;
 	-moz-border-radius: 	@topLeft @topRight @bottomLeft @bottomRight;
 	border-radius: 			@topLeft @topRight @bottomLeft @bottomRight;
+}
+
+// TODO: Find a better way of doing this
+
+.border-radius (@radius) when not (@SYTLE-RoundCorners) {
+
+}
+
+.border-radius-context (@radius: @STYLE-BorderRadius) when not (@SYTLE-RoundCorners) {
+
 }
 
 // BOX SHADOW
@@ -132,6 +142,18 @@
 	filter: ~"alpha(opacity=@{ieOpacity})";
 }
 
+// PLACEHOLDER
+// ----------------------------------------------------
+
+.placeholder (@color: #DDD) {
+	:-moz-placeholder {
+		color: @color;
+	}
+	::-webkit-input-placeholder {
+		color: @color;
+	}
+}
+
 // TEXT SHADOW
 // ----------------------------------------------------
 
@@ -169,4 +191,17 @@
 	-moz-transform: 	 skew(@deg, @deg2);
 	-ms-transform: 		 skew(@deg, @deg2);
 	-o-transform: 		 skew(@deg, @deg2);
+}
+
+
+// WRAP WORDS
+// ----------------------------------------------------
+
+.wrap-words () {
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
 }

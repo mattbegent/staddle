@@ -12,7 +12,18 @@
 // DESKTOP
 // ----------------------------------------------------
 
-@media only screen and (min-width: 768px) { 
+@media only screen and (min-width: @MEDIAQUERY-Desktop) { 
+
+	.wrapper-footer {
+
+	}
+
+}
+
+// TABLET
+// ----------------------------------------------------
+
+@media only screen and (min-width: @MEDIAQUERY-TabletMin) and (@MEDIAQUERY-TabletMax) {
 
 	.wrapper-footer {
 
@@ -23,7 +34,19 @@
 // MOBILE
 // ----------------------------------------------------
 
-@media only screen and (max-width: 767px) { 
+@media only screen and (max-width: @MEDIAQUERY-Mobile) { 
+
+	.wrapper-footer {
+
+	}
+
+}
+
+// HIGH RESOLUTION DEVICES
+// ----------------------------------------------------
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min-resolution: 144dpi) {
 
 	.wrapper-footer {
 

@@ -13,6 +13,15 @@
 @GRID-GutterWidth: 				21;
 @GRID-MaxWidth:					(@GRID-Cols * @GRID-ColWidth) + ((@GRID-Cols - 1) * @GRID-GutterWidth); //derived from ACTUAL values
 
+// MEDIA QUERIES
+// ----------------------------------------------------	
+
+@MEDIAQUERY-Mobile:				(767/@TYPE-FontSize)*1em; //Max
+@MEDIAQUERY-TabletMin:			(768/@TYPE-FontSize)*1em; //Min
+@MEDIAQUERY-TabletMax:			(979/@TYPE-FontSize)*1em; //Max
+@MEDIAQUERY-Desktop:			(768/@TYPE-FontSize)*1em; //Min
+@MEDIAQUERY-DesktopOnly:		(980/@TYPE-FontSize)*1em; //Min 
+
 // TYPOGRAPHY
 // ----------------------------------------------------
 
@@ -51,8 +60,9 @@
 // STYLE
 // ----------------------------------------------------	
 
+@SYTLE-RoundCorners:			true; // Rounds buttons, alerts, pagination, wells.
 @STYLE-BorderRadius:			8;
-@STYLE-BodyBgColor:				#FFF;
+@STYLE-BodyBgColor:				#FFF; 
 
 // PATHS
 // ----------------------------------------------------	
@@ -60,6 +70,11 @@
 @PATH-Assets:					"assets/";
 @PATH-Images:					"assets/images/";
 @PATH-Fonts:					"assets/fonts/";
+
+// COLORS
+// ----------------------------------------------------	
+
+@COLOR-Base:					#FFF;
 
 // MODULES
 // =========================================================================//
@@ -104,13 +119,16 @@
 @BOX-HeaderBgColor: 			#C2C2C2;
 @BOX-HeaderTextColor: 			#FFF;
 @BOX-BodyBgColor: 				#EBEBEB;
-@BOX-FooterBgColor: 			#C2C2C2;
+@BOX-FooterBgColor: 			#C2C2C2; 
 
 // BREADCRUMBS
 // ----------------------------------------------------	
 
-@BREADCRUMB-BgColor:			#DDD;
-@BREADCRUMB-BgColorHover:		darken(@BREADCRUMB-BgColor,15%);
+@BREADCRUMBS-FontSize:			@TYPE-SIZE-Iota;
+@BREADCRUMBS-Color:				@TYPE-FontColor;
+@BREADCRUMBS-ActiveColor:		@TYPE-FontColor;
+
+// User styles here
 
 // BUTTON
 // ----------------------------------------------------
@@ -125,6 +143,8 @@
 
 // FORM
 // ----------------------------------------------------	
+
+@FORM-Placholder:				#CCC;
 
 // NAVIGATION
 // ----------------------------------------------------	

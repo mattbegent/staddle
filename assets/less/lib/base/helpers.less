@@ -6,7 +6,7 @@
 // ----------------------------------------------------
 
 // Clearfix as a mixin
-.clearfix() {
+.clearfix () {
 	*zoom: 1; 
 	&:before, &:after { 
 		content: ""; 
@@ -19,7 +19,7 @@
 
 // Clearfix for use within html
 .c {
-	.clearfix();
+	.clearfix ();
 }
 
 // DISPLAY
@@ -35,14 +35,13 @@
 }
 
 .invisible {	
-	.opacity(0);
+	.opacity (0);
 }
 
 .visible {	
-	.opacity(1);
+	.opacity (1);
 }
 
-// New image replacement
 // Source: http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
 
 .ir {
@@ -50,6 +49,14 @@
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
+}
+
+.inline-block () { 
+	display: inline-block;
+	.ie7 & {
+		display: inline;
+		zoom: 1;
+	}
 }
 
 // ALIGNMENT
@@ -73,26 +80,36 @@
 	margin-right: auto;
 }
 
+.size (@size) {
+	width: @size;
+	height: @size;
+}
+
+.size (@width, @height) {
+	width: @width;
+	height: @height;
+}
+
 // RESPONSIVE UTILITIES
 // ----------------------------------------------------
 
 // Mobile
 
-@media only screen and (max-width: 767px) { 
+@media only screen and (@MEDIAQUERY-Mobile) { 
 
 	.hide-mobile {
 		display: none !important;
 	}
 
 	.show-mobile {
-		display: block !important;
+		display: block !important; 
 	}
 
 }
 
 // Tablet
 
-@media only screen and (min-width: 768px) and (max-width: 980px) {
+@media only screen and (@MEDIAQUERY-TabletMin) and (@MEDIAQUERY-TabletMax) {
 
 	.hide-tablet {
 		display: none !important;
@@ -106,7 +123,7 @@
 
 // Desktop
 
-@media only screen and (min-width: 981px) { 
+@media only screen and (@MEDIAQUERY-DesktopOnly) { 
 
 	.hide-desktop {
 		display: none !important;

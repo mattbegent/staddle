@@ -22,7 +22,7 @@
 .line-height-em (@selectedSize){
 	@em: (@selectedSize/@TYPE-FontSize)*1em; 
 	line-height: @selectedSize/@em;
-}
+} 
 
 // PADDINGS/MARGINS
 // ----------------------------------------------------
@@ -35,4 +35,11 @@
 .margin-em (@selectedSize){
 	@em: @TYPE-FontSize*1em; 
 	margin: @selectedSize/@em;
+}
+
+// PERCENTAGES
+// ----------------------------------------------------
+
+.percentage (@first, @second) {
+	width: (@first/@second)*100%;
 }

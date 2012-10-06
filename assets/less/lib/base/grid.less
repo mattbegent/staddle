@@ -79,19 +79,19 @@
 // DESKTOP GRID
 // ----------------------------------------------------
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: @MEDIAQUERY-Desktop) {
 
 	[class*="span-"] {
 		display: inline;
 		float: left; 
-		margin-bottom: @TYPE-VerticalRhythm;
+		margin-bottom: @TYPE-VerticalRhythm; 
 		&:last-child {
 			margin-bottom: 0;
 		}
 	}
 
 	.grid {
-		max-width: @GRID-MaxWidth * 1px;
+		max-width: (@GRID-MaxWidth/@TYPE-FontSize) * 1em; // Make ems
 	}
 
 	.span-1 { .colwidth(1); }

@@ -11,10 +11,10 @@
 	color: @textColor;
 	background-color: @backgroundColor;
 	text-decoration: none;
-	@paddingBottom: (ceil(@TYPE-LineHeight/4)*1px;
+	@paddingBottom: (@TYPE-LineHeight/4)*1px;
 	padding: @paddingBottom 1em;
 	cursor: pointer;
-	@marginBottom: (floor(@TYPE-LineHeight/2)*1px;
+	@marginBottom: (@TYPE-LineHeight/2)*1px;
 	margin:0 0 @marginBottom 0;
 	border: none;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
@@ -22,7 +22,7 @@
 	.border-radius (@borderRadius);
 	.box-shadow (0, 1px, 2px);
 	.transition (all,0.2s);	
-	.gradient ();
+	.gradient (); 
 
 	//Hover
 	&:hover {
@@ -54,11 +54,11 @@
 // DESKTOP ADJUSTMENT
 // ----------------------------------------------------
 
-@media only screen and (min-width: 768px) { 
+@media only screen and (min-width: @MEDIAQUERY-Desktop) { 
 
 	.button, 
 	.button-alt {
-		display: inline-block;	
+		.inline-block ();	
 	}   
 
 }

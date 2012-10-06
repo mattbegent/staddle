@@ -64,5 +64,3 @@ Boilerplate has a very standard grid system. For example if you wanted content t
 			<!-- 12 COLUMN CONTENT HERE -->
 		</div>
 	</div>
-
-Full documentation coming soon...

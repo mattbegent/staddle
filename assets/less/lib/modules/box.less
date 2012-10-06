@@ -12,10 +12,6 @@
 	display: block;
 	background-color: @BOX-HeaderBgColor;
 	color: @BOX-HeaderTextColor;
-
-	@boxHeaderRadius: (@STYLE-BorderRadius/@TYPE-FontSize)*1em; // TODO: Make a lot tidier - move to base/css3
-	.border-radius-custom (@boxHeaderRadius,@boxHeaderRadius,0,0);
-	.gradient();
 }
 
 .box-body {
@@ -26,9 +22,6 @@
 .box-footer {
 	display: block;
 	background-color: @BOX-FooterBgColor;
-
-	@boxFooterRadius: (@STYLE-BorderRadius/@TYPE-FontSize)*1em; // TODO: Make a lot tidier - move to base/css3
-	.border-radius-custom (0, 0, @boxFooterRadius, @boxFooterRadius);
 }
 
 .box-header,
