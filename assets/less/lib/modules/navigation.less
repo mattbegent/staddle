@@ -69,3 +69,27 @@
 	}
 
 }
+
+// ==========================================================================
+// NAVIGATION > MOBILE TOP
+// =========================================================================//
+
+.nav-mobile-top (@containerHeight: 150px, @positionLeft: 0, @positionBottom: 0) {
+
+	@media only screen and (min-width: @MEDIAQUERY-Desktop) { 
+
+		.nav-mobile-top-container {
+			position: relative;
+			min-height: @containerHeight;
+		}
+
+		.nav-mobile-top {
+			position: absolute;
+			left: @positionLeft;
+			bottom: @positionBottom;
+			width: 100%;
+		}
+
+	}
+
+}
