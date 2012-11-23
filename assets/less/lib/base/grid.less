@@ -2,7 +2,7 @@
 // GRID
 // =========================================================================*/
 
-// @TODO: Make dynamic
+// @TODO: Make more dynamic
 
 // COLUMN CALCULATIONS
 // ----------------------------------------------------
@@ -21,7 +21,7 @@
 	@thisColsOffset: (@numberOfCols - 1) * @gutterPercentage;
 	@thisColWidth: (@singleColPercentage*@numberOfCols) + @thisColsOffset;
 
-    // All together
+	// All together
 	width: @thisColWidth;
 	margin-left: @gutterPercentage;
 	margin-bottom: @TYPE-VerticalRhythm;
@@ -41,7 +41,7 @@
 	@thisColsOffset: (@numberOfCols - 1) * @gutterPercentage;
 	@thisColWidth: (@singleColPercentage*@numberOfCols) + @thisColsOffset;
 
-    // All together
+	// All together
 	margin-left: @thisColWidth + @gutterPercentage;
 }
 
@@ -63,17 +63,13 @@
 
 .grid {
 	width: auto;
-	margin: 0 auto;
+	margin: 0 0.5em;
 	.clearfix();
 }
 
-.wrapper-all {
-    margin: 0.5em;
-}
-
 .wrapper-full {
-    margin: 0;
-    width: 100%;
+	margin: 0;
+	width: 100%;
 }
 
 // DESKTOP GRID
@@ -92,6 +88,7 @@
 
 	.grid {
 		max-width: (@GRID-MaxWidth/@TYPE-FontSize) * 1em; // Make ems
+		margin: 0 auto;
 	}
 
 	.span-1 { .colwidth(1); }
@@ -121,9 +118,5 @@
 	.offset-9 { .offsetwidth(9); }
 	.offset-10 { .offsetwidth(10); }
 	.offset-11 { .offsetwidth(11); }
-
-	.wrapper-all {
-    	margin: 1em;
-	}
 
 }
