@@ -48,13 +48,13 @@
 // BORDER RADIUS
 // ----------------------------------------------------
 
-.border-radius (@radius) when (@SYTLE-RoundCorners) {
+.border-radius (@radius) when (@SYTLE-RoundedCorners) {
 	-webkit-border-radius: 	@radius;
 	-moz-border-radius: 	@radius;
 	border-radius: 			@radius;
 }
 
-.border-radius-context (@radius: @STYLE-BorderRadius) when (@SYTLE-RoundCorners) {
+.border-radius-context (@radius: @STYLE-BorderRadius) when (@SYTLE-RoundedCorners) {
 	@radiusEm: (@radius/@TYPE-FontSize)*1em;
 	-webkit-border-radius: 	@radiusEm;
 	-moz-border-radius: 	@radiusEm;
@@ -69,11 +69,11 @@
 
 // TODO: Find a better way of doing this
 
-.border-radius (@radius) when not (@SYTLE-RoundCorners) {
+.border-radius (@radius) when not (@SYTLE-RoundedCorners) {
 
 }
 
-.border-radius-context (@radius: @STYLE-BorderRadius) when not (@SYTLE-RoundCorners) {
+.border-radius-context (@radius: @STYLE-BorderRadius) when not (@SYTLE-RoundedCorners) {
 
 }
 
