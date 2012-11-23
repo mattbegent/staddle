@@ -75,7 +75,13 @@
 // COLORS
 // ----------------------------------------------------	
 
-@COLOR-Base:					#FFF;
+@COLOR-Base:					#AD1111;
+
+// Sample generated colors
+@COLOR-Complement1: 			spin(@COLOR-Base, 180);
+@COLOR-Complement2: 			darken(spin(@COLOR-Base, 180), 5%);
+@COLOR-Lighten1: 				lighten(@COLOR-Base, 15%);
+@COLOR-Lighten2: 				lighten(@COLOR-Base, 30%); 
 
 // MODULES
 // =========================================================================//
@@ -103,17 +109,6 @@
 @ALERT-AlertTextColor: 			@ALERT-ErrorTextColor;
 @ALERT-AlertBorderColor: 		@ALERT-ErrorBorderColor;
 
-// COLORS
-// ----------------------------------------------------	
-
-@COLOR-Base:					#AD1111;
-
-// Sample colors
-@COLOR-Complement1: 			spin(@COLOR-Base, 180);
-@COLOR-Complement2: 			darken(spin(@COLOR-Base, 180), 5%);
-@COLOR-Lighten1: 				lighten(@COLOR-Base, 15%);
-@COLOR-Lighten2: 				lighten(@COLOR-Base, 30%); 
-
 // BOX
 // ----------------------------------------------------	
 
@@ -128,8 +123,6 @@
 @BREADCRUMBS-FontSize:			@TYPE-SIZE-Iota;
 @BREADCRUMBS-Color:				@TYPE-FontColor;
 @BREADCRUMBS-ActiveColor:		@TYPE-FontColor;
-
-// User styles here
 
 // BUTTON
 // ----------------------------------------------------
