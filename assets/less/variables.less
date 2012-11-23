@@ -5,23 +5,6 @@
 // SETUP
 // =========================================================================//
 
-// GRID
-// ----------------------------------------------------	
-
-@GRID-Cols: 					12;
-@GRID-ColWidth: 				60;
-@GRID-GutterWidth: 				21;
-@GRID-MaxWidth:					(@GRID-Cols * @GRID-ColWidth) + ((@GRID-Cols - 1) * @GRID-GutterWidth); //derived from ACTUAL values
-
-// MEDIA QUERIES
-// ----------------------------------------------------	
-
-@MEDIAQUERY-Mobile:				(767/@TYPE-FontSize)*1em; //Max
-@MEDIAQUERY-TabletMin:			(768/@TYPE-FontSize)*1em; //Min
-@MEDIAQUERY-TabletMax:			(979/@TYPE-FontSize)*1em; //Max
-@MEDIAQUERY-Desktop:			(768/@TYPE-FontSize)*1em; //Min
-@MEDIAQUERY-DesktopOnly:		(980/@TYPE-FontSize)*1em; //Min 
-
 // TYPOGRAPHY
 // ----------------------------------------------------
 
@@ -41,6 +24,23 @@
 @TYPE-SIZE-Zeta: 				14;
 @TYPE-SIZE-Eta: 				@TYPE-FontSize;
 @TYPE-SIZE-Iota: 				12;
+
+// GRID
+// ----------------------------------------------------	
+
+@GRID-Cols: 					12;
+@GRID-ColWidth: 				60;
+@GRID-GutterWidth: 				21;
+@GRID-MaxWidth:					(@GRID-Cols * @GRID-ColWidth) + ((@GRID-Cols - 1) * @GRID-GutterWidth); //derived from ACTUAL values
+
+// MEDIA QUERIES
+// ----------------------------------------------------	
+
+@MEDIAQUERY-Mobile:				(767/@TYPE-FontSize)*1em; //Max
+@MEDIAQUERY-TabletMin:			(768/@TYPE-FontSize)*1em; //Min
+@MEDIAQUERY-TabletMax:			(979/@TYPE-FontSize)*1em; //Max
+@MEDIAQUERY-Desktop:			(768/@TYPE-FontSize)*1em; //Min
+@MEDIAQUERY-DesktopOnly:		(980/@TYPE-FontSize)*1em; //Min 
 
 // LINKS
 // ----------------------------------------------------	
