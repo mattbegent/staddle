@@ -222,6 +222,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: Arial, Helvetica, sans-serif;
   color: #222222;
   font-weight: bold;
   text-rendering: optimizelegibility;
@@ -380,7 +381,7 @@ sub {
 }
 .grid {
   width: auto;
-  margin: 0 auto;
+  margin: 0 0.5em;
   *zoom: 1;
 }
 .grid:before,
@@ -390,9 +391,6 @@ sub {
 }
 .grid:after {
   clear: both;
-}
-.wrapper-all {
-  margin: 0.5em;
 }
 .wrapper-full {
   margin: 0;
@@ -409,6 +407,7 @@ sub {
   }
   .grid {
     max-width: 59.4375em;
+    margin: 0 auto;
   }
   .span-1 {
     width: 6.309148264984227%;
@@ -504,9 +503,6 @@ sub {
   .offset-11 {
     margin-left: 93.69085173501577%;
   }
-  .wrapper-all {
-    margin: 1em;
-  }
 }
 /* =========================================================================
 // ALERT
@@ -514,7 +510,7 @@ sub {
 .alert {
   display: block;
   position: relative;
-  padding: 0.6875em;
+  padding: 1em;
   margin-bottom: 1.5em;
   border-width: 1px;
   border-style: solid;
@@ -613,6 +609,9 @@ sub {
 .breadcrumbs li::before {
   content: ">\0000a0";
 }
+.breadcrumbs li:first-child::before {
+  content: "";
+}
 .breadcrumbs a {
   text-decoration: none;
   color: #222222;
@@ -654,6 +653,9 @@ sub {
   background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
   background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
 }
+.button:visited {
+  color: #ffffff;
+}
 .button:hover {
   background-color: #16dbdb;
   color: #ffffff;
@@ -666,52 +668,36 @@ sub {
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.button,
-.button:visited {
-  color: #ffffff;
-}
 .button-alt {
-  display: block;
   color: #ffffff;
   background-color: #e92121;
-  text-decoration: none;
-  padding: 6px 1em;
-  cursor: pointer;
-  margin: 0 0 12px 0;
-  border: none;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-  -webkit-border-radius: 0.25em;
-  -moz-border-radius: 0.25em;
-  border-radius: 0.25em;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
-  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+}
+.button-alt:visited {
+  color: #ffffff;
 }
 .button-alt:hover {
   background-color: #ee5050;
   color: #ffffff;
-  -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
-.button-alt,
-.button-alt:visited {
+.button-disabled {
   color: #ffffff;
+  background-color: #dedede;
+  cursor: default;
+}
+.button-disabled:visited {
+  color: #ffffff;
+}
+.button-disabled:hover {
+  background-color: #dedede;
+  color: #ffffff;
+}
+.button-disabled:hover {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+.button-full {
+  display: block !important;
 }
 @media only screen and (min-width: 48em) {
   .button,
@@ -805,6 +791,9 @@ button {
   background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
   background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
 }
+button:visited {
+  color: #ffffff;
+}
 button:hover {
   background-color: #16dbdb;
   color: #ffffff;
@@ -816,10 +805,6 @@ button:hover {
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
-button,
-button:visited {
-  color: #ffffff;
 }
 button [class^="icon-"],
 button [class*=" icon-"] {
@@ -1018,27 +1003,6 @@ button [class*=" icon-"] {
 .table.table-striped tbody tr:nth-child(even) {
   background-color: #ebebeb;
 }
-/* =========================================================================
-// THUMBNAIL
-// =======================================================================*/
-.thumbnail {
-  display: block;
-  padding: 5px;
-  margin-bottom: 1.5em;
-  background-color: #ebebeb;
-  -webkit-border-radius: 0.5em;
-  -moz-border-radius: 0.5em;
-  border-radius: 0.5em;
-}
-.thumbnail-content {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.thumbnail-caption {
-  display: block;
-  padding: 0.5em;
-}
 /* ==========================================================================
 // WELL
 // =========================================================================*/
@@ -1088,7 +1052,7 @@ button [class*=" icon-"] {
   filter: alpha(opacity=100);
 }
 .ir {
-  font: a;
+  font: 0/0 a;
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;

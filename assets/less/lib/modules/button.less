@@ -2,14 +2,13 @@
 // BUTTON
 // =======================================================================*/
 
-// BUTTON CREATOR
+// BUTTON BASE
 // ----------------------------------------------------
 
-.button-create(@backgroundColor, @hoverColor, @textColor, @borderRadius: 0.25em) {
-
+.button {
 	display: block;
-	color: @textColor;
-	background-color: @backgroundColor;
+	color: @BUTTON-TextColor;
+	background-color: @BUTTON-MainColor;
 	text-decoration: none;
 	@paddingBottom: (@TYPE-LineHeight/4)*1px;
 	padding: @paddingBottom 1em;
@@ -19,45 +18,61 @@
 	border: none;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 
-	.border-radius (@borderRadius);
+	.border-radius (0.25em);
 	.box-shadow (0, 1px, 2px);
-	.transition (all,0.2s);	
+	.transition (all, 0.2s);	
 	.gradient (); 
 
-	//Hover
+	&:visited {
+		color: @BUTTON-TextColor;
+	}
+
 	&:hover {
-		background-color: @hoverColor;
-		color: @textColor;
+		background-color: @BUTTON-HoverColor;
+		color: @BUTTON-TextColor;
 		.box-shadow-inner (0, 2px, 3px);
 		.transition (all, 0.3s);
 	}
 
-	// If used as class with a inside
-	&, 
+
+}
+
+// BUTTON CREATOR
+// ----------------------------------------------------
+
+.button-create (@backgroundColor, @hoverColor, @textColor) {
+
+	color: @textColor;
+	background-color: @backgroundColor;
+
 	&:visited {
+		color: @textColor;
+	}
+
+	&:hover {
+		background-color: @hoverColor;
 		color: @textColor;
 	}
 
 }
 
-// THE BUTTONS
+// BUTTON TYPES
 // ----------------------------------------------------
-
-.button {
-	.button-create (@BUTTON-MainColor, @BUTTON-HoverColor, @BUTTON-TextColor);
-}
 
 .button-alt {
 	.button-create (@BUTTON-AltColor, @BUTTON-AltHoverColor, @BUTTON-AltTextColor);
 }
 
 .button-disabled {
-	.opacity (0.5);
-	cursor: pointer; 
+	.button-create (#DEDEDE, #DEDEDE, @BUTTON-TextColor);
+	cursor: default; 
+	&:hover {
+		.box-shadow (0, 1px, 2px);
+	}
 }
 
 .button-full {
-	display: block;
+	display: block !important;
 }
 
 // DESKTOP ADJUSTMENT
