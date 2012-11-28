@@ -23,9 +23,7 @@ summary {
 audio, 
 canvas, 
 video { 
-    display: inline-block; 
-    *display: inline;  
-    *zoom: 1; 
+    .inline-block ();
 }
 
 audio:not([controls]) { 
@@ -72,6 +70,12 @@ body {
     background: @SELECT-BgColor; 
     color: @SELECT-TextColor; 
     text-shadow: none; 
+}
+
+*,
+*:after,
+*:before {
+    .box-sizing (border-box);
 }
 
 

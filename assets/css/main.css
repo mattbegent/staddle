@@ -22,8 +22,12 @@ audio,
 canvas,
 video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
+}
+.ie7 audio,
+.ie7 canvas,
+.ie7 video {
+  display: inline;
+  zoom: 1;
 }
 audio:not([controls]) {
   display: none;
@@ -61,6 +65,14 @@ body {
   background: #639aff;
   color: #ffffff;
   text-shadow: none;
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
 a {
   color: #0000ee;
@@ -746,13 +758,6 @@ select {
   padding: 4px;
   border: 1px solid #888;
   color: #555;
-}
-input,
-textarea {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
 }
 input:focus,
 textarea:focus,
