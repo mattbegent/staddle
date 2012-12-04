@@ -32,9 +32,31 @@
 	padding: @selectedSize/@em;
 }
 
+.padding-em (@top, @right, @bottom, @left){
+	@em: @TYPE-FontSize*1em; 
+	padding: @top/@em @right/@em @bottom/@em @left/@em;
+}
+
+.padding-rems (@selectedSize){
+	@rem-size: @px-size / @TYPE-FontSize;
+	padding: ~"@{px-size}px"; 
+	padding: ~"@{rem-size}rem";
+}
+
 .margin-em (@selectedSize){
 	@em: @TYPE-FontSize*1em; 
 	margin: @selectedSize/@em;
+}
+
+.margin-em (@top, @right, @bottom, @left){
+	@em: @TYPE-FontSize*1em; 
+	margin: @top/@em @right/@em @bottom/@em @left/@em;
+}
+
+.margin-rems (@selectedSize){
+	@rem-size: @px-size / @TYPE-FontSize;
+	margin: ~"@{px-size}px"; 
+	margin: ~"@{rem-size}rem";
 }
 
 // PERCENTAGES
@@ -42,4 +64,17 @@
 
 .percentage (@first, @second) {
 	width: (@first/@second)*100%;
+}
+
+// SIZE
+// ----------------------------------------------------
+
+.size (@size) {
+	width: @size;
+	height: @size;
+}
+
+.size (@width, @height) {
+	width: @width;
+	height: @height;
 }
