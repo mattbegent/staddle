@@ -1,18 +1,18 @@
 #Boilerplate
 
-A brilliant less boilerplate 
+A brilliant less boilerplate for small and large scale websites.
 
 By Matt B and Gary F (Mostly Matt B)
 
 ##Features
 
+* Flexibility - all of the built in modules are independent, so if you don't use one you can uncomment it
 * Responsive grid
-* Supports ie7 +
+* Supports ie7 + (ie7 support will be dropped when clients stop demanding it)
 * Easy user configuration
 * Css3 mixins
 * Css debugging
 * Follows [SMACSS](http://smacss.com/)
-* Flexibility - all of the built in modules are independent, so if you don't use one you can uncomment it
 
 #Documentation
 
@@ -47,13 +47,9 @@ As all of the built in modules are independent (assets/less/lib/modules) you can
 
 ##Debugging
 
-Boilerplate has css debugging built and can be enabled by uncommenting the debug module import in main.less (assets/less/main.less). This will outline any problems with images, links, empty elements and deprecated elements. Remember to uncomment this when putting a site live.
+Boilerplate has css debugging built in to outline any problems with images, links, empty elements and deprecated elements.
 
-	// LOAD THE BOILERPLATE
-	// ----------------------------------------------------
-
-	@import "lib/boilerplate.less";
-	@import "lib/modules/debug.less"; // Debugging enabled
+To enable debugging simply set the variable @DEBUG to true in assets/less/variables.less.
 
 ##Grid
 
