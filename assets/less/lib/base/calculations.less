@@ -6,12 +6,12 @@
 // ----------------------------------------------------
 
 .font-size (@font-size) {
-	.font-size-rems (@font-size);
+	.font-size-rem (@font-size);
 	.line-height (@font-size);
-	.margin-rems (0, 0, @TYPE-LineHeight, 0);
+	.margin (0, 0, @TYPE-LineHeight, 0);
 }
 
-.font-size-rems (@px-size) {
+.font-size-rem (@px-size) {
 	@rem-size: @px-size / @TYPE-FontSize;
 	font-size: ~"@{px-size}px"; 
 	font-size: ~"@{rem-size}rem";
@@ -31,27 +31,13 @@
 // PADDINGS/MARGINS
 // ----------------------------------------------------
 
-.padding-rems (@px-size){
-	@rem-size: @px-size / @TYPE-FontSize;
-	padding: ~"@{px-size}px"; 
-	padding: ~"@{rem-size}rem";
-}
-
-.padding-rems (@top, @right, @bottom, @left) {
-	@top-rem: @top / @TYPE-FontSize;
-	@right-rem: @right / @TYPE-FontSize;
-	@bottom-rem: @bottom / @TYPE-FontSize;
-	@left-rem: @left / @TYPE-FontSize;
-	padding: ~"@{top}px" ~"@{right}px" ~"@{bottom}px" ~"@{left}px"; 
-	padding: ~"@{top-rem}rem" ~"@{right-rem}rem" ~"@{bottom-rem}rem" ~"@{left-rem}rem";
-}
-.margin-rems (@px-size){
+.margin (@px-size){
 	@rem-size: @px-size / @TYPE-FontSize;
 	margin: ~"@{px-size}px"; 
 	margin: ~"@{rem-size}rem";
 }
 
-.margin-rems (@top, @right, @bottom, @left) {
+.margin (@top, @right, @bottom, @left) {
 	@top-rem: @top / @TYPE-FontSize;
 	@right-rem: @right / @TYPE-FontSize;
 	@bottom-rem: @bottom / @TYPE-FontSize;
@@ -60,13 +46,40 @@
 	margin: ~"@{top-rem}rem" ~"@{right-rem}rem" ~"@{bottom-rem}rem" ~"@{left-rem}rem";
 }
 
-.margin-top-rems (@px-size){
+.margin-top (@px-size){
 	@rem-size: @px-size / @TYPE-FontSize;
 	margin-top: ~"@{px-size}px"; 
 	margin-top: ~"@{rem-size}rem";
 }
 
-.margin-bottom-rems (@px-size){
+.margin-bottom (@px-size){
+	@rem-size: @px-size / @TYPE-FontSize;
+	margin-bottom: ~"@{px-size}px"; 
+	margin-bottom: ~"@{rem-size}rem";
+}
+
+.padding (@px-size){
+	@rem-size: @px-size / @TYPE-FontSize;
+	padding: ~"@{px-size}px"; 
+	padding: ~"@{rem-size}rem";
+}
+
+.padding (@top, @right, @bottom, @left) {
+	@top-rem: @top / @TYPE-FontSize;
+	@right-rem: @right / @TYPE-FontSize;
+	@bottom-rem: @bottom / @TYPE-FontSize;
+	@left-rem: @left / @TYPE-FontSize;
+	padding: ~"@{top}px" ~"@{right}px" ~"@{bottom}px" ~"@{left}px"; 
+	padding: ~"@{top-rem}rem" ~"@{right-rem}rem" ~"@{bottom-rem}rem" ~"@{left-rem}rem";
+}
+
+.padding-top (@px-size){
+	@rem-size: @px-size / @TYPE-FontSize;
+	margin-top: ~"@{px-size}px"; 
+	margin-top: ~"@{rem-size}rem";
+}
+
+.padding-bottom (@px-size){
 	@rem-size: @px-size / @TYPE-FontSize;
 	margin-bottom: ~"@{px-size}px"; 
 	margin-bottom: ~"@{rem-size}rem";
