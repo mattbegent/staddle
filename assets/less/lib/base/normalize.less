@@ -39,7 +39,7 @@ audio:not([controls]) {
 // ----------------------------------------------------
 
 html { 
-    font-size: @TYPE-FontSizePercentage; 
+    font-size: 100%*(@TYPE-FontSize/16); // Calculates the base font size based on browser default of 16
     -webkit-text-size-adjust: 100%; 
     -ms-text-size-adjust: 100%; 
     overflow-y: scroll;
