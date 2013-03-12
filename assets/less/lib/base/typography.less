@@ -24,42 +24,42 @@ h1,
 .alpha {
 	.font-size-rems (@TYPE-SIZE-Alpha);
 	line-height: (@TYPE-LineHeight * 2)/@TYPE-SIZE-Alpha;
-	margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Alpha)*1em 0;
+	.margin-rems (0, 0, @TYPE-LineHeight, 0);
 }
 
 h2, 
 .beta {
 	.font-size-rems (@TYPE-SIZE-Beta);
 	line-height: (@TYPE-LineHeight * 2)/@TYPE-SIZE-Beta;
-	margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Beta)*1em 0;
+	.margin-rems (0, 0, @TYPE-LineHeight, 0);
 }
 
 h3, 
 .gamma {
 	.font-size-rems (@TYPE-SIZE-Gamma);
 	line-height: (@TYPE-LineHeight * 1)/@TYPE-SIZE-Gamma;
-	margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Gamma)*1em 0;
+	.margin-rems (0, 0, @TYPE-LineHeight, 0);
 }
 
 h4, 
 .delta {
 	.font-size-rems (@TYPE-SIZE-Delta);
 	line-height: @TYPE-LineHeight/@TYPE-SIZE-Delta;
-	margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Delta)*1em 0;
+	.margin-rems (0, 0, @TYPE-LineHeight, 0);
 }
 
 h5, 
 .epsilon {
 	.font-size-rems (@TYPE-SIZE-Epsilon);
 	line-height: @TYPE-LineHeight/@TYPE-SIZE-Epsilon;
-	margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Epsilon)*1em 0;
+	.margin-rems (0, 0, @TYPE-LineHeight, 0);
 }
 
 h6, 
 .zeta {
 	.font-size-rems (@TYPE-SIZE-Zeta);
-	margin:0 0 (@TYPE-LineHeight/@TYPE-SIZE-Zeta)*1em 0;
 	line-height: @TYPE-LineHeight/@TYPE-SIZE-Zeta;
+	.margin-rems (0, 0, @TYPE-LineHeight, 0);
 }
 
 hgroup,
@@ -72,7 +72,7 @@ hgroup,
 // BODY
 // ----------------------------------------------------
 p {
-	margin: 0 0 @TYPE-VerticalRhythm 0;
+	.margin-rems (0, 0, @TYPE-LineHeight, 0);
 	&:last-child {
 		margin-bottom: 0;
 	}
@@ -88,7 +88,7 @@ strong {
 }
 
 blockquote { 
-	margin: @TYPE-VerticalRhythm (40/@TYPE-FontSize)*1em; 
+	.margin-rems (0, 0, @TYPE-LineHeight, 0);
 }
 
 dfn { 
@@ -100,7 +100,7 @@ hr {
 	height: 1px; 
 	border: 0; 
 	border-top: 1px solid #ccc; 
-	margin: @TYPE-VerticalRhythm 0; 
+	.margin-rems (@TYPE-LineHeight, 0, @TYPE-LineHeight, 0); 
 	padding: 0; 
 }
 

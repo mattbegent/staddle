@@ -4,9 +4,8 @@
 
 .well {
 	display: block;
-	.padding-em (@TYPE-LineHeight/2);
-	margin-left: (40/@TYPE-FontSize)*1em;
+	.padding-rems (@TYPE-FontSize);
+	.margin-rems (0, 0, 0, 40);
 	background-color: @WELL-BgColor;
-	margin-bottom: @TYPE-VerticalRhythm;
 	.border-radius-context ();
 }

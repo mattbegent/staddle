@@ -1,8 +1,6 @@
-#Boilerplate
+#Boilerplate v1.5
 
 A brilliant less boilerplate for small and large scale websites.
-
-By Matt B and Gary F (Mostly Matt B)
 
 ##Features
 
@@ -50,6 +48,11 @@ As all of the built in modules are independent (assets/less/lib/modules) you can
 Boilerplate has css debugging built in to outline any problems with images, links, empty elements and deprecated elements.
 
 To enable debugging simply set the variable @DEBUG to true in assets/less/variables.less.
+
+	// DEBUG
+	// ----------------------------------------------------
+
+	@DEBUG:							true;
 
 ##Grid
 

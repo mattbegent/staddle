@@ -1,10 +1,12 @@
 /* ==========================================================================
 // MAIN - SITENAME
 // =========================================================================*/
+
 /* ==========================================================================
 // NORMALIZE
 // Reference: http://github.com/necolas/normalize.css
 // =========================================================================*/
+
 article,
 aside,
 details,
@@ -54,16 +56,16 @@ body {
   margin: 0;
   font-size: 1em;
   line-height: 1.5em;
-  background-color: #ffffff;
+  background-color: white;
 }
 ::-moz-selection {
   background: #639aff;
-  color: #ffffff;
+  color: white;
   text-shadow: none;
 }
 ::selection {
   background: #639aff;
-  color: #ffffff;
+  color: white;
   text-shadow: none;
 }
 *,
@@ -101,11 +103,14 @@ a:active {
 }
 ul,
 ol {
-  margin: 1.5em 0;
-  padding: 0 0 0 2.5em;
+  margin: 24px 0px 24px 40px;
+  margin: 1.5rem 0rem 1.5rem 2.5rem;
+  padding: 0px 0px 0px 40px;
+  padding: 0rem 0rem 0rem 2.5rem;
 }
 dd {
-  margin: 0 0 0 2.5em;
+  margin: 0px 0px 0px 40px;
+  margin: 0rem 0rem 0rem 2.5rem;
 }
 nav ul,
 nav ol {
@@ -228,6 +233,7 @@ td {
 /* ==========================================================================
 // TYPOGRAPHY
 // =========================================================================*/
+
 h1,
 h2,
 h3,
@@ -252,49 +258,56 @@ h1,
   font-size: 48px;
   font-size: 3rem;
   line-height: 1;
-  margin: 0 0 0.5em 0;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
 }
 h2,
 .beta {
   font-size: 36px;
   font-size: 2.25rem;
-  line-height: 1.3333333333333333;
-  margin: 0 0 0.6666666666666666em 0;
+  line-height: 1.333333333;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
 }
 h3,
 .gamma {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1;
-  margin: 0 0 1em 0;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
 }
 h4,
 .delta {
   font-size: 21px;
   font-size: 1.3125rem;
-  line-height: 1.1428571428571428;
-  margin: 0 0 1.1428571428571428em 0;
+  line-height: 1.142857143;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
 }
 h5,
 .epsilon {
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 1.3333333333333333;
-  margin: 0 0 1.3333333333333333em 0;
+  line-height: 1.333333333;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
 }
 h6,
 .zeta {
   font-size: 14px;
   font-size: 0.875rem;
-  margin: 0 0 1.7142857142857142em 0;
-  line-height: 1.7142857142857142;
+  line-height: 1.714285714;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
 }
 hgroup *,
 .hgroup * {
   margin-bottom: 0;
 }
 p {
-  margin: 0 0 1.5em 0;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
 }
 p:last-child {
   margin-bottom: 0;
@@ -307,7 +320,8 @@ strong {
   font-weight: bold;
 }
 blockquote {
-  margin: 1.5em 2.5em;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
 }
 dfn {
   font-style: italic;
@@ -316,18 +330,19 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1.5em 0;
+  border-top: 1px solid #cccccc;
+  margin: 24px 0px 24px 0px;
+  margin: 1.5rem 0rem 1.5rem 0rem;
   padding: 0;
 }
 ins {
-  background: #ff9;
-  color: #000;
+  background: #ffff99;
+  color: black;
   text-decoration: none;
 }
 mark {
-  background: #ff0;
-  color: #000;
+  background: yellow;
+  color: black;
   font-style: italic;
   font-weight: bold;
 }
@@ -422,108 +437,110 @@ sub {
     margin: 0 auto;
   }
   .span-1 {
-    width: 6.309148264984227%;
-    margin-left: 2.2082018927444795%;
+    width: 6.309148265%;
+    margin-left: 2.208201893%;
     margin-bottom: 1.5em;
   }
   .span-2 {
-    width: 14.826498422712934%;
-    margin-left: 2.2082018927444795%;
+    width: 14.826498423%;
+    margin-left: 2.208201893%;
     margin-bottom: 1.5em;
   }
   .span-3 {
-    width: 23.34384858044164%;
-    margin-left: 2.2082018927444795%;
+    width: 23.34384858%;
+    margin-left: 2.208201893%;
     margin-bottom: 1.5em;
   }
   .span-4 {
-    width: 31.861198738170344%;
-    margin-left: 2.2082018927444795%;
+    width: 31.861198738%;
+    margin-left: 2.208201893%;
     margin-bottom: 1.5em;
   }
   .span-5 {
-    width: 40.37854889589905%;
-    margin-left: 2.2082018927444795%;
+    width: 40.378548896%;
+    margin-left: 2.208201893%;
     margin-bottom: 1.5em;
   }
   .span-6 {
-    width: 48.89589905362776%;
-    margin-left: 2.2082018927444795%;
+    width: 48.895899054%;
+    margin-left: 2.208201893%;
     margin-bottom: 1.5em;
   }
   .span-7 {
-    width: 57.41324921135646%;
-    margin-left: 2.2082018927444795%;
+    width: 57.413249211%;
+    margin-left: 2.208201893%;
     margin-bottom: 1.5em;
   }
   .span-8 {
-    width: 65.93059936908517%;
-    margin-left: 2.2082018927444795%;
+    width: 65.930599369%;
+    margin-left: 2.208201893%;
     margin-bottom: 1.5em;
   }
   .span-9 {
-    width: 74.44794952681389%;
-    margin-left: 2.2082018927444795%;
+    width: 74.447949527%;
+    margin-left: 2.208201893%;
     margin-bottom: 1.5em;
   }
   .span-10 {
-    width: 82.96529968454259%;
-    margin-left: 2.2082018927444795%;
+    width: 82.965299685%;
+    margin-left: 2.208201893%;
     margin-bottom: 1.5em;
   }
   .span-11 {
-    width: 91.48264984227129%;
-    margin-left: 2.2082018927444795%;
+    width: 91.482649842%;
+    margin-left: 2.208201893%;
     margin-bottom: 1.5em;
   }
   .span-12 {
     width: 100%;
-    margin-left: 2.2082018927444795%;
+    margin-left: 2.208201893%;
     margin-bottom: 1.5em;
     margin-left: 0;
   }
   .offset-1 {
-    margin-left: 8.517350157728707%;
+    margin-left: 8.517350158%;
   }
   .offset-2 {
-    margin-left: 17.034700315457414%;
+    margin-left: 17.034700315%;
   }
   .offset-3 {
-    margin-left: 25.55205047318612%;
+    margin-left: 25.552050473%;
   }
   .offset-4 {
-    margin-left: 34.06940063091482%;
+    margin-left: 34.069400631%;
   }
   .offset-5 {
-    margin-left: 42.58675078864353%;
+    margin-left: 42.586750789%;
   }
   .offset-6 {
-    margin-left: 51.104100946372235%;
+    margin-left: 51.104100946%;
   }
   .offset-7 {
-    margin-left: 59.621451104100935%;
+    margin-left: 59.621451104%;
   }
   .offset-8 {
-    margin-left: 68.13880126182966%;
+    margin-left: 68.138801262%;
   }
   .offset-9 {
-    margin-left: 76.65615141955837%;
+    margin-left: 76.65615142%;
   }
   .offset-10 {
-    margin-left: 85.17350157728707%;
+    margin-left: 85.173501577%;
   }
   .offset-11 {
-    margin-left: 93.69085173501577%;
+    margin-left: 93.690851735%;
   }
 }
 /* =========================================================================
 // ALERT
 // =======================================================================*/
+
 .alert {
   display: block;
   position: relative;
   padding: 1em;
-  margin-bottom: 1.5em;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
   border-width: 1px;
   border-style: solid;
   -webkit-border-radius: 0.5em;
@@ -559,9 +576,11 @@ sub {
 /* =========================================================================
 // BOX
 // =======================================================================*/
+
 .box {
   display: block;
-  margin-bottom: 1.5em;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
   *zoom: 1;
 }
 .box:before,
@@ -575,7 +594,7 @@ sub {
 .box-header {
   display: block;
   background-color: #c2c2c2;
-  color: #ffffff;
+  color: white;
 }
 .box-body {
   display: block;
@@ -588,7 +607,8 @@ sub {
 .box-header,
 .box-body,
 .box-footer {
-  padding: 0.75em;
+  padding: 16px;
+  padding: 1rem;
   margin-bottom: 0;
 }
 .box-header :last-child,
@@ -599,6 +619,7 @@ sub {
 /* =========================================================================
 // BREADCRUMBS
 // =======================================================================*/
+
 .breadcrumbs {
   display: block;
   *zoom: 1;
@@ -638,14 +659,17 @@ sub {
 /* =========================================================================
 // BUTTON
 // =======================================================================*/
+
 .button {
   display: block;
-  color: #ffffff;
+  color: white;
   background-color: #11adad;
   text-decoration: none;
-  padding: 6px 1em;
+  padding: 6px 16px 6px 16px;
+  padding: 0.375rem 1rem 0.375rem 1rem;
+  margin: 0px 0px 12px 0px;
+  margin: 0rem 0rem 0.75rem 0rem;
   cursor: pointer;
-  margin: 0 0 12px 0;
   border: none;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
   -webkit-border-radius: 0.25em;
@@ -659,18 +683,18 @@ sub {
   -o-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
-  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
+  background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
+  background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
+  background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
 }
 .button:visited {
-  color: #ffffff;
+  color: white;
 }
 .button:hover {
   background-color: #16dbdb;
-  color: #ffffff;
+  color: white;
   -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
   box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
@@ -681,27 +705,27 @@ sub {
   transition: all 0.3s ease-in-out;
 }
 .button-alt {
-  color: #ffffff;
+  color: white;
   background-color: #e92121;
 }
 .button-alt:visited {
-  color: #ffffff;
+  color: white;
 }
 .button-alt:hover {
   background-color: #ee5050;
-  color: #ffffff;
+  color: white;
 }
 .button-disabled {
-  color: #ffffff;
+  color: white;
   background-color: #dedede;
   cursor: default;
 }
 .button-disabled:visited {
-  color: #ffffff;
+  color: white;
 }
 .button-disabled:hover {
   background-color: #dedede;
-  color: #ffffff;
+  color: white;
 }
 .button-disabled:hover {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -725,9 +749,11 @@ sub {
 /* ==========================================================================
 // FORM
 // =========================================================================*/
+
 .form-row {
   *zoom: 1;
-  margin-bottom: 1em;
+  margin: 0px 0px 16px 0px;
+  margin: 0rem 0rem 1rem 0rem;
 }
 .form-row:before,
 .form-row:after {
@@ -756,8 +782,8 @@ select {
   -moz-border-radius: 4px;
   border-radius: 4px;
   padding: 4px;
-  border: 1px solid #888;
-  color: #555;
+  border: 1px solid #888888;
+  color: #555555;
 }
 input:focus,
 textarea:focus,
@@ -771,12 +797,14 @@ select:focus {
 }
 button {
   display: block;
-  color: #ffffff;
+  color: white;
   background-color: #11adad;
   text-decoration: none;
-  padding: 6px 1em;
+  padding: 6px 16px 6px 16px;
+  padding: 0.375rem 1rem 0.375rem 1rem;
+  margin: 0px 0px 12px 0px;
+  margin: 0rem 0rem 0.75rem 0rem;
   cursor: pointer;
-  margin: 0 0 12px 0;
   border: none;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
   -webkit-border-radius: 0.25em;
@@ -790,18 +818,18 @@ button {
   -o-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
-  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
+  background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
+  background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
+  background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
 }
 button:visited {
-  color: #ffffff;
+  color: white;
 }
 button:hover {
   background-color: #16dbdb;
-  color: #ffffff;
+  color: white;
   -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
   box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
@@ -814,7 +842,6 @@ button:hover {
 button [class^="icon-"],
 button [class*=" icon-"] {
   /* keeps button heights with and without icons the same */
-
   line-height: .9em;
 }
 :-moz-placeholder {
@@ -854,9 +881,12 @@ button [class*=" icon-"] {
 }
 /* ==========================================================================
 // MEDIA OBJECT
+// Source: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
 // =========================================================================*/
+
 .media {
-  margin-bottom: 1.5em;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
   *zoom: 1;
 }
 .media:before,
@@ -874,14 +904,16 @@ button [class*=" icon-"] {
 }
 .media-image {
   float: left;
-  margin-right: 1em;
+  margin: 0px 16px 0px 0px;
+  margin: 0rem 1rem 0rem 0rem;
 }
 .media-image img {
   display: block;
 }
 .media-image-alt {
   float: right;
-  margin-left: 1em;
+  margin: 0px 0px 0px 16px;
+  margin: 0rem 0rem 0rem 1rem;
 }
 @media only screen and (max-width: 47.9375em) {
   .media .media-image {
@@ -893,9 +925,11 @@ button [class*=" icon-"] {
 /* ==========================================================================
 // NAVIGATION
 // =========================================================================*/
+
 .nav {
   *zoom: 1;
-  margin: 1.5em 0 1.5em 0;
+  margin: 24px 0px 24px 0px;
+  margin: 1.5rem 0rem 1.5rem 0rem;
   background-color: #5e5e5e;
 }
 .nav:before,
@@ -912,13 +946,14 @@ button [class*=" icon-"] {
 .nav li a {
   display: block;
   text-decoration: none;
-  color: #ffffff;
-  padding: 0.5em;
+  color: white;
+  padding: 8px;
+  padding: 0.5rem;
 }
 .nav li a:hover,
 .nav li a.active {
   background-color: #121212;
-  color: #ffffff;
+  color: white;
 }
 @media only screen and (max-width: 47.9375em) {
   .nav li {
@@ -951,8 +986,10 @@ button [class*=" icon-"] {
 /* =========================================================================
 // PAGINATION
 // =======================================================================*/
+
 .pagination {
   padding: 0;
+  margin-left: 0;
   *zoom: 1;
   list-style: none;
 }
@@ -975,7 +1012,7 @@ button [class*=" icon-"] {
   -moz-border-radius: 0.25em;
   border-radius: 0.25em;
   text-decoration: none;
-  color: #FFF;
+  color: white;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -989,12 +1026,16 @@ button [class*=" icon-"] {
 /* =========================================================================
 // TABLE
 // =======================================================================*/
+
 .table {
   width: 100%;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
 }
 .table th,
 .table td {
-  padding: 0.5em;
+  padding: 8px;
+  padding: 0.5rem;
   text-align: left;
 }
 .table tbody tr:hover {
@@ -1011,12 +1052,14 @@ button [class*=" icon-"] {
 /* ==========================================================================
 // WELL
 // =========================================================================*/
+
 .well {
   display: block;
-  padding: 0.75em;
-  margin-left: 2.5em;
+  padding: 16px;
+  padding: 1rem;
+  margin: 0px 0px 0px 40px;
+  margin: 0rem 0rem 0rem 2.5rem;
   background-color: #ebebeb;
-  margin-bottom: 1.5em;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
   border-radius: 0.5em;
@@ -1104,10 +1147,11 @@ button [class*=" icon-"] {
 // PRINT
 // Adapted from the brilliant: Html5 Boilerplate (http://html5boilerplate.com/)
 // =========================================================================*/
+
 @media print {
   * {
     background: transparent !important;
-    color: #000 !important;
+    color: black !important;
     box-shadow: none !important;
     text-shadow: none !important;
     filter: none !important;
@@ -1130,7 +1174,7 @@ button [class*=" icon-"] {
   }
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
   thead {
@@ -1143,7 +1187,7 @@ button [class*=" icon-"] {
   img {
     max-width: 100% !important;
   }
-  @page  {
+  @page {
     margin: 0.5cm;
   }
   p,
@@ -1160,6 +1204,7 @@ button [class*=" icon-"] {
 /* =========================================================================
 // HEADER
 // =======================================================================*/
+
 @media only screen and (min-width: 48em) {
   
 }
@@ -1169,12 +1214,13 @@ button [class*=" icon-"] {
 @media only screen and (max-width: 47.9375em) {
   
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   
 }
 /* =========================================================================
 // FOOTER
 // =======================================================================*/
+
 @media only screen and (min-width: 48em) {
   
 }
@@ -1184,12 +1230,13 @@ button [class*=" icon-"] {
 @media only screen and (max-width: 47.9375em) {
   
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   
 }
 /* =========================================================================
 // CUSTOM-MODULE
 // =======================================================================*/
+
 @media only screen and (min-width: 48em) {
   
 }
@@ -1199,12 +1246,13 @@ button [class*=" icon-"] {
 @media only screen and (max-width: 47.9375em) {
   
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   
 }
 /* =========================================================================
 // IE OVERRIDES
 // =======================================================================*/
+
 /*  Font Awesome
     the iconic font designed for use with Twitter Bootstrap
     -------------------------------------------------------
@@ -1228,7 +1276,9 @@ button [class*=" icon-"] {
     Work: Lead Product Designer @ http://kyruus.com
 
 */
+
 /* TODO: Move font-face into a mixin */
+
 @font-face {
   font-family: 'FontAwesome';
   src: url('/assets/fonts/fontawesome-webfont.eot');
@@ -1238,6 +1288,7 @@ button [class*=" icon-"] {
 }
 /*  Font Awesome styles
     ------------------------------------------------------- */
+
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-family: FontAwesome;
@@ -1252,16 +1303,16 @@ a [class*=" icon-"] {
   text-decoration: inherit;
 }
 /* makes the font 33% larger relative to the icon container */
+
 .icon-large:before {
   vertical-align: middle;
-  font-size: 1.3333333333333333em;
+  font-size: 1.333333333em;
 }
 .button [class^="icon-"],
 .nav-tabs [class^="icon-"],
 .button [class*=" icon-"],
 .nav-tabs [class*=" icon-"] {
   /* keeps button heights with and without icons the same */
-
   line-height: .9em;
 }
 li [class^="icon-"],
@@ -1273,7 +1324,6 @@ li [class*=" icon-"] {
 li .icon-large:before,
 li .icon-large:before {
   /* 1.5 increased font size for icon-large * 1.25 width */
-
   width: 1.875em;
 }
 ul.icons {
@@ -1288,11 +1338,11 @@ ul.icons li [class*=" icon-"] {
 ul.icons li .icon-large:before,
 ul.icons li .icon-large:before {
   /* 1.5 increased font size for icon-large * 1.25 width */
-
   vertical-align: initial;
 }
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
     readers do not read off random characters that represent icons */
+
 .icon-glass:before {
   content: "\f000";
 }
@@ -1384,6 +1434,7 @@ ul.icons li .icon-large:before {
   content: "\f01e";
 }
 /* \f020 doesn't work in Safari. all shifted one down */
+
 .icon-refresh:before {
   content: "\f021";
 }

@@ -5,7 +5,7 @@
 .nav {
 
 	.clearfix ();
-	margin: @TYPE-VerticalRhythm 0 @TYPE-VerticalRhythm 0;
+	.margin-rems (@TYPE-LineHeight, 0, @TYPE-LineHeight, 0);
 	background-color: @NAV-BgColor;
 
 	li {
@@ -14,7 +14,7 @@
 			display: block;
 			text-decoration: none;
 			color: @NAV-TextColor;
-			padding: 0.5em;
+			.padding-rems (@TYPE-FontSize/2);
 			&:hover, 
 			&.active {
 				background-color: @NAV-ActiveBgColor;

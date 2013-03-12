@@ -4,7 +4,7 @@
 // =========================================================================*/
 
 .media {
-	margin-bottom: @TYPE-VerticalRhythm;
+	.margin-rems (0, 0, @TYPE-LineHeight, 0);
 	.clearfix ();
 }
 
@@ -16,7 +16,7 @@
 
 .media-image { 
 	float: left; 
-	margin-right: 1em;
+	.margin-rems (0, @TYPE-FontSize, 0, 0);
 	img{
 		display: block;
 	}
@@ -24,7 +24,7 @@
 
 .media-image-alt {
 	float: right; 
-	margin-left: 1em;
+	.margin-rems (0, 0, 0, @TYPE-FontSize);
 }
 
 // MOBILE

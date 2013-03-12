@@ -114,12 +114,13 @@ a:active {
 
 ul, 
 ol {
-    margin: @TYPE-VerticalRhythm 0; 
-    padding: 0 0 0 (40/@TYPE-FontSize)*1em; 
+    .margin-rems (@TYPE-LineHeight, 0, @TYPE-LineHeight, 40);  
+    .padding-rems (0, 0, 0, 40);
 }
 
 dd { 
-    margin: 0 0 0 (40/@TYPE-FontSize)*1em; }
+    .margin-rems (0, 0, 0, 40); 
+}
 
 
 nav ul, 

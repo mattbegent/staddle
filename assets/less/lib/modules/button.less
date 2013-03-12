@@ -10,11 +10,10 @@
 	color: @BUTTON-TextColor;
 	background-color: @BUTTON-MainColor;
 	text-decoration: none;
-	@paddingBottom: (@TYPE-LineHeight/4)*1px;
-	padding: @paddingBottom 1em;
+	.padding-rems (@TYPE-LineHeight/4, @TYPE-FontSize, @TYPE-LineHeight/4, @TYPE-FontSize);
+	.margin-rems (0,0,(@TYPE-LineHeight/2,0);
 	cursor: pointer;
-	@marginBottom: (@TYPE-LineHeight/2)*1px;
-	margin:0 0 @marginBottom 0;
+	
 	border: none;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 
