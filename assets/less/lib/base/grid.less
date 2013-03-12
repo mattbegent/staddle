@@ -24,7 +24,6 @@
 	// All together
 	width: @thisColWidth;
 	margin-left: @gutterPercentage;
-	margin-bottom: @TYPE-VerticalRhythm;
 }
 
 .offsetwidth (@numberOfCols: 1){
@@ -58,6 +57,7 @@
 [class^="span-"] {
 	width: 100%;
 	margin-left: 0;
+	.margin-bottom-rems (@TYPE-LineHeight);
 	.transition( all, 0.3s); //Abit cheeky
 } 
 
@@ -80,7 +80,6 @@
 	[class*="span-"] {
 		display: inline;
 		float: left; 
-		margin-bottom: @TYPE-VerticalRhythm; 
 		&:last-child {
 			margin-bottom: 0;
 		}

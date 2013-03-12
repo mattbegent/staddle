@@ -45,7 +45,6 @@
 	padding: ~"@{top}px" ~"@{right}px" ~"@{bottom}px" ~"@{left}px"; 
 	padding: ~"@{top-rem}rem" ~"@{right-rem}rem" ~"@{bottom-rem}rem" ~"@{left-rem}rem";
 }
-
 .margin-rems (@px-size){
 	@rem-size: @px-size / @TYPE-FontSize;
 	margin: ~"@{px-size}px"; 
@@ -59,6 +58,18 @@
 	@left-rem: @left / @TYPE-FontSize;
 	margin: ~"@{top}px" ~"@{right}px" ~"@{bottom}px" ~"@{left}px"; 
 	margin: ~"@{top-rem}rem" ~"@{right-rem}rem" ~"@{bottom-rem}rem" ~"@{left-rem}rem";
+}
+
+.margin-top-rems (@px-size){
+	@rem-size: @px-size / @TYPE-FontSize;
+	margin-top: ~"@{px-size}px"; 
+	margin-top: ~"@{rem-size}rem";
+}
+
+.margin-bottom-rems (@px-size){
+	@rem-size: @px-size / @TYPE-FontSize;
+	margin-bottom: ~"@{px-size}px"; 
+	margin-bottom: ~"@{rem-size}rem";
 }
 
 // LEGACY EM MIXINS
