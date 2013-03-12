@@ -72,39 +72,6 @@
 	margin-bottom: ~"@{rem-size}rem";
 }
 
-// LEGACY EM MIXINS
-// ----------------------------------------------------
-
-.font-size-em (@selectedSize) {
-	@em: @TYPE-FontSize*1em; 
-	font-size: @selectedSize/@em;
-}
-
-.line-height-em (@selectedSize) {
-	@em: (@selectedSize/@TYPE-FontSize)*1em; 
-	line-height: @selectedSize/@em;
-} 
-
-.margin-em (@selectedSize) {
-	@em: @TYPE-FontSize*1em; 
-	margin: @selectedSize/@em;
-}
-
-.margin-em (@top, @right, @bottom, @left) {
-	@em: @TYPE-FontSize*1em; 
-	margin: @top/@em @right/@em @bottom/@em @left/@em;
-}
-
-.padding-em (@selectedSize) {
-	@em: @TYPE-FontSize*1em; 
-	padding: @selectedSize/@em;
-}
-
-.padding-em (@top, @right, @bottom, @left) {
-	@em: @TYPE-FontSize*1em; 
-	padding: @top/@em @right/@em @bottom/@em @left/@em;
-}
-
 // PERCENTAGES
 // ----------------------------------------------------
 
