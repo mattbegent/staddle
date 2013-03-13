@@ -4,23 +4,24 @@ A brilliant less boilerplate for small and large scale websites.
 
 ##Features
 
-* Flexibility - all of the built in modules are independent, so if you don't use one you can uncomment it
-* Responsive grid
-* Supports ie7 + (ie7 support will be dropped when clients stop demanding it)
-* Easy user configuration
-* Css3 mixins
-* Css debugging
-* Follows [SMACSS](http://smacss.com/)
+* Flexibility - all of the built in modules are independent, so if you don't use one you can uncomment it.
+* Responsive grid.
+* Supports ie7 + (ie7 support will be dropped when clients stop demanding it).
+* Easy user configuration.
+* Css3 mixins.
+* Css debugging.
+* Follows [SMACSS](http://smacss.com/).
 
 #Documentation
 
 ##Getting Started
 
-* Set your site variables in assets/less/variables.less
-* Add your custom modules to the assets/less/modules folder and import them in main.less
-* Tell your less compiler to compile main.less to assets/css/main.css
-* Use index.html as a template for your html
-* Build a cool site:-)
+* Clone the Boilerplate repo using `git clone git@github.com:mattbegent/Boilerplate.git` or [download the latest release](https://github.com//mattbegent/Boilerplate/archive/master.zip).
+* Set your site variables in assets/less/variables.less.
+* Add your custom modules to the assets/less/modules folder and import them in main.less.
+* Tell your less compiler to compile assets/less/main.less to assets/css/main.css.
+* Use index.html as a template for your html.
+* Build a cool site:-)!
 
 ##Customising
 
@@ -63,3 +64,23 @@ Boilerplate has a very standard grid system. For example if you wanted content t
 			<!-- 12 COLUMN CONTENT HERE -->
 		</div>
 	</div>
+
+##Mixins
+
+Boilerplate has a lot of handy less mixins to help speed up development. 
+
+Base Mixins:
+
+	.font-size (@FONT-SIZE-IN-PIXELS) // Sets font size in rems with px fallback for older browsers
+
+	.margin (@MARGIN-IN-PIXELS); // Sets margin in rems with px fallback for older browsers
+
+	.padding (@PADDING-IN-PIXELS); // Sets padding in rems with px fallback for older browsers
+
+	.percentage (@FIRST-NUMBER, @SECOND-NUMBER); // Sets width as a percentage
+
+	.size (@WIDTH, @HEIGHT); // Sets width and height
+
+Css3 Mixins:
+
+This includes animations, border radius, transitions and many more. See assets/less/lib/base/css3.less for full list.
