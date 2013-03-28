@@ -1120,7 +1120,7 @@ button [class*=" icon-"] {
   margin-left: auto;
   margin-right: auto;
 }
-@media only screen and (47.9375em) {
+@media only screen and (max-width: 47.9375em) {
   .hide-mobile {
     display: none !important;
   }
@@ -1128,7 +1128,7 @@ button [class*=" icon-"] {
     display: block !important;
   }
 }
-@media only screen and (48em) and (61.1875em) {
+@media only screen and (min-width: 48em) and (max-width: 61.1875em) {
   .hide-tablet {
     display: none !important;
   }
@@ -1136,7 +1136,7 @@ button [class*=" icon-"] {
     display: block !important;
   }
 }
-@media only screen and (61.25em) {
+@media only screen and (min-width: 61.25em) {
   .hide-desktop {
     display: none !important;
   }
@@ -1209,7 +1209,7 @@ button [class*=" icon-"] {
 @media only screen and (min-width: 48em) {
   
 }
-@media only screen and (min-width: 48em) and (61.1875em) {
+@media only screen and (min-width: 48em) and (max-width: 61.1875em) {
   
 }
 @media only screen and (max-width: 47.9375em) {
@@ -1225,7 +1225,7 @@ button [class*=" icon-"] {
 @media only screen and (min-width: 48em) {
   
 }
-@media only screen and (min-width: 48em) and (61.1875em) {
+@media only screen and (min-width: 48em) and (max-width: 61.1875em) {
   
 }
 @media only screen and (max-width: 47.9375em) {
@@ -1241,7 +1241,7 @@ button [class*=" icon-"] {
 @media only screen and (min-width: 48em) {
   
 }
-@media only screen and (min-width: 48em) and (61.1875em) {
+@media only screen and (min-width: 48em) and (max-width: 61.1875em) {
   
 }
 @media only screen and (max-width: 47.9375em) {

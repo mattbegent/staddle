@@ -85,7 +85,7 @@
 
 // Mobile
 
-@media only screen and (@MEDIAQUERY-Mobile) { 
+@media only screen and (max-width: @MEDIAQUERY-Mobile) { 
 
 	.hide-mobile {
 		display: none !important;
@@ -99,7 +99,7 @@
 
 // Tablet
 
-@media only screen and (@MEDIAQUERY-TabletMin) and (@MEDIAQUERY-TabletMax) {
+@media only screen and (min-width: @MEDIAQUERY-TabletMin) and (max-width: @MEDIAQUERY-TabletMax) {
 
 	.hide-tablet {
 		display: none !important;
@@ -113,7 +113,7 @@
 
 // Desktop
 
-@media only screen and (@MEDIAQUERY-DesktopOnly) { 
+@media only screen and (min-width: @MEDIAQUERY-DesktopOnly) { 
 
 	.hide-desktop {
 		display: none !important;
