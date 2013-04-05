@@ -42,7 +42,7 @@ Any custom modules (for example a special box) should be placed in the modules f
 
 	@import "modules/special-box.less";
 
-As all of the built in modules are independent (assets/less/lib/modules) you can safely uncomment them in the boilerplate import (assets/less/lib/boilerplate.less) if you don't use them or you want to write your own module.
+As all of the built in modules are independent (assets/less/base_modules) you can safely uncomment them in the boilerplate import (assets/less/base/boilerplate.less) if you don't use them or you want to write your own module.
 
 ##Debugging
 
@@ -83,4 +83,4 @@ Base Mixins:
 
 Css3 Mixins:
 
-This includes animations, border radius, transitions and many more. See assets/less/lib/base/css3.less for full list.
+This includes animations, border radius, transitions and many more. See assets/less/base/css3.less for full list.
