@@ -416,11 +416,6 @@ sub {
   margin-left: 0;
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 .grid {
   width: auto;
