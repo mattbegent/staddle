@@ -681,16 +681,11 @@ sub {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
-  background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
-  background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
-  background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
-  background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 .button:visited {
   color: white;
@@ -698,14 +693,6 @@ sub {
 .button:hover {
   background-color: #16dbdb;
   color: white;
-  -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 .button-alt {
   color: white;
@@ -720,20 +707,15 @@ sub {
 }
 .button-disabled {
   color: white;
-  background-color: #dedede;
+  background-color: #d1d1d1;
   cursor: default;
 }
 .button-disabled:visited {
   color: white;
 }
 .button-disabled:hover {
-  background-color: #dedede;
+  background-color: #d1d1d1;
   color: white;
-}
-.button-disabled:hover {
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 .button-full {
   display: block !important;
@@ -814,16 +796,11 @@ button {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
-  background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
-  background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
-  background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
-  background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.1));
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 button:visited {
   color: white;
@@ -831,14 +808,6 @@ button:visited {
 button:hover {
   background-color: #16dbdb;
   color: white;
-  -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 button [class^="icon-"],
 button [class*=" icon-"] {
