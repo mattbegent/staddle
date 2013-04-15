@@ -14,140 +14,140 @@ h3,
 h4, 
 h5, 
 h6 {
-	font-family: @TYPE-HeadingsFontFamily;
-	color: @TYPE-HeadingsColor;
-	font-weight: bold;
-	text-rendering: optimizelegibility;
-	&.small {
-		font-weight: normal;
-	}
+    font-family: @TYPE-HeadingsFontFamily;
+    color: @TYPE-HeadingsColor;
+    font-weight: bold;
+    text-rendering: optimizelegibility;
+    &.small {
+        font-weight: normal;
+    }
 }
 
 h1, 
 .alpha {
-	.font-size (@TYPE-SIZE-Alpha);
+    .font-size (@TYPE-SIZE-Alpha);
 }
 
 h2, 
 .beta {
-	.font-size (@TYPE-SIZE-Beta);
+    .font-size (@TYPE-SIZE-Beta);
 }
 
 h3, 
 .gamma {
-	.font-size (@TYPE-SIZE-Gamma);
+    .font-size (@TYPE-SIZE-Gamma);
 }
 
 h4, 
 .delta {
-	.font-size (@TYPE-SIZE-Delta);
+    .font-size (@TYPE-SIZE-Delta);
 }
 
 h5, 
 .epsilon {
-	.font-size (@TYPE-SIZE-Epsilon);
+    .font-size (@TYPE-SIZE-Epsilon);
 }
 
 h6, 
 .zeta {
-	.font-size (@TYPE-SIZE-Zeta);
+    .font-size (@TYPE-SIZE-Zeta);
 }
 
 hgroup,
 .hgroup {
-	* {
-		margin-bottom: 0;
-	}	
+    * {
+        margin-bottom: 0;
+    }   
 }
 
 // BODY
 // ----------------------------------------------------
 
 p {
-	.margin (0, 0, @TYPE-LineHeight, 0);
-	&:last-child {
-		margin-bottom: 0;
-	}
+    .margin (0, 0, @TYPE-LineHeight, 0);
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 abbr[title] { 
-	border-bottom: 1px dotted; 
+    border-bottom: 1px dotted; 
 }
 
 b, 
 strong { 
-	font-weight: bold; 
+    font-weight: bold; 
 }
 
 blockquote { 
-	.margin (0, 0, @TYPE-LineHeight, 0);
+    .margin (0, 0, @TYPE-LineHeight, 0);
 }
 
 dfn { 
-	font-style: italic; 
+    font-style: italic; 
 }
 
 hr { 
-	display: block; 
-	height: 1px; 
-	border: 0; 
-	border-top: 1px solid #CCC; 
-	.margin (@TYPE-LineHeight, 0, @TYPE-LineHeight, 0); 
-	padding: 0; 
+    display: block; 
+    height: 1px; 
+    border: 0; 
+    border-top: 1px solid #CCC; 
+    .margin (@TYPE-LineHeight, 0, @TYPE-LineHeight, 0); 
+    padding: 0; 
 }
 
 ins { 
-	background: #FF9; 
-	color: #000; 
-	text-decoration: none; 
+    background: #FF9; 
+    color: #000; 
+    text-decoration: none; 
 }
 
 mark { 
-	background: #FF0; 
-	color: #000; 
-	font-style: italic; 
-	font-weight: bold; 
+    background: #FF0; 
+    color: #000; 
+    font-style: italic; 
+    font-weight: bold; 
 }
 
 pre, 
 code, 
 kbd, 
 samp { 
-	font-family: @TYPE-CodeFontFamily; 
-	.font-size-rem (@TYPE-FontSize);
+    font-family: @TYPE-CodeFontFamily; 
+    .font-size-rem (@TYPE-FontSize);
 }
 
 pre { 
-	white-space: pre; 
-	white-space: pre-wrap; 
-	word-wrap: break-word; 
-	code {
-		display: block;
-		.padding (@TYPE-FontSize);
-	}
+    white-space: pre; 
+    white-space: pre-wrap; 
+    word-wrap: break-word; 
+    code {
+        display: block;
+        .padding (@TYPE-FontSize);
+    }
 }
 
 code {
-	background-color: #F8F8F8;
-	border: 1px solid #CCC;
-	padding: 0 3px;
-	margin: 0 3px;
-	.border-radius (3px);
+    background-color: #F8F8F8;
+    border: 1px solid #CCC;
+    padding: 0 3px;
+    margin: 0 3px;
+    .border-radius (3px);
 }
 
 q { 
-	quotes: none; 
+    quotes: none; 
 }
 
 q:before, 
 q:after { 
-	content: ""; 
-	content: none; 
+    content: ""; 
+    content: none; 
 }
 
 small, 
 .small { 
-	.font-size-rem (@TYPE-FontSize - 2);
+    .font-size-rem (@TYPE-FontSize - 2);
 }
 
 sub,

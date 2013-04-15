@@ -7,25 +7,25 @@
 
 .nav {
 
-	.clearfix ();
-	.margin (@TYPE-LineHeight, 0, @TYPE-LineHeight, 0);
-	background-color: @NAV-BgColor;
+    .clearfix ();
+    .margin (@TYPE-LineHeight, 0, @TYPE-LineHeight, 0);
+    background-color: @NAV-BgColor;
 
-	li {
-		list-style: none;
-		a {
-			display: block;
-			text-decoration: none;
-			color: @NAV-TextColor;
-			.padding (@TYPE-FontSize/2);
-			.transition (background-color,0.3s);
-			&:hover, 
-			&.active {
-				background-color: @NAV-ActiveBgColor;
-				color: @NAV-ActiveTextColor;
-			}
-		}
-	}
+    li {
+        list-style: none;
+        a {
+            display: block;
+            text-decoration: none;
+            color: @NAV-TextColor;
+            .padding (@TYPE-FontSize/2);
+            .transition (background-color,0.3s);
+            &:hover, 
+            &.active {
+                background-color: @NAV-ActiveBgColor;
+                color: @NAV-ActiveTextColor;
+            }
+        }
+    }
 
 }
 
@@ -34,15 +34,15 @@
 
 @media only screen and (max-width: @MQ-Mobile) { 
 
-	.nav {
-		li {
-			display: block;
-			border-bottom: 1px solid lighten(@NAV-BgColor, 10%);
-		}
-		li:last-child {
-			border-bottom: none;
-		}
-	}
+    .nav {
+        li {
+            display: block;
+            border-bottom: 1px solid lighten(@NAV-BgColor, 10%);
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+    }
 
 }
 
@@ -51,26 +51,26 @@
 
 @media only screen and (min-width: @MQ-Desktop) { 
 
-	.nav {
-		li {
-			display: inline;
-			float: left;
-			margin-left: 0;
-			border-right:1px solid lighten(@NAV-BgColor, 10%);
-		}
-	}
+    .nav {
+        li {
+            display: inline;
+            float: left;
+            margin-left: 0;
+            border-right:1px solid lighten(@NAV-BgColor, 10%);
+        }
+    }
 
-	.nav-vertical {
-		padding:0;
-		li {
-			display: block;
-			float: none;
-			border-bottom: 1px solid lighten(@NAV-BgColor, 10%);
-		}
-		:last-child {
-			border-bottom: none;
-		}
-	}
+    .nav-vertical {
+        padding:0;
+        li {
+            display: block;
+            float: none;
+            border-bottom: 1px solid lighten(@NAV-BgColor, 10%);
+        }
+        :last-child {
+            border-bottom: none;
+        }
+    }
 
 }
 
@@ -80,21 +80,21 @@
 
 .nav-mobile-top (@containerHeight: 150px, @positionLeft: 0, @positionBottom: 0) {
 
-	@media only screen and (min-width: @MQ-Desktop) { 
+    @media only screen and (min-width: @MQ-Desktop) { 
 
-		.nav-mobile-top-container {
-			position: relative;
-			min-height: @containerHeight;
-		}
+        .nav-mobile-top-container {
+            position: relative;
+            min-height: @containerHeight;
+        }
 
-		.nav-mobile-top {
-			position: absolute;
-			left: @positionLeft;
-			bottom: @positionBottom;
-			width: 100%;
-		}
+        .nav-mobile-top {
+            position: absolute;
+            left: @positionLeft;
+            bottom: @positionBottom;
+            width: 100%;
+        }
 
-	}
+    }
 
 }
 

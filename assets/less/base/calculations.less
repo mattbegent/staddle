@@ -6,101 +6,101 @@
 // ----------------------------------------------------
 
 .font-size (@font-size) {
-	.font-size-rem (@font-size);
-	.line-height (@font-size);
-	.margin (0, 0, @TYPE-LineHeight, 0);
+    .font-size-rem (@font-size);
+    .line-height (@font-size);
+    .margin (0, 0, @TYPE-LineHeight, 0);
 }
 
 .font-size-rem (@px-size) {
-	@rem-size: @px-size / @TYPE-FontSize;
-	font-size: ~"@{px-size}px"; 
-	font-size: ~"@{rem-size}rem";
+    @rem-size: @px-size / @TYPE-FontSize;
+    font-size: ~"@{px-size}px"; 
+    font-size: ~"@{rem-size}rem";
 }
 
 // LINE HEIGHT
 // ----------------------------------------------------
 
 .line-height (@font-size) when (@font-size >= @TYPE-LineHeight) {
-	line-height: (@TYPE-LineHeight * 2)/@font-size;
+    line-height: (@TYPE-LineHeight * 2)/@font-size;
 }
 
 .line-height (@font-size) when (@font-size < @TYPE-LineHeight) {
-	line-height: @TYPE-LineHeight/@font-size;
+    line-height: @TYPE-LineHeight/@font-size;
 }
 
 // PADDINGS/MARGINS
 // ----------------------------------------------------
 
 .margin (@px-size){
-	@rem-size: @px-size / @TYPE-FontSize;
-	margin: ~"@{px-size}px"; 
-	margin: ~"@{rem-size}rem";
+    @rem-size: @px-size / @TYPE-FontSize;
+    margin: ~"@{px-size}px"; 
+    margin: ~"@{rem-size}rem";
 }
 
 .margin (@top, @right, @bottom, @left) {
-	@top-rem: @top / @TYPE-FontSize;
-	@right-rem: @right / @TYPE-FontSize;
-	@bottom-rem: @bottom / @TYPE-FontSize;
-	@left-rem: @left / @TYPE-FontSize;
-	margin: ~"@{top}px" ~"@{right}px" ~"@{bottom}px" ~"@{left}px"; 
-	margin: ~"@{top-rem}rem" ~"@{right-rem}rem" ~"@{bottom-rem}rem" ~"@{left-rem}rem";
+    @top-rem: @top / @TYPE-FontSize;
+    @right-rem: @right / @TYPE-FontSize;
+    @bottom-rem: @bottom / @TYPE-FontSize;
+    @left-rem: @left / @TYPE-FontSize;
+    margin: ~"@{top}px" ~"@{right}px" ~"@{bottom}px" ~"@{left}px"; 
+    margin: ~"@{top-rem}rem" ~"@{right-rem}rem" ~"@{bottom-rem}rem" ~"@{left-rem}rem";
 }
 
 .margin-top (@px-size){
-	@rem-size: @px-size / @TYPE-FontSize;
-	margin-top: ~"@{px-size}px"; 
-	margin-top: ~"@{rem-size}rem";
+    @rem-size: @px-size / @TYPE-FontSize;
+    margin-top: ~"@{px-size}px"; 
+    margin-top: ~"@{rem-size}rem";
 }
 
 .margin-bottom (@px-size){
-	@rem-size: @px-size / @TYPE-FontSize;
-	margin-bottom: ~"@{px-size}px"; 
-	margin-bottom: ~"@{rem-size}rem";
+    @rem-size: @px-size / @TYPE-FontSize;
+    margin-bottom: ~"@{px-size}px"; 
+    margin-bottom: ~"@{rem-size}rem";
 }
 
 .padding (@px-size){
-	@rem-size: @px-size / @TYPE-FontSize;
-	padding: ~"@{px-size}px"; 
-	padding: ~"@{rem-size}rem";
+    @rem-size: @px-size / @TYPE-FontSize;
+    padding: ~"@{px-size}px"; 
+    padding: ~"@{rem-size}rem";
 }
 
 .padding (@top, @right, @bottom, @left) {
-	@top-rem: @top / @TYPE-FontSize;
-	@right-rem: @right / @TYPE-FontSize;
-	@bottom-rem: @bottom / @TYPE-FontSize;
-	@left-rem: @left / @TYPE-FontSize;
-	padding: ~"@{top}px" ~"@{right}px" ~"@{bottom}px" ~"@{left}px"; 
-	padding: ~"@{top-rem}rem" ~"@{right-rem}rem" ~"@{bottom-rem}rem" ~"@{left-rem}rem";
+    @top-rem: @top / @TYPE-FontSize;
+    @right-rem: @right / @TYPE-FontSize;
+    @bottom-rem: @bottom / @TYPE-FontSize;
+    @left-rem: @left / @TYPE-FontSize;
+    padding: ~"@{top}px" ~"@{right}px" ~"@{bottom}px" ~"@{left}px"; 
+    padding: ~"@{top-rem}rem" ~"@{right-rem}rem" ~"@{bottom-rem}rem" ~"@{left-rem}rem";
 }
 
 .padding-top (@px-size){
-	@rem-size: @px-size / @TYPE-FontSize;
-	margin-top: ~"@{px-size}px"; 
-	margin-top: ~"@{rem-size}rem";
+    @rem-size: @px-size / @TYPE-FontSize;
+    margin-top: ~"@{px-size}px"; 
+    margin-top: ~"@{rem-size}rem";
 }
 
 .padding-bottom (@px-size){
-	@rem-size: @px-size / @TYPE-FontSize;
-	margin-bottom: ~"@{px-size}px"; 
-	margin-bottom: ~"@{rem-size}rem";
+    @rem-size: @px-size / @TYPE-FontSize;
+    margin-bottom: ~"@{px-size}px"; 
+    margin-bottom: ~"@{rem-size}rem";
 }
 
 // PERCENTAGES
 // ----------------------------------------------------
 
 .percentage (@first, @second) {
-	width: (@first/@second)*100%;
+    width: (@first/@second)*100%;
 }
 
 // SIZE
 // ----------------------------------------------------
 
 .size (@size) {
-	width: @size;
-	height: @size;
+    width: @size;
+    height: @size;
 }
 
 .size (@width, @height) {
-	width: @width;
-	height: @height;
+    width: @width;
+    height: @height;
 }

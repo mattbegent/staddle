@@ -7,36 +7,36 @@
 
 .breadcrumbs {
 
-	display: block;
-	margin-left: 0;
-	padding: 0;
-	.clearfix ();
-	list-style: none; 
-	.font-size-rem (@BREADCRUMBS-FontSize);
+    display: block;
+    margin-left: 0;
+    padding: 0;
+    .clearfix ();
+    list-style: none; 
+    .font-size-rem (@BREADCRUMBS-FontSize);
 
-	li { 
-		display: inline;
-		&::before {
-			content: ">\0000a0";
-		}
-		&:first-child::before  {
-			content: "";
-		}
-	}	
+    li { 
+        display: inline;
+        &::before {
+            content: ">\0000a0";
+        }
+        &:first-child::before  {
+            content: "";
+        }
+    }   
 
-	a {
-		text-decoration: none;
-		color: @BREADCRUMBS-Color;
-		&:hover {
-			text-decoration: underline
-		}
-	}
+    a {
+        text-decoration: none;
+        color: @BREADCRUMBS-Color;
+        &:hover {
+            text-decoration: underline
+        }
+    }
 
-	// Current item
-	a.active,
-	span {
-		color: @BREADCRUMBS-ActiveColor;
-	}
+    // Current item
+    a.active,
+    span {
+        color: @BREADCRUMBS-ActiveColor;
+    }
 
 }
 

@@ -8,185 +8,185 @@
 // DEBUG
 // ----------------------------------------------------
 
-@DEBUG:							false;
+@DEBUG:                         false;
 
 // TYPOGRAPHY
 // ----------------------------------------------------
 
-@TYPE-FontSize: 				16;
-@TYPE-LineHeight: 				24;
-@TYPE-FontFamily: 				Arial, Helvetica, sans-serif;	
-@TYPE-FontColor:				#222;
-@TYPE-HeadingsFontFamily:		@TYPE-FontFamily;
-@TYPE-HeadingsColor:			#222;
+@TYPE-FontSize:                 16;
+@TYPE-LineHeight:               24;
+@TYPE-FontFamily:               Arial, Helvetica, sans-serif;   
+@TYPE-FontColor:                #222;
+@TYPE-HeadingsFontFamily:       @TYPE-FontFamily;
+@TYPE-HeadingsColor:            #222;
 
-@TYPE-SIZE-Omega: 				60;
-@TYPE-SIZE-Alpha: 				48;
-@TYPE-SIZE-Beta: 				36;
-@TYPE-SIZE-Gamma: 				24;
-@TYPE-SIZE-Delta: 				21;
-@TYPE-SIZE-Epsilon: 			18;
-@TYPE-SIZE-Zeta: 				14;
-@TYPE-SIZE-Eta: 				@TYPE-FontSize;
-@TYPE-SIZE-Iota: 				12;
+@TYPE-SIZE-Omega:               60;
+@TYPE-SIZE-Alpha:               48;
+@TYPE-SIZE-Beta:                36;
+@TYPE-SIZE-Gamma:               24;
+@TYPE-SIZE-Delta:               21;
+@TYPE-SIZE-Epsilon:             18;
+@TYPE-SIZE-Zeta:                14;
+@TYPE-SIZE-Eta:                 @TYPE-FontSize;
+@TYPE-SIZE-Iota:                12;
 
-@TYPE-CodeFontFamily:			Monaco, Courier New, monospace, serif;
+@TYPE-CodeFontFamily:           Monaco, Courier New, monospace, serif;
 
 // GRID
-// ----------------------------------------------------	
+// ---------------------------------------------------- 
 
-@GRID-Cols: 					12;
-@GRID-ColWidth: 				60;
-@GRID-GutterWidth: 				21;
-@GRID-MaxWidth:					(@GRID-Cols * @GRID-ColWidth) + ((@GRID-Cols - 1) * @GRID-GutterWidth); //derived from ACTUAL values
+@GRID-Cols:                     12;
+@GRID-ColWidth:                 60;
+@GRID-GutterWidth:              21;
+@GRID-MaxWidth:                 (@GRID-Cols * @GRID-ColWidth) + ((@GRID-Cols - 1) * @GRID-GutterWidth); //derived from ACTUAL values
 
 // MEDIA QUERIES
-// ----------------------------------------------------	
+// ---------------------------------------------------- 
 
-@MQ-Mobile:						(767/@TYPE-FontSize)*1em; //Max
-@MQ-TabletMin:					(768/@TYPE-FontSize)*1em; //Min
-@MQ-TabletMax:					(979/@TYPE-FontSize)*1em; //Max
-@MQ-Desktop:					(768/@TYPE-FontSize)*1em; //Min
-@MQ-DesktopOnly:				(980/@TYPE-FontSize)*1em; //Min 
+@MQ-Mobile:                     (767/@TYPE-FontSize)*1em; //Max
+@MQ-TabletMin:                  (768/@TYPE-FontSize)*1em; //Min
+@MQ-TabletMax:                  (979/@TYPE-FontSize)*1em; //Max
+@MQ-Desktop:                    (768/@TYPE-FontSize)*1em; //Min
+@MQ-DesktopOnly:                (980/@TYPE-FontSize)*1em; //Min 
 
 // LINKS
-// ----------------------------------------------------	
+// ---------------------------------------------------- 
 
-@LINK-Link:						#00e;
-@LINK-Visited:					lighten(@LINK-Link, 10);
-@LINK-Hover:					darken(@LINK-Link, 20);
-@LINK-Active:					darken(@LINK-Link, 20);
-@LINK-Focus:					darken(@LINK-Link, 40);
+@LINK-Link:                     #00e;
+@LINK-Visited:                  lighten(@LINK-Link, 10);
+@LINK-Hover:                    darken(@LINK-Link, 20);
+@LINK-Active:                   darken(@LINK-Link, 20);
+@LINK-Focus:                    darken(@LINK-Link, 40);
 
 // SELECT
-// ----------------------------------------------------	
+// ---------------------------------------------------- 
 
-@SELECT-BgColor:				#639AFF;
-@SELECT-TextColor:				#FFF;
+@SELECT-BgColor:                #639AFF;
+@SELECT-TextColor:              #FFF;
 
 // STYLE
-// ----------------------------------------------------	
+// ---------------------------------------------------- 
 
-@SYTLE-RoundedCorners:			true; // Rounds buttons, alerts, pagination, wells.
-@STYLE-BorderRadius:			8;
-@STYLE-BodyBgColor:				#FFF; 
+@SYTLE-RoundedCorners:          true; // Rounds buttons, alerts, pagination, wells.
+@STYLE-BorderRadius:            8;
+@STYLE-BodyBgColor:             #FFF; 
 
 // PATHS
-// ----------------------------------------------------	
+// ---------------------------------------------------- 
 
-@PATH-Assets:					"assets/";
-@PATH-Images:					"assets/images/";
-@PATH-Fonts:					"assets/fonts/";
+@PATH-Assets:                   "assets/";
+@PATH-Images:                   "assets/images/";
+@PATH-Fonts:                    "assets/fonts/";
 
 // COLORS
-// ----------------------------------------------------	
+// ---------------------------------------------------- 
 
-@COLOR-Base:					#AD1111;
+@COLOR-Base:                    #AD1111;
 
 // Sample generated colors
-@COLOR-Complement1: 			spin(@COLOR-Base, 180);
-@COLOR-Complement2: 			darken(spin(@COLOR-Base, 180), 5%);
-@COLOR-Lighten1: 				lighten(@COLOR-Base, 15%);
-@COLOR-Lighten2: 				lighten(@COLOR-Base, 30%); 
+@COLOR-Complement1:             spin(@COLOR-Base, 180);
+@COLOR-Complement2:             darken(spin(@COLOR-Base, 180), 5%);
+@COLOR-Lighten1:                lighten(@COLOR-Base, 15%);
+@COLOR-Lighten2:                lighten(@COLOR-Base, 30%); 
 
 // BASE MODULES
 // Change to false if not using
 // =========================================================================//
 
-@MODULE-Alert:					true;
-@MODULE-Box:					true;
-@MODULE-Breadcrumbs:			true;
-@MODULE-Button:					true;
-@MODULE-Form:					true;
-@MODULE-Media:					true;
-@MODULE-Navigation:				true;
-@MODULE-Pagination:				true;
-@MODULE-Print:					true;
-@MODULE-Table:					true;
-@MODULE-Typography:				true;
-@MODULE-Well:					true;
+@MODULE-Alert:                  true;
+@MODULE-Box:                    true;
+@MODULE-Breadcrumbs:            true;
+@MODULE-Button:                 true;
+@MODULE-Form:                   true;
+@MODULE-Media:                  true;
+@MODULE-Navigation:             true;
+@MODULE-Pagination:             true;
+@MODULE-Print:                  true;
+@MODULE-Table:                  true;
+@MODULE-Typography:             true;
+@MODULE-Well:                   true;
 
 // MODULES
 // =========================================================================//
 
 // ALERT
-// ----------------------------------------------------	
+// ---------------------------------------------------- 
 
-@ALERT-InfoBgColor: 			#D9EDF7;
-@ALERT-InfoTextColor: 			#3A87AD;
-@ALERT-InfoBorderColor:			#3A87AD;
+@ALERT-InfoBgColor:             #D9EDF7;
+@ALERT-InfoTextColor:           #3A87AD;
+@ALERT-InfoBorderColor:         #3A87AD;
 
-@ALERT-ErrorBgColor: 			#F2DEDE;
-@ALERT-ErrorTextColor: 			#B94A48;
-@ALERT-ErrorBorderColor: 		#B94A48;
+@ALERT-ErrorBgColor:            #F2DEDE;
+@ALERT-ErrorTextColor:          #B94A48;
+@ALERT-ErrorBorderColor:        #B94A48;
 
-@ALERT-SuccessBgColor: 			#DFF0D8;
-@ALERT-SuccessTextColor: 		#468847;
-@ALERT-SuccessBorderColor: 		#468847;
+@ALERT-SuccessBgColor:          #DFF0D8;
+@ALERT-SuccessTextColor:        #468847;
+@ALERT-SuccessBorderColor:      #468847;
 
-@ALERT-NoteBgColor: 			#EBE8E2;
-@ALERT-NoteTextColor: 			#222;
-@ALERT-NoteBorderColor: 		#222;
+@ALERT-NoteBgColor:             #EBE8E2;
+@ALERT-NoteTextColor:           #222;
+@ALERT-NoteBorderColor:         #222;
 
-@ALERT-AlertBgColor: 			@ALERT-ErrorBgColor;
-@ALERT-AlertTextColor: 			@ALERT-ErrorTextColor;
-@ALERT-AlertBorderColor: 		@ALERT-ErrorBorderColor;
+@ALERT-AlertBgColor:            @ALERT-ErrorBgColor;
+@ALERT-AlertTextColor:          @ALERT-ErrorTextColor;
+@ALERT-AlertBorderColor:        @ALERT-ErrorBorderColor;
 
 // BOX
-// ----------------------------------------------------	
+// ---------------------------------------------------- 
 
-@BOX-HeaderBgColor: 			#C2C2C2;
-@BOX-HeaderTextColor: 			#FFF;
-@BOX-BodyBgColor: 				#EBEBEB;
-@BOX-FooterBgColor: 			#C2C2C2; 
+@BOX-HeaderBgColor:             #C2C2C2;
+@BOX-HeaderTextColor:           #FFF;
+@BOX-BodyBgColor:               #EBEBEB;
+@BOX-FooterBgColor:             #C2C2C2; 
 
 // BREADCRUMBS
-// ----------------------------------------------------	
+// ---------------------------------------------------- 
 
-@BREADCRUMBS-FontSize:			@TYPE-SIZE-Iota;
-@BREADCRUMBS-Color:				@TYPE-FontColor;
-@BREADCRUMBS-ActiveColor:		@TYPE-FontColor;
+@BREADCRUMBS-FontSize:          @TYPE-SIZE-Iota;
+@BREADCRUMBS-Color:             @TYPE-FontColor;
+@BREADCRUMBS-ActiveColor:       @TYPE-FontColor;
 
 // BUTTON
 // ----------------------------------------------------
 
-@BUTTON-MainColor:				@COLOR-Complement1;
-@BUTTON-HoverColor:				lighten(@BUTTON-MainColor, 10%);
-@BUTTON-TextColor:				#FFF;
+@BUTTON-MainColor:              @COLOR-Complement1;
+@BUTTON-HoverColor:             lighten(@BUTTON-MainColor, 10%);
+@BUTTON-TextColor:              #FFF;
 
-@BUTTON-AltColor:				@COLOR-Lighten1;
-@BUTTON-AltHoverColor:			lighten(@BUTTON-AltColor, 10%);	
-@BUTTON-AltTextColor:			#FFF;
+@BUTTON-AltColor:               @COLOR-Lighten1;
+@BUTTON-AltHoverColor:          lighten(@BUTTON-AltColor, 10%); 
+@BUTTON-AltTextColor:           #FFF;
 
-@BUTTON-DisabledColor:			@BUTTON-TextColor;
-@BUTTON-DisabledBgColor:		#D1D1D1;
+@BUTTON-DisabledColor:          @BUTTON-TextColor;
+@BUTTON-DisabledBgColor:        #D1D1D1;
 
 // FORM
-// ----------------------------------------------------	
+// ---------------------------------------------------- 
 
-@FORM-Placeholder:				#CCC;
+@FORM-Placeholder:              #CCC;
 
 // NAVIGATION
-// ----------------------------------------------------	
+// ---------------------------------------------------- 
 
-@NAV-BgColor: 					#5E5E5E;
-@NAV-TextColor: 				#FFF;
-@NAV-ActiveBgColor: 			darken(@NAV-BgColor, 30%);
-@NAV-ActiveTextColor: 			#FFF;
+@NAV-BgColor:                   #5E5E5E;
+@NAV-TextColor:                 #FFF;
+@NAV-ActiveBgColor:             darken(@NAV-BgColor, 30%);
+@NAV-ActiveTextColor:           #FFF;
 
 // PAGINATION
-// ----------------------------------------------------	
+// ---------------------------------------------------- 
 
-@PAGINATION-BgColor:			@BUTTON-AltColor;
-@PAGINATION-BgColorHover:		@BUTTON-AltHoverColor;
+@PAGINATION-BgColor:            @BUTTON-AltColor;
+@PAGINATION-BgColorHover:       @BUTTON-AltHoverColor;
 
 // TABLE
-// ----------------------------------------------------	
+// ---------------------------------------------------- 
 
-@TABLE-HoverBgColor:			#EBEBEB;
-@TABLE-StripedBgColor:			#EBEBEB;
+@TABLE-HoverBgColor:            #EBEBEB;
+@TABLE-StripedBgColor:          #EBEBEB;
 
 // WELL
-// ----------------------------------------------------	
+// ---------------------------------------------------- 
 
-@WELL-BgColor: 					#EBEBEB;
+@WELL-BgColor:                  #EBEBEB;

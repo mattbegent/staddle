@@ -9,36 +9,36 @@
 // ----------------------------------------------------
 
 .table {
-	width:100%;
-	.margin (0, 0, @TYPE-LineHeight, 0);
+    width:100%;
+    .margin (0, 0, @TYPE-LineHeight, 0);
 
-	th, 
-	td {
-		.padding (@TYPE-FontSize/2);
-		text-align: left;
-	}
+    th, 
+    td {
+        .padding (@TYPE-FontSize/2);
+        text-align: left;
+    }
 
-	tbody {
-		tr {
-			&:hover {
-				background-color: @TABLE-HoverBgColor;
-				.transition ( all, 0.3s);
-			}
-		}
-	}
+    tbody {
+        tr {
+            &:hover {
+                background-color: @TABLE-HoverBgColor;
+                .transition ( all, 0.3s);
+            }
+        }
+    }
 }
 
 // STRIPED
 // ----------------------------------------------------
 
 .table.table-striped {
-	tbody {
-		tr {
-			&:nth-child(even){
-				background-color: @TABLE-StripedBgColor;
-			}
-		}
-	}
+    tbody {
+        tr {
+            &:nth-child(even){
+                background-color: @TABLE-StripedBgColor;
+            }
+        }
+    }
 }
 
 } .table-styles();

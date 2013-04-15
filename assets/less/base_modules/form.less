@@ -11,44 +11,44 @@
 // ----------------------------------------------------
 
 .form-row {
-	.clearfix ();
-	.margin (0, 0, @TYPE-FontSize, 0);
+    .clearfix ();
+    .margin (0, 0, @TYPE-FontSize, 0);
 }
 
 label  {
-	cursor: pointer;
-	display: block;
-	font-weight: bold;
-	width: 140px;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    width: 140px;
 }
 
 input {
-	float: left;
-	display: block;
-	max-width: 100%;
+    float: left;
+    display: block;
+    max-width: 100%;
 }
 
 input, 
 textarea, 
 select {
-	width: 100%;
-	.border-radius (4px);
-	padding: 4px;
-	border: 1px solid #888;
-	color: #555;
+    width: 100%;
+    .border-radius (4px);
+    padding: 4px;
+    border: 1px solid #888;
+    color: #555;
 }
 
 input:focus, 
 textarea:focus, 
 select:focus {
-	border-color: rgba(82, 168, 236, 0.8);
-	.box-shadow-custom (~"inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)");
- 	outline: 0;
-  	outline: thin dotted \9;
+    border-color: rgba(82, 168, 236, 0.8);
+    .box-shadow-custom (~"inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)");
+    outline: 0;
+    outline: thin dotted \9;
 }
 
 button {
-	.button;
+    .button;
 }
 
 .placeholder (@FORM-Placeholder); 
@@ -61,39 +61,39 @@ button {
 
 @media only screen and (min-width: @MQ-Desktop) {
 
-	label {
-		width: 140px;
-		float: left;
-		text-align: right;
-		margin-top: 2px;
-	}
+    label {
+        width: 140px;
+        float: left;
+        text-align: right;
+        margin-top: 2px;
+    }
 
-	input, 
-	textarea, 
-	select {
-		width: 250px;
-		margin-left: 10px;
-	}
+    input, 
+    textarea, 
+    select {
+        width: 250px;
+        margin-left: 10px;
+    }
 
-	.input-small {
-		width: 80px;
-	}
+    .input-small {
+        width: 80px;
+    }
 
-	.input-medium {
-		width: 150px;
-	}
+    .input-medium {
+        width: 150px;
+    }
 
-	.input-large {
-		width: 225px;
-	}
+    .input-large {
+        width: 225px;
+    }
 
-	.input-xlarge {
-		width: 300px;
-	}
+    .input-xlarge {
+        width: 300px;
+    }
 
-	.input-full {
-		width: 100%;
-	}
+    .input-full {
+        width: 100%;
+    }
 
 }
 

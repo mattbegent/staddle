@@ -7,27 +7,27 @@
 // =========================================================================*/
 
 .media {
-	.margin (0, 0, @TYPE-LineHeight, 0);
-	.clearfix ();
+    .margin (0, 0, @TYPE-LineHeight, 0);
+    .clearfix ();
 }
 
 .media-content {
-	overflow: hidden; 
-	_overflow: visible; 
-	zoom: 1;
+    overflow: hidden; 
+    _overflow: visible; 
+    zoom: 1;
 }
 
 .media-image { 
-	float: left; 
-	.margin (0, @TYPE-FontSize, 0, 0);
-	img{
-		display: block;
-	}
+    float: left; 
+    .margin (0, @TYPE-FontSize, 0, 0);
+    img{
+        display: block;
+    }
 }
 
 .media-image-alt {
-	float: right; 
-	.margin (0, 0, 0, @TYPE-FontSize);
+    float: right; 
+    .margin (0, 0, 0, @TYPE-FontSize);
 }
 
 // MOBILE
@@ -35,13 +35,13 @@
 
 @media only screen and (max-width: @MQ-Mobile) {
 
-	.media {
-		.media-image {
-			float: none;
-			display: block;
-			margin: 0 auto;
-		}
-	}
+    .media {
+        .media-image {
+            float: none;
+            display: block;
+            margin: 0 auto;
+        }
+    }
 
 }
 

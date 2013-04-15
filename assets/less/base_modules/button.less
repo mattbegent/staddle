@@ -9,27 +9,27 @@
 // ----------------------------------------------------
 
 .button {
-	display: block;
-	color: @BUTTON-TextColor;
-	background-color: @BUTTON-MainColor;
-	text-decoration: none;
-	.padding (@TYPE-LineHeight/4, @TYPE-FontSize, @TYPE-LineHeight/4, @TYPE-FontSize);
-	cursor: pointer;
-	border: none;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    display: block;
+    color: @BUTTON-TextColor;
+    background-color: @BUTTON-MainColor;
+    text-decoration: none;
+    .padding (@TYPE-LineHeight/4, @TYPE-FontSize, @TYPE-LineHeight/4, @TYPE-FontSize);
+    cursor: pointer;
+    border: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 
-	.border-radius (0.25em);
-	.box-shadow (0, 1px, 2px);
-	.transition (background-color, 0.2s);	
+    .border-radius (0.25em);
+    .box-shadow (0, 1px, 2px);
+    .transition (background-color, 0.2s);   
 
-	&:visited {
-		color: @BUTTON-TextColor;
-	}
+    &:visited {
+        color: @BUTTON-TextColor;
+    }
 
-	&:hover {
-		background-color: @BUTTON-HoverColor;
-		color: @BUTTON-TextColor;
-	}
+    &:hover {
+        background-color: @BUTTON-HoverColor;
+        color: @BUTTON-TextColor;
+    }
 
 
 }
@@ -39,17 +39,17 @@
 
 .button-create (@backgroundColor, @hoverColor, @textColor) {
 
-	color: @textColor;
-	background-color: @backgroundColor;
+    color: @textColor;
+    background-color: @backgroundColor;
 
-	&:visited {
-		color: @textColor;
-	}
+    &:visited {
+        color: @textColor;
+    }
 
-	&:hover {
-		background-color: @hoverColor;
-		color: @textColor;
-	}
+    &:hover {
+        background-color: @hoverColor;
+        color: @textColor;
+    }
 
 }
 
@@ -57,16 +57,16 @@
 // ----------------------------------------------------
 
 .button-alt {
-	.button-create (@BUTTON-AltColor, @BUTTON-AltHoverColor, @BUTTON-AltTextColor);
+    .button-create (@BUTTON-AltColor, @BUTTON-AltHoverColor, @BUTTON-AltTextColor);
 }
 
 .button-disabled {
-	.button-create (@BUTTON-DisabledBgColor, @BUTTON-DisabledBgColor, @BUTTON-TextColor);
-	cursor: default; 
+    .button-create (@BUTTON-DisabledBgColor, @BUTTON-DisabledBgColor, @BUTTON-TextColor);
+    cursor: default; 
 }
 
 .button-full {
-	display: block !important;
+    display: block !important;
 }
 
 // DESKTOP ADJUSTMENT
@@ -74,10 +74,10 @@
 
 @media only screen and (min-width: @MQ-Desktop) { 
 
-	.button, 
-	.button-alt {
-		.inline-block ();	
-	}   
+    .button, 
+    .button-alt {
+        .inline-block ();   
+    }   
 
 }
 
