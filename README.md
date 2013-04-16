@@ -4,24 +4,24 @@ A brilliant front-end HTML5 and LESS boilerplate for small and large scale websi
 
 ##Features
 
-* Flexibility - all of the built in modules are independent, so if you don't use one you can uncomment it.
+* Flexibility - all of the base modules are independent, so you can turn off modules that you don't use.
 * Responsive grid.
 * Supports ie7 + (ie7 support will be dropped when clients stop demanding it).
 * Easy user configuration.
 * Css3 mixins.
 * Css debugging.
-* Follows [SMACSS](http://smacss.com/).
+* Follows a [SMACSS](http://smacss.com/) style.
 
 #Documentation
 
 ##Getting Started
 
-* Clone the Boilerplate repo using `git clone git@github.com:mattbegent/boilerplate.git` or [download the latest release](https://github.com/mattbegent/boilerplate/archive/master.zip).
-* Set your site variables in assets/less/variables.less.
-* Add your custom modules to the assets/less/modules folder and import them in main.less.
-* Tell your less compiler to compile assets/less/main.less to assets/css/main.css.
-* Use index.html as a template for your html.
-* Build a cool site:-)!
+1. Get the latest version of Boilerplate either by cloning it `git clone git@github.com:mattbegent/boilerplate.git`, downloading a zip of the [latest release](https://github.com/mattbegent/boilerplate/archive/master.zip) or if you use [bower](https://github.com/twitter/bower) `bower install boilerplate`.
+2. Set your site variables in assets/less/variables.less.
+3. Add your custom modules to the assets/less/modules folder and import them in main.less.
+4. Tell your less compiler to compile assets/less/main.less to assets/css/main.css.
+5. Use index.html as a template for your html.
+6. Build a cool site:-)!
 
 ##Customising
 
