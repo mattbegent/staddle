@@ -16,7 +16,7 @@ A brilliant front-end HTML5 and LESS boilerplate for small and large scale websi
 
 ##Getting Started
 
-* Clone the Boilerplate repo using `git clone git@github.com:mattbegent/Boilerplate.git` or [download the latest release](https://github.com//mattbegent/Boilerplate/archive/master.zip).
+* Clone the Boilerplate repo using `git clone git@github.com:mattbegent/boilerplate.git` or [download the latest release](https://github.com/mattbegent/boilerplate/archive/master.zip).
 * Set your site variables in assets/less/variables.less.
 * Add your custom modules to the assets/less/modules folder and import them in main.less.
 * Tell your less compiler to compile assets/less/main.less to assets/css/main.css.
