@@ -1,6 +1,6 @@
-#Boilerplate v1.5
+#Boilerplate v1.6.0
 
-A brilliant less boilerplate for small and large scale websites.
+A brilliant front-end HTML5 and LESS boilerplate for small and large scale websites.
 
 ##Features
 
