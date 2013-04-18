@@ -1,4 +1,13 @@
 {
-  "name": "boilerplate",
-  "version": "1.6.1"
+    "name": "boilerplate",
+    "version": "1.7.1",
+    "dependencies": {
+        "jquery": "latest",
+        "respond": "latest",
+        "selectivizr": "latest"
+    },
+    "ignore": [
+        ".jshintrc",
+        "**/*.txt"
+    ]
 }

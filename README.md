@@ -1,4 +1,4 @@
-#Boilerplate v1.7.0
+#Boilerplate v1.7.1
 
 A brilliant front-end HTML5 and LESS boilerplate for small and large scale websites.
 
@@ -8,7 +8,7 @@ A brilliant front-end HTML5 and LESS boilerplate for small and large scale websi
 * Responsive grid.
 * Supports ie7 + (ie7 support will be dropped when clients stop demanding it).
 * Easy user configuration.
-* Css3 mixins.
+* CSS3 mixins.
 * Css debugging.
 * Follows a [SMACSS](http://smacss.com/) style.
 
@@ -84,3 +84,7 @@ Base Mixins:
 Css3 Mixins:
 
 This includes animations, border radius, transitions and many more. See less/base/css3.less for full list.
+
+##Updating JavaScript Libraries
+
+If you use [bower](https://github.com/twitter/bower) you can easily update all the JavaScript libraries used by Boilerplate by using `bower update`.
