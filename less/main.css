@@ -231,175 +231,6 @@ td {
   vertical-align: top;
 }
 /* ==========================================================================
-// TYPOGRAPHY
-// =========================================================================*/
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #222222;
-  font-weight: bold;
-  text-rendering: optimizelegibility;
-}
-h1.small,
-h2.small,
-h3.small,
-h4.small,
-h5.small,
-h6.small {
-  font-weight: normal;
-}
-h1,
-.alpha {
-  font-size: 48px;
-  font-size: 3rem;
-  line-height: 1;
-  margin: 0px 0px 24px 0px;
-  margin: 0rem 0rem 1.5rem 0rem;
-}
-h2,
-.beta {
-  font-size: 36px;
-  font-size: 2.25rem;
-  line-height: 1.333333333;
-  margin: 0px 0px 24px 0px;
-  margin: 0rem 0rem 1.5rem 0rem;
-}
-h3,
-.gamma {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 2;
-  margin: 0px 0px 24px 0px;
-  margin: 0rem 0rem 1.5rem 0rem;
-}
-h4,
-.delta {
-  font-size: 21px;
-  font-size: 1.3125rem;
-  line-height: 1.142857143;
-  margin: 0px 0px 24px 0px;
-  margin: 0rem 0rem 1.5rem 0rem;
-}
-h5,
-.epsilon {
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.333333333;
-  margin: 0px 0px 24px 0px;
-  margin: 0rem 0rem 1.5rem 0rem;
-}
-h6,
-.zeta {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.714285714;
-  margin: 0px 0px 24px 0px;
-  margin: 0rem 0rem 1.5rem 0rem;
-}
-hgroup *,
-.hgroup * {
-  margin-bottom: 0;
-}
-p {
-  margin: 0px 0px 24px 0px;
-  margin: 0rem 0rem 1.5rem 0rem;
-}
-p:last-child {
-  margin-bottom: 0;
-}
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-b,
-strong {
-  font-weight: bold;
-}
-blockquote {
-  margin: 0px 0px 24px 0px;
-  margin: 0rem 0rem 1.5rem 0rem;
-}
-dfn {
-  font-style: italic;
-}
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin: 24px 0px 24px 0px;
-  margin: 1.5rem 0rem 1.5rem 0rem;
-  padding: 0;
-}
-ins {
-  background: #ffff99;
-  color: black;
-  text-decoration: none;
-}
-mark {
-  background: yellow;
-  color: black;
-  font-style: italic;
-  font-weight: bold;
-}
-pre,
-code,
-kbd,
-samp {
-  font-family: Monaco, Courier New, monospace, serif;
-  font-size: 16px;
-  font-size: 1rem;
-}
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-pre code {
-  display: block;
-  padding: 16px;
-  padding: 1rem;
-}
-code {
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
-  padding: 0 3px;
-  margin: 0 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-q {
-  quotes: none;
-}
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-small,
-.small {
-  font-size: 14px;
-  font-size: 0.875rem;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sup {
-  top: -0.5em;
-}
-sub {
-  bottom: -0.25em;
-}
-/* ==========================================================================
 // GRID
 // =========================================================================*/
 .grid > [class*="span-"]:first-child {
@@ -1025,6 +856,175 @@ button [class*=" icon-"] {
   background-color: #ebebeb;
 }
 /* ==========================================================================
+// TYPOGRAPHY
+// =========================================================================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+  font-weight: bold;
+  text-rendering: optimizelegibility;
+}
+h1.small,
+h2.small,
+h3.small,
+h4.small,
+h5.small,
+h6.small {
+  font-weight: normal;
+}
+h1,
+.alpha {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
+}
+h2,
+.beta {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.333333333;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
+}
+h3,
+.gamma {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 2;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
+}
+h4,
+.delta {
+  font-size: 21px;
+  font-size: 1.3125rem;
+  line-height: 1.142857143;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
+}
+h5,
+.epsilon {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.333333333;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
+}
+h6,
+.zeta {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.714285714;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
+}
+hgroup *,
+.hgroup * {
+  margin-bottom: 0;
+}
+p {
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
+}
+dfn {
+  font-style: italic;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 24px 0px 24px 0px;
+  margin: 1.5rem 0rem 1.5rem 0rem;
+  padding: 0;
+}
+ins {
+  background: #ffff99;
+  color: black;
+  text-decoration: none;
+}
+mark {
+  background: yellow;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: Monaco, Courier New, monospace, serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+pre code {
+  display: block;
+  padding: 16px;
+  padding: 1rem;
+}
+code {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  padding: 0 3px;
+  margin: 0 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+small,
+.small {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ==========================================================================
 // WELL
 // =========================================================================*/
 
@@ -1256,8 +1256,8 @@ button [class*=" icon-"] {
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url('/assets/fonts/fontawesome-webfont.eot');
-  src: url('/assets/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/fontawesome-webfont.woff') format('woff'), url('/assets/fonts/fontawesome-webfont.ttf') format('truetype'), url('/assets/fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
+  src: url('fonts/fontawesome-webfont.eot');
+  src: url('fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff') format('woff'), url('fonts/fontawesome-webfont.ttf') format('truetype'), url('fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
   font-weight: normal;
   font-style: normal;
 }

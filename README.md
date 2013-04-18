@@ -1,4 +1,4 @@
-#Boilerplate v1.6.0
+#Boilerplate v1.7.0
 
 A brilliant front-end HTML5 and LESS boilerplate for small and large scale websites.
 
@@ -17,9 +17,9 @@ A brilliant front-end HTML5 and LESS boilerplate for small and large scale websi
 ##Getting Started
 
 1. Get the latest version of Boilerplate either by cloning it `git clone git@github.com:mattbegent/boilerplate.git`, downloading a zip of the [latest release](https://github.com/mattbegent/boilerplate/archive/master.zip) or if you use [bower](https://github.com/twitter/bower) `bower install boilerplate`.
-2. Set your site variables in assets/less/variables.less.
-3. Add your custom modules to the assets/less/modules folder and import them in main.less.
-4. Tell your less compiler to compile assets/less/main.less to assets/css/main.css.
+2. Set your site variables in less/variables.less.
+3. Add your custom modules to the less/modules folder and import them in main.less.
+4. Tell your less compiler to compile less/main.less to css/main.css.
 5. Use index.html as a template for your html.
 6. Build a cool site:-)!
 
@@ -27,7 +27,7 @@ A brilliant front-end HTML5 and LESS boilerplate for small and large scale websi
 
 Although Boilerplate does come with some in built modules and styles, it is all about customisation.
 
-All of the main setup (e.g. base font size) and module variables are set in assets/less/variables.less.
+All of the main setup (e.g. base font size) and module variables are set in less/variables.less.
 
 	// TYPOGRAPHY
 	// ----------------------------------------------------
@@ -35,20 +35,20 @@ All of the main setup (e.g. base font size) and module variables are set in asse
 	@TYPE-FontSize: 				16;
 	@TYPE-LineHeight: 				24;
 
-Any custom modules (for example a special box) should be placed in the modules folder (assets/less/modules) and imported in main.less (assets/less/main.less) in the modules section. 
+Any custom modules (for example a special box) should be placed in the modules folder (less/modules) and imported in main.less (less/main.less) in the modules section. 
 
 	// MODULES
 	// ----------------------------------------------------
 
 	@import "modules/special-box.less";
 
-As all of the built in modules are independent (assets/less/base_modules) you can safely uncomment them in the boilerplate import (assets/less/base/boilerplate.less) if you don't use them or you want to write your own module.
+As all of the built in modules are independent (less/base_modules) you can safely uncomment them in the boilerplate import (less/base/boilerplate.less) if you don't use them or you want to write your own module.
 
 ##Debugging
 
 Boilerplate has css debugging built in to outline any problems with images, links, empty elements and deprecated elements.
 
-To enable debugging simply set the variable @DEBUG to true in assets/less/variables.less.
+To enable debugging simply set the variable @DEBUG to true in less/variables.less.
 
 	// DEBUG
 	// ----------------------------------------------------
@@ -83,4 +83,4 @@ Base Mixins:
 
 Css3 Mixins:
 
-This includes animations, border radius, transitions and many more. See assets/less/base/css3.less for full list.
+This includes animations, border radius, transitions and many more. See less/base/css3.less for full list.
