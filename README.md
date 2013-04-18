@@ -1,4 +1,4 @@
-#Boilerplate v1.7.1
+#Boilerplate v1.7.2
 
 A brilliant front-end HTML5 and LESS boilerplate for small and large scale websites.
 
