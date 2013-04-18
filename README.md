@@ -1,4 +1,4 @@
-#Boilerplate v1.7.2
+#Boilerplate v1.8.0
 
 A brilliant front-end HTML5 and LESS boilerplate for small and large scale websites.
 
@@ -10,6 +10,7 @@ A brilliant front-end HTML5 and LESS boilerplate for small and large scale websi
 * Easy user configuration.
 * CSS3 mixins.
 * Css debugging.
+* Uses [RequireJS](http://requirejs.org/).
 * Follows a [SMACSS](http://smacss.com/) style.
 
 #Documentation

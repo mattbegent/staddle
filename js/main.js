@@ -1,25 +1,35 @@
 /* ==========================================================================
 // Main.js
-// Reference: http://viget.com/inspire/extending-paul-irishs-comprehensive-dom-ready-execution
+// =========================================================================*/
+
+/* ==========================================================================
+// RequireJS Configuration
+// =========================================================================*/
+
+require.config({
+    paths: {
+        "jquery": "libs/jquery/jquery.min"
+    }
+});
+
+/* ==========================================================================
+// The controllers and actions
 // =========================================================================*/
 
 SITENAME = {
 
-
-    /* ===================== COMMON ========================*/
     common: {
 
         init: function() {
 
-            //Signal js is present
-            $("html").removeClass("no-js");
+            require(["jquery", "modules/example"], function($, example) {
+                example.init();
+            });
 
         }
 
     },
 
-
-    /* ===================== HOME ========================*/
     home: {
 
         init: function() {
@@ -34,8 +44,12 @@ SITENAME = {
 
 };
 
+/* ==========================================================================
+// Load the controller and actions
+// =========================================================================*/
+
 UTIL = {
-    exec: function( controller, action ) {
+    exec: function(controller, action) {
         var ns = SITENAME,
         action = ( action === undefined ) ? "init" : action;
 
@@ -44,13 +58,31 @@ UTIL = {
 
     init: function() {
         var body = document.body,
-        controller = body.getAttribute( "data-controller" ),
-        action = body.getAttribute( "data-action" );
+        controller = body.getAttribute("data-controller"),
+        action = body.getAttribute("data-action");
 
-        UTIL.exec( "common" );
-        UTIL.exec( controller );
-        UTIL.exec( controller, action );
+        UTIL.exec("common");
+        UTIL.exec(controller);
+        UTIL.exec(controller, action);
     }
 };
 
-$( document ).ready( UTIL.init );
+/* ==========================================================================
+// Lets-a go!
+// =========================================================================*/
+
+require(["jquery"], function($) {
+    $(document).ready(UTIL.init);
+});
+
+/* ==========================================================================
+// Require js Errors
+// =========================================================================*/
+
+requirejs.onError = function (err) {
+    console.log(err.requireType);
+    if (err.requireType === 'timeout') {
+        console.log('modules: ' + err.requireModules);
+    }
+    throw err;
+};
