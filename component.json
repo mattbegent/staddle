@@ -1,14 +1,10 @@
 {
     "name": "boilerplate",
     "version": "1.8.0",
-    "dependencies": {
+    "devDependencies": {
         "jquery": "latest",
         "requirejs": "latest",
         "respond": "latest",
         "selectivizr": "latest"
-    },
-    "ignore": [
-        ".jshintrc",
-        "**/*.txt"
-    ]
+    }
 }
