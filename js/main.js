@@ -7,8 +7,12 @@
 // =========================================================================*/
 
 require.config({
+    waitSeconds : 20,    
+    urlArgs: "bust=" + (new Date()).getTime(), // For development to bypass the cache
+    //urlArgs: "bust=v1", // For production
     paths: {
-        "jquery": "libs/jquery/jquery.min"
+        "jquery": "libs/jquery/jquery.min",
+        "async": "libs/requirejs-plugins/src/async" // Useful plugin for loading google maps etc
     }
 });
 
@@ -22,8 +26,12 @@ SITENAME = {
 
         init: function() {
 
-            require(["jquery", "modules/example"], function($, example) {
+            require(["jquery", "modules/example", "modules/map"], function($, example, map) {
+
+                $("html").removeClass("no-js");
                 example.init();
+                map.init();
+
             });
 
         }

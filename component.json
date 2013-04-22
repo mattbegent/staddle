@@ -1,10 +1,16 @@
 {
     "name": "boilerplate",
-    "version": "1.8.0",
+    "version": "1.8.1",
+    "main": [
+        "index.html",
+        "js/main.js",
+        "less/main.less"
+    ],
     "devDependencies": {
-        "jquery": "latest",
+        "jquery": "1.9.1",
         "requirejs": "latest",
         "respond": "latest",
-        "selectivizr": "latest"
+        "selectivizr": "latest",
+        "requirejs-plugins": "latest"
     }
 }
