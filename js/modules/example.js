@@ -11,7 +11,7 @@ define(
             init: function() {
                 console.log("I am an example.");
             }
-        }
+        };
 
         return example;
 

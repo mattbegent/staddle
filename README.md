@@ -1,4 +1,4 @@
-#Boilerplate v1.8.1
+#Boilerplate v1.8.2
 
 A brilliant front-end HTML5 and LESS boilerplate for small and large scale websites.
 
@@ -12,6 +12,7 @@ A brilliant front-end HTML5 and LESS boilerplate for small and large scale websi
 * Css debugging.
 * Uses [RequireJS](http://requirejs.org/).
 * Follows a [SMACSS](http://smacss.com/) style.
+* Uses [Grunt](http://gruntjs.com/) to compile LESS, JSHint JavaScript and optimise RequireJS.
 
 #Documentation
 
@@ -20,7 +21,7 @@ A brilliant front-end HTML5 and LESS boilerplate for small and large scale websi
 1. Get the latest version of Boilerplate either by cloning it `git clone git@github.com:mattbegent/boilerplate.git`, downloading a zip of the [latest release](https://github.com/mattbegent/boilerplate/archive/master.zip) or if you use [bower](https://github.com/twitter/bower) `bower install boilerplate`.
 2. Set your site variables in less/variables.less.
 3. Add your custom modules to the less/modules folder and import them in main.less.
-4. Tell your less compiler to compile less/main.less to css/main.css.
+4. Tell your LESS compiler to compile less/main.less to css/main.css. Or if you use [Grunt](http://gruntjs.com/) install the Grunt dependencies `npm install` then use `grunt watch` and your LESS files will be compiled on save.
 5. Use index.html as a template for your html.
 6. Build a cool site:-)!
 

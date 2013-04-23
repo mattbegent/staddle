@@ -13,3 +13,8 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# Ignore node files #
+######################
+
+/node_modules/*
