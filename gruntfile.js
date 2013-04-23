@@ -38,6 +38,17 @@ module.exports = function(grunt) {
           }
         },
 
+        clean: [
+          'js/libs/requirejs/dist', 
+          'js/libs/requirejs/docs', 
+          'js/libs/requirejs/tests', 
+          'js/libs/requirejs-plugins/examples', 
+          'js/libs/requirejs-plugins/lib', 
+          'js/libs/respond/test', 
+          'js/libs/respond/cross-domain', 
+          'js/libs/selectivizr/tests'
+        ],
+
         watch: {
           scripts: {
             files: ['**/*.less','<%= jshint.files %>'],
@@ -52,8 +63,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
     // Default Tasks
-    grunt.registerTask('default', ['less','requirejs','jshint']);
+    grunt.registerTask('default', ['less','requirejs','jshint','clean']);
 
 };
