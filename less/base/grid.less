@@ -62,7 +62,7 @@
 
 .grid {
     width: auto;
-    margin: 0 0.5em;
+    .margin (0, 10, 0, 10);
     .clearfix();
 }
 
@@ -116,5 +116,18 @@
     .offset-9 { .offsetwidth(9); }
     .offset-10 { .offsetwidth(10); }
     .offset-11 { .offsetwidth(11); }
+
+}
+
+// GRID BREAKPOINT
+// ----------------------------------------------------
+
+@MQ-GridBreakpoint: ((@GRID-MaxWidth + 10)/@TYPE-FontSize)*1em;
+
+@media only screen and (min-width: @MQ-Desktop) and (max-width: @MQ-GridBreakpoint)  { 
+    
+    .grid { 
+        .margin (0, 10, 0, 10);
+    }
 
 }
