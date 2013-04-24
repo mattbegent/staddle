@@ -115,7 +115,7 @@ ins{background:#FF9;color:#000;text-decoration:none;}
 mark{background:#FF0;color:#000;font-style:italic;font-weight:bold;}
 pre,code,kbd,samp{font-family:Monaco,Courier New,monospace,serif;font-size:16px;font-size:1rem;}
 pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word;}pre code{display:block;padding:16px;padding:1rem;}
-code{background-color:#F8F8F8;border:1px solid #CCC;padding:0 3px;margin:0 3px;-webkit-border-radius:0.1875px;-moz-border-radius:0.1875px;border-radius:0.1875px;}
+code{background-color:#F8F8F8;border:1px solid #CCC;padding:0 3px;margin:0 3px;-webkit-border-radius:0.1875rem;-moz-border-radius:0.1875rem;border-radius:0.1875rem;}
 q{quotes:none;}
 q:before,q:after{content:"";content:none;}
 small,.small{font-size:14px;font-size:0.875rem;}

@@ -10,16 +10,16 @@
 .colwidth (@numberOfCols: 1){
 
     // Gutters
-    @gutterPercentage: 100%*(@GRID-GutterWidth/@GRID-MaxWidth);  
-    @totalGutterWidth: (@GRID-Cols - 1) * @GRID-GutterWidth;
+    @gutterPercentage: (100%*(@GRID-GutterWidth/@GRID-MaxWidth));  
+    @totalGutterWidth: ((@GRID-Cols - 1) * @GRID-GutterWidth);
     
     // Single Col
-    @singleColPx: (@GRID-MaxWidth - @totalGutterWidth)/@GRID-Cols;
-    @singleColPercentage: 100%*(@singleColPx/@GRID-MaxWidth);
+    @singleColPx: ((@GRID-MaxWidth - @totalGutterWidth)/@GRID-Cols);
+    @singleColPercentage: (100%*(@singleColPx/@GRID-MaxWidth));
 
     // This col offset
-    @thisColsOffset: (@numberOfCols - 1) * @gutterPercentage;
-    @thisColWidth: (@singleColPercentage*@numberOfCols) + @thisColsOffset;
+    @thisColsOffset: ((@numberOfCols - 1) * @gutterPercentage);
+    @thisColWidth: ((@singleColPercentage*@numberOfCols) + @thisColsOffset);
 
     // All together
     width: @thisColWidth;
@@ -29,19 +29,19 @@
 .offsetwidth (@numberOfCols: 1){
 
     // Gutters
-    @gutterPercentage:100%*(@GRID-GutterWidth/@GRID-MaxWidth);  
-    @totalGutterWidth: (@GRID-Cols - 1) * @GRID-GutterWidth;
+    @gutterPercentage: (100%*(@GRID-GutterWidth/@GRID-MaxWidth));  
+    @totalGutterWidth: ((@GRID-Cols - 1) * @GRID-GutterWidth);
     
     // Single Col
-    @singleColPx:(@GRID-MaxWidth - @totalGutterWidth)/@GRID-Cols;
-    @singleColPercentage: 100%*(@singleColPx/@GRID-MaxWidth);
+    @singleColPx: ((@GRID-MaxWidth - @totalGutterWidth)/@GRID-Cols);
+    @singleColPercentage: (100%*(@singleColPx/@GRID-MaxWidth));
 
     // This col offset
-    @thisColsOffset: (@numberOfCols - 1) * @gutterPercentage;
-    @thisColWidth: (@singleColPercentage*@numberOfCols) + @thisColsOffset;
+    @thisColsOffset: ((@numberOfCols - 1) * @gutterPercentage);
+    @thisColWidth: ((@singleColPercentage*@numberOfCols) + @thisColsOffset);
 
     // All together
-    margin-left: @thisColWidth + @gutterPercentage;
+    margin-left: (@thisColWidth + @gutterPercentage);
 }
 
 .grid > [class*="span-"]:first-child {
@@ -85,37 +85,37 @@
     }
 
     .grid {
-        max-width: (@GRID-MaxWidth/@TYPE-FontSize) * 1em; // Make ems
+        max-width: ((@GRID-MaxWidth/@TYPE-FontSize) * 1em);
         margin: 0 auto;
     }
 
-    .span-1 { .colwidth(1); }
-    .span-2 { .colwidth(2); }
-    .span-3 { .colwidth(3); } 
-    .span-4 { .colwidth(4); } 
-    .span-5 { .colwidth(5); }
-    .span-6 { .colwidth(6); }
-    .span-7 { .colwidth(7); }
-    .span-8 { .colwidth(8); }
-    .span-9 { .colwidth(9); }
-    .span-10 { .colwidth(10); }
-    .span-11 { .colwidth(11); }
+    .span-1 { .colwidth (1); }
+    .span-2 { .colwidth (2); }
+    .span-3 { .colwidth (3); } 
+    .span-4 { .colwidth (4); } 
+    .span-5 { .colwidth (5); }
+    .span-6 { .colwidth (6); }
+    .span-7 { .colwidth (7); }
+    .span-8 { .colwidth (8); }
+    .span-9 { .colwidth (9); }
+    .span-10 { .colwidth (10); }
+    .span-11 { .colwidth (11); }
     .span-12 { 
-        .colwidth(12);
+        .colwidth (12);
         margin-left: 0;
     }
 
-    .offset-1 { .offsetwidth(1); }
-    .offset-2 { .offsetwidth(2); }
-    .offset-3 { .offsetwidth(3); }
-    .offset-4 { .offsetwidth(4); }
-    .offset-5 { .offsetwidth(5); }
-    .offset-6 { .offsetwidth(6); }
-    .offset-7 { .offsetwidth(7); }
-    .offset-8 { .offsetwidth(8); }
-    .offset-9 { .offsetwidth(9); }
-    .offset-10 { .offsetwidth(10); }
-    .offset-11 { .offsetwidth(11); }
+    .offset-1 { .offsetwidth (1); }
+    .offset-2 { .offsetwidth (2); }
+    .offset-3 { .offsetwidth (3); }
+    .offset-4 { .offsetwidth (4); }
+    .offset-5 { .offsetwidth (5); }
+    .offset-6 { .offsetwidth (6); }
+    .offset-7 { .offsetwidth (7); }
+    .offset-8 { .offsetwidth (8); }
+    .offset-9 { .offsetwidth (9); }
+    .offset-10 { .offsetwidth (10); }
+    .offset-11 { .offsetwidth (11); }
 
 }
 
@@ -123,7 +123,7 @@
 // TODO: Fix grid rounding error with small base font sizes
 // ----------------------------------------------------
 
-@MQ-GridBreakpoint: ((@GRID-MaxWidth + 10)/@TYPE-FontSize)*1em;
+@MQ-GridBreakpoint: (((@GRID-MaxWidth + 10)/@TYPE-FontSize)*1em);
 
 @media only screen and (min-width: @MQ-Desktop) and (max-width: @MQ-GridBreakpoint)  { 
     

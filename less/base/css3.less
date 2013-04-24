@@ -48,18 +48,18 @@
 // BORDER RADIUS
 // ----------------------------------------------------
 
-.border-radius (@px-size: @STYLE-BorderRadius) when (@SYTLE-RoundedCorners) {
-    @rem-size: (@px-size / @TYPE-FontSize)*1rem;
+.border-radius (@pixel-size: @STYLE-BorderRadius) when (@SYTLE-RoundedCorners) {
+    @rem-size: ((@pixel-size / @TYPE-FontSize)*1rem);
     -webkit-border-radius:  @rem-size;
     -moz-border-radius:     @rem-size;
     border-radius:          @rem-size;
 }
 
 .border-radius-custom (@topLeft: @STYLE-BorderRadius, @topRight: @STYLE-BorderRadius, @bottomLeft: @STYLE-BorderRadius, @bottomRight: @STYLE-BorderRadius) {
-    @topLeft-rem: (@topLeft / @TYPE-FontSize)*1rem;
-    @topRight-rem: (@topRight / @TYPE-FontSize)*1rem;
-    @bottomLeft-rem: (@bottomLeft / @TYPE-FontSize)*1rem;
-    @bottomRight-rem: (@bottomRight / @TYPE-FontSize)*1rem;
+    @topLeft-rem: ((@topLeft / @TYPE-FontSize)*1rem);
+    @topRight-rem: ((@topRight / @TYPE-FontSize)*1rem);
+    @bottomLeft-rem: ((@bottomLeft / @TYPE-FontSize)*1rem);
+    @bottomRight-rem: ((@bottomRight / @TYPE-FontSize)*1rem);
     -webkit-border-radius:  @topLeft-rem @topRight-rem @bottomLeft-rem @bottomRight-rem;
     -moz-border-radius:     @topLeft-rem @topRight-rem @bottomLeft-rem @bottomRight-rem;
     border-radius:          @topLeft-rem @topRight-rem @bottomLeft-rem @bottomRight-rem;
@@ -135,7 +135,7 @@
     -webkit-opacity: @opacity;
     -moz-opacity: @opacity;
     //ie <9
-    @ieOpacity: @opacity * 100;
+    @ieOpacity: (@opacity * 100);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieOpacity})";
     filter: ~"alpha(opacity=@{ieOpacity})";
 }

@@ -12,20 +12,20 @@
 }
 
 .font-size-rem (@px-size) {
-    @rem-size: @px-size / @TYPE-FontSize;
-    font-size: ~"@{px-size}px"; 
-    font-size: ~"@{rem-size}rem";
+    @rem-size: (@px-size / @TYPE-FontSize); 
+    font-size: (@px-size * 1px); 
+    font-size: (@rem-size * 1rem);
 }
 
 // LINE HEIGHT
 // ----------------------------------------------------
 
 .line-height (@font-size) when (@font-size >= @TYPE-LineHeight) {
-    line-height: (@TYPE-LineHeight * 2)/@font-size;
+    line-height: ((@TYPE-LineHeight * 2)/@font-size);
 }
 
 .line-height (@font-size) when (@font-size < @TYPE-LineHeight) {
-    line-height: @TYPE-LineHeight/@font-size;
+    line-height: (@TYPE-LineHeight/@font-size);
 }
 
 // PADDINGS/MARGINS
@@ -33,8 +33,8 @@
 
 .margin (@px-size){
     @rem-size: @px-size / @TYPE-FontSize;
-    margin: ~"@{px-size}px"; 
-    margin: ~"@{rem-size}rem";
+    margin: (@px-size * 1px); 
+    margin: (@rem-size * 1rem);
 }
 
 .margin (@top, @right, @bottom, @left) {
@@ -42,26 +42,26 @@
     @right-rem: @right / @TYPE-FontSize;
     @bottom-rem: @bottom / @TYPE-FontSize;
     @left-rem: @left / @TYPE-FontSize;
-    margin: ~"@{top}px" ~"@{right}px" ~"@{bottom}px" ~"@{left}px"; 
-    margin: ~"@{top-rem}rem" ~"@{right-rem}rem" ~"@{bottom-rem}rem" ~"@{left-rem}rem";
+    margin: (@top * 1px) (@right * 1px)  (@bottom * 1px)  (@left * 1px) ; 
+    margin: (@top-rem * 1rem) (@right-rem * 1rem) (@bottom-rem * 1rem) (@left-rem * 1rem);
 }
 
 .margin-top (@px-size){
     @rem-size: @px-size / @TYPE-FontSize;
-    margin-top: ~"@{px-size}px"; 
-    margin-top: ~"@{rem-size}rem";
+    margin-top: (@px-size * 1px); 
+    margin-top: (@rem-size * 1rem);
 }
 
 .margin-bottom (@px-size){
     @rem-size: @px-size / @TYPE-FontSize;
-    margin-bottom: ~"@{px-size}px"; 
-    margin-bottom: ~"@{rem-size}rem";
+    margin-bottom: (@px-size * 1px); 
+    margin-bottom: (@rem-size * 1rem);
 }
 
 .padding (@px-size){
     @rem-size: @px-size / @TYPE-FontSize;
-    padding: ~"@{px-size}px"; 
-    padding: ~"@{rem-size}rem";
+    padding: (@px-size * 1px); 
+    padding: (@rem-size * 1rem);
 }
 
 .padding (@top, @right, @bottom, @left) {
@@ -69,27 +69,27 @@
     @right-rem: @right / @TYPE-FontSize;
     @bottom-rem: @bottom / @TYPE-FontSize;
     @left-rem: @left / @TYPE-FontSize;
-    padding: ~"@{top}px" ~"@{right}px" ~"@{bottom}px" ~"@{left}px"; 
-    padding: ~"@{top-rem}rem" ~"@{right-rem}rem" ~"@{bottom-rem}rem" ~"@{left-rem}rem";
+    padding: (@top * 1px) (@right * 1px)  (@bottom * 1px)  (@left * 1px) ; 
+    padding: (@top-rem * 1rem) (@right-rem * 1rem) (@bottom-rem * 1rem) (@left-rem * 1rem);
 }
 
 .padding-top (@px-size){
     @rem-size: @px-size / @TYPE-FontSize;
-    margin-top: ~"@{px-size}px"; 
-    margin-top: ~"@{rem-size}rem";
+    padding-top: (@px-size * 1px); 
+    padding-top: (@rem-size * 1rem);
 }
 
 .padding-bottom (@px-size){
     @rem-size: @px-size / @TYPE-FontSize;
-    margin-bottom: ~"@{px-size}px"; 
-    margin-bottom: ~"@{rem-size}rem";
+    padding-bottom: (@px-size * 1px); 
+    padding-bottom: (@rem-size * 1rem);
 }
 
 // PERCENTAGES
 // ----------------------------------------------------
 
 .percentage (@first, @second) {
-    width: (@first/@second)*100%;
+    width: ((@first/@second) * 100%);
 }
 
 // SIZE
