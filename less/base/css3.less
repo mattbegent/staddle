@@ -48,23 +48,21 @@
 // BORDER RADIUS
 // ----------------------------------------------------
 
-.border-radius (@radius) when (@SYTLE-RoundedCorners) {
-    -webkit-border-radius:  @radius;
-    -moz-border-radius:     @radius;
-    border-radius:          @radius;
+.border-radius (@px-size: @STYLE-BorderRadius) when (@SYTLE-RoundedCorners) {
+    @rem-size: (@px-size / @TYPE-FontSize)*1rem;
+    -webkit-border-radius:  @rem-size;
+    -moz-border-radius:     @rem-size;
+    border-radius:          @rem-size;
 }
 
-.border-radius-context (@radius: @STYLE-BorderRadius) when (@SYTLE-RoundedCorners) {
-    @radiusEm: (@radius/@TYPE-FontSize)*1em;
-    -webkit-border-radius:  @radiusEm;
-    -moz-border-radius:     @radiusEm;
-    border-radius:          @radiusEm;
-}
-
-.border-radius-custom (@topLeft: 0.5em, @topRight: 0.5em, @bottomLeft: 0.5em, @bottomRight: 0.5em) {
-    -webkit-border-radius:  @topLeft @topRight @bottomLeft @bottomRight;
-    -moz-border-radius:     @topLeft @topRight @bottomLeft @bottomRight;
-    border-radius:          @topLeft @topRight @bottomLeft @bottomRight;
+.border-radius-custom (@topLeft: @STYLE-BorderRadius, @topRight: @STYLE-BorderRadius, @bottomLeft: @STYLE-BorderRadius, @bottomRight: @STYLE-BorderRadius) {
+    @topLeft-rem: (@topLeft / @TYPE-FontSize)*1rem;
+    @topRight-rem: (@topRight / @TYPE-FontSize)*1rem;
+    @bottomLeft-rem: (@bottomLeft / @TYPE-FontSize)*1rem;
+    @bottomRight-rem: (@bottomRight / @TYPE-FontSize)*1rem;
+    -webkit-border-radius:  @topLeft-rem @topRight-rem @bottomLeft-rem @bottomRight-rem;
+    -moz-border-radius:     @topLeft-rem @topRight-rem @bottomLeft-rem @bottomRight-rem;
+    border-radius:          @topLeft-rem @topRight-rem @bottomLeft-rem @bottomRight-rem;
 }
 
 // TODO: Find a better way of doing this
