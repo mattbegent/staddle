@@ -8,18 +8,18 @@
 .pagination {
 
     padding: 0;
-    margin-left: -0.5em;
+    .margin (0, 0, @TYPE-LineHeight, -8);
     .clearfix ();
     list-style: none;
 
     li {
         float: left;
-        margin-left: 0.5em;
+        .margin (0, 0, 0, 8);
     }
 
     a {
         float: left;
-        padding: 0.2em 0.5em;
+        .padding (2, 10, 2, 10);
         .border-radius (4); 
 
         text-decoration: none;
