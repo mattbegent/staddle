@@ -120,6 +120,7 @@
 }
 
 // GRID BREAKPOINT
+// TODO: Fix grid rounding error with small base font sizes
 // ----------------------------------------------------
 
 @MQ-GridBreakpoint: ((@GRID-MaxWidth + 10)/@TYPE-FontSize)*1em;
@@ -127,6 +128,7 @@
 @media only screen and (min-width: @MQ-Desktop) and (max-width: @MQ-GridBreakpoint)  { 
     
     .grid { 
+        max-width: 100%;
         .margin (0, 10, 0, 10);
     }
 
