@@ -1,4 +1,4 @@
-#Boilerplate v1.8.4
+#Boilerplate v1.8.5
 
 A brilliant front-end HTML5 and LESS boilerplate for small and large scale websites.
 
@@ -59,11 +59,11 @@ To enable debugging simply set the variable @DEBUG to true in less/variables.les
 
 ##Grid
 
-Boilerplate has a very standard grid system. For example if you wanted content to span 12 columns, you would write:
+Boilerplate has a very standard grid system. For example if you wanted content to span three quarters of the page, you would write:
 
 	<div class="grid">
-		<div class="span-12">
-			<!-- 12 COLUMN CONTENT HERE -->
+		<div class="col-3-4">
+			<!-- CONTENT HERE -->
 		</div>
 	</div>
 

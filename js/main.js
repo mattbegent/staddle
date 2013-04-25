@@ -26,7 +26,7 @@ SITENAME = {
 
         init: function() {
 
-            require(["jquery", "modules/example", "modules/map"], function($, example, map) {
+            require(["jquery", "modules/example", "modules/map", "modules/ie7boxsizing"], function($, example, map) {
 
                 $("html").removeClass("no-js");
                 example.init();
