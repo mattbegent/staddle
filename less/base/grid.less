@@ -42,6 +42,7 @@
     [class*='col-'] {
         float: left;
         .padding (0, @GRID-GutterWidth, 0, 0);
+        margin: 0;
     }
 
     [class*='col-']:last-of-type {
@@ -49,6 +50,10 @@
     }
 
     // Column widths
+    .col-1-2 {
+        width: 50%; 
+    }
+
     .col-1-3 {
         width: 33.33%;
     }
