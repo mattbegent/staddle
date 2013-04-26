@@ -50,22 +50,26 @@ module.exports = function(grunt) {
         ],
 
         watch: {
-          scripts: {
-            files: ['**/*.less','<%= jshint.files %>'],
-            tasks: ['less', 'jshint']
+          watchless: {
+            files: [ '**/*.less' ], 
+            tasks: ['less']
+          },
+          watchjs: {
+            files: ['<%= jshint.files %>'],
+            tasks: ['jshint']
           }
-        }      
+        }    
 
     });
 
     // Load Tasks
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-watch', ['watch:watchless', 'watch:watchjs']);
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
     // Default Tasks
-    grunt.registerTask('default', ['less','requirejs','jshint','clean']);
+    grunt.registerTask('default', ['less','requirejs','jshint','clean','watch']);
 
 };
