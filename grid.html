@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>Page Title &ndash; Website Name</title>
+    <title>Grid &ndash; Boilerplate</title>
 
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -43,7 +43,22 @@
     <script type="text/javascript" src="js/libs/respond/respond.min.js"></script>
     <![endif]-->
 
-</head>
+    <style>
+
+        .grid [class*='col-'] {      
+            margin-bottom: 20px;
+        }
+
+        .grid [class*='col-'] p {    
+            padding: 20px;
+            background-color: grey;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+    </style>
+
+</head> 
 
 <body id="sitename">
 
@@ -51,10 +66,9 @@
 
         <header class="wrapper-header" role="banner">
         
-            <div class="grid">
+            <div class="grid c">
 
-                <!-- HEADER CONTENT HERE -->
-                <h1 class="title-primary">Header</h1>
+                <h1 class="title-primary">Grid</h1>
 
             </div>
 
@@ -63,26 +77,55 @@
         <div class="primary wrapper-primary" role="main">
 
             <div class="grid">
+                <div class="col-1"><p>1</p></div>
+            </div>    
 
-                <!-- MAIN CONTENT HERE -->
-                <h2>Main Content</h2>
-                <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa.</strong></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+            <div class="grid">
+                <div class="col-1-2 col-mobile-1-2"><p>1/2</p></div>
+                <div class="col-1-2 col-mobile-1-2"><p>1/2</p></div>
+            </div>
+
+            <div class="grid">
+                <div class="col-1-3 col-tablet-1-2 col-mobile-1-2"><p>1/3</p></div>
+                <div class="col-1-3 col-tablet-1-2 col-mobile-1-2 col-mobile-last col-tablet-last"><p>1/3</p></div>
+                <div class="col-1-3 col-tablet-1"><p>1/3</p></div>
+            </div>
+
+            <div class="grid">
+                <div class="col-1-4 col-tablet-1-2"><p>1/4</p></div>
+                <div class="col-1-4 col-tablet-1-2 col-tablet-last"><p>1/4</p></div>
+                <div class="col-1-4 col-tablet-1-2"><p>1/4</p></div>
+                <div class="col-1-4 col-tablet-1-2 col-tablet-last"><p>1/4</p></div>
+            </div>
+
+            <div class="grid">
+                <div class="col-1-8 col-tablet-1-4"><p>1/8</p></div>
+                <div class="col-1-8 col-tablet-1-4"><p>1/8</p></div>
+                <div class="col-1-8 col-tablet-1-4"><p>1/8</p></div>
+                <div class="col-1-8 col-tablet-1-4 col-tablet-last"><p>1/8</p></div>
+                <div class="col-1-8 col-tablet-1-4"><p>1/8</p></div>
+                <div class="col-1-8 col-tablet-1-4"><p>1/8</p></div>
+                <div class="col-1-8 col-tablet-1-4"><p>1/8</p></div>
+                <div class="col-1-8 col-tablet-1-4"><p>1/8</p></div>
+            </div>
+
+            <div class="grid">
+                <div class="col-1-12 col-tablet-1-6"><p>1/12</p></div>
+                <div class="col-1-12 col-tablet-1-6"><p>1/12</p></div>
+                <div class="col-1-12 col-tablet-1-6"><p>1/12</p></div>
+                <div class="col-1-12 col-tablet-1-6"><p>1/12</p></div>
+                <div class="col-1-12 col-tablet-1-6"><p>1/12</p></div>
+                <div class="col-1-12 col-tablet-1-6 col-tablet-last"><p>1/12</p></div>
+                <div class="col-1-12 col-tablet-1-6"><p>1/12</p></div>
+                <div class="col-1-12 col-tablet-1-6"><p>1/12</p></div>
+                <div class="col-1-12 col-tablet-1-6"><p>1/12</p></div>
+                <div class="col-1-12 col-tablet-1-6"><p>1/12</p></div>
+                <div class="col-1-12 col-tablet-1-6"><p>1/12</p></div>
+                <div class="col-1-12 col-tablet-1-6"><p>1/12</p></div>
 
             </div>
 
         </div><!-- End .primary -->
-
-        <footer class="wrapper-footer" role="contentinfo">
-
-            <div class="grid">
-                
-                <!-- FOOTER CONTENT HERE -->
-                <p><small>&copy; Copyright Information</small></p>
-
-            </div>
-
-        </footer>
 
     </div><!-- End .wrapper-all -->
 

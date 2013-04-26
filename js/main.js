@@ -7,12 +7,13 @@
 // =========================================================================*/
 
 require.config({
-    waitSeconds : 20,    
+    waitSeconds : 40,    
     urlArgs: "bust=" + (new Date()).getTime(), // For development to bypass the cache
     //urlArgs: "bust=v1", // For production
     paths: {
         "jquery": "libs/jquery/jquery.min",
         "async": "libs/requirejs-plugins/src/async" // Useful plugin for loading google maps etc
+
     }
 });
 
@@ -26,11 +27,13 @@ SITENAME = {
 
         init: function() {
 
-            require(["jquery", "modules/example", "modules/map", "modules/ie7boxsizing"], function($, example, map) {
+            require(["jquery", "modules/iefixes"], function($, iefixes) {
 
+                // Show that js is present
                 $("html").removeClass("no-js");
-                example.init();
-                map.init();
+
+                // Help ie out abit
+                iefixes.init();
 
             });
 
@@ -38,14 +41,16 @@ SITENAME = {
 
     },
 
-    home: {
+    examples: {
 
         init: function() {
-            // controller-wide code
-        },
 
-        show: function() {
-            // action-specific code
+            require(["modules/map"], function(map) {
+
+                map.init();
+
+            });
+
         }
 
     }
