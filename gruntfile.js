@@ -33,7 +33,7 @@ module.exports = function(grunt) {
               name: "main",
               baseUrl: "./js",
               mainConfigFile: "js/main.js",
-              out: "js/main-min.js",
+              out: "js/main.min.js",
               include: "libs/requirejs/require"
             }
           }
