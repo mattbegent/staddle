@@ -16,11 +16,11 @@ module.exports = function(grunt) {
         },
 
         jshint: {
-          files: ['grunt.js','js/modules/*.js','js/main.js'],
+          files: ['gruntfile.js','js/modules/*.js','js/main.js'],
           options: {
             globals: {
               jQuery: true,
-              requirejs: true,
+              requirejs: true, 
               console: true,
               module: true
             }
@@ -33,7 +33,8 @@ module.exports = function(grunt) {
               name: "main",
               baseUrl: "./js",
               mainConfigFile: "js/main.js",
-              out: "js/main-min.js"
+              out: "js/main-min.js",
+              include: "libs/requirejs/require"
             }
           }
         },
@@ -56,7 +57,7 @@ module.exports = function(grunt) {
           },
           watchjs: {
             files: ['<%= jshint.files %>'],
-            tasks: ['jshint']
+            tasks: ['jshint', 'requirejs']
           }
         }    
 

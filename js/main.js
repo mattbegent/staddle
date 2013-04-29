@@ -9,7 +9,7 @@
 require.config({
     waitSeconds : 40,    
     urlArgs: "bust=" + (new Date()).getTime(), // For development to bypass the cache
-    //urlArgs: "bust=v1", // For production
+    //urlArgs: "bust=v1", // For production 
     paths: {
         "jquery": "libs/jquery/jquery.min",
         "async": "libs/requirejs-plugins/src/async" // Useful plugin for loading google maps etc

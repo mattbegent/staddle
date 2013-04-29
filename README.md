@@ -1,4 +1,4 @@
-#Boilerplate v1.8.6
+#Boilerplate v1.8.7
 
 A brilliant front-end HTML5 and LESS boilerplate for small and large scale websites.
 
@@ -90,3 +90,7 @@ This includes animations, border radius, transitions and many more. See less/bas
 ##Updating JavaScript Libraries
 
 If you use [bower](https://github.com/twitter/bower) you can easily update all the JavaScript libraries used by Boilerplate by using `bower update`.
+
+##Requirements
+
+LESS 1.3.3 or above.
