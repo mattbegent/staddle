@@ -39,7 +39,6 @@
     <!-- Fallbacks -->
     <!--[if lte IE 8]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script type="text/javascript" src="js/libs/selectivizr/selectivizr.js"></script>
     <script type="text/javascript" src="js/libs/respond/respond.min.js"></script>
     <![endif]-->
 
@@ -104,8 +103,6 @@
                         <header>
                             <h3 class="beta">Modules</h3>
                         </header>
-
-                        <p class="alert alert-info"><strong>Tip:</strong> All modules are completely independent of each other, so if you don't use one/want to create your own version, just uncomment the modules import in less/boilerplate.less</p>
 
                         <h4>Alerts</h4>
 
@@ -308,8 +305,12 @@
 
     </div><!-- End .wrapper-all -->
 
-    <!-- JavaScipt -->
+    <!-- JavaScript -->
     <script data-main="js/main" src="js/libs/requirejs/require.js"></script>
+
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="js/libs/selectivizr/selectivizr.js"></script>
+    <![endif]-->
 
     <!-- Google Analytics -->
     <!-- <script>

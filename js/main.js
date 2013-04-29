@@ -13,12 +13,11 @@ require.config({
     paths: {
         "jquery": "libs/jquery/jquery.min",
         "async": "libs/requirejs-plugins/src/async" // Useful plugin for loading google maps etc
-
     }
 });
 
 /* ==========================================================================
-// The controllers and actions
+// The controllers
 // =========================================================================*/
 
 SITENAME = {
@@ -58,25 +57,22 @@ SITENAME = {
 };
 
 /* ==========================================================================
-// Load the controller and actions
+// Load the controller
 // =========================================================================*/
 
 UTIL = {
     exec: function(controller, action) {
-        var ns = SITENAME,
-        action = ( action === undefined ) ? "init" : action;
+        var ns = SITENAME;
 
-        if ( controller !== "" && ns[controller] && typeof ns[controller][action] == "function" ) {ns[controller][action]();}
+        if ( controller !== "" && ns[controller] && typeof ns[controller].init == "function" ) {ns[controller].init();}
     },
 
     init: function() {
         var body = document.body,
-        controller = body.getAttribute("data-controller"),
-        action = body.getAttribute("data-action");
+        controller = body.getAttribute("data-controller");
 
         UTIL.exec("common");
         UTIL.exec(controller);
-        UTIL.exec(controller, action);
     }
 };
 

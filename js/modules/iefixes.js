@@ -11,6 +11,7 @@ define(
 
             init: function() {
 
+                // IE7 Box Sizing
                 if($("html").hasClass("ie7")) {
                     this.ie7boxsizing();
                     $(window).on("resize", this.ie7boxsizing);
