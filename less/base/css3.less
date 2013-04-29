@@ -55,7 +55,7 @@
     border-radius:          @rem-size;
 }
 
-.border-radius-custom (@topLeft: @STYLE-BorderRadius, @topRight: @STYLE-BorderRadius, @bottomLeft: @STYLE-BorderRadius, @bottomRight: @STYLE-BorderRadius) {
+.border-radius-custom (@topLeft: @STYLE-BorderRadius, @topRight: @STYLE-BorderRadius, @bottomLeft: @STYLE-BorderRadius, @bottomRight: @STYLE-BorderRadius) when (@SYTLE-RoundedCorners) {
     @topLeft-rem: ((@topLeft / @TYPE-FontSize)*1rem);
     @topRight-rem: ((@topRight / @TYPE-FontSize)*1rem);
     @bottomLeft-rem: ((@bottomLeft / @TYPE-FontSize)*1rem);
@@ -71,7 +71,7 @@
 
 }
 
-.border-radius-context (@radius: @STYLE-BorderRadius) when not (@SYTLE-RoundedCorners) {
+.border-radius-custom (@radius: @STYLE-BorderRadius) when not (@SYTLE-RoundedCorners) {
 
 }
 

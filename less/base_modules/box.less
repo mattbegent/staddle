@@ -14,6 +14,11 @@
 .box-header {
     display: block;
     background-color: @BOX-HeaderBgColor;
+    .border-radius-custom (@STYLE-BorderRadius, @STYLE-BorderRadius, 0,  0);
+}
+
+.box-header-title {
+    line-height: 1;
     color: @BOX-HeaderTextColor;
 }
 
@@ -25,6 +30,7 @@
 .box-footer {
     display: block;
     background-color: @BOX-FooterBgColor;
+    .border-radius-custom (0, 0, @STYLE-BorderRadius, @STYLE-BorderRadius);
 }
 
 .box-header,

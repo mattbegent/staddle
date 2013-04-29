@@ -80,7 +80,7 @@
 // COLORS
 // ---------------------------------------------------- 
 
-@COLOR-Base:                    #AD1111;
+@COLOR-Base:                    #63b5d8;
 
 // Sample generated colors
 @COLOR-Complement1:             spin(@COLOR-Base, 180);
@@ -135,10 +135,10 @@
 // BOX
 // ---------------------------------------------------- 
 
-@BOX-HeaderBgColor:             #C2C2C2;
-@BOX-HeaderTextColor:           #FFF;
-@BOX-BodyBgColor:               #EBEBEB;
-@BOX-FooterBgColor:             #C2C2C2; 
+@BOX-HeaderBgColor:             #DEDEDE;
+@BOX-HeaderTextColor:           @TYPE-HeadingsColor;
+@BOX-BodyBgColor:               #F8F8F8;
+@BOX-FooterBgColor:             #DEDEDE; 
 
 // BREADCRUMBS
 // ---------------------------------------------------- 
@@ -150,12 +150,12 @@
 // BUTTON
 // ----------------------------------------------------
 
-@BUTTON-MainColor:              @COLOR-Complement1;
-@BUTTON-HoverColor:             lighten(@BUTTON-MainColor, 10%);
+@BUTTON-MainColor:              @COLOR-Base;
+@BUTTON-HoverColor:             lighten(@BUTTON-MainColor, 5%);
 @BUTTON-TextColor:              #FFF;
 
-@BUTTON-AltColor:               @COLOR-Lighten1;
-@BUTTON-AltHoverColor:          lighten(@BUTTON-AltColor, 10%); 
+@BUTTON-AltColor:               @COLOR-Complement1;
+@BUTTON-AltHoverColor:          lighten(@BUTTON-AltColor, 5%); 
 @BUTTON-AltTextColor:           #FFF;
 
 @BUTTON-DisabledColor:          @BUTTON-TextColor;
