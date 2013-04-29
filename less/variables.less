@@ -80,7 +80,7 @@
 // COLORS
 // ---------------------------------------------------- 
 
-@COLOR-Base:                    #63b5d8;
+@COLOR-Base:                    #3B8BAD;
 
 // Sample generated colors
 @COLOR-Complement1:             spin(@COLOR-Base, 180);
@@ -151,11 +151,11 @@
 // ----------------------------------------------------
 
 @BUTTON-MainColor:              @COLOR-Base;
-@BUTTON-HoverColor:             lighten(@BUTTON-MainColor, 5%);
+@BUTTON-HoverColor:             darken(@BUTTON-MainColor, 10%);
 @BUTTON-TextColor:              #FFF;
 
 @BUTTON-AltColor:               @COLOR-Complement1;
-@BUTTON-AltHoverColor:          lighten(@BUTTON-AltColor, 5%); 
+@BUTTON-AltHoverColor:          darken(@BUTTON-AltColor, 10%); 
 @BUTTON-AltTextColor:           #FFF;
 
 @BUTTON-DisabledColor:          @BUTTON-TextColor;
