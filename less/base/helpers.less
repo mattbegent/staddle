@@ -94,16 +94,30 @@
 // RESPONSIVE UTILITIES
 // ----------------------------------------------------
 
+// Desktop
+
+.show-desktop {
+    display: inherit !important;
+}
+
+.hide-desktop,
+.show-mobile,
+.show-tablet {
+    display: none !important;
+}
+
 // Mobile
 
 @media only screen and (max-width: @MQ-Mobile) { 
 
-    .hide-mobile {
-        display: none !important;
+    .show-mobile {
+        display: inherit !important; 
     }
 
-    .show-mobile {
-        display: block !important; 
+    .hide-mobile,
+    .show-desktop,
+    .show-tablet {
+        display: none !important;
     }
 
 }
@@ -111,27 +125,16 @@
 // Tablet
 
 @media only screen and (min-width: @MQ-TabletMin) and (max-width: @MQ-TabletMax) {
-
-    .hide-tablet {
-        display: none !important;
-    }
-
-    .show-tablet {
-        display: block !important;
-    }
-
-}
-
-// Desktop
-
-@media only screen and (min-width: @MQ-DesktopOnly) { 
-
+    
+    .show-tablet,
     .hide-desktop {
-        display: none !important;
+        display: inherit !important;
     }
 
+    .hide-tablet,
+    .show-mobile,
     .show-desktop {
-        display: block !important;
+        display: none !important;
     }
 
 }
