@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         },
 
         jshint: {
-          files: ['gruntfile.js','js/modules/*.js','js/main.js'],
+          files: ['gruntfile.js','js/main.js','js/modules/*.js'],
           options: {
             globals: {
               jQuery: true,
@@ -50,13 +50,29 @@ module.exports = function(grunt) {
           'js/libs/selectivizr/tests'
         ],
 
+        imagemin: {
+            options: {
+              optimizationLevel: 3
+            },
+            dynamic_mappings: {
+              files: [
+                {
+                  expand: true, 
+                  cwd: 'images/',
+                  src: ['**/*.jpg','**/*.png'],
+                  dest: 'images/' 
+                }
+              ]
+            }
+        },
+
         watch: {
           watchless: {
             files: [ '**/*.less' ], 
             tasks: ['less']
           },
           watchjs: {
-            files: ['<%= jshint.files %>'],
+            files: ['<%= jshint.files %>'], 
             tasks: ['jshint', 'requirejs']
           }
         }    
@@ -65,12 +81,13 @@ module.exports = function(grunt) {
 
     // Load Tasks
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-watch', ['watch:watchless', 'watch:watchjs']);
-    grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-watch', ['watch:watchless', 'watch:watchjs']);
 
     // Default Tasks
-    grunt.registerTask('default', ['less','requirejs','jshint','clean','watch']);
+    grunt.registerTask('default', ['less','requirejs','jshint','clean','imagemin','watch']);
 
 };
