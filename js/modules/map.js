@@ -8,6 +8,7 @@ define(
     function($) {
 
         var map = {
+
             init: function() {
 
                 var mapDiv = document.getElementById('map-canvas');
@@ -28,7 +29,7 @@ define(
                 var marker = new google.maps.Marker({
                     position: latLng,
                     map: map,
-                    title: 'Timbuktu'
+                    title: "Timbuktu"
                 });    
 
                 google.maps.event.addListener(marker, 'click', function() {
@@ -36,6 +37,7 @@ define(
                 });
 
             }
+            
         };
 
         return map;
