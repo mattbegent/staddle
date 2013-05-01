@@ -6,15 +6,19 @@
 // =======================================================================*/
 
 // Play nice with google maps
-#map-canvas,
-#map-canvas * {
+.map,
+.map * {
     max-width: none;
 }
 
-#map-canvas {
+.map {
     .margin (0, 0, @TYPE-LineHeight, 0);
     width: 100%;
     height: 500px;
+}
+
+.map-small {
+    height: 250px;
 }
 
 } .map-styles();
