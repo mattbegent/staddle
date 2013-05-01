@@ -66,6 +66,58 @@ module.exports = function(grunt) {
             }
         },
 
+        // Used for example templates
+        template: {
+          index: {
+            src: "templates/src/index.ejs",
+            dest: 'templates/index.html',
+            variables: {
+              title : "Boilerplate Presents",
+              currentPage: "Home"
+            }
+          },  
+          col2: {
+            src: "templates/src/2column.ejs",
+            dest: 'templates/2column.html',
+            variables: {
+              title : "2 Column",
+              currentPage: "2 Column"
+            }
+          },
+          col3: {
+            src: "templates/src/3column.ejs",
+            dest: 'templates/3column.html',
+            variables: {
+              title : "3 Column",
+              currentPage: "3 Column"
+            }
+          },
+          grid: {
+            src: "templates/src/grid.ejs",
+            dest: 'templates/grid.html',
+            variables: {
+              title : "Grid",
+              currentPage: "Grid"
+            }
+          },
+          news: {
+            src: "templates/src/news.ejs",
+            dest: 'templates/news.html',
+            variables: {
+              title : "News",
+              currentPage: "News"
+            }
+          },
+          contact: {
+            src: "templates/src/contact.ejs",
+            dest: 'templates/contact.html',
+            variables: {
+              title : "Contact",
+              currentPage: "Contact"
+            }
+          }    
+        },
+
         watch: {
           watchless: {
             files: [ '**/*.less' ], 
@@ -74,6 +126,10 @@ module.exports = function(grunt) {
           watchjs: {
             files: ['<%= jshint.files %>'], 
             tasks: ['jshint', 'requirejs']
+          },
+          watchejs: {
+            files: ['templates/src/**/*.ejs'], 
+            tasks: ['template']
           }
         }    
 
@@ -85,9 +141,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-contrib-watch', ['watch:watchless', 'watch:watchjs']);
+    grunt.loadNpmTasks('grunt-templater');
+    grunt.loadNpmTasks('grunt-contrib-watch', ['watch:watchless', 'watch:watchjs', 'watch:watchejs']);
 
     // Default Tasks
-    grunt.registerTask('default', ['less','requirejs','jshint','clean','imagemin','watch']);
+    grunt.registerTask('default', ['less','requirejs','jshint','clean','imagemin','template','watch']);
 
 };

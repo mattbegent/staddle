@@ -1,4 +1,4 @@
-# Boilerplate v1.9.0
+# Boilerplate v1.9.1
 
 A brilliant front-end HTML5 and LESS boilerplate for small and large scale websites.
 
