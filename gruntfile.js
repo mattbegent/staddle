@@ -115,7 +115,15 @@ module.exports = function(grunt) {
               title : "Contact",
               currentPage: "Contact"
             }
-          }    
+          },
+          pagenotfound: {
+            src: "templates/src/404.ejs",
+            dest: 'templates/404.html',
+            variables: {
+              title : "Page Not Found",
+              currentPage: "404"
+            }
+          }     
         },
 
         watch: {
