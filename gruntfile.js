@@ -123,6 +123,14 @@ module.exports = function(grunt) {
               title : "Page Not Found",
               currentPage: "404"
             }
+          },
+          gallery: {
+            src: "templates/src/gallery.ejs",
+            dest: 'templates/gallery.html',
+            variables: {
+              title : "Gallery",
+              currentPage: "Gallery"
+            }
           }     
         },
 

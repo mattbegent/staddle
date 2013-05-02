@@ -15,6 +15,16 @@
     position: relative;
 }
 
+// Thumbnails grid - see gallery.html for example
+
+.grid-thumbnails,
+.row-thumbnails {
+    .thumbnail {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
 // DESKTOP
 // ----------------------------------------------------
 
@@ -86,6 +96,16 @@
     .col-9-12 { width: 75%; }
     .col-10-12 { width: 83.33333333333333%; }
     .col-11-12 { width: 91.66666666666667%; }
+
+    // Thumbnails grid
+
+    .grid-thumbnails,
+    .row-thumbnails {
+        .margin (0, 0, @TYPE-LineHeight, 0);
+        [class*='col-'] {
+            .margin-bottom (@GRID-GutterWidth);
+        }  
+    }
 
 }
 
