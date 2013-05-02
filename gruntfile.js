@@ -142,7 +142,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-templater');
-    grunt.loadNpmTasks('grunt-contrib-watch', ['watch:watchless', 'watch:watchjs', 'watch:watchejs']);
+    grunt.loadNpmTasks('grunt-contrib-watch', ['watch:watchless','watch:watchjs','watch:watchejs']);
 
     // Default Tasks
     grunt.registerTask('default', ['less','requirejs','jshint','clean','imagemin','template','watch']);
