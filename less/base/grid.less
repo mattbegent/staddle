@@ -2,6 +2,9 @@
 // GRID
 // =========================================================================*/
 
+// BASE
+// ----------------------------------------------------
+
 // Clear grids
 .grid:after,
 .row:after {
@@ -13,16 +16,6 @@
 .grid,
 .row {
     position: relative;
-}
-
-// Thumbnails grid - see gallery.html for example
-
-.grid-thumbnails,
-.row-thumbnails {
-    .thumbnail {
-        display: block;
-        margin: 0 auto;
-    }
 }
 
 // DESKTOP
@@ -96,16 +89,6 @@
     .col-9-12 { width: 75%; }
     .col-10-12 { width: 83.33333333333333%; }
     .col-11-12 { width: 91.66666666666667%; }
-
-    // Thumbnails grid
-
-    .grid-thumbnails,
-    .row-thumbnails {
-        .margin (0, 0, @TYPE-LineHeight, 0);
-        [class*='col-'] {
-            .margin-bottom (@GRID-GutterWidth);
-        }  
-    }
 
 }
 
@@ -224,5 +207,106 @@
 
     .col-mobile-1-3 { width: 33.33333%; }
     .col-mobile-2-3 { width: 66.66666666666667%; }
+
+}
+
+
+// PADDED
+// TODO: Tidy up
+// ----------------------------------------------------
+
+.grid-padded {
+    .padding (@GRID-MobileGutterWidth, 0, @GRID-MobileGutterWidth, @GRID-MobileGutterWidth); 
+}
+
+.grid-padded [class*='col-']:last-of-type {
+    .padding (0, @GRID-MobileGutterWidth, 0, 0);
+}
+
+// Desktop
+
+@media only screen and (min-width: @MQ-Desktop) {
+
+    .grid-padded {
+
+        .padding (@GRID-GutterWidth, 0, @GRID-GutterWidth, @GRID-GutterWidth);
+
+        [class*='col-']:last-of-type {
+            .padding (0, @GRID-GutterWidth, 0, 0);
+        }
+
+    }
+
+}
+
+// Tablet
+
+@media only screen and (min-width: @MQ-TabletMin) and (max-width: @MQ-TabletMax) {
+
+    .grid-padded {
+
+        .col-tablet-last {
+            .padding (0, @GRID-GutterWidth, 0, 0);
+        }
+
+        [class*='col-tablet-'] {
+            .padding-bottom (@GRID-GutterWidth);
+        }
+
+        .row-tablet-last {
+            [class*='col-'] {
+                padding-bottom: 0;
+            }  
+        }
+    }
+
+}
+
+// Mobile
+
+@media only screen and (max-width: @MQ-Mobile) { 
+
+    .grid-padded {   
+
+        [class*='col-'] {
+            .padding (0, @GRID-MobileGutterWidth, @GRID-MobileGutterWidth, 0);
+        }
+
+        // TODO: Think of a better way to do this
+        .col-mobile-1-2,
+        .col-mobile-1-3,
+        .col-mobile-2-3 {
+            padding-bottom: 0;
+        }
+
+        .col-mobile-last {
+            .padding (0, @GRID-MobileGutterWidth, @GRID-MobileGutterWidth, 0);
+        }
+
+    }
+
+}
+
+// THUMBNAILS
+// ----------------------------------------------------
+
+.grid-thumbnails,
+.row-thumbnails {
+    .thumbnail {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+// Desktop
+
+@media only screen and (min-width: @MQ-Desktop) {
+
+    .grid-thumbnails,
+    .row-thumbnails {
+        [class*='col-'] {
+            .margin-bottom (@GRID-GutterWidth);
+        }  
+    }
 
 }
