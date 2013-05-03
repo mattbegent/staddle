@@ -43,11 +43,13 @@ module.exports = function(grunt) {
           'js/libs/requirejs/dist', 
           'js/libs/requirejs/docs', 
           'js/libs/requirejs/tests', 
-          'js/libs/requirejs-plugins/examples', 
+          'js/libs/requirejs-plugins/examples',  
           'js/libs/requirejs-plugins/lib', 
           'js/libs/respond/test', 
           'js/libs/respond/cross-domain', 
-          'js/libs/selectivizr/tests'
+          'js/libs/selectivizr/tests',
+          'js/libs/jquery/.gitignore',
+          'js/libs/requirejs/.gitignore'
         ],
 
         imagemin: {
