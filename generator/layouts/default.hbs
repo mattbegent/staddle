@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Home</title>
+    <title>{{ title }}</title>
 
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -16,26 +16,26 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="{{ assets }}css/main.css">
 
     <!-- For retina-display iPads -->
-    <!-- <link href="images/icons/retina_ipad_home.png" rel="apple-touch-icon-precomposed" sizes="144x144" type="image/png"/> -->
+    <!-- <link href="{{ assets }}images/icons/retina_ipad_home.png" rel="apple-touch-icon-precomposed" sizes="144x144" type="image/png"/> -->
     <!-- For retina-display iPhones -->
-    <!-- <link href="images/icons/iphone_home.png" rel="apple-touch-icon-precomposed" sizes="114x114" type="image/png"/> -->
+    <!-- <link href="{{ assets }}images/icons/iphone_home.png" rel="apple-touch-icon-precomposed" sizes="114x114" type="image/png"/> -->
     <!-- For iPad 1 -->
-    <!-- <link href="images/icons/ipad_home.png" rel="apple-touch-icon-precomposed" sizes="72x72" type="image/png"/> -->
+    <!-- <link href="{{ assets }}images/icons/ipad_home.png" rel="apple-touch-icon-precomposed" sizes="72x72" type="image/png"/> -->
     <!-- For iPhone 3G, iPod Touch and Android -->
-    <!-- <link href="images/icons/iphone_home.png" rel="apple-touch-icon-precomposed" type="image/png"/> -->
+    <!-- <link href="{{ assets }}images/icons/iphone_home.png" rel="apple-touch-icon-precomposed" type="image/png"/> -->
     <!-- For Nokia -->
-    <!-- <link href="images/icons/iphone_home.png" rel="shortcut icon"/> -->
+    <!-- <link href="{{ assets }}images/icons/iphone_home.png" rel="shortcut icon"/> -->
     <!-- For everything else -->
-    <!-- <link href="images/icons/favicon.png" rel="shortcut icon" type="image/png"/> -->
-    <!-- <link href="images/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/> -->
+    <!-- <link href="{{ assets }}images/icons/favicon.png" rel="shortcut icon" type="image/png"/> -->
+    <!-- <link href="{{ assets }}images/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/> -->
 
     <!-- IE8 and below fallbacks -->
     <!--[if lte IE 8]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script type="text/javascript" src="js/libs/respond/respond.min.js"></script>
+    <script type="text/javascript" src="{{ assets }}js/libs/respond/respond.min.js"></script>
     <![endif]-->
 
 </head>
@@ -56,15 +56,7 @@
 
         <main class="primary wrapper-primary" role="main">
 
-            
-        <div class="grid">
-
-            <h2>Main Content</h2>
-            <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa.</strong></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-            <p>For help getting started with <a href="https://github.com/mattbegent/boilerplate">Boilerplate</a>, see README.md and take a look at the <a href="templates/index.html">example templates</a>.</p>
-
-        </div>
+            {{> body }}
 
         </main><!-- .wrapper-primary -->
 
@@ -72,7 +64,7 @@
 
             <div class="grid">
                 
-                <p><small>&copy; 2013 Copyright Information</small></p>
+                <p><small>&copy; {{ year }} Copyright Information</small></p>
 
             </div>
 
@@ -81,13 +73,15 @@
     </div><!-- .wrapper-all -->
 
     <!-- JavaScript -->
-    
+    {{#dev}}
     <script data-main="js/main" src="js/libs/requirejs/require.js"></script>
-    
-    
+    {{/dev}}
+    {{#prod}}
+    <script src="{{ assets }}js/main.min.js"></script>
+    {{/prod}}
 
     <!--[if lte IE 8]>
-    <script type="text/javascript" src="js/libs/selectivizr/selectivizr.js"></script>
+    <script type="text/javascript" src="{{ assets }}js/libs/selectivizr/selectivizr.js"></script>
     <![endif]-->
 
     <!-- Google Analytics -->

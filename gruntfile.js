@@ -39,18 +39,21 @@ module.exports = function(grunt) {
           }
         },
 
-        clean: [
-          'js/libs/requirejs/dist', 
-          'js/libs/requirejs/docs', 
-          'js/libs/requirejs/tests', 
-          'js/libs/requirejs-plugins/examples',  
-          'js/libs/requirejs-plugins/lib', 
-          'js/libs/respond/test', 
-          'js/libs/respond/cross-domain', 
-          'js/libs/selectivizr/tests',
-          'js/libs/jquery/.gitignore',
-          'js/libs/requirejs/.gitignore'
-        ],
+        clean: {
+          jslibclean: [
+              'js/libs/requirejs/dist', 
+              'js/libs/requirejs/docs', 
+              'js/libs/requirejs/tests', 
+              'js/libs/requirejs-plugins/examples',  
+              'js/libs/requirejs-plugins/lib', 
+              'js/libs/respond/test', 
+              'js/libs/respond/cross-domain', 
+              'js/libs/selectivizr/tests',
+              'js/libs/jquery/.gitignore',
+              'js/libs/requirejs/.gitignore'
+          ]
+          // htmlclean: ['*.html', 'templates/*.html'] If using assemble
+        },
 
         imagemin: {
             options: {
@@ -68,72 +71,35 @@ module.exports = function(grunt) {
             }
         },
 
-        // Used for example templates
-        template: {
-          index: {
-            src: "templates/src/index.ejs",
-            dest: 'templates/index.html',
-            variables: {
-              title : "Boilerplate Presents",
-              currentPage: "Home"
-            }
-          },  
-          col2: {
-            src: "templates/src/2column.ejs",
-            dest: 'templates/2column.html',
-            variables: {
-              title : "2 Column",
-              currentPage: "2 Column"
+        assemble: {
+          pages: { // User pages
+            options: {
+              flatten: true,
+              dev: true,
+              prod: false,
+              assets: '',
+              year: "<%= grunt.template.today('yyyy') %>",
+              layout: 'generator/layouts/default.hbs',
+              partials: 'generator/partials/*.hbs'
+            },
+            files: {
+              './': ['generator/pages/*.hbs']
             }
           },
-          col3: {
-            src: "templates/src/3column.ejs",
-            dest: 'templates/3column.html',
-            variables: {
-              title : "3 Column",
-              currentPage: "3 Column"
+          templates: { // Example templates
+            options: {
+              flatten: true,
+              dev: true,
+              prod: false,
+              year: "<%= grunt.template.today('yyyy') %>",
+              layout: 'generator/layouts/templates.hbs',
+              partials: 'generator/partials/*.hbs'
+            },
+            files: {
+              'templates/': ['generator/templates/*.hbs']
             }
-          },
-          grid: {
-            src: "templates/src/grid.ejs",
-            dest: 'templates/grid.html',
-            variables: {
-              title : "Grid",
-              currentPage: "Grid"
-            }
-          },
-          news: {
-            src: "templates/src/news.ejs",
-            dest: 'templates/news.html',
-            variables: {
-              title : "News",
-              currentPage: "News"
-            }
-          },
-          contact: {
-            src: "templates/src/contact.ejs",
-            dest: 'templates/contact.html',
-            variables: {
-              title : "Contact",
-              currentPage: "Contact"
-            }
-          },
-          pagenotfound: {
-            src: "templates/src/404.ejs",
-            dest: 'templates/404.html',
-            variables: {
-              title : "Page Not Found",
-              currentPage: "404"
-            }
-          },
-          gallery: {
-            src: "templates/src/gallery.ejs",
-            dest: 'templates/gallery.html',
-            variables: {
-              title : "Gallery",
-              currentPage: "Gallery"
-            }
-          }     
+          }
+                  
         },
 
         watch: {
@@ -145,9 +111,9 @@ module.exports = function(grunt) {
             files: ['<%= jshint.files %>'], 
             tasks: ['jshint', 'requirejs']
           },
-          watchejs: {
-            files: ['templates/src/**/*.ejs'], 
-            tasks: ['template']
+          watchpages: {
+            files: ['generator/pages/*.hbs', 'generator/templates/*.hbs', 'generator/layouts/*.hbs', 'generator/partials/*.hbs' ], 
+            tasks: ['assemble'] // add 'clean:htmlclean' if using assemble
           }
         }    
 
@@ -159,10 +125,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-templater');
-    grunt.loadNpmTasks('grunt-contrib-watch', ['watch:watchless','watch:watchjs','watch:watchejs']);
+    grunt.loadNpmTasks('assemble');
+    grunt.loadNpmTasks('grunt-contrib-watch', ['watch:watchless','watch:watchjs','watch:watchpages']);
 
     // Default Tasks
-    grunt.registerTask('default', ['less','requirejs','jshint','clean','imagemin','template','watch']);
+    grunt.registerTask('default', ['less','requirejs','jshint','imagemin','clean','assemble','watch']);
 
 };

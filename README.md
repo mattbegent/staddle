@@ -1,4 +1,4 @@
-# Boilerplate v1.9.2
+# Boilerplate v1.9.3
 
 A brilliant front-end HTML5 and LESS boilerplate for small and large scale websites.
 
@@ -14,6 +14,7 @@ A brilliant front-end HTML5 and LESS boilerplate for small and large scale websi
 * Uses [RequireJS](http://requirejs.org/).
 * Follows a [SMACSS](http://smacss.com/) style.
 * Uses [Grunt](http://gruntjs.com/) to compile LESS, JSHint JavaScript and optimise RequireJS.
+* Uses [Assemble](https://github.com/assemble/assemble) as a static site generator.
 
 # Documentation
 
@@ -23,7 +24,7 @@ A brilliant front-end HTML5 and LESS boilerplate for small and large scale websi
 2. Set your site variables in less/variables.less.
 3. Add your custom modules to the less/modules folder and import them in main.less.
 4. Tell your LESS compiler to compile less/main.less to css/main.css. Or if you use [Grunt](http://gruntjs.com/) install the Grunt dependencies `npm install` then use `grunt watch` and your LESS files will be compiled on save.
-5. Use index.html as a template for your html, using the example templates in the templates folder.
+5. Use index.html as a template for your html, using the example templates in the templates folder. If you use Grunt you can generate a static site using Assemble - see the generator folder. 
 6. Build a cool site:-)!
 
 ## Customising

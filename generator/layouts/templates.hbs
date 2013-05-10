@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>2 Column &ndash; Boilerplate Template</title>
+    <title>{{ title }} &ndash; Boilerplate Template</title>
 
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -48,18 +48,18 @@
         
             <div class="grid">
 
-                <h1 class="title-primary margin-bottom">2 Column</h1> 
+                <h1 class="title-primary margin-bottom">{{ title }}</h1> 
 
                 <nav>
                     <ul class="nav nav-main">
-                        <li><a href="index.html" class="">Home</a></li>
-                        <li><a href="2column.html" class="active">2 Column</a></li>
-                        <li><a href="3column.html" class="">3 Column</a></li>
-                        <li><a href="grid.html" class="">Grid</a></li>
-                        <li><a href="404.html" class="">404</a></li>
-                        <li><a href="gallery.html" class="">Gallery</a></li>
-                        <li><a href="news.html" class="">News</a></li>
-                        <li><a href="contact.html" class="">Contact</a></li>
+                        <li><a href="index.html" class="{{#if navHomeActive}}active{{/if}}">Home</a></li>
+                        <li><a href="2column.html" class="{{#if nav2ColActive}}active{{/if}}">2 Column</a></li>
+                        <li><a href="3column.html" class="{{#if nav3ColActive}}active{{/if}}">3 Column</a></li>
+                        <li><a href="grid.html" class="{{#if navGridActive}}active{{/if}}">Grid</a></li>
+                        <li><a href="404.html" class="{{#if nav404Active}}active{{/if}}">404</a></li>
+                        <li><a href="gallery.html" class="{{#if navGalleryActive}}active{{/if}}">Gallery</a></li>
+                        <li><a href="news.html" class="{{#if navNewsActive}}active{{/if}}">News</a></li>
+                        <li><a href="contact.html" class="{{#if navContactActive}}active{{/if}}">Contact</a></li>
                
                     </ul>
                 </nav>
@@ -70,23 +70,7 @@
 
         <main class="primary wrapper-primary" role="main">
 
-            
-        <div class="grid">   
-
-            <div class="col-8-12">     
-                <h2>Main Content</h2>     
-                <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa.</strong></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-            </div>
-
-            <div class="col-4-12">
-                <h2>Sidebar</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-            </div>
-
-        </div>
+            {{> body }}
 
         </main><!-- .wrapper-primary -->
 
@@ -94,7 +78,7 @@
 
             <div class="grid">
                 
-                <p><small>&copy; 2013 Copyright Information</small></p>
+                <p><small>&copy; {{ year }} Copyright Information</small></p>
 
             </div>
 
@@ -103,10 +87,12 @@
     </div><!-- .wrapper-all -->
 
     <!-- JavaScript -->
-    
+    {{#dev}}
     <script data-main="../js/main" src="../js/libs/requirejs/require.js"></script>
-    
-    
+    {{/dev}}
+    {{#prod}}
+    <script src="../js/main.min.js"></script>
+    {{/prod}}
 
     <!--[if lte IE 8]>
     <script type="text/javascript" src="../js/libs/selectivizr/selectivizr.js"></script>
