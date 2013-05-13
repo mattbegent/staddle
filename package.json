@@ -1,15 +1,15 @@
 {
   "name": "boilerplate",
-  "version": "1.9.3",
+  "version": "2.0.0",
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-less": "~0.5.0",
-    "grunt-contrib-watch": "~0.3.1",
-    "grunt-contrib-requirejs": "~0.4.0",
-    "grunt-contrib-jshint": "~0.4.3",
-    "grunt-contrib-clean": "~0.4.1",
-    "grunt-contrib-imagemin": "~0.1.4",
-    "ejs": "~0.8.3",
-    "assemble": "~0.3.76"
+    "grunt": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-requirejs": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-imagemin": "*",
+    "assemble": "*",
+    "grunt-contrib-connect": "*"
   }
 }

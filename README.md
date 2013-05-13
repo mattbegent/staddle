@@ -1,10 +1,10 @@
-# Boilerplate v1.9.3
+# Boilerplate v2.0.0
 
 A brilliant front-end HTML5 and LESS boilerplate for small and large scale websites.
 
 ## Features
 
-* Responsive grid.
+* Responsive grid, including breakpoints for tablet and mobile.
 * Supports ie7 + (ie7 support will be dropped when clients stop demanding it).
 * Easy user configuration.
 * Flexibility - all of the base modules are independent, so you can turn off modules that you don't use.
@@ -13,8 +13,8 @@ A brilliant front-end HTML5 and LESS boilerplate for small and large scale websi
 * Example templates to get you started quickly.
 * Uses [RequireJS](http://requirejs.org/).
 * Follows a [SMACSS](http://smacss.com/) style.
-* Uses [Grunt](http://gruntjs.com/) to compile LESS, JSHint JavaScript and optimise RequireJS.
-* Uses [Assemble](https://github.com/assemble/assemble) as a static site generator.
+* Uses [Grunt](http://gruntjs.com/) to compile LESS, JSHint JavaScript, optimise RequireJS and start a Connect web server.
+* Uses [Assemble](https://github.com/assemble/assemble) as a static site generator for small builds or prototyping.
 
 # Documentation
 
@@ -24,8 +24,8 @@ A brilliant front-end HTML5 and LESS boilerplate for small and large scale websi
 2. Set your site variables in less/variables.less.
 3. Add your custom modules to the less/modules folder and import them in main.less.
 4. Tell your LESS compiler to compile less/main.less to css/main.css. Or if you use [Grunt](http://gruntjs.com/) install the Grunt dependencies `npm install` then use `grunt watch` and your LESS files will be compiled on save.
-5. Use index.html as a template for your html, using the example templates in the templates folder. If you use Grunt you can generate a static site using Assemble - see the generator folder. 
-6. Build a cool site:-)!
+5. Use index.html as a template for your html. If you use Grunt you can generate a static site using Assemble - see the _templates folder. If you choose to use Grunt (which is definitely should!), you must use the _templates folder to template your html, as any html in the root is deleted before Assemble compiles.
+6. Build a cool site:-)! 
 
 ## Customising
 

@@ -6,8 +6,8 @@ module.exports = function(grunt) {
         less: {
           all: {
             options: {
-              paths: ["less/"],
-              compress: true
+              paths: ["less/"]
+              //compress: true
             },
             files: {
               "css/main.css": "less/main.less"
@@ -51,8 +51,8 @@ module.exports = function(grunt) {
               'js/libs/selectivizr/tests',
               'js/libs/jquery/.gitignore',
               'js/libs/requirejs/.gitignore'
-          ]
-          // htmlclean: ['*.html', 'templates/*.html'] If using assemble
+          ],
+          htmlclean: ['*.html', 'examples/*.html']
         },
 
         imagemin: {
@@ -77,29 +77,37 @@ module.exports = function(grunt) {
               flatten: true,
               dev: true,
               prod: false,
-              assets: '',
+              assets: '.',
               year: "<%= grunt.template.today('yyyy') %>",
-              layout: 'generator/layouts/default.hbs',
-              partials: 'generator/partials/*.hbs'
+              layout: '_templates/layouts/default.hbs',
+              partials: '_templates/partials/*.hbs'
             },
             files: {
-              './': ['generator/pages/*.hbs']
+              './': ['_templates/pages/*.hbs']
             }
           },
-          templates: { // Example templates
+          examples: { // Example templates
             options: {
               flatten: true,
               dev: true,
               prod: false,
               year: "<%= grunt.template.today('yyyy') %>",
-              layout: 'generator/layouts/templates.hbs',
-              partials: 'generator/partials/*.hbs'
+              layout: '_templates/layouts/examples.hbs'
             },
             files: {
-              'templates/': ['generator/templates/*.hbs']
+              'examples/': ['_templates/examples/*.hbs']
             }
           }
                   
+        },
+
+        connect: {
+          server: {
+            options: {
+              port: 8080,
+              base: ''
+            }
+          }
         },
 
         watch: {
@@ -112,8 +120,8 @@ module.exports = function(grunt) {
             tasks: ['jshint', 'requirejs']
           },
           watchpages: {
-            files: ['generator/pages/*.hbs', 'generator/templates/*.hbs', 'generator/layouts/*.hbs', 'generator/partials/*.hbs' ], 
-            tasks: ['assemble'] // add 'clean:htmlclean' if using assemble
+            files: ['_templates/pages/*.hbs', '_templates/templates/*.hbs', '_templates/layouts/*.hbs', '_templates/partials/*.hbs' ], 
+            tasks: ['clean:htmlclean', 'assemble']
           }
         }    
 
@@ -126,9 +134,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('assemble');
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch', ['watch:watchless','watch:watchjs','watch:watchpages']);
 
     // Default Tasks
-    grunt.registerTask('default', ['less','requirejs','jshint','imagemin','clean','assemble','watch']);
+    grunt.registerTask('default', ['less','requirejs','jshint','imagemin','clean','assemble','connect','watch']);
 
 };
