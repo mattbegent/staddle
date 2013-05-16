@@ -42,49 +42,45 @@
 
 <body id="sitename" data-controller="examples">
 
-    <div class="wrapper-all">
+    <header class="wrapper-header" role="banner"> 
+    
+        <div class="grid">
 
-        <header class="wrapper-header" role="banner"> 
-        
-            <div class="grid">
+            <h1 class="title-primary margin-bottom">{{ title }}</h1> 
 
-                <h1 class="title-primary margin-bottom">{{ title }}</h1> 
+            <nav>
+                <ul class="nav nav-main">
+                    <li><a href="index.html" class="{{#if navHomeActive}}active{{/if}}">Home</a></li>
+                    <li><a href="2column.html" class="{{#if nav2ColActive}}active{{/if}}">2 Column</a></li>
+                    <li><a href="3column.html" class="{{#if nav3ColActive}}active{{/if}}">3 Column</a></li>
+                    <li><a href="grid.html" class="{{#if navGridActive}}active{{/if}}">Grid</a></li>
+                    <li><a href="404.html" class="{{#if nav404Active}}active{{/if}}">404</a></li>
+                    <li><a href="gallery.html" class="{{#if navGalleryActive}}active{{/if}}">Gallery</a></li>
+                    <li><a href="news.html" class="{{#if navNewsActive}}active{{/if}}">News</a></li>
+                    <li><a href="contact.html" class="{{#if navContactActive}}active{{/if}}">Contact</a></li>
+           
+                </ul>
+            </nav>
 
-                <nav>
-                    <ul class="nav nav-main">
-                        <li><a href="index.html" class="{{#if navHomeActive}}active{{/if}}">Home</a></li>
-                        <li><a href="2column.html" class="{{#if nav2ColActive}}active{{/if}}">2 Column</a></li>
-                        <li><a href="3column.html" class="{{#if nav3ColActive}}active{{/if}}">3 Column</a></li>
-                        <li><a href="grid.html" class="{{#if navGridActive}}active{{/if}}">Grid</a></li>
-                        <li><a href="404.html" class="{{#if nav404Active}}active{{/if}}">404</a></li>
-                        <li><a href="gallery.html" class="{{#if navGalleryActive}}active{{/if}}">Gallery</a></li>
-                        <li><a href="news.html" class="{{#if navNewsActive}}active{{/if}}">News</a></li>
-                        <li><a href="contact.html" class="{{#if navContactActive}}active{{/if}}">Contact</a></li>
-               
-                    </ul>
-                </nav>
+        </div>
 
-            </div>
+    </header><!-- .wrapper-header -->
 
-        </header><!-- .wrapper-header -->
+    <main class="wrapper-primary primary" role="main">
 
-        <main class="primary wrapper-primary" role="main">
+        {{> body }}
 
-            {{> body }}
+    </main><!-- .wrapper-primary -->
 
-        </main><!-- .wrapper-primary -->
+    <footer class="wrapper-footer" role="contentinfo">
 
-        <footer class="wrapper-footer" role="contentinfo">
+        <div class="grid">
+            
+            <p><small>&copy; {{ year }} Copyright Information</small></p>
 
-            <div class="grid">
-                
-                <p><small>&copy; {{ year }} Copyright Information</small></p>
+        </div>
 
-            </div>
-
-        </footer><!-- .wrapper-footer -->
-
-    </div><!-- .wrapper-all -->
+    </footer><!-- .wrapper-footer -->
 
     <!-- JavaScript -->
     {{#dev}}

@@ -42,35 +42,31 @@
 
 <body id="sitename">
 
-    <div class="wrapper-all">
+    <header class="wrapper-header" role="banner">
+    
+        <div class="grid">
 
-        <header class="wrapper-header" role="banner">
-        
-            <div class="grid">
+            <h1 class="title-primary">Header</h1>
 
-                <h1 class="title-primary">Header</h1>
+        </div>
 
-            </div>
+    </header><!-- .wrapper-header -->
 
-        </header><!-- .wrapper-header -->
+    <main class="wrapper-primary primary" role="main">
 
-        <main class="primary wrapper-primary" role="main">
+        {{> body }}
 
-            {{> body }}
+    </main><!-- .wrapper-primary -->
 
-        </main><!-- .wrapper-primary -->
+    <footer class="wrapper-footer" role="contentinfo">
 
-        <footer class="wrapper-footer" role="contentinfo">
+        <div class="grid">
+            
+            <p><small>&copy; {{ year }} Copyright Information</small></p>
 
-            <div class="grid">
-                
-                <p><small>&copy; {{ year }} Copyright Information</small></p>
+        </div>
 
-            </div>
-
-        </footer><!-- .wrapper-footer --> 
-
-    </div><!-- .wrapper-all -->
+    </footer><!-- .wrapper-footer --> 
 
     <!-- JavaScript -->
     {{#dev}}
