@@ -4,7 +4,16 @@
 
 module.exports = function(grunt) {
 
+    // Configurable paths
+    var boilerplateConfig = {
+        app: "app",
+        assets: "",
+        dist: "dist"
+    };
+
     grunt.initConfig({
+
+        bp: boilerplateConfig,
 
         less: {
           all: {
@@ -13,13 +22,13 @@ module.exports = function(grunt) {
                 //compress: true
             },
             files: {
-                "css/main.css": "less/main.less"
+                "<%= bp.assets %>css/main.css": "<%= bp.assets %>less/main.less"
             }
           }
         },
 
         jshint: {
-          files: ['gruntfile.js','js/main.js','js/modules/*.js'],
+          files: ['gruntfile.js','<%= bp.assets %>js/main.js','<%= bp.assets %>js/modules/*.js'],
           options: {
             globals: {
                 jQuery: true,
@@ -35,27 +44,27 @@ module.exports = function(grunt) {
             options: { 
                 name: "main",
                 baseUrl: "./js",
-                mainConfigFile: "js/main.js",
-                out: "js/main.min.js",
-                include: "libs/requirejs/require"
+                mainConfigFile: "<%= bp.assets %>js/main.js",
+                out: "<%= bp.assets %>js/main.min.js",
+                include: "<%= bp.assets %>libs/requirejs/require"
             }
           }
         },
 
         clean: {
           jslibclean: [
-              'js/libs/requirejs/dist', 
-              'js/libs/requirejs/docs', 
-              'js/libs/requirejs/tests', 
-              'js/libs/requirejs-plugins/examples',  
-              'js/libs/requirejs-plugins/lib', 
-              'js/libs/respond/test', 
-              'js/libs/respond/cross-domain', 
-              'js/libs/selectivizr/tests',
-              'js/libs/jquery/.gitignore',
-              'js/libs/requirejs/.gitignore'
+              '<%= bp.assets %>js/libs/requirejs/dist', 
+              '<%= bp.assets %>js/libs/requirejs/docs', 
+              '<%= bp.assets %>js/libs/requirejs/tests', 
+              '<%= bp.assets %>js/libs/requirejs-plugins/examples',  
+              '<%= bp.assets %>js/libs/requirejs-plugins/lib', 
+              '<%= bp.assets %>js/libs/respond/test', 
+              '<%= bp.assets %>js/libs/respond/cross-domain', 
+              '<%= bp.assets %>js/libs/selectivizr/tests',
+              '<%= bp.assets %>js/libs/jquery/.gitignore',
+              '<%= bp.assets %>js/libs/requirejs/.gitignore'
           ],
-          htmlclean: ['*.html', 'examples/*.html']
+          htmlclean: ['*.html', '<%= bp.assets %>examples/*.html']
         },
 
         imagemin: {
@@ -66,9 +75,9 @@ module.exports = function(grunt) {
               files: [
                 {
                 expand: true, 
-                cwd: 'images/',
+                cwd: '<%= bp.assets %>images/',
                 src: ['**/*.jpg','**/*.png'],
-                dest: 'images/' 
+                dest: '<%= bp.assets %>images/' 
                 }
               ]
             }
@@ -98,7 +107,7 @@ module.exports = function(grunt) {
                 layout: '_templates/layouts/examples.hbs'
             },
             files: {
-                'examples/': ['_templates/examples/*.hbs']
+                '<%= bp.assets %>examples/': ['_templates/examples/*.hbs']
             }
           }
                   
