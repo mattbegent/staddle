@@ -1,15 +1,19 @@
 {
-  "name": "boilerplate",
-  "version": "2.0.1",
-  "devDependencies": {
-    "grunt": "*",
-    "grunt-contrib-less": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-requirejs": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-contrib-imagemin": "*",
-    "assemble": "*",
-    "grunt-contrib-connect": "*"
-  }
+    "name": "boilerplate",
+    "version": "2.0.1",
+    "repository" : { 
+        "type" : "git", 
+        "url" : "https://github.com/mattbegent/boilerplate.git"
+    },
+    "devDependencies": {
+        "grunt": "*",
+        "grunt-contrib-less": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-contrib-requirejs": "*",
+        "grunt-contrib-jshint": "*",
+        "grunt-contrib-clean": "*",
+        "grunt-contrib-imagemin": "*",
+        "assemble": "*",
+        "grunt-contrib-connect": "*"
+    }  
 }
