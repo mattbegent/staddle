@@ -63,7 +63,6 @@ As all of the built in modules are independent (less/base_modules) you can safel
 	@MODULE-Navigation:             true;
 	@MODULE-Pagination:             false;
 	@MODULE-Print:                  true;
-	@MODULE-Table:                  false;
 	@MODULE-Typography:             true;
 	@MODULE-Well:                   true;
 
