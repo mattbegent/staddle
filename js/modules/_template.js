@@ -1,13 +1,13 @@
 /* ==========================================================================
-// Example.js
+// _template.js
 // =========================================================================*/
 
 define(
-    ["jquery"], 
+    ["jquery"],  
 
     function($) {
 
-        var example = {
+        var _template = {
 
             init: function() {
                 console.log("I am an example.");
@@ -15,7 +15,7 @@ define(
             
         };
 
-        return example;
+        return _template;
 
     }
 );
