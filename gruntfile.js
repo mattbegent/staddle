@@ -7,8 +7,9 @@ module.exports = function(grunt) {
     // Configurable paths - include trailing slashes
     var boilerplateConfig = {
         assets: "",
-        build: "build/",
-        htmltemplates: "_templates/"
+        layouts: "_layouts/",
+        pages: "_pages/",
+        includes: "_includes/"
     };
 
     grunt.initConfig({
@@ -91,11 +92,11 @@ module.exports = function(grunt) {
                 prod: false,
                 assets: '.',
                 year: "<%= grunt.template.today('yyyy') %>",
-                layout: '<%= bp.htmltemplates %>layouts/default.hbs',
-                partials: '<%= bp.htmltemplates %>partials/*.hbs'
+                layout: '<%= bp.layouts %>default.hbs',
+                partials: '<%= bp.includes %>*.hbs'
             },
             files: {
-                './': ['<%= bp.htmltemplates %>pages/*.hbs']
+                './': ['<%= bp.pages %>*.hbs']
             }
           },
           examples: { // Example templates
@@ -104,10 +105,10 @@ module.exports = function(grunt) {
                 dev: true,
                 prod: false,
                 year: "<%= grunt.template.today('yyyy') %>",
-                layout: '<%= bp.htmltemplates %>layouts/examples.hbs'
+                layout: '<%= bp.layouts %>examples.hbs'
             },
             files: {
-                '<%= bp.assets %>examples/': ['<%= bp.htmltemplates %>examples/*.hbs']
+                'examples/': ['<%= bp.pages %>examples/*.hbs']
             }
           }
                   
