@@ -27,6 +27,26 @@ A brilliant front-end HTML5 and LESS boilerplate for small and large scale websi
 5. Use index.html as a template for your html. If you use Grunt you can generate a static site using Assemble - see the _pages and _layouts folders. If you choose to use Grunt (which is definitely should!), you must use the _pages and _layouts folders to template your html, as any html in the root is deleted before Assemble compiles.
 6. Build a cool site:-)! 
 
+## Folder Structure
+
+The basic structure and main files are outlined below: 
+
+```
+boilerplate
+|-- _layouts          - Handlebars layouts for static website generation
+|-- _pages            - Handlebars pages for static website generation
+|-- css               - Compiled css
+|-- examples          - Example modules and pages
+|-- images            - The images!
+|-- js                - JavaScripts separated into amd modules
+|-- less     
+|	|- base           - Boilerplate base - try not to touch this!
+|	|- base_modules   - Default modules - these can be turned off in variables.less
+|	|- modules        - Add new less modules in here
+|	main.less         - Load your modules in here
+|	variables.less    - All LESS module variables are set in here
+```
+
 ## Customising
 
 Although Boilerplate does come with some in built modules and styles, it is all about customisation.
