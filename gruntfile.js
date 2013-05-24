@@ -4,11 +4,11 @@
 
 module.exports = function(grunt) {
 
-    // Configurable paths
+    // Configurable paths - include trailing slashes
     var boilerplateConfig = {
-        app: "app",
         assets: "",
-        dist: "dist"
+        build: "build/",
+        htmltemplates: "_templates/"
     };
 
     grunt.initConfig({
@@ -91,11 +91,11 @@ module.exports = function(grunt) {
                 prod: false,
                 assets: '.',
                 year: "<%= grunt.template.today('yyyy') %>",
-                layout: '_templates/layouts/default.hbs',
-                partials: '_templates/partials/*.hbs'
+                layout: '<%= bp.htmltemplates %>layouts/default.hbs',
+                partials: '<%= bp.htmltemplates %>partials/*.hbs'
             },
             files: {
-                './': ['_templates/pages/*.hbs']
+                './': ['<%= bp.htmltemplates %>pages/*.hbs']
             }
           },
           examples: { // Example templates
@@ -104,10 +104,10 @@ module.exports = function(grunt) {
                 dev: true,
                 prod: false,
                 year: "<%= grunt.template.today('yyyy') %>",
-                layout: '_templates/layouts/examples.hbs'
+                layout: '<%= bp.htmltemplates %>layouts/examples.hbs'
             },
             files: {
-                '<%= bp.assets %>examples/': ['_templates/examples/*.hbs']
+                '<%= bp.assets %>examples/': ['<%= bp.htmltemplates %>examples/*.hbs']
             }
           }
                   
@@ -132,7 +132,12 @@ module.exports = function(grunt) {
             tasks: ['jshint', 'requirejs']
           },
           watchpages: {
-            files: ['_templates/pages/*.hbs', '_templates/templates/*.hbs', '_templates/layouts/*.hbs', '_templates/partials/*.hbs' ], 
+            files: [
+              '<%= bp.htmltemplates %>pages/*.hbs', 
+              '<%= bp.htmltemplates %>templates/*.hbs', 
+              '<%= bp.htmltemplates %>layouts/*.hbs', 
+              '<%= bp.htmltemplates %>partials/*.hbs' 
+            ], 
             tasks: ['clean:htmlclean', 'assemble']
           }
         }    
