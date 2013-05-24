@@ -1087,31 +1087,6 @@ button:hover {
 .pagination a.active {
   background-color: #2e6c87;
 }
-/* =========================================================================
-// TABLE
-// =======================================================================*/
-.table {
-  width: 100%;
-  margin: 0px 0px 24px 0px;
-  margin: 0rem 0rem 1.5rem 0rem;
-}
-.table th,
-.table td {
-  padding: 8px;
-  padding: 0.5rem;
-  text-align: left;
-}
-.table tbody tr:hover {
-  background-color: #ebebeb;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.table.table-striped tbody tr:nth-child(even) {
-  background-color: #ebebeb;
-}
 /* ==========================================================================
 // TYPOGRAPHY
 // =========================================================================*/
