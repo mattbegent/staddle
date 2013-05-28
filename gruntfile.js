@@ -9,7 +9,8 @@ module.exports = function(grunt) {
         assets: "",
         layouts: "_layouts/",
         pages: "_pages/",
-        includes: "_includes/"
+        partials: "_partials/",
+        site: "_site/"
     };
 
     grunt.initConfig({
@@ -134,10 +135,9 @@ module.exports = function(grunt) {
           },
           watchpages: {
             files: [
-              '<%= bp.htmltemplates %>pages/*.hbs', 
-              '<%= bp.htmltemplates %>templates/*.hbs', 
-              '<%= bp.htmltemplates %>layouts/*.hbs', 
-              '<%= bp.htmltemplates %>partials/*.hbs' 
+              '<%= bp.pages %>**/*.hbs', 
+              '<%= bp.layouts %>*.hbs', 
+              '<%= bp.partials %>*.hbs' 
             ], 
             tasks: ['clean:htmlclean', 'assemble']
           }
