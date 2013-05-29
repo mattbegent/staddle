@@ -1326,6 +1326,17 @@ sub {
 .margin-none {
   margin: 0;
 }
+.padding-bottom {
+  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
+}
+.padding-top {
+  padding-top: 24px;
+  padding-top: 1.5rem;
+}
+.padding-none {
+  padding: 0;
+}
 .show-desktop {
   display: inherit !important;
 }

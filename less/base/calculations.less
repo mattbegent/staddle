@@ -52,10 +52,22 @@
     margin-top: (@rem-size * 1rem);
 }
 
+.margin-right (@px-size){
+    @rem-size: @px-size / @TYPE-FontSize;
+    margin-right: (@px-size * 1px); 
+    margin-right: (@rem-size * 1rem);
+}
+
 .margin-bottom (@px-size){
     @rem-size: @px-size / @TYPE-FontSize;
     margin-bottom: (@px-size * 1px); 
     margin-bottom: (@rem-size * 1rem);
+}
+
+.margin-left (@px-size){
+    @rem-size: @px-size / @TYPE-FontSize;
+    margin-left: (@px-size * 1px); 
+    margin-left: (@rem-size * 1rem);
 }
 
 .padding (@px-size){
@@ -79,10 +91,22 @@
     padding-top: (@rem-size * 1rem);
 }
 
+.padding-right (@px-size){
+    @rem-size: @px-size / @TYPE-FontSize;
+    padding-right: (@px-size * 1px); 
+    padding-right: (@rem-size * 1rem);
+}
+
 .padding-bottom (@px-size){
     @rem-size: @px-size / @TYPE-FontSize;
     padding-bottom: (@px-size * 1px); 
     padding-bottom: (@rem-size * 1rem);
+}
+
+.padding-left (@px-size){
+    @rem-size: @px-size / @TYPE-FontSize;
+    padding-left: (@px-size * 1px); 
+    padding-left: (@rem-size * 1rem);
 }
 
 // PERCENTAGES
