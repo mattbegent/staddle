@@ -4,33 +4,35 @@
 
 module.exports = function(grunt) {
 
-    // Configurable paths - include trailing slashes
-    var boilerplateConfig = {
-        assets: "",
-        layouts: "_layouts/",
-        pages: "_pages/",
-        partials: "_partials/",
-        site: "_site/"
-    };
-
     grunt.initConfig({
 
-        bp: boilerplateConfig,
+        // Configurable paths
+        project: {
+          layouts: '_layouts',
+          pages: '_pages',
+          partials: '_partials',
+          site: '_site',
+          css: 'css',
+          img: 'img',
+          js: 'js',
+          less: 'less',
+          port: 8080 
+        },
 
         less: {
           all: {
             options: {
-                paths: ["less/"]
+                paths: ['<%= project.less %>/']
                 //compress: true
             },
             files: {
-                "<%= bp.assets %>css/main.css": "<%= bp.assets %>less/main.less"
+                '<%= project.css %>/main.css': '<%= project.less %>/main.less'
             }
           }
         },
 
         jshint: {
-          files: ['gruntfile.js','<%= bp.assets %>js/main.js','<%= bp.assets %>js/modules/*.js'],
+          files: ['gruntfile.js','<%= project.js %>/main.js','<%= project.js %>/modules/*.js'],
           options: {
             globals: {
                 jQuery: true,
@@ -44,29 +46,29 @@ module.exports = function(grunt) {
         requirejs: {
           compile: {
             options: { 
-                name: "main",
-                baseUrl: "./js",
-                mainConfigFile: "<%= bp.assets %>js/main.js",
-                out: "<%= bp.assets %>js/main.min.js",
-                include: "<%= bp.assets %>libs/requirejs/require"
+                name: 'main',
+                baseUrl: './<%= project.js %>',
+                mainConfigFile: '<%= project.js %>/main.js',
+                out: '<%= project.js %>/main.min.js',
+                include: 'libs/requirejs/require'
             }
           }
         },
 
         clean: {
           jslibclean: [
-              '<%= bp.assets %>js/libs/requirejs/dist', 
-              '<%= bp.assets %>js/libs/requirejs/docs', 
-              '<%= bp.assets %>js/libs/requirejs/tests', 
-              '<%= bp.assets %>js/libs/requirejs-plugins/examples',  
-              '<%= bp.assets %>js/libs/requirejs-plugins/lib', 
-              '<%= bp.assets %>js/libs/respond/test', 
-              '<%= bp.assets %>js/libs/respond/cross-domain', 
-              '<%= bp.assets %>js/libs/selectivizr/tests',
-              '<%= bp.assets %>js/libs/jquery/.gitignore',
-              '<%= bp.assets %>js/libs/requirejs/.gitignore'
+              '<%= project.js %>/libs/requirejs/dist', 
+              '<%= project.js %>/libs/requirejs/docs', 
+              '<%= project.js %>/libs/requirejs/tests', 
+              '<%= project.js %>/libs/requirejs-plugins/examples',  
+              '<%= project.js %>/libs/requirejs-plugins/lib', 
+              '<%= project.js %>/libs/respond/test', 
+              '<%= project.js %>/libs/respond/cross-domain', 
+              '<%= project.js %>/libs/selectivizr/tests',
+              '<%= project.js %>/libs/jquery/.gitignore',
+              '<%= project.js %>/libs/requirejs/.gitignore'
           ],
-          htmlclean: ['*.html', '<%= bp.assets %>examples/*.html']
+          htmlclean: ['*.html', 'examples/*.html']
         },
 
         imagemin: {
@@ -77,9 +79,9 @@ module.exports = function(grunt) {
               files: [
                 {
                 expand: true, 
-                cwd: '<%= bp.assets %>images/',
+                cwd: '<%= project.img %>/',
                 src: ['**/*.jpg','**/*.png'],
-                dest: '<%= bp.assets %>images/' 
+                dest: '<%= project.img %>/' 
                 }
               ]
             }
@@ -92,12 +94,12 @@ module.exports = function(grunt) {
                 dev: true,
                 prod: false,
                 assets: '.',
-                year: "<%= grunt.template.today('yyyy') %>",
-                layout: '<%= bp.layouts %>default.hbs',
-                partials: '<%= bp.includes %>*.hbs'
+                year: '<%= grunt.template.today("yyyy") %>',
+                layout: '<%= project.layouts %>/default.hbs',
+                partials: '<%= project.partials %>/*.hbs'
             },
             files: {
-                './': ['<%= bp.pages %>*.hbs']
+                './': ['<%= project.pages %>/*.hbs']
             }
           },
           examples: { // Example templates
@@ -105,11 +107,11 @@ module.exports = function(grunt) {
                 flatten: true,
                 dev: true,
                 prod: false,
-                year: "<%= grunt.template.today('yyyy') %>",
-                layout: '<%= bp.layouts %>examples.hbs'
+                year: '<%= grunt.template.today("yyyy") %>',
+                layout: '<%= project.layouts %>/examples.hbs'
             },
             files: {
-                'examples/': ['<%= bp.pages %>examples/*.hbs']
+                'examples/': ['<%= project.pages %>/examples/*.hbs']
             }
           }
                   
@@ -118,7 +120,7 @@ module.exports = function(grunt) {
         connect: {
           server: {
             options: {
-                port: 8080,
+                port: '<%= project.port %>',
                 base: ''
             }
           }
@@ -126,18 +128,22 @@ module.exports = function(grunt) {
 
         watch: {
           watchless: {
-            files: [ '**/*.less' ], 
+            files: [ '<%= project.less %>/**/*.less' ], 
             tasks: ['less']
           },
           watchjs: {
             files: ['<%= jshint.files %>'], 
             tasks: ['jshint', 'requirejs']
           },
+          watchimages: {
+            files: ['<%= project.img %>/**/*.jpg','<%= project.img %>/**/*.png'], 
+            tasks: ['imagemin']
+          },
           watchpages: {
             files: [
-              '<%= bp.pages %>**/*.hbs', 
-              '<%= bp.layouts %>*.hbs', 
-              '<%= bp.partials %>*.hbs' 
+              '<%= project.pages %>/**/*.hbs', 
+              '<%= project.layouts %>/*.hbs', 
+              '<%= project.partials %>/*.hbs' 
             ], 
             tasks: ['clean:htmlclean', 'assemble']
           }
