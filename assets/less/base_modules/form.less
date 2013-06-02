@@ -1,0 +1,93 @@
+.form-styles() when not (@MODULE-Form) { }
+.form-styles() when (@MODULE-Form) {
+
+/* ==========================================================================
+// FORM
+// =========================================================================*/
+
+// DEFAULT
+// ----------------------------------------------------
+
+.form {
+    .margin (0, 0, @TYPE-LineHeight, 0);
+}
+
+.form-row {
+    .clearfix ();
+    .margin (0, 0, @TYPE-LineHeight, 0);
+}
+
+label  {
+    cursor: pointer;
+    display: block;
+}
+
+input {
+    clear: left;
+    display: block;
+    max-width: 100%;
+}
+
+input, 
+textarea, 
+select {
+    width: 100%;
+    .border-radius (4);
+    padding: 4px;
+    border: 1px solid #888;
+    color: #555;
+}
+
+input:focus, 
+textarea:focus, 
+select:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    .box-shadow-custom (~"inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)");
+    outline: 0;
+    outline: thin dotted \9;
+}
+
+button {
+    .button;
+}
+
+.placeholder (@FORM-Placeholder); 
+
+// DESKTOP ADJUSTMENTS
+// ----------------------------------------------------
+
+@media only screen and (min-width: @MQ-Desktop) {
+
+    label {
+        margin-top: 2px;
+    }
+
+    input, 
+    textarea, 
+    select {
+        width: 40%;
+    }
+
+    .input-small {
+        width: 15%;
+    }
+
+    .input-medium {
+        width: 40%;
+    }
+
+    .input-large {
+        width: 50%;
+    }
+
+    .input-xlarge {
+        width: 75%;
+    }
+
+    .input-full {
+        width: 100%;
+    }
+
+}
+
+} .form-styles();

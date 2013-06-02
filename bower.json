@@ -1,9 +1,9 @@
 {
-    "name": "boilerplate",
-    "version": "2.0.2",
+    "name": "staddle",
+    "version": "3.0.0",
     "repository": {
         "type": "git",
-        "url": "git://github.com/mattbegent/boilerplate.git"
+        "url": "git://github.com/mattbegent/staddle.git"
     },
     "main": [
         "index.html",
@@ -11,10 +11,13 @@
         "less/main.less"
     ],
     "devDependencies": {
-        "jquery": "1.9.1",
+        "jquery": "1.10.0",
         "requirejs": "latest",
         "respond": "latest",
         "selectivizr": "latest",
         "requirejs-plugins": "latest"
-    }
+    },
+    "ignore": [
+        "**/.*"
+    ]
 }

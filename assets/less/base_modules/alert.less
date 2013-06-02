@@ -1,0 +1,69 @@
+.alert-styles() when not (@MODULE-Alert) { }
+.alert-styles() when (@MODULE-Alert) {
+
+/* =========================================================================
+// ALERT
+// =======================================================================*/
+
+// BASE
+// ----------------------------------------------------
+
+.alert {
+    display: block;
+    position: relative;  
+    .padding (@TYPE-FontSize); // TODO: Make better - take into account the 1px border
+    .margin (0, 0, @TYPE-LineHeight, 0);
+    
+    border-width: 1px;
+    border-style: solid;
+
+    .border-radius ();
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+// INFO
+// ----------------------------------------------------
+
+.alert-info { 
+    background-color: @ALERT-InfoBgColor;
+    color:  @ALERT-InfoTextColor; 
+    border-color: @ALERT-InfoBorderColor;
+}
+
+// ERROR
+// ----------------------------------------------------
+
+.alert-error {
+    background-color: @ALERT-ErrorBgColor;
+    color: @ALERT-ErrorTextColor;
+    border-color: @ALERT-ErrorBorderColor;
+}
+
+// SUCCESS
+// ----------------------------------------------------
+
+.alert-success { 
+    background-color: @ALERT-SuccessBgColor;
+    color: @ALERT-SuccessTextColor;
+    border-color: @ALERT-SuccessBorderColor;
+}
+
+// NOTE
+// ----------------------------------------------------
+
+.alert-note { 
+    background-color: @ALERT-NoteBgColor;
+    color: @ALERT-NoteTextColor;
+    border-color: @ALERT-NoteBorderColor;
+}
+
+// ALERT
+// ----------------------------------------------------
+
+.alert-alert { 
+    background-color: @ALERT-AlertBgColor;
+    color: @ALERT-AlertTextColor;
+    border-color: @ALERT-AlertBorderColor;
+}
+
+} .alert-styles();

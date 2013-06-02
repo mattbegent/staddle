@@ -8,25 +8,26 @@ module.exports = function(grunt) {
 
         // Configurable paths
         project: {
-          layouts: '_layouts',
-          pages: '_pages',
-          partials: '_partials',
+          layouts: 'content/layouts',
+          includes: 'content/includes',
+          pages: 'content/pages',
           site: '_site',
-          css: 'css',
-          img: 'img',
-          js: 'js',
-          less: 'less',
+          assets: 'assets',
+          css: 'assets/css',
+          img: 'assets/img',
+          js: 'assets/js',
+          less: 'assets/less',
           port: 8080 
         },
 
         less: {
           all: {
             options: {
-                paths: ['<%= project.less %>/']
-                //compress: true
+              paths: ['<%= project.less %>/'],
+              yuicompress: true
             },
             files: {
-                '<%= project.css %>/main.css': '<%= project.less %>/main.less'
+              '<%= project.site %>/<%= project.css %>/main.css': '<%= project.less %>/main.less'
             }
           }
         },
@@ -35,10 +36,10 @@ module.exports = function(grunt) {
           files: ['gruntfile.js','<%= project.js %>/main.js','<%= project.js %>/modules/*.js'],
           options: {
             globals: {
-                jQuery: true,
-                requirejs: true, 
-                console: true,
-                module: true
+              jQuery: true,
+              requirejs: true, 
+              console: true,
+              module: true
             }
           }
         },
@@ -46,29 +47,29 @@ module.exports = function(grunt) {
         requirejs: {
           compile: {
             options: { 
-                name: 'main',
-                baseUrl: './<%= project.js %>',
-                mainConfigFile: '<%= project.js %>/main.js',
-                out: '<%= project.js %>/main.min.js',
-                include: 'libs/requirejs/require'
+              name: 'main',
+              baseUrl: './<%= project.js %>',
+              mainConfigFile: '<%= project.js %>/main.js',
+              out: '<%= project.site %>/<%= project.js %>/main.min.js',
+              include: 'libs/requirejs/require'
             }
           }
         },
 
         clean: {
-          jslibclean: [
-              '<%= project.js %>/libs/requirejs/dist', 
-              '<%= project.js %>/libs/requirejs/docs', 
-              '<%= project.js %>/libs/requirejs/tests', 
-              '<%= project.js %>/libs/requirejs-plugins/examples',  
-              '<%= project.js %>/libs/requirejs-plugins/lib', 
-              '<%= project.js %>/libs/respond/test', 
-              '<%= project.js %>/libs/respond/cross-domain', 
-              '<%= project.js %>/libs/selectivizr/tests',
-              '<%= project.js %>/libs/jquery/.gitignore',
-              '<%= project.js %>/libs/requirejs/.gitignore'
+          jslibs: [
+            '<%= project.js %>/libs/jquery/**/*',
+            '!<%= project.js %>/libs/jquery/jquery.min.js',
+            '<%= project.js %>/libs/jquery/.gitignore',
+            '<%= project.js %>/libs/requirejs/**/*', 
+            '!<%= project.js %>/libs/requirejs/require.js', 
+            '<%= project.js %>/libs/requirejs/.gitignore',  
+            '<%= project.js %>/libs/respond/**/*', 
+            '!<%= project.js %>/libs/respond/respond.min.js', 
+            '<%= project.js %>/libs/selectivizr/**/*',
+            '!<%= project.js %>/libs/selectivizr/selectivizr.js'
           ],
-          htmlclean: ['*.html', 'examples/*.html']
+          html: ['<%= project.site %>/**/*.html']
         },
 
         imagemin: {
@@ -78,74 +79,101 @@ module.exports = function(grunt) {
             dynamic_mappings: {
               files: [
                 {
-                expand: true, 
-                cwd: '<%= project.img %>/',
-                src: ['**/*.jpg','**/*.png'],
-                dest: '<%= project.img %>/' 
+                  expand: true, 
+                  cwd: '<%= project.img %>/',
+                  src: ['**/*.jpg','**/*.png'],
+                  dest: '<%= project.site %>/<%= project.img %>' 
                 }
               ]
             }
         },
 
         assemble: {
-          pages: { // User pages
+          pages: {
             options: {
-                flatten: true,
-                dev: true,
-                prod: false,
-                assets: '.',
-                year: '<%= grunt.template.today("yyyy") %>',
-                layout: '<%= project.layouts %>/default.hbs',
-                partials: '<%= project.partials %>/*.hbs'
+              flatten: false,
+              assets: '<%= project.site %>/<%= project.assets %>',
+              year: '<%= grunt.template.today("yyyy") %>',
+              layout: '<%= project.layouts %>/default.hbs',
+              partials: '<%= project.includes %>/**/*.hbs'
             },
-            files: {
-                './': ['<%= project.pages %>/*.hbs']
-            }
+            files: [
+              {
+                expand: true,
+                cwd: '<%= project.pages %>/',
+                src: ['**/*.hbs'],
+                dest: '<%= project.site %>/'
+              }
+            ]
+          }               
+        },
+
+        copy: {
+          assets: { // Not less, js or img
+            files: [ 
+              { 
+                expand: true,
+                src: ['<%= project.assets %>/**/*', '!<%= project.less %>/**/*', '!<%= project.js %>/**/*', '!<%= project.img %>/**/*'], 
+                dest: '<%= project.site %>/',
+                filter: 'isFile' 
+              }
+            ]
           },
-          examples: { // Example templates
-            options: {
-                flatten: true,
-                dev: true,
-                prod: false,
-                year: '<%= grunt.template.today("yyyy") %>',
-                layout: '<%= project.layouts %>/examples.hbs'
-            },
-            files: {
-                'examples/': ['<%= project.pages %>/examples/*.hbs']
-            }
+          iefixes: { 
+            files: [
+              { 
+                src: '<%= project.js %>/libs/respond/respond.min.js', 
+                dest: '<%= project.site %>/<%= project.js %>/libs/respond/respond.min.js' 
+              },
+              { 
+                src: '<%= project.js %>/libs/selectivizr/selectivizr.js', 
+                dest: '<%= project.site %>/<%= project.js %>/libs/selectivizr/selectivizr.js' 
+              } 
+            ]
           }
-                  
         },
 
         connect: {
           server: {
             options: {
-                port: '<%= project.port %>',
-                base: ''
+              port: '<%= project.port %>',
+              base: '<%= project.site %>'
             }
           }
         },
 
         watch: {
           watchless: {
-            files: [ '<%= project.less %>/**/*.less' ], 
+            files: ['<%= project.less %>/**/*.less' ], 
             tasks: ['less']
           },
           watchjs: {
             files: ['<%= jshint.files %>'], 
-            tasks: ['jshint', 'requirejs']
+            tasks: ['jshint','requirejs']
           },
           watchimages: {
-            files: ['<%= project.img %>/**/*.jpg','<%= project.img %>/**/*.png'], 
+            files: [
+              '<%= project.img %>/**/*.jpg',
+              '<%= project.img %>/**/*.png'
+            ], 
             tasks: ['imagemin']
           },
-          watchpages: {
+          watchassets: {
             files: [
-              '<%= project.pages %>/**/*.hbs', 
-              '<%= project.layouts %>/*.hbs', 
-              '<%= project.partials %>/*.hbs' 
+              '<%= project.assets %>/**/*', 
+              '!<%= project.less %>/**/*', 
+              '!<%= project.js %>/**/*', 
+              '!<%= project.img %>/**/*'
             ], 
-            tasks: ['clean:htmlclean', 'assemble']
+            tasks: ['copy:assets']
+          },
+          watchcontent: {
+            files: [
+              '<%= project.pages %>/**/*.hbs',
+              '<%= project.layouts %>/**/*.hbs',
+              '<%= project.includes %>/**/*.hbs'
+            ], 
+            tasks: ['clean:html','assemble']
           }
         }    
 
@@ -158,10 +186,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('assemble');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-contrib-watch', ['watch:watchless','watch:watchjs','watch:watchpages']);
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default Tasks
-    grunt.registerTask('default', ['less','requirejs','jshint','imagemin','clean','assemble','connect','watch']);
+    grunt.registerTask('default', ['less','jshint','requirejs','imagemin','clean','assemble','copy','connect','watch']);
 
 };

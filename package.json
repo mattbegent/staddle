@@ -1,9 +1,9 @@
 {
-    "name": "boilerplate",
-    "version": "2.0.2",
+    "name": "staddle",
+    "version": "3.0.0",
     "repository" : { 
         "type" : "git", 
-        "url" : "https://github.com/mattbegent/boilerplate.git"
+        "url" : "https://github.com/mattbegent/staddle.git"
     },
     "devDependencies": {
         "grunt": "*",
@@ -14,6 +14,7 @@
         "grunt-contrib-clean": "*",
         "grunt-contrib-imagemin": "*",
         "assemble": "*",
-        "grunt-contrib-connect": "*"
+        "grunt-contrib-connect": "*",
+        "grunt-contrib-copy": "*"
     }  
 }
