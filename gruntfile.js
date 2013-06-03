@@ -8,6 +8,7 @@ module.exports = function(grunt) {
 
         // Configurable paths
         project: {
+          dev: true, // Adds livereload script
           layouts: 'content/layouts',
           includes: 'content/includes',
           pages: 'content/pages',
@@ -91,6 +92,7 @@ module.exports = function(grunt) {
         assemble: {
           pages: {
             options: {
+              dev: '<%= project.dev %>',
               flatten: false,
               assets: '<%= project.site %>/<%= project.assets %>',
               year: '<%= grunt.template.today("yyyy") %>',
@@ -143,6 +145,9 @@ module.exports = function(grunt) {
         },
 
         watch: {
+          options: {
+            livereload: true
+          },
           watchless: {
             files: ['<%= project.less %>/**/*.less' ], 
             tasks: ['less']
