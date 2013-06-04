@@ -7,8 +7,8 @@
     },
     "main": [
         "index.html",
-        "js/main.js",
-        "less/main.less"
+        "assets/js/main.js",
+        "assets/less/main.less"
     ],
     "devDependencies": {
         "jquery": "1.10.0",
