@@ -70,7 +70,7 @@ module.exports = function(grunt) {
             '<%= project.js %>/libs/selectivizr/**/*',
             '!<%= project.js %>/libs/selectivizr/selectivizr.js'
           ],
-          html: ['<%= project.site %>/**/*.html']
+          html: ['<%= project.site %>/**/*.html','!<%= project.site %>/<%= project.assets %>/**/*.html']
         },
 
         imagemin: {
