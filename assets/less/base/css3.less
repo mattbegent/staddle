@@ -51,7 +51,6 @@
 .border-radius (@pixel-size: @STYLE-BorderRadius) when (@SYTLE-RoundedCorners) {
     @rem-size: ((@pixel-size / @TYPE-FontSize)*1rem);
     -webkit-border-radius:  @rem-size;
-    -moz-border-radius:     @rem-size;
     border-radius:          @rem-size;
 }
 
@@ -61,7 +60,6 @@
     @bottomLeft-rem: ((@bottomLeft / @TYPE-FontSize)*1rem);
     @bottomRight-rem: ((@bottomRight / @TYPE-FontSize)*1rem);
     -webkit-border-radius:  @topLeft-rem @topRight-rem @bottomLeft-rem @bottomRight-rem;
-    -moz-border-radius:     @topLeft-rem @topRight-rem @bottomLeft-rem @bottomRight-rem;
     border-radius:          @topLeft-rem @topRight-rem @bottomLeft-rem @bottomRight-rem;
 }
 
@@ -80,19 +78,16 @@
 
 .box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.4) {
     -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
-    -moz-box-shadow:    @x @y @blur rgba(0, 0, 0, @alpha);
     box-shadow:         @x @y @blur rgba(0, 0, 0, @alpha);
 }
 
 .box-shadow-inner (@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.4) {
     -webkit-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
-    -moz-box-shadow:    inset @x @y @blur rgba(0, 0, 0, @alpha);
     box-shadow:         inset @x @y @blur rgba(0, 0, 0, @alpha);
 }
 
 .box-shadow-custom (@customShadow) {
     -webkit-box-shadow: @customShadow;
-    -moz-box-shadow:    @customShadow;
     box-shadow:         @customShadow;
 }
 
@@ -102,7 +97,6 @@
 .box-sizing (@type:border-box) {    
     -webkit-box-sizing: @type;
     -moz-box-sizing:    @type;
-    -ms-box-sizing:     @type;
     box-sizing:         @type;
 }
 
@@ -132,8 +126,6 @@
 
 .opacity (@opacity: 1) {
     opacity: @opacity;
-    -webkit-opacity: @opacity;
-    -moz-opacity: @opacity;
     //ie <9
     @ieOpacity: (@opacity * 100);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieOpacity})";
