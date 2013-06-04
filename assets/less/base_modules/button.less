@@ -60,7 +60,16 @@
 
 .button-disabled {
     .button-create (@BUTTON-DisabledBgColor, @BUTTON-DisabledBgColor, @BUTTON-TextColor);
-    cursor: default; 
+    cursor: not-allowed; 
+}
+
+.button-small {
+    .font-size-rem ((@TYPE-FontSize - 2));  
+    line-height: 1; 
+}
+
+.button-large {
+    .font-size-rem ((@TYPE-FontSize + 2));  
 }
 
 .button-full {

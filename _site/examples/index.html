@@ -118,9 +118,15 @@
 
                     <p class="alert alert-info"><strong>Info:</strong> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
 
+                    <pre><code>&lt;p class=&quot;alert alert-info&quot;&gt;Info content.&lt;/p&gt;</code></pre>
+
                     <p class="alert alert-error"><strong>Error:</strong> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
 
+                    <pre><code>&lt;p class=&quot;alert alert-error&quot;&gt;Error content.&lt;/p&gt;</code></pre>
+
                     <p class="alert alert-success"><strong>Success:</strong> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
+
+                    <pre><code>&lt;p class=&quot;alert alert-success&quot;&gt;Success content.&lt;/p&gt;</code></pre>
 
                     <h4>Box</h4>
 
@@ -138,6 +144,18 @@
 
                     </div>
 
+                    <pre><code>&lt;div class=&quot;box&quot;&gt;
+    &lt;div class=&quot;box-header&quot;&gt;
+        &lt;h3 class=&quot;box-title&quot;&gt;Box Header&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;box-body&quot;&gt;
+        &lt;p&gt;Box content.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;box-footer&quot;&gt;
+         &lt;p&gt;Box footer&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
                     <h4>Breadcrumbs</h4>
 
                     <ul class="breadcrumbs">
@@ -146,20 +164,51 @@
                         <li><a href="#">Lorem ipsum</a></li>
                     </ul>
 
+                    <pre><code>&lt;ul class=&quot;breadcrumbs&quot;&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Lorem ipsum&lt;/a&gt;&lt;/li&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Lorem ipsum&lt;/a&gt;&lt;/li&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Lorem ipsum&lt;/a&gt;&lt;/li&gt;<br/>&lt;/ul&gt;</code></pre>
+
                     <h4>Buttons</h4>
 
                     <p>
                         <a href="#" class="button">Button</a>
-                    </p>    
+                    </p> 
+
+                    <pre><code>&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Button&lt;/a&gt;</code></pre>
+
+                    <p>
+                        <button class="button">Button</button>
+                    </p> 
+
+                    <pre><code>&lt;button class=&quot;button&quot;&gt;Button&lt;/button&gt;</code></pre>
+
                     <p>
                         <a href="#" class="button button-alt">Button Alt</a>    
                     </p>
+
+                    <pre><code>&lt;a href=&quot;#&quot; class=&quot;button button-alt&quot;&gt;Button Alt&lt;/a&gt;</code></pre>
+
                     <p> 
                         <a href="#" class="button button-disabled">Button Disabled</a>  
                     </p>
+
+                    <pre><code>&lt;a href=&quot;#&quot; class=&quot;button button-disabled&quot;&gt;Button Disabled&lt;/a&gt;</code></pre>
+
+                    <p> 
+                        <a href="#" class="button button-small">Button Small</a>  
+                    </p>
+
+                    <pre><code>&lt;a href=&quot;#&quot; class=&quot;button button-small&quot;&gt;Button Small&lt;/a&gt;</code></pre>
+
+                    <p> 
+                        <a href="#" class="button button-large">Button Large</a>  
+                    </p>
+
+                    <pre><code>&lt;a href=&quot;#&quot; class=&quot;button button-large&quot;&gt;Button Large&lt;/a&gt;</code></pre>
+
                     <p>
                         <a href="#" class="button button-full">Button Full</a>  
                     </p>
+
+                    <pre><code>&lt;a href=&quot;#&quot; class=&quot;button button-full&quot;&gt;Button Full&lt;/a&gt;</code></pre>
 
                     <h4>Form</h4>   
 
@@ -185,8 +234,8 @@
                         </p>
 
                         <p class="form-row">
-                            <label for="xlarge">XLarge:</label>
-                            <input id="xlarge" type="text" autocomplete="on" placeholder="xlarge" class="input-xlarge" />
+                            <label for="subject">Subject:</label>
+                            <input id="subject" type="text" autocomplete="on" placeholder="Subject" class="input-xlarge" />
                         </p>
 
                         <p class="form-row">
@@ -200,25 +249,66 @@
 
                     </form> 
 
+                    <pre><code>&lt;form id=&quot;form-o-matic&quot; method=&quot;post&quot; class=&quot;form c&quot;&gt;
+
+    &lt;p class=&quot;form-row&quot;&gt;
+        &lt;label for=&quot;title&quot;&gt;Title:&lt;/label&gt;
+        &lt;select id=&quot;title&quot; class=&quot;input-small&quot;&gt;
+            &lt;option&gt;Lord&lt;/option&gt;
+            &lt;option&gt;Rev&lt;/option&gt;
+            &lt;option&gt;Dude&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/p&gt;
+    
+    &lt;p class=&quot;form-row&quot;&gt;
+        &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+        &lt;input id=&quot;name&quot; type=&quot;text&quot; autocomplete=&quot;on&quot; placeholder=&quot;Name&quot; required=&quot;required&quot; class=&quot;input-medium&quot;/&gt;
+    &lt;/p&gt;
+
+    &lt;p class=&quot;form-row&quot;&gt;
+        &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+        &lt;input id=&quot;email&quot; type=&quot;email&quot; autocomplete=&quot;on&quot; placeholder=&quot;name@example.com&quot; class=&quot;input-large&quot; /&gt;
+    &lt;/p&gt;
+
+    &lt;p class=&quot;form-row&quot;&gt;
+        &lt;label for=&quot;subject&quot;&gt;Subject:&lt;/label&gt;
+        &lt;input id=&quot;subject&quot; type=&quot;text&quot; autocomplete=&quot;on&quot; placeholder=&quot;subject&quot; class=&quot;input-xlarge&quot; /&gt;
+    &lt;/p&gt;
+
+    &lt;p class=&quot;form-row&quot;&gt;
+        &lt;label for=&quot;message&quot;&gt;Message:&lt;/label&gt;
+        &lt;textarea id=&quot;message&quot; rows=&quot;5&quot; class=&quot;input-xlarge&quot;&gt;&lt;/textarea&gt;
+    &lt;/p&gt;
+
+    &lt;p class=&quot;form-row&quot;&gt;
+        &lt;button type=&quot;submit&quot; id=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+    &lt;/p&gt;
+
+&lt;/form&gt; </code></pre>
+
                     <h4>Images</h4>
 
-                    <div class="c">
+                    <div class="c margin-bottom">
                         <div class="col-1-3">
-                            <img class="image-rounded" src="http://placehold.it/200x200&text=Rounded" alt="Test Image Rounded" />
+                            <img class="image-rounded" src="http://placehold.it/200x200&text=Rounded" alt="Rounded" />
                         </div>
 
                         <div class="col-1-3">
-                            <img class="image-circle" src="http://placehold.it/200x200&text=Circle" alt="Test Image Circle" />
+                            <img class="image-circle" src="http://placehold.it/200x200&text=Circle" alt="Circle" />
                         </div>
 
                         <div class="col-1-3">
-                            <img class="image-bordered" src="http://placehold.it/200x200&text=Borded" alt="Test Image Borded" />
+                            <img class="image-bordered" src="http://placehold.it/200x200&text=Bordered" alt="Bordered" />
                         </div>
                     </div>
+
+                    <pre><code>&lt;img class=&quot;image-rounded&quot; src=&quot;http://placehold.it/200x200&amp;text=Rounded&quot; alt=&quot;Rounded&quot; /&gt;<br/><br/>&lt;img class=&quot;image-circle&quot; src=&quot;http://placehold.it/200x200&amp;text=Circle&quot; alt=&quot;Circle&quot; /&gt;<br/><br/>&lt;img class=&quot;image-bordered&quot; src=&quot;http://placehold.it/200x200&amp;text=Bordered&quot; alt=&quot;Bordered&quot; /&gt;</code></pre>
 
                     <h4>Map</h4>
 
                     <div id="map-canvas" class="map"></div>
+
+                    <pre><code>&lt;div id=&quot;map-canvas&quot; class=&quot;map&quot;&gt;&lt;/div&gt;</code></pre> 
 
                     <h4>Media</h4>
 
@@ -226,6 +316,11 @@
                         <img class="media-image" src="http://placehold.it/200x200&text=Media" alt="Test Image" />
                         <p class="media-content"><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
                     </div>
+
+                    <pre><code>&lt;div class=&quot;media&quot;&gt;
+    &lt;img class=&quot;media-image&quot; src=&quot;http://placehold.it/200x200&amp;text=Media&quot; alt=&quot;Test Image&quot; /&gt;
+    &lt;p class=&quot;media-content&quot;&gt;&lt;strong&gt;Media content.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
 
                     <h4>Navigation</h4>
 
@@ -239,6 +334,12 @@
                         </ul>
                     </nav>
 
+                    <pre><code>&lt;ul class=&quot;nav&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
                     <h6>Vertical</h6>
 
                     <nav class="margin-bottom">
@@ -249,6 +350,12 @@
                         </ul>
                     </nav>
 
+                    <pre><code>&lt;ul class=&quot;nav nav-vertical&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
                     <h4>Pagination</h4>
 
                     <ul class="pagination">
@@ -257,11 +364,21 @@
                         <li><a href="#">3</a></li>
                     </ul>
 
+                    <pre><code>&lt;ul class=&quot;pagination&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;1&lt;/a&gt;&lt;/li&gt; 
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
                     <h4>Well</h4>
 
                     <div class="well">
                         <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
                     </div>  
+
+                    <pre><code>&lt;div class=&quot;well&quot;&gt;
+    &lt;p&gt;Content.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
 
                 </section>
 
