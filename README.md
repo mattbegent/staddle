@@ -1,3 +1,5 @@
+![Staddle Logo](http://mattbegent.co.uk/images/staddle-logo.png)
+
 # Staddle v3.0.0
 
 Staddle is a brilliant front-end HTML5 and LESS framework for building small and large scale websites.
@@ -178,3 +180,7 @@ stad•dle (ˈstæd l)
 1. the lower part of a stack of hay or the like.
 2. a platform or supporting frame for a stack.
 3. any supporting framework or base.
+
+## Logo
+
+Thanks to [@dave_ja](https://twitter.com/dave_ja) for creating Staddle's brilliant logo.
