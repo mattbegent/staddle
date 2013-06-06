@@ -16,8 +16,5 @@
         "respond": "latest",
         "selectivizr": "latest",
         "requirejs-plugins": "latest"
-    },
-    "ignore": [
-        "**/.*"
-    ]
+    }
 }
