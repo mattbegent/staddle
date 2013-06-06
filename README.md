@@ -176,7 +176,6 @@ LESS 1.3.3 and Grunt 0.4.1 or above.
 
 stad•dle (ˈstæd l) 
 
-
 1. the lower part of a stack of hay or the like.
 2. a platform or supporting frame for a stack.
 3. any supporting framework or base.
