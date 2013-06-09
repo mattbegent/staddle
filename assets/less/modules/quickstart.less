@@ -1,27 +1,21 @@
 /* =========================================================================
-// definition
+// quickstart
 // =======================================================================*/
 
 // ALL
 // ----------------------------------------------------
 
-.definition {
-	background-color: #2E2E33;
-	.padding-top;
-	.padding-bottom;
-	border-top: 3px solid darken(#E6E6E6, 15%);
-	border-bottom: 3px solid darken(#E6E6E6, 15%);
-}
-
-.definition-title {
-	margin-bottom: 0;
-	font-style: bolder;
+.quickstart {
+	.padding (@TYPE-LineHeight, 0, @TYPE-LineHeight, 0);
+	background-color: lighten(#2e2e33, 10%);
 	color: #FFF;
-}
-
-.definition-intro {
-	font-weight: normal;
-	font-style: italic;
+	h2,
+	a {
+		color: #FFF; 
+	} 
+	code {
+		color: #222;
+	}
 }
 
 // DESKTOP
@@ -29,7 +23,7 @@
 
 // @media only screen and (min-width: @MQ-Desktop) { 
 
-//     .definition {
+//     .quickstart {
 
 //     }
 
@@ -40,7 +34,7 @@
 
 // @media only screen and (min-width: @MQ-TabletMin) and (max-width: @MQ-TabletMax) {
 
-//     .definition {
+//     .quickstart {
 
 //     }
 
@@ -49,13 +43,13 @@
 // MOBILE
 // ----------------------------------------------------
 
-@media only screen and (max-width: @MQ-Mobile) { 
+// @media only screen and (max-width: @MQ-Mobile) { 
 
-    .definition-title {
-    	.font-size-rem (22);
-    }
+//     .quickstart {
 
-}
+//     }
+
+// }
 
 // HIGH RESOLUTION DEVICES
 // ----------------------------------------------------
@@ -67,7 +61,7 @@
 // only screen and (min-resolution: 192dpi),
 // only screen and (min-resolution: 2dppx) {
 
-//     .definition {
+//     .quickstart {
 
 //     }
 

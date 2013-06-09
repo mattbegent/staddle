@@ -138,15 +138,6 @@ module.exports = function(grunt) {
             ], 
             tasks: ['imagemin']
           },
-          watchassets: {
-            files: [
-              '<%= project.assets %>/**/*', 
-              '!<%= project.less %>/**/*', 
-              '!<%= project.js %>/**/*', 
-              '!<%= project.img %>/**/*'
-            ], 
-            tasks: ['copy:assets']
-          },
           watchcontent: {
             files: [
               '<%= project.pages %>/**/*.hbs',
