@@ -1,0 +1,91 @@
+.button-styles() when not (@MODULE-Button) { }
+.button-styles() when (@MODULE-Button) {
+
+/* =========================================================================
+// BUTTON
+// =======================================================================*/
+
+// BUTTON BASE
+// ----------------------------------------------------
+
+.button {
+    display: block;
+    color: @BUTTON-TextColor;
+    background-color: @BUTTON-MainColor;
+    text-decoration: none;
+    .padding ((@TYPE-LineHeight/4), (@TYPE-FontSize * 1.5), (@TYPE-LineHeight/4), (@TYPE-FontSize * 1.5));
+    .line-height (@TYPE-FontSize); 
+    cursor: pointer;
+    border: none;
+
+    .border-radius (4);
+    .transition (background-color, 0.2s);   
+
+    &:visited { 
+        color: @BUTTON-TextColor;
+    }
+
+    &:hover {
+        background-color: @BUTTON-HoverColor;
+        color: @BUTTON-TextColor;
+    }
+
+}
+
+// BUTTON CREATOR
+// ----------------------------------------------------
+
+.button-create (@backgroundColor, @hoverColor, @textColor) {
+
+    color: @textColor;
+    background-color: @backgroundColor;
+
+    &:visited {
+        color: @textColor;
+    }
+
+    &:hover {
+        background-color: @hoverColor;
+        color: @textColor;
+    }
+
+}
+
+// BUTTON TYPES
+// ----------------------------------------------------
+
+.button-alt {
+    .button-create (@BUTTON-AltColor, @BUTTON-AltHoverColor, @BUTTON-AltTextColor);
+}
+
+.button-disabled {
+    .button-create (@BUTTON-DisabledBgColor, @BUTTON-DisabledBgColor, @BUTTON-TextColor);
+    cursor: not-allowed; 
+}
+
+.button-small {
+    .font-size-rem ((@TYPE-FontSize - 2));  
+    line-height: 1; 
+}
+
+.button-large {
+    .font-size-rem ((@TYPE-FontSize + 2));  
+}
+
+.button-full {
+    display: block !important;
+}
+
+// DESKTOP ADJUSTMENT
+// ----------------------------------------------------
+
+@media only screen and (min-width: @MQ-Desktop) { 
+
+    .button, 
+    .button-alt {
+        .inline-block ();   
+    }   
+
+}
+
+} .button-styles();

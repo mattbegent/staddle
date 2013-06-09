@@ -1,0 +1,20 @@
+{
+    "name": "staddle-website",
+    "version": "1.0.0",
+    "repository" : { 
+        "type" : "git", 
+        "url" : "https://github.com/mattbegent/staddle.git"
+    },
+    "devDependencies": {
+        "grunt": "*",
+        "grunt-contrib-less": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-contrib-requirejs": "*",
+        "grunt-contrib-jshint": "*",
+        "grunt-contrib-clean": "*",
+        "grunt-contrib-imagemin": "*",
+        "assemble": "*",
+        "grunt-contrib-connect": "*",
+        "grunt-contrib-copy": "*"
+    }  
+}

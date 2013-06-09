@@ -1,0 +1,20 @@
+{
+    "name": "staddle-website",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/mattbegent/staddle.git"
+    },
+    "main": [
+        "index.html",
+        "assets/js/main.js",
+        "assets/less/main.less"
+    ],
+    "devDependencies": {
+        "jquery": "1.10.1",
+        "requirejs": "latest",
+        "respond": "latest",
+        "selectivizr": "latest",
+        "requirejs-plugins": "latest"
+    }
+}

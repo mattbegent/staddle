@@ -6,7 +6,7 @@
 <head> 
     <meta charset="utf-8"> 
 
-    <title>Welcome | Staddle is a front-end HTML5 and LESS framework</title>  
+    <title>{{ title }} | Staddle is a front-end HTML5 and LESS framework</title>  
 
     <meta name="description" content="Staddle is a rock solid front-end HTML5 and LESS framework for building optimised websites."> 
     <meta name="keywords" content="staddle,front-end,html5,less,grunt"> 
@@ -16,14 +16,14 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
-    <link rel="stylesheet" href="assets/css/main.css">  
+    <link rel="stylesheet" href="{{ assets }}/css/main.css">  
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,800' rel='stylesheet' type='text/css'>
 
     <!-- IE8 and below fallbacks -->
     <!--[if lte IE 8]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script type="text/javascript" src="assets/js/libs/respond/respond.min.js"></script>
+    <script type="text/javascript" src="{{ assets }}/js/libs/respond/respond.min.js"></script>
     <![endif]-->
 
 </head>
@@ -35,7 +35,7 @@
         <div class="grid">
             <div class="col-1-2">
                 <a href="/" class="logo">
-                    <img src="assets/img/staddle-logo.png" />
+                    <img src="{{ assets }}/img/staddle-logo.png" />
                 </a>
             </div>
             <div class="col-1-2">
@@ -58,39 +58,7 @@
 
     <main class="wrapper-primary" role="main">  
 
-        
-
-        <div class="grid margin-bottom">
-            <div class="col-1-3"> 
-                <h3>LESS</h3>
-                <p>Staddle includes base styles, CSS3 mixins and helpers to help you get started quickly.</p>
-            </div>
-            <div class="col-1-3"> 
-                <h3>JavaScript</h3>
-                <p>Staddle uses RequireJs for loading modules and using Grunt lints and minifys all JavaScripts into a single file.</p>
-            </div>
-            <div class="col-1-3"> 
-                <h3>Grunt Tools</h3>
-                <p>Used to compile LESS, JSHint, minifying RequireJS, optimising images, LiveReload, starting a development server and generating static websites.</p>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="col-1-3"> 
-                <h3>Static Site Generator</h3>
-                <p>Staddle uses Assemble and Grunt to generate static websites. This compiled and optimised website can be put live on any server.</p>
-            </div>
-            <div class="col-1-3"> 
-                <h3>Responsive Grid</h3>
-                <p>Staddles includes a simple to use and responsive grid, that includes breakpoints for tablet and mobile.</p>  
-            </div>
-            <div class="col-1-3"> 
-                <h3>IE7+ support</h3>
-                <p>IE7 support will be dropped when clients stop demanding it.</p>
-            </div>
-        </div>
-
- 
+        {{> body }}
 
     </main><!-- .wrapper-primary -->
 
@@ -99,7 +67,7 @@
         <div class="grid">
             <div class="col-1">
             
-                <p><small>&copy; 2013 Staddle</small></p>
+                <p><small>&copy; {{ year }} Staddle</small></p>
 
             </div>
         </div>
@@ -107,13 +75,13 @@
     </footer><!-- .wrapper-footer --> 
 
     <!-- JavaScript -->
-    <script src="assets/js/main.min.js"></script>
-    
+    <script src="{{ assets }}/js/main.min.js"></script>
+    {{#dev}}
     <script src="http://localhost:35729/livereload.js"></script> 
-    
+    {{/dev}}
 
     <!--[if lte IE 8]>
-    <script type="text/javascript" src="assets/js/libs/selectivizr/selectivizr.js"></script>
+    <script type="text/javascript" src="{{ assets }}/js/libs/selectivizr/selectivizr.js"></script>
     <![endif]-->
 
     <!-- Google Analytics -->

@@ -1,0 +1,69 @@
+/* =========================================================================
+// definition
+// =======================================================================*/
+
+// ALL
+// ----------------------------------------------------
+
+.definition {
+	background-color: #2E2E33;
+	.padding-top;
+	.padding-bottom;
+	border-top: 3px solid darken(#E6E6E6, 15%);
+	border-bottom: 3px solid darken(#E6E6E6, 15%);
+}
+
+.definition-title {
+	margin-bottom: 0;
+	font-style: bolder;
+	color: #FFF;
+}
+
+// DESKTOP
+// ----------------------------------------------------
+
+// @media only screen and (min-width: @MQ-Desktop) { 
+
+//     .definition {
+
+//     }
+
+// }
+
+// TABLET
+// ----------------------------------------------------
+
+// @media only screen and (min-width: @MQ-TabletMin) and (max-width: @MQ-TabletMax) {
+
+//     .definition {
+
+//     }
+
+// }
+ 
+// MOBILE
+// ----------------------------------------------------
+
+@media only screen and (max-width: @MQ-Mobile) { 
+
+    .definition-title {
+    	.font-size-rem (22);
+    }
+
+}
+
+// HIGH RESOLUTION DEVICES
+// ----------------------------------------------------
+
+// @media 
+// only screen and (-webkit-min-device-pixel-ratio: 2),
+// only screen and (-o-min-device-pixel-ratio: 2/1),
+// only screen and (min-device-pixel-ratio: 2),
+// only screen and (min-resolution: 192dpi),
+// only screen and (min-resolution: 2dppx) {
+
+//     .definition {
+
+//     }
+
+// }
