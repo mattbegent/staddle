@@ -1,6 +1,6 @@
 ![Staddle Logo](http://mattbegent.co.uk/images/staddle-logo.png)
 
-# Staddle v3.0.0
+# Staddle v3.0.1
 
 Staddle is a brilliant front-end HTML5 and LESS framework for building small and large scale websites.
 

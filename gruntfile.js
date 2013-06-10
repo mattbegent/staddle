@@ -34,7 +34,7 @@ module.exports = function(grunt) {
         },
 
         jshint: {
-          files: ['gruntfile.js','<%= project.js %>/main.js','<%= project.js %>/modules/*.js'],
+          files: ['gruntfile.js','<%= project.js %>/main.js','<%= project.js %>/modules/*.js','!<%= project.js %>/modules/flickr.js'],
           options: {
             globals: {
               jQuery: true,
@@ -153,7 +153,7 @@ module.exports = function(grunt) {
             tasks: ['less']
           },
           watchjs: {
-            files: ['<%= jshint.files %>'], 
+            files: ['<%= project.js %>/main.js','<%= project.js %>/modules/*.js'], 
             tasks: ['jshint','requirejs']
           },
           watchimages: {

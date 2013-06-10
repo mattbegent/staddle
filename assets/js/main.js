@@ -29,7 +29,7 @@ SITENAME = {
             require(["jquery", "modules/iefixes"], function($, iefixes) {
 
                 // Show that js is present
-                $("html").removeClass("no-js");
+                $("html").removeClass("no-js"); 
 
                 // Help ie out abit
                 iefixes.init();
@@ -44,9 +44,17 @@ SITENAME = {
 
         init: function() {
 
-            require(["modules/map"], function(map) {
+            require(["modules/map","modules/flickr"], function(map) {
 
+                // Google maps example
                 map.init();
+
+                // Flickr example
+                $(".staddle-flickr").staddleflickr({
+                    userid: '90478545@N02', 
+                    imagecount : 8, 
+                    html : '<a href="{{link}}"title="{{title}}"><img src="{{thumb}}" title="{{title}}" alt="{{image}}"/></a>' 
+                });  
 
             });
 
