@@ -5,6 +5,19 @@
         "type" : "git", 
         "url" : "https://github.com/mattbegent/staddle.git"
     },
+    "staddle" : {
+        "dev": true,
+        "layouts": "content/layouts",
+        "includes": "content/includes",
+        "pages": "content/pages",
+        "site": "_site",
+        "assets": "assets",
+        "css": "assets/css",
+        "img": "assets/img",
+        "js": "assets/js",
+        "less": "assets/less",
+        "port": 8080 
+    },
     "devDependencies": {
         "grunt": "*",
         "grunt-contrib-less": "*",

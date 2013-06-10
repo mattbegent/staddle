@@ -6,35 +6,22 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
 
-        // Configurable paths
-        project: {
-          dev: true, // Adds livereload script
-          layouts: 'content/layouts',
-          includes: 'content/includes',
-          pages: 'content/pages',
-          site: '_site',
-          assets: 'assets',
-          css: 'assets/css',
-          img: 'assets/img',
-          js: 'assets/js',
-          less: 'assets/less',
-          port: 8080 
-        },
+        pkg: grunt.file.readJSON('package.json'),
 
         less: {
           all: {
             options: {
-              paths: ['<%= project.less %>/'],
+              paths: ['<%= pkg.staddle.less %>/'],
               yuicompress: true
             },
             files: {
-              '<%= project.site %>/<%= project.css %>/main.css': '<%= project.less %>/main.less'
+              '<%= pkg.staddle.site %>/<%= pkg.staddle.css %>/main.css': '<%= pkg.staddle.less %>/main.less'
             }
           }
         },
 
         jshint: {
-          files: ['gruntfile.js','<%= project.js %>/main.js','<%= project.js %>/modules/*.js','!<%= project.js %>/modules/flickr.js'],
+          files: ['gruntfile.js','<%= pkg.staddle.js %>/main.js','<%= pkg.staddle.js %>/modules/*.js','!<%= pkg.staddle.js %>/modules/flickr.js'],
           options: {
             globals: {
               jQuery: true,
@@ -49,9 +36,9 @@ module.exports = function(grunt) {
           compile: {
             options: { 
               name: 'main',
-              baseUrl: './<%= project.js %>',
-              mainConfigFile: '<%= project.js %>/main.js',
-              out: '<%= project.site %>/<%= project.js %>/main.min.js',
+              baseUrl: './<%= pkg.staddle.js %>',
+              mainConfigFile: '<%= pkg.staddle.js %>/main.js',
+              out: '<%= pkg.staddle.site %>/<%= pkg.staddle.js %>/main.min.js',
               include: 'libs/requirejs/require'
             }
           }
@@ -59,18 +46,18 @@ module.exports = function(grunt) {
 
         clean: {
           jslibs: [
-            '<%= project.js %>/libs/jquery/**/*',
-            '!<%= project.js %>/libs/jquery/jquery.min.js',
-            '<%= project.js %>/libs/jquery/.gitignore',
-            '<%= project.js %>/libs/requirejs/**/*', 
-            '!<%= project.js %>/libs/requirejs/require.js', 
-            '<%= project.js %>/libs/requirejs/.gitignore',  
-            '<%= project.js %>/libs/respond/**/*', 
-            '!<%= project.js %>/libs/respond/respond.min.js', 
-            '<%= project.js %>/libs/selectivizr/**/*',
-            '!<%= project.js %>/libs/selectivizr/selectivizr.js'
+            '<%= pkg.staddle.js %>/libs/jquery/**/*',
+            '!<%= pkg.staddle.js %>/libs/jquery/jquery.min.js',
+            '<%= pkg.staddle.js %>/libs/jquery/.gitignore',
+            '<%= pkg.staddle.js %>/libs/requirejs/**/*', 
+            '!<%= pkg.staddle.js %>/libs/requirejs/require.js', 
+            '<%= pkg.staddle.js %>/libs/requirejs/.gitignore',  
+            '<%= pkg.staddle.js %>/libs/respond/**/*', 
+            '!<%= pkg.staddle.js %>/libs/respond/respond.min.js', 
+            '<%= pkg.staddle.js %>/libs/selectivizr/**/*',
+            '!<%= pkg.staddle.js %>/libs/selectivizr/selectivizr.js'
           ],
-          html: ['<%= project.site %>/**/*.html','!<%= project.site %>/<%= project.assets %>/**/*.html']
+          html: ['<%= pkg.staddle.site %>/**/*.html','!<%= pkg.staddle.site %>/<%= pkg.staddle.assets %>/**/*.html']
         },
 
         imagemin: {
@@ -81,9 +68,9 @@ module.exports = function(grunt) {
               files: [
                 {
                   expand: true, 
-                  cwd: '<%= project.img %>/',
+                  cwd: '<%= pkg.staddle.img %>/',
                   src: ['**/*.jpg','**/*.png'],
-                  dest: '<%= project.site %>/<%= project.img %>' 
+                  dest: '<%= pkg.staddle.site %>/<%= pkg.staddle.img %>' 
                 }
               ]
             }
@@ -92,19 +79,19 @@ module.exports = function(grunt) {
         assemble: {
           pages: {
             options: {
-              dev: '<%= project.dev %>',
+              dev: '<%= pkg.staddle.dev %>',
               flatten: false,
-              assets: '<%= project.site %>/<%= project.assets %>',
+              assets: '<%= pkg.staddle.site %>/<%= pkg.staddle.assets %>',
               year: '<%= grunt.template.today("yyyy") %>',
-              layout: '<%= project.layouts %>/default.hbs',
-              partials: '<%= project.includes %>/**/*.hbs'
+              layout: '<%= pkg.staddle.layouts %>/default.hbs',
+              partials: '<%= pkg.staddle.includes %>/**/*.hbs'
             },
             files: [
               {
                 expand: true,
-                cwd: '<%= project.pages %>/',
+                cwd: '<%= pkg.staddle.pages %>/',
                 src: ['**/*.hbs'],
-                dest: '<%= project.site %>/'
+                dest: '<%= pkg.staddle.site %>/'
               }
             ]
           }               
@@ -115,8 +102,8 @@ module.exports = function(grunt) {
             files: [ 
               { 
                 expand: true,
-                src: ['<%= project.assets %>/**/*', '!<%= project.less %>/**/*', '!<%= project.js %>/**/*', '!<%= project.img %>/**/*'], 
-                dest: '<%= project.site %>/',
+                src: ['<%= pkg.staddle.assets %>/**/*', '!<%= pkg.staddle.less %>/**/*', '!<%= pkg.staddle.js %>/**/*', '!<%= pkg.staddle.img %>/**/*'], 
+                dest: '<%= pkg.staddle.site %>/',
                 filter: 'isFile' 
               }
             ]
@@ -124,12 +111,12 @@ module.exports = function(grunt) {
           iefixes: { 
             files: [
               { 
-                src: '<%= project.js %>/libs/respond/respond.min.js', 
-                dest: '<%= project.site %>/<%= project.js %>/libs/respond/respond.min.js' 
+                src: '<%= pkg.staddle.js %>/libs/respond/respond.min.js', 
+                dest: '<%= pkg.staddle.site %>/<%= pkg.staddle.js %>/libs/respond/respond.min.js' 
               },
               { 
-                src: '<%= project.js %>/libs/selectivizr/selectivizr.js', 
-                dest: '<%= project.site %>/<%= project.js %>/libs/selectivizr/selectivizr.js' 
+                src: '<%= pkg.staddle.js %>/libs/selectivizr/selectivizr.js', 
+                dest: '<%= pkg.staddle.site %>/<%= pkg.staddle.js %>/libs/selectivizr/selectivizr.js' 
               } 
             ]
           }
@@ -138,8 +125,8 @@ module.exports = function(grunt) {
         connect: {
           server: {
             options: {
-              port: '<%= project.port %>',
-              base: '<%= project.site %>'
+              port: '<%= pkg.staddle.port %>',
+              base: '<%= pkg.staddle.site %>'
             }
           }
         },
@@ -149,34 +136,34 @@ module.exports = function(grunt) {
             livereload: true
           },
           watchless: {
-            files: ['<%= project.less %>/**/*.less' ], 
+            files: ['<%= pkg.staddle.less %>/**/*.less' ], 
             tasks: ['less']
           },
           watchjs: {
-            files: ['<%= project.js %>/main.js','<%= project.js %>/modules/*.js'], 
+            files: ['<%= pkg.staddle.js %>/main.js','<%= pkg.staddle.js %>/modules/*.js'], 
             tasks: ['jshint','requirejs']
           },
           watchimages: {
             files: [
-              '<%= project.img %>/**/*.jpg',
-              '<%= project.img %>/**/*.png'
+              '<%= pkg.staddle.img %>/**/*.jpg',
+              '<%= pkg.staddle.img %>/**/*.png'
             ], 
             tasks: ['imagemin']
           },
           watchassets: {
             files: [
-              '<%= project.assets %>/**/*', 
-              '!<%= project.less %>/**/*', 
-              '!<%= project.js %>/**/*', 
-              '!<%= project.img %>/**/*'
+              '<%= pkg.staddle.assets %>/**/*', 
+              '!<%= pkg.staddle.less %>/**/*', 
+              '!<%= pkg.staddle.js %>/**/*', 
+              '!<%= pkg.staddle.img %>/**/*'
             ], 
             tasks: ['copy:assets']
           },
           watchcontent: {
             files: [
-              '<%= project.pages %>/**/*.hbs',
-              '<%= project.layouts %>/**/*.hbs',
-              '<%= project.includes %>/**/*.hbs'
+              '<%= pkg.staddle.pages %>/**/*.hbs',
+              '<%= pkg.staddle.layouts %>/**/*.hbs',
+              '<%= pkg.staddle.includes %>/**/*.hbs'
             ], 
             tasks: ['clean:html','assemble']
           }
