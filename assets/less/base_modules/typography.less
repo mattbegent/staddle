@@ -18,36 +18,37 @@ h6 {
     color: @TYPE-HeadingsColor;
     font-weight: bold;
     text-rendering: optimizelegibility;
+    .margin (0, 0, @TYPE-LineHeight, 0);
 }
 
 h1, 
 .alpha {
-    .font-size (@TYPE-SIZE-Alpha);
+    .font-size-heading (@TYPE-SIZE-Alpha);
 }
 
 h2, 
 .beta {
-    .font-size (@TYPE-SIZE-Beta);
+    .font-size-heading (@TYPE-SIZE-Beta);
 }
 
 h3, 
 .gamma {
-    .font-size (@TYPE-SIZE-Gamma);
+    .font-size-heading (@TYPE-SIZE-Gamma);
 }
 
 h4, 
 .delta {
-    .font-size (@TYPE-SIZE-Delta);
+    .font-size-heading (@TYPE-SIZE-Delta);
 }
 
 h5, 
 .epsilon {
-    .font-size (@TYPE-SIZE-Epsilon);
+    .font-size-heading (@TYPE-SIZE-Epsilon);
 }
 
 h6, 
 .zeta {
-    .font-size (@TYPE-SIZE-Zeta);
+    .font-size-heading (@TYPE-SIZE-Zeta);
 }
 
 .title-primary {
@@ -108,7 +109,7 @@ code,
 kbd, 
 samp { 
     font-family: @TYPE-CodeFontFamily; 
-    .font-size-rem (@TYPE-FontSize);
+    .font-size (@TYPE-FontSize);
 }
 
 pre { 
@@ -140,7 +141,7 @@ q:after {
 
 small, 
 .small { 
-    .font-size-rem ((@TYPE-FontSize - 2));
+    .font-size ((@TYPE-FontSize - 2));
     font-weight: normal;
 }
 

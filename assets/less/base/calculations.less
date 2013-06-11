@@ -5,16 +5,24 @@
 // FONT SIZE 
 // ----------------------------------------------------
 
-.font-size (@font-size) {
-    .font-size-rem (@font-size);
-    .line-height (@font-size);
-    .margin (0, 0, @TYPE-LineHeight, 0);
-}
-
-.font-size-rem (@px-size) {
+.font-size (@px-size) {
     @rem-size: (@px-size / @TYPE-FontSize); 
     font-size: (@px-size * 1px); 
     font-size: (@rem-size * 1rem);
+}
+
+.font-size (@px-size, @line-height) {
+    @rem-font-size: (@px-size / @TYPE-FontSize); 
+    @rem-line-height: (@line-height / @TYPE-FontSize); 
+    font-size: (@px-size * 1px); 
+    font-size: (@rem-font-size * 1rem);
+    line-height: (@line-height * 1px); 
+    line-height: (@rem-line-height * 1rem);
+}
+
+.font-size-heading (@font-size) {
+    .font-size (@font-size);
+    .line-height (@font-size);
 }
 
 // LINE HEIGHT
