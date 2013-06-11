@@ -83,14 +83,14 @@ module.exports = function(grunt) {
               flatten: false,
               assets: '<%= pkg.staddle.site %>/<%= pkg.staddle.assets %>',
               year: '<%= grunt.template.today("yyyy") %>',
-              layout: '<%= pkg.staddle.layouts %>/default.hbs',
-              partials: '<%= pkg.staddle.includes %>/**/*.hbs'
+              layout: '<%= pkg.staddle.content %>/<%= pkg.staddle.layouts %>/default.hbs',
+              partials: '<%= pkg.staddle.content %>/<%= pkg.staddle.includes %>/**/*.hbs'
             },
             files: [
               {
                 expand: true,
-                cwd: '<%= pkg.staddle.pages %>/',
-                src: ['**/*.hbs'],
+                cwd: '<%= pkg.staddle.content %>/',
+                src: ['**/*.hbs', '!<%= pkg.staddle.layouts %>/**/*.hbs','!<%= pkg.staddle.includes %>/**/*.hbs'],
                 dest: '<%= pkg.staddle.site %>/'
               }
             ]
@@ -161,9 +161,7 @@ module.exports = function(grunt) {
           },
           watchcontent: {
             files: [
-              '<%= pkg.staddle.pages %>/**/*.hbs',
-              '<%= pkg.staddle.layouts %>/**/*.hbs',
-              '<%= pkg.staddle.includes %>/**/*.hbs'
+              '<%= pkg.staddle.content %>/**/*.hbs'
             ], 
             tasks: ['clean:html','assemble']
           }
