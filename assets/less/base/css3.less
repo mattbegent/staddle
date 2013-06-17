@@ -112,12 +112,11 @@
 }
 
 .gradient-custom (@origin: left, @start: #ffffff, @stop: #000000) {
-    background-color: @start;
+    background-color: mix(@start, @stop);
     background-image: -webkit-linear-gradient(@origin, @start, @stop);
     background-image: -moz-linear-gradient(@origin, @start, @stop);
     background-image: -o-linear-gradient(@origin, @start, @stop);
     background-image: -ms-linear-gradient(@origin, @start, @stop);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@stop');//IE 5.5 - 8
     background-image: linear-gradient(@origin, @start, @stop);
 }
 
