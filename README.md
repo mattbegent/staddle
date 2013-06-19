@@ -1,6 +1,6 @@
 ![Staddle Logo](http://mattbegent.co.uk/images/staddle-logo.png)
 
-# Staddle v3.1.0
+# Staddle v3.1.1
 
 [Staddle](http://staddl.es/) is a brilliant front-end HTML5 and LESS framework for building small and large scale websites.
 
@@ -64,7 +64,7 @@ The basic structure and main files are outlined below:
 		|- main.less        - Load your modules in here
 		|- variables.less   - All LESS module variables are set in here
 	content                 - Layouts for static website generation
-		|- _includes        - Partials for static website generation
+		|- _partials        - Partials for static website generation
 		|- _layouts         - Layouts for static website generation
 		|- examples     	- Example modules and pages
 		|- index.hbs     	- Example page

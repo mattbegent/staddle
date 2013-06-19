@@ -84,13 +84,13 @@ module.exports = function(grunt) {
               assets: '<%= pkg.staddle.site %>/<%= pkg.staddle.assets %>',
               year: '<%= grunt.template.today("yyyy") %>',
               layout: '<%= pkg.staddle.content %>/<%= pkg.staddle.layouts %>/default.hbs',
-              partials: '<%= pkg.staddle.content %>/<%= pkg.staddle.includes %>/**/*.hbs'
+              partials: '<%= pkg.staddle.content %>/<%= pkg.staddle.partials %>/**/*.hbs'
             },
             files: [
               {
                 expand: true,
                 cwd: '<%= pkg.staddle.content %>/',
-                src: ['**/*.hbs', '!<%= pkg.staddle.layouts %>/**/*.hbs','!<%= pkg.staddle.includes %>/**/*.hbs'],
+                src: ['**/*.hbs', '!<%= pkg.staddle.layouts %>/**/*.hbs','!<%= pkg.staddle.partials %>/**/*.hbs'],
                 dest: '<%= pkg.staddle.site %>/'
               }
             ]

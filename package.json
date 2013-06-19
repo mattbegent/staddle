@@ -1,6 +1,6 @@
 {
     "name": "staddle",
-    "version": "3.1.0",
+    "version": "3.1.1",
     "repository" : { 
         "type" : "git", 
         "url" : "https://github.com/mattbegent/staddle.git"
@@ -9,7 +9,7 @@
         "dev": true,
         "content": "content",
         "layouts": "_layouts",
-        "includes": "_includes",
+        "partials": "_partials",
         "site": "_site",
         "assets": "assets",
         "css": "assets/css",
