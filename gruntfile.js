@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 
         // Configurable paths
         project: {
-          dev: true, // Adds livereload script
+          dev: false, // Adds livereload script
           layouts: 'content/layouts',
           includes: 'content/includes',
           pages: 'content/pages',
