@@ -12,7 +12,7 @@ module.exports = function(grunt) {
           all: {
             options: {
               paths: ['<%= pkg.staddle.less %>/'],
-              yuicompress: true
+              cleancss: true
             },
             files: {
               '<%= pkg.staddle.site %>/<%= pkg.staddle.css %>/main.css': '<%= pkg.staddle.less %>/main.less'

@@ -1,4 +1,4 @@
-![Staddle Logo](http://mattbegent.co.uk/images/staddle-logo.png)
+![Staddle Logo](http://mattbegent.co.uk/assets/img/staddle-logo.png)
 
 # Staddle v3.1.1
 
