@@ -8,40 +8,30 @@
 .animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
     -webkit-animation:  @name @duration @delay @ease;
     -moz-animation:     @name @duration @delay @ease;
-    -o-animation:       @name @duration @delay @ease;
-    -ms-animation:      @name @duration @delay @ease;
     animation:          @name @duration @delay @ease;
 }
 
 .animation-fill-mode (@fill: forwards) {
     -webkit-animation-fill-mode:    @fill;
     -moz-animation-fill-mode:       @fill;
-    -o-animation-fill-mode:         @fill;
-    -ms-animation-fill-mode:        @fill;
     animation-fill-mode:            @fill;
 }
 
 .animation-duration (@duration: 500ms) {
     -webkit-animation-duration: @duration;
     -moz-animation-duration:    @duration;
-    -o-animation-duration:      @duration;
-    -ms-animation-duration:     @duration;
     animation-duration:         @duration;
 }
 
 .transition (@range: all, @time: 1s, @ease: ease-in-out) {
     -webkit-transition: @range @time @ease;
     -moz-transition:    @range @time @ease; 
-    -o-transition:      @range @time @ease;
-    -ms-transition:     @range @time @ease;
     transition:         @range @time @ease;
 }
 
 .transition-none () {
     -webkit-transition: none;
     -moz-transition:    none; 
-    -o-transition:      none;
-    -ms-transition:     none;
     transition:         none;
 }
 
@@ -106,8 +96,6 @@
 .gradient (@origin: left, @alpha: 0.1) {
     background-image: -webkit-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
     background-image: -moz-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
-    background-image: -o-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
-    background-image: -ms-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
     background-image: linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
 }
 
@@ -115,8 +103,6 @@
     background-color: mix(@start, @stop);
     background-image: -webkit-linear-gradient(@origin, @start, @stop);
     background-image: -moz-linear-gradient(@origin, @start, @stop);
-    background-image: -o-linear-gradient(@origin, @start, @stop);
-    background-image: -ms-linear-gradient(@origin, @start, @stop);
     background-image: linear-gradient(@origin, @start, @stop);
 }
 
@@ -157,7 +143,6 @@
     -webkit-transform:  rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
     -moz-transform:     rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
     -ms-transform:      rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-    -o-transform:       rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
     transform:          rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
 }
 
@@ -165,21 +150,21 @@
     -webkit-transform:  scale(@factor);
     -moz-transform:     scale(@factor);
     -ms-transform:      scale(@factor);
-    -o-transform:       scale(@factor);
+    transform:       scale(@factor);
 }
 
 .rotate (@deg: 90deg) {
     -webkit-transform:  rotate(@deg);
     -moz-transform:     rotate(@deg);
     -ms-transform:      rotate(@deg);
-    -o-transform:       rotate(@deg);
+    transform:          rotate(@deg);
 }
 
 .skew (@deg, @deg2) {
     -webkit-transform:   skew(@deg, @deg2);
     -moz-transform:      skew(@deg, @deg2);
     -ms-transform:       skew(@deg, @deg2);
-    -o-transform:        skew(@deg, @deg2);
+    transform:           skew(@deg, @deg2);
 }
 
 
