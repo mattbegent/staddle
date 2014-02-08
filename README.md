@@ -1,6 +1,6 @@
 ![Staddle Logo](http://mattbegent.co.uk/assets/img/staddle-logo.png)
 
-# Staddle v3.1.1
+# Staddle v3.2.0
 
 [Staddle](http://staddl.es/) is a brilliant front-end HTML5 and LESS framework for building small and large scale websites.
 
@@ -14,7 +14,7 @@ It ships with basic styles and mixins to help get your project started quickly, 
 * **HTML Templates** - example templates are included to help get you started quickly.
 * **Static Site Generator** - a static minified version of your site which you can be hosted anywhere.
 * **Grunt** - used to do all of the legwork, including compiling LESS, JSHint, minifying RequireJS, optimising images, LiveReload and starting a development server.
-* **IE7+ support** - IE7 support will be dropped when clients stop demanding it.
+* **IE8+ support** - For IE7 support use a grid system that doesn't use box sizing border box and the inline block fix
 
 ## Quick Start
 

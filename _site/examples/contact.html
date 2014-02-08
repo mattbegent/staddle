@@ -1,5 +1,4 @@
 <!doctype html>
-<!--[if IE 7]>    <html class="no-js ie ie7 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie ie8 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 9]>    <html class="no-js ie ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
@@ -31,7 +30,7 @@
     <!-- <link href="../assets/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/> -->
 
     <!-- IE8 and below fallbacks -->
-    <!--[if lte IE 8]>
+    <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script type="text/javascript" src="../assets/js/libs/respond/respond.min.js"></script> 
     <![endif]-->
@@ -39,6 +38,10 @@
 </head>
 
 <body id="sitename" data-controller="examples">
+
+    <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
     <header class="wrapper-header" role="banner"> 
     
@@ -135,7 +138,7 @@
     <script src="http://localhost:35729/livereload.js"></script> 
     
 
-    <!--[if lte IE 8]>
+    <!--[if lt IE 9]>
     <script type="text/javascript" src="../assets/js/libs/selectivizr/selectivizr.js"></script>
     <![endif]-->
 

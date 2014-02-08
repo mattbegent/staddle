@@ -26,13 +26,10 @@ SITENAME = {
 
         init: function() {
 
-            require(["jquery", "modules/iefixes"], function($, iefixes) {
+            require(["jquery"], function($) {
 
                 // Show that js is present
                 $("html").removeClass("no-js"); 
-
-                // Help ie out abit
-                iefixes.init();
 
             });
 
