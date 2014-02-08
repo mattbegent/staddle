@@ -1,0 +1,56 @@
+.icon-styles() when not (@MODULE-Icon) { }
+.icon-styles() when (@MODULE-Icon) {
+
+/* =========================================================================
+// ICON
+// TODO: svg icons
+// =======================================================================*/
+
+// BASE
+// ----------------------------------------------------
+
+[class*='icon-'] {
+    position: relative;  
+    .inline-block();
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    .font-size (28);
+}
+
+// ICONS
+// ----------------------------------------------------
+
+.icon-menu:before {
+    content: "\2261";
+}
+
+.icon-tel:before {
+    content: "\260E";
+}
+
+.icon-star:before {
+    content: "\2605";
+}
+
+.icon-email:before {
+    content: "\2709";
+}
+
+.icon-tick:before {
+    content: "\2713";
+}
+
+.icon-cross:before {
+    content: "\2715";
+}
+
+.icon-heart:before {
+    content: "\2665";
+}
+
+
+
+} .icon-styles();
