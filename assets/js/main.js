@@ -46,6 +46,12 @@ SITENAME = {
                 // Google maps example
                 map.init();
 
+                // Overlay
+                $(".toggle-overlay").on("click", function() {
+                    $(".overlay").toggleClass("overlay-open");
+                    return false;
+                });
+
                 // Flickr example
                 $(".staddle-flickr").staddleflickr({
                     userid: '90478545@N02', 

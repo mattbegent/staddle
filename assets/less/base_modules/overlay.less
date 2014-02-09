@@ -1,0 +1,50 @@
+.overlay-styles() when not (@MODULE-Overlay) { }
+.overlay-styles() when (@MODULE-Overlay) {
+
+/* =========================================================================
+// OVERLAY
+// =======================================================================*/
+
+// BASE
+// ----------------------------------------------------
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; // IE8
+
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+    transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+
+    &.overlay-open {
+        visibility: visible;
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+    }
+}
+
+.overlay-content {
+    position: relative;
+    margin-top: 2em;
+    padding: 1em;
+    background-color: #FFF;
+
+    .icon-cross {
+        position: absolute;
+        top: 0.5em;
+        right: 0.5em;
+        color: @TYPE-FontColor;
+        .font-size (22);
+    }
+}
+
+} .overlay-styles();
