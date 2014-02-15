@@ -33,7 +33,7 @@ textarea,
 select {
     width: 100%;
     .border-radius (4);
-    padding: 4px;
+    padding: 6px 8px;
     border: 1px solid #888;
     color: #555;
 }
@@ -47,8 +47,19 @@ select:focus {
     outline: thin dotted \9;
 }
 
-button {
-    .button;
+.form-note {
+    display: block;
+    .margin-top (5);
+    .font-size ((@TYPE-FontSize - 2));
+}
+
+.form-row-checkbox {
+    label,
+    input {
+        .inline-block ();
+        width: auto;
+        margin-top: 0;
+    }
 }
 
 .placeholder (@FORM-Placeholder); 
@@ -66,6 +77,8 @@ button {
     textarea, 
     select {
         width: 40%;
+        .inline-block ();
+        vertical-align: middle;
     }
 
     .input-small {
@@ -86,6 +99,11 @@ button {
 
     .input-full {
         width: 100%;
+    }
+
+    .form-note {
+        margin-top: 0;
+        .inline-block ();
     }
 
 }
