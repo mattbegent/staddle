@@ -30,6 +30,31 @@
 
 }
 
+// OFFSCREEN
+// ----------------------------------------------------
+
+.nav-offscreen {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0; 
+    z-index: 999;
+
+    .transition (all, 400ms);
+}
+
+.nav-offscreen:target {
+    width: 100%;
+}
+
+.nav-offscreen-trigger {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 // MOBILE
 // ----------------------------------------------------
 

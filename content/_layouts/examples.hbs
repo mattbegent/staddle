@@ -51,7 +51,7 @@
                 <h1 class="title-primary margin-bottom">{{ title }}</h1> 
 
                 <nav>
-                    <ul class="nav nav-main">
+                    <ul class="nav nav-main hide-mobile">
                         <li><a href="index.html" class="{{#if navHomeActive}}active{{/if}}">Home</a></li>
                         <li><a href="2column.html" class="{{#if nav2ColActive}}active{{/if}}">2 Column</a></li>
                         <li><a href="3column.html" class="{{#if nav3ColActive}}active{{/if}}">3 Column</a></li>
@@ -60,6 +60,7 @@
                         <li><a href="news.html" class="{{#if navNewsActive}}active{{/if}}">News</a></li>
                         <li><a href="contact.html" class="{{#if navContactActive}}active{{/if}}">Contact</a></li>
                     </ul>
+                    <a href="#nav" class="show-mobile nav-offscreen-trigger"><i class="icon-menu"></i></a>
                 </nav>
 
             </div>
@@ -67,6 +68,18 @@
         </div>
 
     </header><!-- .wrapper-header -->
+
+    <nav>
+        <ul class="nav nav-offscreen nav-vertical" id="nav">
+            <li><a href="index.html" class="{{#if navHomeActive}}active{{/if}}">Home</a></li>
+            <li><a href="2column.html" class="{{#if nav2ColActive}}active{{/if}}">2 Column</a></li>
+            <li><a href="3column.html" class="{{#if nav3ColActive}}active{{/if}}">3 Column</a></li>
+            <li><a href="grid.html" class="{{#if navGridActive}}active{{/if}}">Grid</a></li>
+            <li><a href="gallery.html" class="{{#if navGalleryActive}}active{{/if}}">Gallery</a></li>
+            <li><a href="news.html" class="{{#if navNewsActive}}active{{/if}}">News</a></li>
+            <li><a href="contact.html" class="{{#if navContactActive}}active{{/if}}">Contact</a></li>
+        </ul>
+    </nav>
 
     <main class="wrapper-primary" role="main">
 

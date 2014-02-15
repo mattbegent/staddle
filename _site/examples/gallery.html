@@ -51,7 +51,7 @@
                 <h1 class="title-primary margin-bottom">Gallery</h1> 
 
                 <nav>
-                    <ul class="nav nav-main">
+                    <ul class="nav nav-main hide-mobile">
                         <li><a href="index.html" class="">Home</a></li>
                         <li><a href="2column.html" class="">2 Column</a></li>
                         <li><a href="3column.html" class="">3 Column</a></li>
@@ -60,6 +60,7 @@
                         <li><a href="news.html" class="">News</a></li>
                         <li><a href="contact.html" class="">Contact</a></li>
                     </ul>
+                    <a href="#nav" class="show-mobile nav-offscreen-trigger"><i class="icon-menu"></i></a>
                 </nav>
 
             </div>
@@ -67,6 +68,18 @@
         </div>
 
     </header><!-- .wrapper-header -->
+
+    <nav>
+        <ul class="nav nav-offscreen nav-vertical" id="nav">
+            <li><a href="index.html" class="">Home</a></li>
+            <li><a href="2column.html" class="">2 Column</a></li>
+            <li><a href="3column.html" class="">3 Column</a></li>
+            <li><a href="grid.html" class="">Grid</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="news.html" class="">News</a></li>
+            <li><a href="contact.html" class="">Contact</a></li>
+        </ul>
+    </nav>
 
     <main class="wrapper-primary" role="main">
 
@@ -80,42 +93,42 @@
 
                 <ul class="grid grid-thumbnails list-unstyled">
                     <li class="col-1-4 col-tablet-1-3">
-                        <a href="http://placehold.it/500x500&text=Image1">
+                        <a href="#image-1" class="toggle-overlay">
                             <img class="image-circle thumbnail" src="http://placehold.it/225x225&text=Image1" alt="Test Image Gallery" />
                         </a>
                     </li>
                     <li class="col-1-4 col-tablet-1-3">
-                        <a href="http://placehold.it/500x500&text=Image2">
+                        <a href="#image-2" class="toggle-overlay">
                             <img class="image-circle thumbnail" src="http://placehold.it/225x225&text=Image2" alt="Test Image Gallery" />
                         </a>
                     </li>
                     <li class="col-1-4 col-tablet-1-3">
-                        <a href="http://placehold.it/500x500&text=Image3">
+                        <a href="#image-3" class="toggle-overlay">
                             <img class="image-circle thumbnail" src="http://placehold.it/225x225&text=Image3" alt="Test Image Gallery" />
                         </a>
                     </li>
                     <li class="col-1-4 col-tablet-1-3">
-                        <a href="http://placehold.it/500x500&text=Image4"> 
+                        <a href="#image-4" class="toggle-overlay"> 
                             <img class="image-circle thumbnail" src="http://placehold.it/225x225&text=Image4" alt="Test Image Gallery" />
                         </a>
                     </li>
                     <li class="col-1-4 col-tablet-1-3">
-                        <a href="http://placehold.it/500x500&text=Image5">
+                        <a href="#image-5" class="toggle-overlay">
                             <img class="image-circle thumbnail" src="http://placehold.it/225x225&text=Image5" alt="Test Image Gallery" />
                         </a>
                     </li>
                     <li class="col-1-4 col-tablet-1-3">
-                        <a href="http://placehold.it/500x500&text=Image6">
+                        <a href="#image-6" class="toggle-overlay">
                             <img class="image-circle thumbnail" src="http://placehold.it/225x225&text=Image6" alt="Test Image Gallery" />
                         </a>
                     </li>
                     <li class="col-1-4 col-tablet-1-3">
-                        <a href="http://placehold.it/500x500&text=Image7">
+                        <a href="#image-7" class="toggle-overlay">
                             <img class="image-circle thumbnail" src="http://placehold.it/225x225&text=Image7" alt="Test Image Gallery" />
                         </a>
                     </li>
                     <li class="col-1-4 col-tablet-1-3">
-                        <a href="http://placehold.it/500x500&text=Image8">
+                        <a href="#image-8" class="toggle-overlay">
                             <img class="image-circle thumbnail" src="http://placehold.it/225x225&text=Image8" alt="Test Image Gallery" />
                         </a>
                     </li>
@@ -124,6 +137,94 @@
 
             </div>
         </div> 
+
+        <div class="overlay" id="image-1">
+            <div class="grid">
+                <div class="col-1">
+                    <div class="overlay-content center">
+                        <a href="#" class="close-overlay"><i class="icon-cross"></i></a>
+                        <img src="http://placehold.it/875x500&text=Image1" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay" id="image-2">
+            <div class="grid">
+                <div class="col-1">
+                    <div class="overlay-content center">
+                        <a href="#" class="close-overlay"><i class="icon-cross"></i></a>
+                        <img src="http://placehold.it/875x500&text=Image2" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay" id="image-3">
+            <div class="grid">
+                <div class="col-1">
+                    <div class="overlay-content center">
+                        <a href="#" class="close-overlay"><i class="icon-cross"></i></a>
+                        <img src="http://placehold.it/875x500&text=Image3" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay" id="image-4">
+            <div class="grid">
+                <div class="col-1">
+                    <div class="overlay-content center">
+                        <a href="#" class="close-overlay"><i class="icon-cross"></i></a>
+                        <img src="http://placehold.it/875x500&text=Image4" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay" id="image-5">
+            <div class="grid">
+                <div class="col-1">
+                    <div class="overlay-content center">
+                        <a href="#" class="close-overlay"><i class="icon-cross"></i></a>
+                        <img src="http://placehold.it/875x500&text=Image5" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay" id="image-6">
+            <div class="grid">
+                <div class="col-1">
+                    <div class="overlay-content center">
+                        <a href="#" class="close-overlay"><i class="icon-cross"></i></a>
+                        <img src="http://placehold.it/875x500&text=Image6" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay" id="image-7">
+            <div class="grid">
+                <div class="col-1">
+                    <div class="overlay-content center">
+                        <a href="#" class="close-overlay"><i class="icon-cross"></i></a>
+                        <img src="http://placehold.it/875x500&text=Image7" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay" id="image-8">
+            <div class="grid">
+                <div class="col-1">
+                    <div class="overlay-content center">
+                        <a href="#" class="close-overlay"><i class="icon-cross"></i></a>
+                        <img src="http://placehold.it/875x500&text=Image8" />
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main><!-- .wrapper-primary -->
 

@@ -51,7 +51,7 @@
                 <h1 class="title-primary margin-bottom">Contact</h1> 
 
                 <nav>
-                    <ul class="nav nav-main">
+                    <ul class="nav nav-main hide-mobile">
                         <li><a href="index.html" class="">Home</a></li>
                         <li><a href="2column.html" class="">2 Column</a></li>
                         <li><a href="3column.html" class="">3 Column</a></li>
@@ -60,6 +60,7 @@
                         <li><a href="news.html" class="">News</a></li>
                         <li><a href="contact.html" class="active">Contact</a></li>
                     </ul>
+                    <a href="#nav" class="show-mobile nav-offscreen-trigger"><i class="icon-menu"></i></a>
                 </nav>
 
             </div>
@@ -67,6 +68,18 @@
         </div>
 
     </header><!-- .wrapper-header -->
+
+    <nav>
+        <ul class="nav nav-offscreen nav-vertical" id="nav">
+            <li><a href="index.html" class="">Home</a></li>
+            <li><a href="2column.html" class="">2 Column</a></li>
+            <li><a href="3column.html" class="">3 Column</a></li>
+            <li><a href="grid.html" class="">Grid</a></li>
+            <li><a href="gallery.html" class="">Gallery</a></li>
+            <li><a href="news.html" class="">News</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
 
     <main class="wrapper-primary" role="main">
 
@@ -81,29 +94,34 @@
 
                 <form id="form-o-matic" method="post" class="form c">
                     
-                    <p class="form-row">
+                    <div class="form-row">
                         <label for="name">Name:</label>
                         <input id="name" type="text" autocomplete="on" placeholder="Name" required="required" class="input-large"/>
-                    </p>
+                    </div>
 
-                    <p class="form-row">
+                    <div class="form-row">
                         <label for="email">Email:</label>
                         <input id="email" type="email" autocomplete="on" placeholder="name@example.com" class="input-large" />
-                    </p>
+                    </div>
 
-                    <p class="form-row">
+                    <div class="form-row">
                         <label for="subject">Subject:</label>
                         <input id="subject" type="text" autocomplete="on" placeholder="Subject" class="input-xlarge" />
-                    </p>
+                    </div>
 
-                    <p class="form-row">
+                    <div class="form-row">
                         <label for="message">Comment:</label>
                         <textarea id="message" rows="5" class="input-xlarge"></textarea>
-                    </p>
+                    </div>
 
-                    <p class="form-row">
+                    <div class="form-row form-row-checkbox">
+                        <label for="checkbox">A label with a checkbox</label>
+                        <input id="checkbox" type="checkbox" required="required"/>
+                    </div>
+
+                    <div class="form-row">
                         <button type="submit" id="submit">Submit</button>
-                    </p>
+                    </div>
 
                 </form> 
 
