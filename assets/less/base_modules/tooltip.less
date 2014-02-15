@@ -1,0 +1,76 @@
+.tooltip-styles() when not (@MODULE-Tooltip) { }
+.tooltip-styles() when (@MODULE-Tooltip) {
+
+/* =========================================================================
+// TOOLTIP
+// http://cbavota.bitbucket.org/css3-tips/
+// http://www.webdesignerdepot.com/2012/11/how-to-create-a-simple-css3-tooltip/
+// =======================================================================*/
+
+// BASE
+// ----------------------------------------------------
+
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]:after,
+[data-tooltip]:before {
+    position: absolute;
+    bottom: 90%;
+    left: -9999px;
+    margin-bottom: 12px;
+    z-index: 100;
+    opacity: 0;
+
+    -webkit-transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    -moz-transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+[data-tooltip]:after {
+    content: attr(data-tooltip);
+    padding: 0.5em;
+    .font-size (12);
+    text-align: center;
+    color: #fff;
+    background: @TOOLTIP-BgColor;
+    white-space: nowrap;
+
+    .border-radius (5);
+    text-shadow: 0 0 5px #000;
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+[data-tooltip].tooltip-large:after {
+    min-width: 150px;
+    white-space: normal;
+}
+
+[data-tooltip]:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-style: solid;
+    border-color: @TOOLTIP-BgColor transparent transparent transparent;
+    margin-bottom: 0;
+}
+
+[data-tooltip]:hover:after,
+[data-tooltip]:hover:before {
+    opacity: 1;
+}
+
+[data-tooltip]:hover:after,
+[data-tooltip]:hover:before {
+    bottom: 100%;
+    left: 0;
+}
+[data-tooltip]:hover:before {
+    left: 15px;
+}
+
+} .tooltip-styles();

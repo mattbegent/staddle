@@ -46,9 +46,15 @@ SITENAME = {
                 // Google maps example
                 map.init();
 
-                // Overlay
+                // Overlay - make generic
                 $(".toggle-overlay").on("click", function() {
-                    $(".overlay").toggleClass("overlay-open");
+                    var target = $($(this).attr("href"));
+                    $(target).toggleClass("overlay-open");
+                    return false;
+                });
+
+                $(".close-overlay").on("click", function() {
+                    $(".overlay").removeClass("overlay-open");
                     return false;
                 });
 

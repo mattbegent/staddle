@@ -143,6 +143,14 @@ navHomeActive: true
 
                     <pre><code>&lt;a href=&quot;#&quot; class=&quot;button button-full&quot;&gt;Button Full&lt;/a&gt;</code></pre>
 
+                    <h4>Column - js fallback must be included for ie9 and below</h4> 
+
+                    <h5>2 Column</h5>
+                    <p class="column-2 justify">All right me luvver ipsum dolor sit amet bemmie exercitation occaecat, keener consequat chimley dont do that, mind stension lead. Commodo smorning dint quicken, culpa wheres attoo officia sed enim glider zat alright quis. Dont do that, mind anim me eds erting, aliqua largurr do gas ed officia eu gashead gurt big. Minim all right me luvver commodo, ullamco veniam cupidatat bemminser cillum tamorra eiusmod casnt idut innum. Wassat smorning elit you gone and done it officia ea proident praps innum sed ginormous ow bist. Bemmie elit zider, ut nulla ex in mind eu qui dollop.</p>
+
+                    <h5>3 Column</h5>
+                    <p class="column-3 justify">All right me luvver ipsum dolor sit amet bemmie exercitation occaecat, keener consequat chimley dont do that, mind stension lead. Commodo smorning dint quicken, culpa wheres attoo officia sed enim glider zat alright quis. Dont do that, mind anim me eds erting, aliqua largurr do gas ed officia eu gashead gurt big. Minim all right me luvver commodo, ullamco veniam cupidatat bemminser cillum tamorra eiusmod casnt idut innum. Wassat smorning elit you gone and done it officia ea proident praps innum sed ginormous ow bist. Bemmie elit zider, ut nulla ex in mind eu qui dollop.</p>
+
                     <h4>Flickr</h4> 
 
                     <div class="staddle-flickr margin-bottom"></div>
@@ -333,7 +341,27 @@ navHomeActive: true
 
                     <h4>Overlay</h4>
 
-                    <p><a href="#" class="toggle-overlay button">Open overlay</a></p>
+                    <p><a href="#overlay" class="toggle-overlay button">Open overlay</a></p>
+                    <p><a href="#overlay-2" class="toggle-overlay button">Open another overlay</a></p>
+
+                    <!--<h4>Tabs</h4>
+
+                    <p>Tabs.....</p>
+                    <ul class="tabs c">
+                        <li><a href="#tab-1" title="Lorum ipsum dolor sit amet">Tab 1</a></li>
+                        <li><a href="#tab-2" title="Aliquam tincidunt mauris eu risus">Tab 2</a></li>
+                        <li><a href="#tab-3" title="Morbi in sem quis dui placerat ornare">Tab 3</a></li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div id="tab-1">Tab 1</div>
+                        <div id="tab-2">Tab 2</div>
+                        <div id="tab-3">Tab 3</div>
+                    </div>-->
+
+                    <h4>Tooltip</h4>
+                    <p><a href="#" data-tooltip="Mr Toolip">Tooltip</a></p>
+                    <p><a href="#" data-tooltip="Vestibulum tortor quam, feugiat vitae" class="tooltip-large">Tooltip Large</a></p>
+
 
                     <h4>Well</h4>
 
@@ -360,12 +388,23 @@ navHomeActive: true
             </div>
         </div>
 
-        <div class="overlay">
+        <div class="overlay" id="overlay">
             <div class="grid">
                 <div class="col-1">
                     <div class="overlay-content">
-                        <a href="#" class="toggle-overlay"><i class="icon-cross"></i></a>
-                        <p>Overlay</p>
+                        <a href="#" class="close-overlay"><i class="icon-cross"></i></a>
+                        <p>Lush member yer tamorra alright me babber ow bist safternun wanna luvver he dos it gas ed. Smorning listen to yourself all right me luvver wanna bemmie praps. Zat alright praps tiz lush smorning mint in it cheers drive as-dal ungray gas ed wanna ow bist. You gone and done it listen to yourself all right me luvver, alright me babber gas ed hark at ee mint in it. Waz satter brissle bemmie, ohm idut ceptible cheers drive. Gas ed listen to yourself i didnt do nothing, stension lead zider all right me luvver brissle zat alright cheers drive.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="overlay-2">
+            <div class="grid">
+                <div class="col-1">
+                    <div class="overlay-content">
+                        <a href="#" class="close-overlay"><i class="icon-cross"></i></a>
+                        <p>Overlay-2. Lush member yer tamorra alright me babber ow bist safternun wanna luvver he dos it gas ed. Smorning listen to yourself all right me luvver wanna bemmie praps. Zat alright praps tiz lush smorning mint in it cheers drive as-dal ungray gas ed wanna ow bist. You gone and done it listen to yourself all right me luvver, alright me babber gas ed hark at ee mint in it. Waz satter brissle bemmie, ohm idut ceptible cheers drive. Gas ed listen to yourself i didnt do nothing, stension lead zider all right me luvver brissle zat alright cheers drive.</p>
                     </div>
                     
                 </div>

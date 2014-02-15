@@ -1,0 +1,38 @@
+.tabs-styles() when not (@MODULE-Tabs) { }
+.tabs-styles() when (@MODULE-Tabs) {
+
+/* ==========================================================================
+// TABS
+// TODO: Complete
+// =========================================================================*/
+
+.tabs {
+    margin: 0;
+    padding: 0;
+    li {
+    	float: left;
+    	list-style: none;
+    	a {
+    		display: block;
+    		.padding (10);
+    	}
+    }
+}
+
+.tabs-content > div {
+	display: none;
+}
+
+.tabs-content > div:first-child {
+	display: block;
+}
+
+.tabs-content > div:target {
+	display: block;
+}
+
+.tabs-content {
+	
+}
+
+} .tabs-styles();
