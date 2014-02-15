@@ -10,6 +10,8 @@
 
 @columnGap: (@TYPE-LineHeight * 1px);
 
+@media only screen and (min-width: @MQ-Desktop) {
+
 .column-2 {
     -moz-column-count: 2;
     -moz-column-gap: @columnGap;
@@ -26,6 +28,8 @@
     -webkit-column-gap: @columnGap;
     column-count: 3;
     column-gap: @columnGap;
+}
+
 }
 
 } .column-styles();
