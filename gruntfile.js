@@ -25,22 +25,19 @@ module.exports = function(grunt) {
           options: {
             globals: {
               jQuery: true,
-              requirejs: true, 
-              console: true,
-              module: true
+              console: true
             }
           }
         },
 
-        requirejs: {
-          compile: {
-            options: { 
-              name: 'main',
-              baseUrl: './<%= pkg.staddle.js %>',
-              mainConfigFile: '<%= pkg.staddle.js %>/main.js',
-              out: '<%= pkg.staddle.site %>/<%= pkg.staddle.js %>/main.min.js',
-              include: 'libs/requirejs/require'
-            }
+        uglify: {
+          options: {
+              banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %> */\n'
+          },
+          my_target: {
+            files: {
+              '<%= pkg.staddle.site %>/<%= pkg.staddle.js %>/main.min.js': ['<%= pkg.staddle.js %>/main.js','<%= pkg.staddle.js %>/modules/*.js','!<%= pkg.staddle.js %>/modules/_template.js']
+            } 
           }
         },
 
@@ -108,7 +105,7 @@ module.exports = function(grunt) {
               }
             ]
           },
-          iefixes: { 
+          jslibs: { 
             files: [
               { 
                 src: '<%= pkg.staddle.js %>/libs/respond/respond.min.js', 
@@ -117,6 +114,10 @@ module.exports = function(grunt) {
               { 
                 src: '<%= pkg.staddle.js %>/libs/selectivizr/selectivizr.js', 
                 dest: '<%= pkg.staddle.site %>/<%= pkg.staddle.js %>/libs/selectivizr/selectivizr.js' 
+              },
+              { 
+                src: '<%= pkg.staddle.js %>/libs/jquery/jquery.min.js', 
+                dest: '<%= pkg.staddle.site %>/<%= pkg.staddle.js %>/libs/jquery/jquery.min.js' 
               } 
             ]
           }
@@ -141,7 +142,7 @@ module.exports = function(grunt) {
           },
           watchjs: {
             files: ['<%= pkg.staddle.js %>/main.js','<%= pkg.staddle.js %>/modules/*.js'], 
-            tasks: ['jshint','requirejs']
+            tasks: ['jshint','uglify']
           },
           watchimages: {
             files: [
@@ -172,7 +173,7 @@ module.exports = function(grunt) {
     // Load Tasks
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('assemble');
@@ -181,6 +182,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default Tasks
-    grunt.registerTask('default', ['less','jshint','requirejs','imagemin','clean','assemble','copy','connect','watch']);
+    grunt.registerTask('default', ['less','jshint','uglify','imagemin','clean','assemble','copy','connect','watch']);
 
 };

@@ -11,10 +11,8 @@
         "assets/less/main.less"
     ],
     "devDependencies": {
-        "jquery": "1.10.2",
-        "requirejs": "latest",
+        "jquery": "1.11.0",
         "respond": "latest",
-        "selectivizr": "latest",
-        "requirejs-plugins": "latest"
+        "selectivizr": "latest"
     }
 }

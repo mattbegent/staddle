@@ -13,7 +13,7 @@ It ships with basic styles and mixins to help get your project started quickly, 
 * **LESS** - including base styles, CSS3 mixins and debugging.
 * **HTML Templates** - example templates are included to help get you started quickly.
 * **Static Site Generator** - a static minified version of your site which you can be hosted anywhere.
-* **Grunt** - used to do all of the legwork, including compiling LESS, JSHint, minifying RequireJS, optimising images, LiveReload and starting a development server.
+* **Grunt** - used to do all of the legwork, including compiling LESS, JSHint, minifying JavaScript, optimising images, LiveReload and starting a development server.
 * **IE8+ support** - For IE7 support use a grid system that doesn't use box sizing border box and the inline block fix
 
 ## Quick Start

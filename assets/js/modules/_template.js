@@ -2,20 +2,14 @@
 // _template.js
 // =========================================================================*/
 
-define(
-    ["jquery"],  
+var _template = (function () {
 
-    function($) {
-
-        var _template = {
-
-            init: function() {
-                console.log("I am an example.");
-            }
-            
-        };
-
-        return _template;
-
+    function init() {
+        console.log("Lets ago!");
     }
-);
+
+    return {
+        init: init
+    };
+
+})();

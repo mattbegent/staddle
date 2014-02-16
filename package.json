@@ -1,33 +1,33 @@
 {
-    "name": "staddle",
-    "version": "3.1.1",
-    "repository" : { 
-        "type" : "git", 
-        "url" : "https://github.com/mattbegent/staddle.git"
-    },
-    "staddle" : {
-        "dev": true,
-        "content": "content",
-        "layouts": "_layouts",
-        "partials": "_partials",
-        "site": "_site",
-        "assets": "assets",
-        "css": "assets/css",
-        "img": "assets/img",
-        "js": "assets/js",
-        "less": "assets/less",
-        "port": 8080 
-    },
-    "devDependencies": {
-        "grunt": "*",
-        "grunt-contrib-less": "*",
-        "grunt-contrib-watch": "*",
-        "grunt-contrib-requirejs": "*",
-        "grunt-contrib-jshint": "*",
-        "grunt-contrib-clean": "*",
-        "grunt-contrib-imagemin": "*",
-        "assemble": "*",
-        "grunt-contrib-connect": "*",
-        "grunt-contrib-copy": "*"
-    }  
+  "name": "staddle",
+  "version": "3.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattbegent/staddle.git"
+  },
+  "staddle": {
+    "dev": true,
+    "content": "content",
+    "layouts": "_layouts",
+    "partials": "_partials",
+    "site": "_site",
+    "assets": "assets",
+    "css": "assets/css",
+    "img": "assets/img",
+    "js": "assets/js",
+    "less": "assets/less",
+    "port": 8080
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-imagemin": "*",
+    "assemble": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-uglify": "*"
+  }
 }

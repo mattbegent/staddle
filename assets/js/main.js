@@ -3,20 +3,6 @@
 // =========================================================================*/
 
 /* ==========================================================================
-// RequireJS Configuration
-// =========================================================================*/
-
-require.config({
-    waitSeconds : 40,    
-    urlArgs: "bust=" + (new Date()).getTime(), // For development to bypass the cache
-    //urlArgs: "bust=v1", // For production 
-    paths: {
-        "jquery": "libs/jquery/jquery.min",
-        "async": "libs/requirejs-plugins/src/async" // Useful plugin for loading google maps etc
-    }
-});
-
-/* ==========================================================================
 // The controllers
 // =========================================================================*/
 
@@ -26,25 +12,11 @@ SITENAME = {
 
         init: function() {
 
-            require(["jquery"], function($) {
+            // Show that js is present
+            $("html").removeClass("no-js"); 
 
-                // Show that js is present
-                $("html").removeClass("no-js"); 
-
-                // Overlay - make generic
-                $(".toggle-overlay").on("click", function() {
-                    var target = $($(this).attr("href"));
-                    $(target).toggleClass("overlay-open");
-                    return false;
-                });
-
-                $(".close-overlay").on("click", function() {
-                    $(".overlay").removeClass("overlay-open");
-                    return false;
-                });
-
-            });
-
+            // Overlays
+            overlay.init();
         }
 
     },
@@ -53,19 +25,15 @@ SITENAME = {
 
         init: function() {
 
-            require(["modules/map","modules/flickr"], function(map) {
+            // Google maps example
+            map.init();
 
-                // Google maps example
-                map.init();
-
-                // Flickr example
-                $(".staddle-flickr").staddleflickr({
-                    userid: '90478545@N02', 
-                    imagecount : 8, 
-                    html : '<a href="{{link}}"title="{{title}}"><img src="{{thumb}}" title="{{title}}" alt="{{image}}"/></a>' 
-                });  
-
-            });
+            // Flickr example
+            $(".staddle-flickr").staddleflickr({
+                userid: '90478545@N02', 
+                imagecount : 8, 
+                html : '<a href="{{link}}"title="{{title}}"><img src="{{thumb}}" title="{{title}}" alt="{{image}}"/></a>' 
+            });  
 
         }
 
@@ -78,7 +46,7 @@ SITENAME = {
 // =========================================================================*/
 
 UTIL = {
-    exec: function(controller, action) {
+    exec: function(controller) {
         var ns = SITENAME;
 
         if ( controller !== "" && ns[controller] && typeof ns[controller].init == "function" ) {ns[controller].init();}
@@ -97,18 +65,4 @@ UTIL = {
 // Lets-a go!
 // =========================================================================*/
 
-require(["jquery"], function($) {
-    $(document).ready(UTIL.init);
-});
-
-/* ==========================================================================
-// Require js Errors
-// =========================================================================*/
-
-requirejs.onError = function (err) {
-    console.log(err.requireType);
-    if (err.requireType === 'timeout') {
-        console.log('modules: ' + err.requireModules);
-    }
-    throw err;
-};
+$(document).ready(UTIL.init);
